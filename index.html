@@ -3,14 +3,449 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PathWeave &mdash; Weaving the Operational Architecture for India&rsquo;s Most Ambitious Organisations</title>
+<title>PathWeave &mdash; Weaving the Operational Architecture</title>
 <meta name="description" content="PathWeave is the operational architecture that enables ambitious organisations to scale with clarity, discipline, and intelligent systems &mdash; across HR Systems &amp; Operations, Business Systems, and Data &amp; AI Enablement.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500;700&family=Caveat:wght@500&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
+<style>
+/* ===================================================
+   PathWeave — website stylesheet
+   =================================================== */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white: #FFFFFF;
+  --ice-blue: #F4F9FD;
+  --accent-blue: #5C9DD1;
+  --navy: #0F1F3D;
+  --text-main: #2A2E35;
+  --muted: #5A6070;
+  --grid-line: rgba(15, 31, 61, 0.12);
+  --max-width: 1080px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--navy); font-weight: 500; }
+.mono { font-family: 'Roboto Mono', monospace; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; }
+.devanagari { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+h1 { font-size: 4.2rem; line-height: 1.1; letter-spacing: -0.01em; }
+h2 { font-size: 2.6rem; line-height: 1.2; letter-spacing: 0.005em; margin-bottom: 1.5rem; }
+h3 { font-size: 1.7rem; margin-bottom: 0.3rem; }
+h4 { font-size: 1.3rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.01em; margin-bottom: 0.5rem; }
+
+p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-main); }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
+
+/* ---------- reveal-on-scroll (for non-GSAP elements) ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- NAV ---------- */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(15, 31, 61, 0);
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  padding: 22px 0;
+}
+.site-header.scrolled {
+  background: rgba(15, 31, 61, 0.94);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 14px 0;
+}
+.nav-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand {
+  font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600;
+  color: var(--white); letter-spacing: 0.01em;
+}
+.brand span { color: var(--accent-blue); }
+.main-nav { display: flex; align-items: center; gap: 1.2rem; }
+.nav-link {
+  font-family: 'Roboto Mono', monospace; font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.85);
+  transition: color 0.2s ease;
+}
+.nav-link:hover { color: var(--accent-blue); }
+.nav-cta {
+  background: var(--accent-blue); color: var(--navy) !important;
+  padding: 0.6rem 1.1rem; border-radius: 2px;
+}
+.nav-cta:hover { background: var(--white); }
+.nav-toggle {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  width: 32px; height: 32px; background: none; border: none; cursor: pointer;
+}
+.nav-toggle span { display: block; width: 100%; height: 2px; background: var(--white); transition: 0.3s ease; }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative; min-height: 100vh;
+  background: var(--navy);
+  display: flex; align-items: center;
+  padding: 90px 0 80px;
+  overflow: hidden;
+}
+.diamond-bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 2; max-width: var(--max-width); margin: 0 auto; padding: 0 32px; width: 100%; }
+.hero h1 { color: var(--white); margin-bottom: 2rem; }
+.eyebrow { color: var(--accent-blue); font-size: 0.9rem; margin-bottom: 1.2rem; }
+.rule { width: 80px; height: 3px; background: var(--accent-blue); margin: 2.2rem 0; }
+.lede {
+  font-size: 1.5rem; font-weight: 400; max-width: 900px;
+  font-family: 'Playfair Display', serif; font-style: italic;
+  color: rgba(255,255,255,0.75); line-height: 1.5;
+}
+.sub-tagline {
+  font-size: 1rem; font-weight: 300; max-width: 900px; margin-top: 1.2rem;
+  color: rgba(255,255,255,0.55); line-height: 1.6;
+}
+.hero-actions { display: flex; gap: 1rem; margin-top: 2.8rem; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 0.95rem 1.8rem; font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  border-radius: 2px; transition: all 0.2s ease; border: 1px solid transparent; cursor: pointer;
+}
+.btn-primary { background: var(--accent-blue); color: var(--navy); }
+.btn-primary:hover { background: var(--white); }
+.btn-ghost { border-color: rgba(255,255,255,0.3); color: var(--white); }
+.btn-ghost:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+
+.module-strip {
+  margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.12);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+}
+.module-chip { display: flex; flex-direction: column; gap: 0.5rem; }
+.module-chip .mono { font-size: 0.68rem; color: var(--accent-blue); }
+.module-chip span:last-child { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); }
+
+/* ---------- SECTIONS ---------- */
+.section { padding: 6.5rem 0; background: var(--white); }
+.section-alt { background: var(--ice-blue); }
+.section-label {
+  background: var(--navy); color: var(--white); display: inline-block;
+  padding: 0.5rem 0.9rem; font-family: 'Roboto Mono', monospace; font-size: 0.78rem;
+  font-weight: 700; letter-spacing: 0.14em; margin-bottom: 1.8rem; text-transform: uppercase;
+}
+.quote-h2 { font-size: 2.9rem; margin-bottom: 2rem; }
+.lead-copy { max-width: 700px; font-size: 1.12rem; margin-bottom: 3rem; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4.5rem; }
+.emph { font-weight: 500; color: var(--navy); }
+
+.core-idea-block {
+  background: var(--navy); padding: 2.4rem 2.6rem; margin-bottom: 4.5rem;
+  border-left: 4px solid var(--accent-blue);
+}
+.core-idea-block p {
+  color: var(--white); font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 1.35rem; font-weight: 500; line-height: 1.5; margin: 0;
+}
+
+/* Infographic Image constraints */
+.infographic {
+  width: 100%;
+  max-width: 760px; 
+  height: auto;
+  margin: 1.5rem auto 3.5rem auto; 
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(15,31,61,0.06);
+  display: block;
+}
+
+/* ---------- scale readiness roadmap (Desktop GSAP Scrollytelling overrides below) ---------- */
+.roadmap-rows { display: flex; flex-direction: column; gap: 1.4rem; }
+.roadmap-row {
+  display: grid; grid-template-columns: 64px 1fr 1.6fr; gap: 2rem;
+  background: var(--white); box-shadow: 0 4px 20px rgba(15,31,61,0.05);
+  border-left: 6px solid var(--accent-blue); padding: 1.8rem 2rem;
+}
+.roadmap-row-01 { border-color: var(--navy); }
+.roadmap-row-02 { border-color: #2451A8; }
+.roadmap-row-03 { border-color: #178C82; }
+.roadmap-row-04 { border-color: #4E9F3D; }
+
+.roadmap-num {
+  font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 600;
+  color: var(--navy); line-height: 1;
+}
+.roadmap-main h4 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.roadmap-main p { margin: 0; font-size: 0.98rem; }
+
+.focus-heading { font-size: 0.68rem; color: var(--accent-blue); display: block; margin-bottom: 0.8rem; }
+.focus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 1.4rem; }
+.focus-item { display: flex; flex-direction: column; gap: 0.2rem; }
+.focus-item strong { font-size: 0.86rem; color: var(--navy); font-weight: 600; }
+.focus-item span { font-size: 0.82rem; color: var(--muted); font-weight: 300; }
+
+/* GSAP Pin Stacking only for Desktop */
+@media (min-width: 861px) {
+  .roadmap-rows { position: relative; height: 380px; }
+  .roadmap-row { position: absolute; top: 0; left: 0; width: 100%; opacity: 0; visibility: hidden; }
+  .roadmap-row-01 { opacity: 1; visibility: visible; }
+}
+
+/* ---------- modules ---------- */
+.module-intro { text-align: center; margin-bottom: 1rem; }
+.module-intro .section-label { display: inline-block; }
+.module-block { padding-top: 4rem; padding-bottom: 1rem; }
+.module-image-wrapper {
+  width: 100%; height: 280px; margin: 1.5rem 0 2.2rem; position: relative;
+  background: var(--ice-blue); border: 1px solid var(--grid-line); overflow: hidden;
+  cursor: pointer;
+}
+.module-image-wrapper img {
+  width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1.1) brightness(1.1); opacity: 0.85;
+  transition: all 0.5s ease;
+}
+.module-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 1.2rem;
+  background: rgba(15, 31, 61, 0.9); display: flex; align-items: center; justify-content: center;
+  transform: translateY(100%); transition: transform 0.4s ease;
+}
+.module-overlay span {
+  font-family: 'Roboto Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--white); letter-spacing: 0.05em; text-transform: uppercase;
+}
+.module-image-wrapper:hover img { filter: grayscale(0%) contrast(1) brightness(1); opacity: 1; mix-blend-mode: normal; }
+.module-image-wrapper:hover .module-overlay { transform: translateY(0); }
+
+.pull-quote {
+  font-size: 1.25rem; font-family: 'Playfair Display', serif; font-style: italic;
+  border-left: 3px solid var(--accent-blue); padding-left: 1.5rem; margin-bottom: 2.5rem;
+  color: var(--navy); font-weight: 500;
+}
+.frame { border: 1px solid var(--grid-line); padding: 2.2rem; background: var(--white); display: grid; gap: 2.2rem; }
+.fw-label { color: var(--navy); font-size: 0.78rem; margin-bottom: 0.4rem; display: block; }
+.framework p, .method-item p { margin: 0; }
+
+.constraint-block {
+  background: var(--navy); color: var(--white); padding: 1.8rem 2.4rem;
+  margin-top: 3.5rem; border-left: 4px solid var(--accent-blue);
+  box-shadow: 0 10px 30px rgba(15,31,61,0.1);
+}
+.constraint-block .mono { color: var(--accent-blue); margin-bottom: 0.6rem; display: block; font-size: 0.75rem; letter-spacing: 0.12em; font-weight: 700; }
+.constraint-block p { margin: 0; font-style: italic; font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--white); }
+
+/* ---------- MODULE OFFERINGS (Detailed Sub-pages) ---------- */
+.module-offerings {
+  margin-top: 3.5rem;
+  padding: 3.5rem 3rem;
+  background: var(--white);
+  border: 1px solid var(--grid-line);
+  box-shadow: 0 10px 30px rgba(15,31,61,0.03);
+  border-radius: 4px;
+}
+.offering-group { margin-bottom: 4rem; }
+.offering-group:last-child { margin-bottom: 0; }
+
+.fw-eyebrow {
+  font-size: 0.75rem;
+  color: var(--navy);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.offering-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+.offering-tagline {
+  font-size: 0.98rem;
+  color: var(--text-main);
+  border-left: 3px solid #178C82; 
+  padding-left: 1.2rem;
+  margin-bottom: 2.2rem;
+  max-width: 850px;
+}
+.what-we-cover {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+.offering-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 0.4rem 4rem;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid rgba(15, 31, 61, 0.06);
+  padding-top: 1rem;
+}
+.offering-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 0.82rem; 
+  color: var(--navy);
+  font-weight: 400;
+  text-transform: uppercase; 
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(15, 31, 61, 0.06);
+  padding-bottom: 0.9rem;
+  padding-top: 0.5rem;
+}
+.offering-list li::before {
+  content: '•';
+  color: #178C82; 
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* ---------- method ---------- */
+.method-frame { margin-bottom: 2.2rem; }
+.devanagari-line { font-size: 0.92rem; font-style: italic; margin-bottom: 0.9rem; color: var(--muted); font-family: 'Playfair Display', serif; }
+.method-quote { font-size: 1.02rem; font-weight: 500; color: var(--navy); margin-bottom: 0.6rem !important; }
+
+/* ---------- approach ---------- */
+.approach-blocks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; margin-bottom: 2.2rem; }
+.approach-block {
+  background: var(--white); border-top: 4px solid var(--accent-blue);
+  box-shadow: 0 4px 20px rgba(15,31,61,0.05); padding: 1.8rem 2rem;
+}
+.approach-block-01 { border-color: var(--navy); }
+.approach-block-02 { border-color: #178C82; }
+.approach-block-03 { border-color: #6B3FA0; }
+.approach-block-04 { border-color: #2451A8; }
+.approach-block-num {
+  font-family: 'Roboto Mono', monospace; font-weight: 700; font-size: 0.85rem;
+  color: var(--accent-blue); margin-bottom: 0.6rem;
+}
+.approach-block h4 { font-size: 1.05rem; margin-bottom: 0.6rem; }
+.approach-block p { margin: 0; font-size: 0.96rem; }
+
+.approach-banner {
+  background: var(--navy); padding: 1.6rem 2.2rem; display: flex; flex-direction: column;
+  gap: 0.4rem; border-left: 4px solid var(--accent-blue); margin-bottom: 4rem;
+}
+.approach-banner-title { color: var(--accent-blue); font-size: 0.78rem; }
+.approach-banner p { color: var(--white); margin: 0; font-size: 0.98rem; font-weight: 300; }
+
+/* ---------- TRACK RECORD GRID ---------- */
+.stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.8rem; }
+.stat-block { border-bottom: 1px solid var(--grid-line); padding-bottom: 1rem; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 500; color: var(--navy); display: block; line-height: 1; margin-bottom: 0.3rem; }
+.stat-text { font-size: 2.1rem; }
+.stat-label { font-family: 'Roboto Mono', monospace; font-size: 0.72rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.cred-list { display: grid; gap: 1rem; }
+.cred-item { color: var(--navy); font-size: 0.85rem; }
+
+/* ---------- founders ---------- */
+.architect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.architect-card { border-top: 1px solid var(--grid-line); padding-top: 1.6rem; cursor: pointer; }
+.architect-card .role { font-size: 0.72rem; color: var(--accent-blue); margin-bottom: 1rem; display: block; }
+.founder-img { 
+  width: 88px; height: 88px; border-radius: 4px; object-fit: cover; margin-bottom: 1.2rem; 
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.architect-card:hover .founder-img { transform: scale(1.08); }
+.signature { font-family: 'Caveat', cursive; font-size: 2.1rem; color: var(--navy); opacity: 0.85; margin-top: 0.5rem; transform: rotate(-3deg); display: inline-block; }
+
+/* ---------- testimonials ---------- */
+.testi-grid { display: grid; gap: 2rem; grid-template-columns: 1fr 1fr; }
+.testi-block { background: var(--white); padding: 2.4rem; border-left: 3px solid var(--accent-blue); box-shadow: 0 4px 20px rgba(15,31,61,0.05); }
+.testi-block p { font-size: 1.12rem; font-style: italic; margin-bottom: 1.2rem; color: var(--navy); font-family: 'Playfair Display', serif; font-weight: 500; line-height: 1.6; }
+.testi-block .attr { display: block; font-family: 'Roboto Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; color: var(--accent-blue); }
+.testi-block .nda { display: block; font-family: 'Roboto Mono', monospace; font-size: 0.68rem; color: var(--muted); margin-top: 0.6rem; }
+
+/* ---------- CTA / contact ---------- */
+.cta-section { position: relative; background: var(--navy); overflow: hidden; }
+.cta-container { position: relative; z-index: 2; }
+.cta-block { background: var(--white); padding: 3.5rem; border-left: 6px solid var(--accent-blue); box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
+.cta-eyebrow { color: var(--accent-blue); font-size: 0.82rem; margin-bottom: 1.1rem; display: block; }
+.cta-h2 { font-size: 2.8rem; text-transform: uppercase; margin-bottom: 1.4rem; }
+.cta-copy { max-width: 90%; margin-bottom: 0; }
+.contact-grid { display: flex; gap: 3rem; margin-top: 2.2rem; border-top: 1px solid var(--grid-line); padding-top: 1.4rem; flex-wrap: wrap; }
+.contact-grid-single { margin-top: 0; }
+.contact-grid div { display: flex; flex-direction: column; gap: 0.4rem; font-family: 'Roboto Mono', monospace; font-size: 0.85rem; letter-spacing: 0.03em; color: var(--navy); }
+.contact-label { color: var(--accent-blue); }
+.contact-grid a:hover { text-decoration: underline; }
+
+/* ---------- footer ---------- */
+.site-footer {
+  background: var(--navy); padding: 2.2rem 32px; display: flex; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; color: rgba(255,255,255,0.55);
+}
+.site-footer .mono { font-size: 0.72rem; }
+.footer-copy { color: rgba(255,255,255,0.35); }
+.footer-tagline {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.92rem;
+  color: rgba(255,255,255,0.5); width: 100%; margin-bottom: 0.4rem;
+}
+
+/* =========== RESPONSIVE =========== */
+@media (max-width: 860px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2rem; }
+  .quote-h2 { font-size: 2.1rem; }
+  .two-col, .architect-grid, .testi-grid { grid-template-columns: 1fr; }
+  .module-strip { grid-template-columns: 1fr; gap: 1.4rem; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .cta-block { padding: 2.2rem; }
+  .cta-h2 { font-size: 2.1rem; }
+  .roadmap-row { grid-template-columns: 1fr; gap: 1rem; }
+  .focus-grid { grid-template-columns: 1fr 1fr; }
+  
+  .module-offerings { padding: 2.5rem 2rem; }
+  .offering-list { grid-template-columns: 1fr; gap: 0.6rem; }
+  .offering-title { font-size: 1.4rem; }
+
+  .main-nav {
+    position: fixed; top: 0; right: 0; height: 100vh; width: 78%; max-width: 320px;
+    background: var(--navy); flex-direction: column; align-items: flex-start;
+    padding: 100px 32px 32px; gap: 1.8rem;
+    transform: translateX(100%); transition: transform 0.3s ease;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+  }
+  .main-nav.open { transform: translateX(0); }
+  .nav-toggle { display: flex; }
+  .nav-cta { align-self: flex-start; }
+}
+
+@media (max-width: 500px) {
+  .hero { padding-top: 120px; }
+  h1 { font-size: 2.2rem; }
+  .lede { font-size: 1.2rem; }
+  .section { padding: 4rem 0; }
+  .frame { padding: 1.6rem; }
+  .cta-copy { max-width: 100%; }
+  .focus-grid { grid-template-columns: 1fr; }
+  .module-offerings { padding: 2rem 1.5rem; }
+}
+</style>
 </head>
 <body>
 
@@ -20,10 +455,12 @@
     <a href="#top" class="brand">Path<span>Weave</span></a>
     <nav class="main-nav" id="mainNav">
       <a href="#top" class="nav-link">Operating System</a>
+      <a href="#thesis" class="nav-link">Scale Readiness Roadmap</a>
       <a href="#method" class="nav-link">PW-3 Framework</a>
       <a href="#modules" class="nav-link">Modules</a>
-      <a href="#founders" class="nav-link">Meet the Founders</a>
-      <a href="#approach" class="nav-link">Insights</a>
+      <a href="#approach" class="nav-link">PW-Approach</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#founders" class="nav-link">Founders</a>
       <a href="#contact" class="nav-link nav-cta">Contact</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -32,7 +469,7 @@
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
+<!-- ============ 1. HERO ============ -->
 <section class="hero" id="top">
   <svg class="diamond-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <g fill="var(--accent-blue)" opacity="0.10">
@@ -74,7 +511,7 @@
 
 <main>
 
-<!-- ============ THESIS ============ -->
+<!-- ============ 2. THESIS ============ -->
 <section class="section" id="thesis">
   <div class="container reveal">
     <div class="section-label">The PathWeave Thesis</div>
@@ -89,30 +526,9 @@
       <p>The PathWeave Operating System is the operational architecture that enables ambitious organisations to scale with clarity, discipline, and intelligent systems.</p>
     </div>
   </div>
-
-  <!-- FOUNDERS SECTION -->
-  <div class="container reveal" id="founders">
-    <div class="section-label">The Chief Architects</div>
-    <div class="architect-grid">
-      <div class="architect-card">
-        <img src="assets/rennu-sharma.jpeg" alt="Rennu Sharma" class="founder-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Rennu+Sharma&background=F4F9FD&color=0F1F3D&bold=true'">
-        <h3>Rennu Sharma</h3>
-        <span class="mono role">Human Capital &amp; Culture Architecture</span>
-        <p>Decades of transformation experience aligning people with profit. Specialist in digital HR adoption, leadership engineering, and compliance.</p>
-        <div class="signature">Rennu Sharma</div>
-      </div>
-      <div class="architect-card">
-        <img src="assets/srrinivas-sharrma.jpeg" alt="Srrinivas Sharrma" class="founder-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Srrinivas+Sharrma&background=F4F9FD&color=0F1F3D&bold=true'">
-        <h3>Srrinivas Sharrma</h3>
-        <span class="mono role">Business Excellence Lead</span>
-        <p>18+ years architecting revenue and operational synergy. MBA (SCMHRD). Specialist in supply chain resilience and GTM expansion.</p>
-        <div class="signature">Srrinivas Sharrma</div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- ============ READINESS MAP ============ -->
+<!-- ============ 3. READINESS MAP ============ -->
 <section class="section section-alt" id="readiness">
   <div class="container reveal">
     <div class="section-label">The Scale Readiness Roadmap&trade;</div>
@@ -192,8 +608,46 @@
   </div>
 </section>
 
-<!-- ============ MODULES ============ -->
-<section class="section" id="modules">
+<!-- ============ 4. METHOD (PW-3) ============ -->
+<section class="section" id="method">
+  <div class="container reveal">
+    <div class="section-label">The PW-3 Framework&trade;</div>
+    <h2>Three Frameworks. One Instrument. Every Time.</h2>
+    <p class="lead-copy">Every layer of the PathWeave method&mdash;diagnosis, systems, technology&mdash;runs on the same architecture: three interlocking frameworks, built into one named instrument. This is not advice delivered ad hoc. It is a repeatable operating system, applied in the same disciplined sequence for every client, every time.</p>
+
+    <div class="frame method-frame" style="overflow: hidden;">
+      <div class="method-item" id="pw3-sutra">
+        <div class="mono fw-label">I. // Diagnose</div>
+        <h4>PW-3 Sutra Diagnostic&trade;</h4>
+        <div class="devanagari-line"><span class="devanagari">सूत्र</span> (S&#363;tra) &mdash; &lsquo;thread&rsquo;; a concise rule that holds a larger body of knowledge together.</div>
+        <p class="method-quote">&ldquo;Before you can weave anything, you need to know the state of every thread.&rdquo;</p>
+        <p>The baseline assessment run before any engagement begins&mdash;three frameworks scored across Human Capital, Business Systems, and Data Infrastructure. Replaces guesswork with evidence: a structured map of exactly where threads are frayed or strong.</p>
+      </div>
+      <div class="method-item" id="pw3-tantra">
+        <div class="mono fw-label">II. // Rebuild</div>
+        <h4>PW-3 Tantra Framework&trade;</h4>
+        <div class="devanagari-line"><span class="devanagari">तन्त्र</span> (Tantra) &mdash; &lsquo;loom, the warp of a fabric&rsquo;; a system of interconnected parts working as one.</div>
+        <p class="method-quote">&ldquo;A loom doesn&rsquo;t move fast because it hurries. It moves fast because every part is exactly where it should be.&rdquo;</p>
+        <p>The business systems build&mdash;covering Strategy, Sales, and Process Optimisation. Takes the gaps Sutra identifies and replaces them with one interlocking system where strategy, sales discipline, and process are load-bearing on each other.</p>
+      </div>
+      <div class="method-item" id="pw3-yantra">
+        <div class="mono fw-label">III. // Sustain</div>
+        <h4>PW-3 Yantra Engine&trade;</h4>
+        <div class="devanagari-line"><span class="devanagari">यन्त्र</span> (Yantra) &mdash; &lsquo;instrument, machine&rsquo;; a precision-built tool that produces a specific, repeatable outcome.</div>
+        <p class="method-quote">&ldquo;A loom without a shuttle is just wood and string. This is what puts it into motion.&rdquo;</p>
+        <p>The technology and data layer&mdash;instruments the system Tantra has built, turning raw operational data into an always-on, automated feed of insight&mdash;the piece that makes the other two durable instead of a one-time exercise.</p>
+      </div>
+    </div>
+    
+    <div class="constraint-block">
+      <span class="mono">The PathWeave Principle</span>
+      <p>&ldquo;Sutra tells you what&rsquo;s frayed. Tantra tells you how it should be rebuilt. Yantra keeps it running. Three frameworks, every time. That&rsquo;s the PathWeave Operating System.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. MODULES ============ -->
+<section class="section section-alt" id="modules">
   <div class="container reveal module-intro">
     <div class="section-label">The PathWeave Modules&trade;</div>
     <h2>One system. Three interlocking layers.</h2>
@@ -297,7 +751,7 @@
       </div>
     </div>
 
-    <!-- Outcome Block (Moved to bottom) -->
+    <!-- Outcome Block -->
     <div class="constraint-block">
       <span class="mono">The Outcome</span>
       <p>&ldquo;Create a dependable, compliant HR backbone that aligns leadership and allows founders to focus entirely on growth.&rdquo;</p>
@@ -390,7 +844,7 @@
       </div>
     </div>
 
-    <!-- Outcome Block (Moved to bottom) -->
+    <!-- Outcome Block -->
     <div class="constraint-block">
       <span class="mono">The Outcome</span>
       <p>&ldquo;Strengthen business adaptability, build a sharper sales engine, and drastically reduce workflow bottlenecks.&rdquo;</p>
@@ -476,7 +930,7 @@
       </div>
     </div>
 
-    <!-- Outcome Block (Moved to bottom) -->
+    <!-- Outcome Block -->
     <div class="constraint-block">
       <span class="mono">The Outcome</span>
       <p>&ldquo;Ensure technical systems actively drive pipeline visibility and support confident executive decisions backed by hard data.&rdquo;</p>
@@ -484,45 +938,7 @@
   </div>
 </section>
 
-<!-- ============ METHOD (PW-3) ============ -->
-<section class="section section-alt" id="method">
-  <div class="container reveal">
-    <div class="section-label">The PW-3 Framework&trade;</div>
-    <h2>Three Frameworks. One Instrument. Every Time.</h2>
-    <p class="lead-copy">Every layer of the PathWeave method&mdash;diagnosis, systems, technology&mdash;runs on the same architecture: three interlocking frameworks, built into one named instrument. This is not advice delivered ad hoc. It is a repeatable operating system, applied in the same disciplined sequence for every client, every time.</p>
-
-    <div class="frame method-frame" style="overflow: hidden;">
-      <div class="method-item" id="pw3-sutra">
-        <div class="mono fw-label">I. // Diagnose</div>
-        <h4>PW-3 Sutra Diagnostic&trade;</h4>
-        <div class="devanagari-line"><span class="devanagari">सूत्र</span> (S&#363;tra) &mdash; &lsquo;thread&rsquo;; a concise rule that holds a larger body of knowledge together.</div>
-        <p class="method-quote">&ldquo;Before you can weave anything, you need to know the state of every thread.&rdquo;</p>
-        <p>The baseline assessment run before any engagement begins&mdash;three frameworks scored across Human Capital, Business Systems, and Data Infrastructure. Replaces guesswork with evidence: a structured map of exactly where threads are frayed or strong.</p>
-      </div>
-      <div class="method-item" id="pw3-tantra">
-        <div class="mono fw-label">II. // Rebuild</div>
-        <h4>PW-3 Tantra Framework&trade;</h4>
-        <div class="devanagari-line"><span class="devanagari">तन्त्र</span> (Tantra) &mdash; &lsquo;loom, the warp of a fabric&rsquo;; a system of interconnected parts working as one.</div>
-        <p class="method-quote">&ldquo;A loom doesn&rsquo;t move fast because it hurries. It moves fast because every part is exactly where it should be.&rdquo;</p>
-        <p>The business systems build&mdash;covering Strategy, Sales, and Process Optimisation. Takes the gaps Sutra identifies and replaces them with one interlocking system where strategy, sales discipline, and process are load-bearing on each other.</p>
-      </div>
-      <div class="method-item" id="pw3-yantra">
-        <div class="mono fw-label">III. // Sustain</div>
-        <h4>PW-3 Yantra Engine&trade;</h4>
-        <div class="devanagari-line"><span class="devanagari">यन्त्र</span> (Yantra) &mdash; &lsquo;instrument, machine&rsquo;; a precision-built tool that produces a specific, repeatable outcome.</div>
-        <p class="method-quote">&ldquo;A loom without a shuttle is just wood and string. This is what puts it into motion.&rdquo;</p>
-        <p>The technology and data layer&mdash;instruments the system Tantra has built, turning raw operational data into an always-on, automated feed of insight&mdash;the piece that makes the other two durable instead of a one-time exercise.</p>
-      </div>
-    </div>
-    
-    <div class="constraint-block">
-      <span class="mono">The PathWeave Principle</span>
-      <p>&ldquo;Sutra tells you what&rsquo;s frayed. Tantra tells you how it should be rebuilt. Yantra keeps it running. Three frameworks, every time. That&rsquo;s the PathWeave Operating System.&rdquo;</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ APPROACH & CREDENTIALS ============ -->
+<!-- ============ 6. APPROACH & CREDENTIALS ============ -->
 <section class="section" id="approach">
   <div class="container reveal">
     <div class="section-label">The PathWeave Approach</div>
@@ -586,7 +1002,7 @@
   </div>
 </section>
 
-<!-- ============ TESTIMONIALS ============ -->
+<!-- ============ 7. TESTIMONIALS ============ -->
 <section class="section section-alt" id="testimonials">
   <div class="container reveal">
     <div class="section-label">Client Testimonies</div>
@@ -605,7 +1021,30 @@
   </div>
 </section>
 
-<!-- ============ CTA / CONTACT ============ -->
+<!-- ============ 8. MEET THE FOUNDERS ============ -->
+<section class="section" id="founders">
+  <div class="container reveal">
+    <div class="section-label">The Chief Architects</div>
+    <div class="architect-grid">
+      <div class="architect-card">
+        <img src="assets/rennu-sharma.jpeg" alt="Rennu Sharma" class="founder-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Rennu+Sharma&background=F4F9FD&color=0F1F3D&bold=true'">
+        <h3>Rennu Sharma</h3>
+        <span class="mono role">Human Capital &amp; Culture Architecture</span>
+        <p>Decades of transformation experience aligning people with profit. Specialist in digital HR adoption, leadership engineering, and compliance.</p>
+        <div class="signature">Rennu Sharma</div>
+      </div>
+      <div class="architect-card">
+        <img src="assets/srrinivas-sharrma.jpeg" alt="Srrinivas Sharrma" class="founder-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Srrinivas+Sharrma&background=F4F9FD&color=0F1F3D&bold=true'">
+        <h3>Srrinivas Sharrma</h3>
+        <span class="mono role">Business Excellence Lead</span>
+        <p>18+ years architecting revenue and operational synergy. MBA (SCMHRD). Specialist in supply chain resilience and GTM expansion.</p>
+        <div class="signature">Srrinivas Sharrma</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. CTA / CONTACT ============ -->
 <section class="section cta-section" id="contact">
   <svg class="diamond-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <g fill="var(--accent-blue)" opacity="0.10">
@@ -619,6 +1058,11 @@
       <h2 class="cta-h2">Start the Conversation.</h2>
       <p class="cta-copy">Whether you're building from the ground up or strengthening an existing organization, we'll assess your operational foundation, identify gaps and opportunities, and define the roadmap to build a scalable, high-performing business.</p>
 
+      <div style="margin-top: 2rem; margin-bottom: 0.5rem;">
+        <p style="font-weight: 500; color: var(--navy); margin-bottom: 1.2rem; font-size: 1.1rem;">Ready to get started?</p>
+        <a href="mailto:growth@pathweave.in" class="btn btn-primary magnetic-btn">Schedule a Discovery Call</a>
+      </div>
+
       <div class="contact-grid">
         <div>
           <span class="contact-label">Schedule a discovery call:</span>
@@ -626,10 +1070,10 @@
         </div>
         <div>
           <span class="contact-label">Website:</span>
-          <span>www.pathweave.in</span>
+          <span><a href="https://www.pathweave.in" target="_blank">www.pathweave.in</a></span>
         </div>
       </div>
-      <div class="contact-grid contact-grid-single">
+      <div class="contact-grid" style="margin-top: 1.5rem;">
         <div>
           <span class="contact-label">Direct Line (Srrinivas Sharrma):</span>
           <span><a href="tel:+917700883315">+91 77008 83315</a></span>
@@ -651,6 +1095,174 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<script src="script.js"></script>
+<script>
+// PathWeave site interactions & GSAP Animations
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// 1. Sticky header background on scroll
+const header = document.getElementById('siteHeader');
+const onScroll = () => {
+  if (window.scrollY > 40) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// 2. Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+navToggle.addEventListener('click', () => {
+  const isOpen = mainNav.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen);
+});
+
+// Close mobile nav when a link is clicked
+mainNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', false);
+  });
+});
+
+// 3. Fallback reveal for browsers with prefers-reduced-motion
+const revealEls = document.querySelectorAll('.reveal');
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  revealEls.forEach(el => el.classList.add('in-view'));
+} else {
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in-view'));
+  }
+}
+
+/* =========================================================
+   GSAP & ScrollTrigger Animations
+   ========================================================= */
+
+// Ensure GSAP and ScrollTrigger are loaded before running
+if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+  
+  gsap.registerPlugin(ScrollTrigger);
+
+  // A. Hero Section Breath (Slow SVG Rotation & Pulse)
+  gsap.to('.diamond-bg', {
+    rotation: 360,
+    opacity: 0.3, // Slight opacity increase for the pulse
+    duration: 80,
+    ease: "none",
+    repeat: -1,
+    yoyo: true,
+    transformOrigin: "center center"
+  });
+
+  // B. Magnetic Hover Effect for Primary Buttons
+  const magneticBtns = document.querySelectorAll('.magnetic-btn');
+  magneticBtns.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      // Calculate cursor position relative to button center
+      const x = (e.clientX - rect.left) - rect.width / 2;
+      const y = (e.clientY - rect.top) - rect.height / 2;
+      
+      // Move button slightly towards cursor
+      gsap.to(btn, { 
+        x: x * 0.3, 
+        y: y * 0.3, 
+        duration: 0.3, 
+        ease: "power2.out" 
+      });
+    });
+
+    // Snap back when mouse leaves
+    btn.addEventListener('mouseleave', () => {
+      gsap.to(btn, { 
+        x: 0, 
+        y: 0, 
+        duration: 0.7, 
+        ease: "elastic.out(1, 0.3)" 
+      });
+    });
+  });
+
+  // C. Scale Readiness Roadmap - Scrollytelling (Desktop Only)
+  if (window.innerWidth > 860) {
+    const roadmapRows = gsap.utils.toArray('.roadmap-row');
+    
+    // Create pinned timeline
+    const tlRoadmap = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#readiness",
+        start: "center center", 
+        end: "+=2500", // Scroll length to pin the section
+        pin: true,
+        scrub: 1 // Smooth scrubbing tied to scrollbar
+      }
+    });
+
+    // Animate row transitions (crossfading)
+    roadmapRows.forEach((row, index) => {
+      if (index > 0) {
+        // Fade in next row
+        tlRoadmap.to(row, { autoAlpha: 1, duration: 1 }, "+=0.5");
+      }
+      if (index < roadmapRows.length - 1) {
+        // Fade out current row before next comes in
+        tlRoadmap.to(row, { autoAlpha: 0, duration: 1 }, "+=1");
+      }
+    });
+  }
+
+  // D. PW-3 Framework - Visual Weaving Reveal
+  const pw3Timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#method",
+      start: "top 60%" // Triggers when top of section hits 60% down viewport
+    }
+  });
+
+  // Sutra slides from left, Tantra from right, Yantra drops in center
+  pw3Timeline
+    .from("#pw3-sutra", { x: -100, autoAlpha: 0, duration: 0.8, ease: "power2.out" })
+    .from("#pw3-yantra", { x: 100, autoAlpha: 0, duration: 0.8, ease: "power2.out" }, "<")
+    .from("#pw3-tantra", { y: -60, autoAlpha: 0, duration: 0.8, ease: "back.out(1.2)" }, "-=0.4");
+
+  // E. Track Record Stats - Stagger & Counter
+  // Stagger reveal of the three stat blocks
+  gsap.from(".gs-stat", {
+    scrollTrigger: {
+      trigger: "#results",
+      start: "top 80%"
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2, // Time between each block revealing
+    ease: "power2.out"
+  });
+
+  // Animate the numeric counter for "Years Combined Exp."
+  gsap.to("#yearsCounter", {
+    scrollTrigger: {
+      trigger: "#results",
+      start: "top 80%"
+    },
+    innerText: 25, // Target number
+    duration: 2.5,
+    snap: { innerText: 1 }, // Snap to whole numbers during animation
+    ease: "power1.inOut"
+  });
+
+}
+</script>
 </body>
 </html>
