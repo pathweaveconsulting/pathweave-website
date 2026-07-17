@@ -11,10 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500;700&family=Caveat:wght@500&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-/* ===================================================
-   PathWeave — website stylesheet
-   =================================================== */
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -62,44 +58,43 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 }
 
 /* ---------- NAV ---------- */
+/* Updated to light blue background */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(15, 31, 61, 0);
-  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
-  padding: 22px 0;
+  background: rgba(244, 249, 253, 0.98); 
+  border-bottom: 1px solid var(--grid-line);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  padding: 14px 0;
 }
 .site-header.scrolled {
-  background: rgba(15, 31, 61, 0.94);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-  padding: 14px 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 10px 0;
 }
 .nav-inner {
   max-width: var(--max-width); margin: 0 auto; padding: 0 32px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.brand {
-  font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600;
-  color: var(--white); letter-spacing: 0.01em;
-}
-.brand span { color: var(--accent-blue); }
 .main-nav { display: flex; align-items: center; gap: 1.2rem; }
 .nav-link {
   font-family: 'Roboto Mono', monospace; font-size: 0.68rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.85);
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted);
   transition: color 0.2s ease;
 }
-.nav-link:hover { color: var(--accent-blue); }
+.nav-link:hover { color: var(--navy); }
 .nav-cta {
-  background: var(--accent-blue); color: var(--navy) !important;
+  background: var(--navy); color: var(--white) !important;
   padding: 0.6rem 1.1rem; border-radius: 2px;
 }
-.nav-cta:hover { background: var(--white); }
+.nav-cta:hover { background: var(--accent-blue); color: var(--navy) !important; }
 .nav-toggle {
   display: none; flex-direction: column; justify-content: center; gap: 5px;
-  width: 32px; height: 32px; background: none; border: none; cursor: pointer;
+  width: 32px; height: 32px; background: none; border: none; cursor: pointer; z-index: 101;
 }
-.nav-toggle span { display: block; width: 100%; height: 2px; background: var(--white); transition: 0.3s ease; }
+.nav-toggle span { display: block; width: 100%; height: 2px; background: var(--navy); transition: 0.3s ease; }
+.nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- HERO ---------- */
 .hero {
@@ -140,7 +135,8 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 }
 .module-chip { display: flex; flex-direction: column; gap: 0.5rem; }
 .module-chip .mono { font-size: 0.68rem; color: var(--accent-blue); }
-.module-chip span:last-child { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); }
+/* Fixed text-transform to display standard casing properly */
+.module-chip span:last-child { font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; color: var(--white); text-transform: none; }
 
 /* ---------- SECTIONS ---------- */
 .section { padding: 6.5rem 0; background: var(--white); }
@@ -241,6 +237,9 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 .frame { border: 1px solid var(--grid-line); padding: 2.2rem; background: var(--white); display: grid; gap: 2.2rem; }
 .fw-label { color: var(--navy); font-size: 0.78rem; margin-bottom: 0.4rem; display: block; }
 .framework p, .method-item p { margin: 0; }
+
+/* Fixed text-transform to keep OS Names formatted perfectly */
+.os-sublabel { font-size: 1.1rem; color: var(--accent-blue); margin-top: -1rem; margin-bottom: 2rem; display: block; text-transform: none !important; }
 
 .constraint-block {
   background: var(--navy); color: var(--white); padding: 1.8rem 2.4rem;
@@ -423,9 +422,10 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   .offering-list { grid-template-columns: 1fr; gap: 0.6rem; }
   .offering-title { font-size: 1.4rem; }
 
+  /* White background for Mobile Menu to match new branding requirements */
   .main-nav {
     position: fixed; top: 0; right: 0; height: 100vh; width: 78%; max-width: 320px;
-    background: var(--navy); flex-direction: column; align-items: flex-start;
+    background: var(--white); flex-direction: column; align-items: flex-start;
     padding: 100px 32px 32px; gap: 1.8rem;
     transform: translateX(100%); transition: transform 0.3s ease;
     box-shadow: -10px 0 30px rgba(0,0,0,0.2);
@@ -452,16 +452,18 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 <!-- ============ NAV ============ -->
 <header class="site-header" id="siteHeader">
   <div class="nav-inner">
-    <a href="#top" class="brand">Path<span>Weave</span></a>
+    <a href="#top" class="brand" style="display: inline-block;">
+      <img src="logo.png" alt="PathWeave" style="height: 48px; width: auto; object-fit: contain;">
+    </a>
     <nav class="main-nav" id="mainNav">
-      <a href="#top" class="nav-link">Operating System</a>
+      <a href="#top" class="nav-link">Home</a>
       <a href="#thesis" class="nav-link">Scale Readiness Roadmap</a>
       <a href="#method" class="nav-link">PW-3 Framework</a>
       <a href="#modules" class="nav-link">Modules</a>
       <a href="#approach" class="nav-link">PW-Approach</a>
       <a href="#testimonials" class="nav-link">Testimonials</a>
       <a href="#founders" class="nav-link">Founders</a>
-      <a href="#contact" class="nav-link nav-cta">Contact</a>
+      <a href="#contact" class="nav-link nav-cta">Start the Conversation</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -488,22 +490,21 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
     <p class="sub-tagline">Integrating HR Systems &amp; Operations, Business Systems, and Data &amp; AI Enablement into one operating architecture built for scale.</p>
 
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary magnetic-btn">Request an Evaluation</a>
-      <a href="#modules" class="btn btn-ghost">See the Modules ↓</a>
+      <a href="#modules" class="btn btn-ghost">Explore OS Modules ↓</a>
     </div>
 
     <div class="module-strip">
       <div class="module-chip">
         <span class="mono">MODULE 01</span>
-        <span>HR Systems &amp; Operations</span>
+        <span>PeopleOS&trade;</span>
       </div>
       <div class="module-chip">
         <span class="mono">MODULE 02</span>
-        <span>Business Systems</span>
+        <span>ScaleOS&trade;</span>
       </div>
       <div class="module-chip">
         <span class="mono">MODULE 03</span>
-        <span>Data &amp; AI Enablement</span>
+        <span>TechOS&trade;</span>
       </div>
     </div>
   </div>
@@ -657,6 +658,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   <div class="container reveal module-block" id="hr-systems">
     <div class="section-label">Module 01</div>
     <h2>HR Systems &amp; Operations.</h2>
+    <span class="mono os-sublabel">Powered by PeopleOS&trade;</span>
 
     <div class="module-image-wrapper">
       <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="HR and collaborative office environment" loading="lazy">
@@ -751,6 +753,31 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
       </div>
     </div>
 
+    <!-- NEW UNBOXED PEOPLEOS BLUEPRINT INTEGRATION -->
+    <div style="margin-top: 4rem; margin-bottom: 3rem; padding-top: 3rem; border-top: 1px solid var(--grid-line);">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--navy); margin-bottom: 1rem;">PeopleOSBlueprint&trade;</h3>
+      <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.8rem; max-width: 850px;">
+        A structured diagnostic for businesses where people growth is outpacing people systems. It reveals where HR, compliance, manager capability, and employee lifecycle design are beginning to crack under scale.
+      </p>
+      
+      <p style="font-weight: 600; color: var(--navy); font-size: 1.05rem; margin-bottom: 1rem;">Inside the blueprint, you'll uncover:</p>
+      <ul style="list-style: none; padding: 0; margin-bottom: 2.5rem;">
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          Where your people operations are still founder-dependent.
+        </li>
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          Which HR, compliance, and manager gaps are quietly creating risk.
+        </li>
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          What must be fixed first to build a dependable people backbone.
+        </li>
+      </ul>
+      <a href="#contact" class="btn btn-primary magnetic-btn">Request the blueprint overview</a>
+    </div>
+
     <!-- Outcome Block -->
     <div class="constraint-block">
       <span class="mono">The Outcome</span>
@@ -762,6 +789,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   <div class="container reveal module-block" id="business-systems">
     <div class="section-label">Module 02</div>
     <h2>Business Systems.</h2>
+    <span class="mono os-sublabel">Powered by ScaleOS&trade;</span>
 
     <div class="module-image-wrapper">
       <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Business strategy and architecture" loading="lazy">
@@ -844,6 +872,31 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
       </div>
     </div>
 
+    <!-- NEW UNBOXED SCALEOS BLUEPRINT INTEGRATION -->
+    <div style="margin-top: 4rem; margin-bottom: 3rem; padding-top: 3rem; border-top: 1px solid var(--grid-line);">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--navy); margin-bottom: 1rem;">ScaleOSBlueprint&trade;</h3>
+      <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.8rem; max-width: 850px;">
+        A business systems diagnostic for companies facing growth friction, execution drag, or revenue inconsistency. It surfaces where strategy, sales discipline, workflows, and cross-functional operating rhythms are breaking down.
+      </p>
+      
+      <p style="font-weight: 600; color: var(--navy); font-size: 1.05rem; margin-bottom: 1rem;">Inside the blueprint, you'll uncover:</p>
+      <ul style="list-style: none; padding: 0; margin-bottom: 2.5rem;">
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          Where growth is slowing because execution is not systemized.
+        </li>
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          Which workflow and handoff gaps are hurting speed and predictability.
+        </li>
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          What needs to be rebuilt to create a sharper engine for scale.
+        </li>
+      </ul>
+      <a href="#contact" class="btn btn-primary magnetic-btn">Request the blueprint overview</a>
+    </div>
+
     <!-- Outcome Block -->
     <div class="constraint-block">
       <span class="mono">The Outcome</span>
@@ -855,6 +908,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   <div class="container reveal module-block" id="data-ai">
     <div class="section-label">Module 03</div>
     <h2>Data &amp; AI Enablement.</h2>
+    <span class="mono os-sublabel">Powered by TechOS&trade;</span>
 
     <div class="module-image-wrapper">
       <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Data, analytics, and AI enablement screens" loading="lazy">
@@ -928,6 +982,31 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
           <li>Decision support for hiring, sales, finance, or operations</li>
         </ul>
       </div>
+    </div>
+
+    <!-- NEW UNBOXED TECHOS BLUEPRINT INTEGRATION -->
+    <div style="margin-top: 4rem; margin-bottom: 3rem; padding-top: 3rem; border-top: 1px solid var(--grid-line);">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--navy); margin-bottom: 1rem;">TechOSBlueprint&trade;</h3>
+      <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.8rem; max-width: 850px;">
+        A technology and data diagnostic for companies running on fragmented tools, manual reporting, and weak visibility. It identifies where your tech stack, dashboards, automation, and AI readiness are falling short of what scale now demands.
+      </p>
+      
+      <p style="font-weight: 600; color: var(--navy); font-size: 1.05rem; margin-bottom: 1rem;">Inside the blueprint, you'll uncover:</p>
+      <ul style="list-style: none; padding: 0; margin-bottom: 2.5rem;">
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          Where your current systems are creating visibility gaps.
+        </li>
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          Which tools, data flows, and reports are limiting decision speed.
+        </li>
+        <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.98rem; color: var(--text-main);">
+          <span style="position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: bold;">&bull;</span>
+          What technical layer needs to be built for real-time execution clarity.
+        </li>
+      </ul>
+      <a href="#contact" class="btn btn-primary magnetic-btn">Request the blueprint overview</a>
     </div>
 
     <!-- Outcome Block -->
@@ -1086,6 +1165,11 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 </main>
 
 <footer class="site-footer">
+  <div style="width: 100%; margin-bottom: 1rem;">
+    <a href="#top">
+      <img src="logo.png" alt="PathWeave Logo" style="height: 60px; width: auto; object-fit: contain;">
+    </a>
+  </div>
   <span class="footer-tagline">Weaving the Operational Architecture for India&rsquo;s Most Ambitious Organisations.</span>
   <span class="mono">Offices: Hyderabad &middot; Nagpur &middot; Bhopal &middot; Delhi NCR</span>
   <span class="mono footer-copy">&copy; <span id="year"></span> PathWeave. All rights reserved.</span>
