@@ -4,17 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PathWeave &mdash; Weaving the Operational Architecture</title>
-<meta name="description" content="PathWeave is a management consulting and advisory firm helping growing organizations build the systems they need to scale across people (PeopleOS™), operations (ScaleOS™), and technology (TechOS™).">
+<meta name="description" content="PathWeave is the operational architecture that enables ambitious organisations to scale with clarity, discipline, and intelligent systems &mdash; across HR Systems &amp; Operations, Business Systems, and Data &amp; AI Enablement.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500;700&family=Caveat:wght@500&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-/* ===================================================
-   PathWeave — website stylesheet
-   =================================================== */
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -62,10 +58,12 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 }
 
 /* ---------- NAV ---------- */
+/* Updated to light blue background */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: var(--ice-blue); 
+  background: rgba(244, 249, 253, 0.98); 
   border-bottom: 1px solid var(--grid-line);
+  backdrop-filter: blur(8px);
   transition: all 0.3s ease;
   padding: 14px 0;
 }
@@ -77,14 +75,10 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   max-width: var(--max-width); margin: 0 auto; padding: 0 32px;
   display: flex; align-items: center; justify-content: space-between;
 }
-.header-logo {
-  height: 90px; width: auto; object-fit: contain; display: block;
-}
-
-.main-nav { display: flex; align-items: center; gap: 2rem; }
+.main-nav { display: flex; align-items: center; gap: 1.2rem; }
 .nav-link {
-  font-family: 'Roboto Mono', monospace; font-size: 0.75rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+  font-family: 'Roboto Mono', monospace; font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted);
   transition: color 0.2s ease;
 }
 .nav-link:hover { color: var(--navy); }
@@ -107,7 +101,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   position: relative; min-height: 100vh;
   background: var(--navy);
   display: flex; align-items: center;
-  padding: 140px 0 80px; /* added top padding to clear the solid header */
+  padding: 90px 0 80px;
   overflow: hidden;
 }
 .diamond-bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
@@ -141,8 +135,8 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 }
 .module-chip { display: flex; flex-direction: column; gap: 0.5rem; }
 .module-chip .mono { font-size: 0.68rem; color: var(--accent-blue); }
-/* Ensures standard casing for OS names */
-.module-chip span:last-child { font-weight: 600; font-size: 0.95rem; text-transform: none; letter-spacing: 0.02em; color: var(--white); }
+/* Fixed text-transform to display standard casing properly */
+.module-chip span:last-child { font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; color: var(--white); text-transform: none; }
 
 /* ---------- SECTIONS ---------- */
 .section { padding: 6.5rem 0; background: var(--white); }
@@ -177,16 +171,6 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   box-shadow: 0 10px 30px rgba(15,31,61,0.06);
   display: block;
 }
-
-.architect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-.architect-card { border-top: 1px solid var(--grid-line); padding-top: 1.6rem; cursor: pointer; }
-.architect-card .role { font-size: 0.72rem; color: var(--accent-blue); margin-bottom: 1rem; display: block; }
-.founder-img { 
-  width: 88px; height: 88px; border-radius: 4px; object-fit: cover; margin-bottom: 1.2rem; 
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.architect-card:hover .founder-img { transform: scale(1.08); }
-.signature { font-family: 'Caveat', cursive; font-size: 2.1rem; color: var(--navy); opacity: 0.85; margin-top: 0.5rem; transform: rotate(-3deg); display: inline-block; }
 
 /* ---------- scale readiness roadmap (Desktop GSAP Scrollytelling overrides below) ---------- */
 .roadmap-rows { display: flex; flex-direction: column; gap: 1.4rem; }
@@ -254,8 +238,8 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 .fw-label { color: var(--navy); font-size: 0.78rem; margin-bottom: 0.4rem; display: block; }
 .framework p, .method-item p { margin: 0; }
 
-/* Ensures standard casing for OS names in subheadings */
-.os-sublabel { font-size: 1.1rem; color: var(--accent-blue); font-family: 'Inter', sans-serif; font-weight: 500; margin-top: -1rem; margin-bottom: 2rem; display: block; text-transform: none; }
+/* Fixed text-transform to keep OS Names formatted perfectly */
+.os-sublabel { font-size: 1.1rem; color: var(--accent-blue); margin-top: -1rem; margin-bottom: 2rem; display: block; text-transform: none !important; }
 
 .constraint-block {
   background: var(--navy); color: var(--white); padding: 1.8rem 2.4rem;
@@ -322,7 +306,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   padding-left: 1.2rem;
   font-size: 0.82rem; 
   color: var(--navy);
-  font-weight: 400; 
+  font-weight: 400;
   text-transform: uppercase; 
   letter-spacing: 0.04em;
   border-bottom: 1px solid rgba(15, 31, 61, 0.06);
@@ -378,6 +362,17 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 .cred-list { display: grid; gap: 1rem; }
 .cred-item { color: var(--navy); font-size: 0.85rem; }
 
+/* ---------- founders ---------- */
+.architect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.architect-card { border-top: 1px solid var(--grid-line); padding-top: 1.6rem; cursor: pointer; }
+.architect-card .role { font-size: 0.72rem; color: var(--accent-blue); margin-bottom: 1rem; display: block; }
+.founder-img { 
+  width: 88px; height: 88px; border-radius: 4px; object-fit: cover; margin-bottom: 1.2rem; 
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.architect-card:hover .founder-img { transform: scale(1.08); }
+.signature { font-family: 'Caveat', cursive; font-size: 2.1rem; color: var(--navy); opacity: 0.85; margin-top: 0.5rem; transform: rotate(-3deg); display: inline-block; }
+
 /* ---------- testimonials ---------- */
 .testi-grid { display: grid; gap: 2rem; grid-template-columns: 1fr 1fr; }
 .testi-block { background: var(--white); padding: 2.4rem; border-left: 3px solid var(--accent-blue); box-shadow: 0 4px 20px rgba(15,31,61,0.05); }
@@ -400,14 +395,15 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 
 /* ---------- footer ---------- */
 .site-footer {
-  background: var(--ice-blue); 
-  padding: 4rem 32px 2.2rem;
-  display: flex; flex-direction: column; gap: 1rem; color: var(--text-main);
+  background: var(--navy); padding: 2.2rem 32px; display: flex; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem; color: rgba(255,255,255,0.55);
 }
-.footer-logo-img { height: 90px; width: auto; margin-bottom: 1rem; }
-.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--grid-line); padding-top: 1.5rem; margin-top: 2rem;}
 .site-footer .mono { font-size: 0.72rem; }
-.footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--navy); max-width: 500px;}
+.footer-copy { color: rgba(255,255,255,0.35); }
+.footer-tagline {
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.92rem;
+  color: rgba(255,255,255,0.5); width: 100%; margin-bottom: 0.4rem;
+}
 
 /* =========== RESPONSIVE =========== */
 @media (max-width: 860px) {
@@ -426,6 +422,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   .offering-list { grid-template-columns: 1fr; gap: 0.6rem; }
   .offering-title { font-size: 1.4rem; }
 
+  /* White background for Mobile Menu to match new branding requirements */
   .main-nav {
     position: fixed; top: 0; right: 0; height: 100vh; width: 78%; max-width: 320px;
     background: var(--white); flex-direction: column; align-items: flex-start;
@@ -435,12 +432,11 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   }
   .main-nav.open { transform: translateX(0); }
   .nav-toggle { display: flex; }
-  .nav-toggle span { background: var(--navy); }
   .nav-cta { align-self: flex-start; }
 }
 
 @media (max-width: 500px) {
-  .hero { padding-top: 140px; }
+  .hero { padding-top: 120px; }
   h1 { font-size: 2.2rem; }
   .lede { font-size: 1.2rem; }
   .section { padding: 4rem 0; }
@@ -448,7 +444,6 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   .cta-copy { max-width: 100%; }
   .focus-grid { grid-template-columns: 1fr; }
   .module-offerings { padding: 2rem 1.5rem; }
-  .contact-grid { flex-direction: column; gap: 1.5rem;}
 }
 </style>
 </head>
@@ -457,8 +452,8 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 <!-- ============ NAV ============ -->
 <header class="site-header" id="siteHeader">
   <div class="nav-inner">
-    <a href="#top" class="brand">
-      <img src="logo.png" alt="PathWeave" class="header-logo" onerror="this.onerror=null; this.src='https://placehold.co/300x90/F4F9FD/0F1F3D?text=PathWeave'">
+    <a href="#top" class="brand" style="display: inline-block;">
+      <img src="logo.png" alt="PathWeave" style="height: 48px; width: auto; object-fit: contain;" onerror="this.onerror=null; this.src='https://placehold.co/300x100/F4F9FD/0F1F3D?text=PathWeave+Logo'">
     </a>
     <nav class="main-nav" id="mainNav">
       <a href="#top" class="nav-link">Home</a>
@@ -663,7 +658,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   <div class="container reveal module-block" id="hr-systems">
     <div class="section-label">Module 01</div>
     <h2>HR Systems &amp; Operations.</h2>
-    <span class="os-sublabel">Powered by PeopleOS&trade;</span>
+    <span class="mono os-sublabel">Powered by PeopleOS&trade;</span>
 
     <div class="module-image-wrapper">
       <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="HR and collaborative office environment" loading="lazy">
@@ -758,6 +753,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
       </div>
     </div>
 
+    <!-- NEW UNBOXED PEOPLEOS BLUEPRINT INTEGRATION -->
     <div style="margin-top: 4rem; margin-bottom: 3rem; padding-top: 3rem; border-top: 1px solid var(--grid-line);">
       <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--navy); margin-bottom: 1rem;">PeopleOSBlueprint&trade;</h3>
       <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.8rem; max-width: 850px;">
@@ -793,7 +789,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   <div class="container reveal module-block" id="business-systems">
     <div class="section-label">Module 02</div>
     <h2>Business Systems.</h2>
-    <span class="os-sublabel">Powered by ScaleOS&trade;</span>
+    <span class="mono os-sublabel">Powered by ScaleOS&trade;</span>
 
     <div class="module-image-wrapper">
       <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Business strategy and architecture" loading="lazy">
@@ -876,6 +872,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
       </div>
     </div>
 
+    <!-- NEW UNBOXED SCALEOS BLUEPRINT INTEGRATION -->
     <div style="margin-top: 4rem; margin-bottom: 3rem; padding-top: 3rem; border-top: 1px solid var(--grid-line);">
       <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--navy); margin-bottom: 1rem;">ScaleOSBlueprint&trade;</h3>
       <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.8rem; max-width: 850px;">
@@ -911,7 +908,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   <div class="container reveal module-block" id="data-ai">
     <div class="section-label">Module 03</div>
     <h2>Data &amp; AI Enablement.</h2>
-    <span class="os-sublabel">Powered by TechOS&trade;</span>
+    <span class="mono os-sublabel">Powered by TechOS&trade;</span>
 
     <div class="module-image-wrapper">
       <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Data, analytics, and AI enablement screens" loading="lazy">
@@ -987,6 +984,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
       </div>
     </div>
 
+    <!-- NEW UNBOXED TECHOS BLUEPRINT INTEGRATION -->
     <div style="margin-top: 4rem; margin-bottom: 3rem; padding-top: 3rem; border-top: 1px solid var(--grid-line);">
       <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--navy); margin-bottom: 1rem;">TechOSBlueprint&trade;</h3>
       <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-main); margin-bottom: 1.8rem; max-width: 850px;">
@@ -1022,7 +1020,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 <!-- ============ 6. APPROACH & CREDENTIALS ============ -->
 <section class="section" id="approach">
   <div class="container reveal">
-    <div class="section-label">PW-Approach</div>
+    <div class="section-label">The PathWeave Approach</div>
     
     <img src="assets/pathweave-approach.png" alt="The PathWeave Approach" class="infographic">
 
@@ -1108,14 +1106,14 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
     <div class="section-label">The Chief Architects</div>
     <div class="architect-grid">
       <div class="architect-card">
-        <img src="assets/rennu-sharma.jpeg" alt="Rennu Sharma" class="founder-img" onerror="this.onerror=null; this.src='https://placehold.co/300x300/F4F9FD/0F1F3D?text=RS'">
+        <img src="assets/rennu-sharma.jpeg" alt="Rennu Sharma" class="founder-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Rennu+Sharma&background=F4F9FD&color=0F1F3D&bold=true'">
         <h3>Rennu Sharma</h3>
         <span class="mono role">Human Capital &amp; Culture Architecture</span>
         <p>Decades of transformation experience aligning people with profit. Specialist in digital HR adoption, leadership engineering, and compliance.</p>
         <div class="signature">Rennu Sharma</div>
       </div>
       <div class="architect-card">
-        <img src="assets/srrinivas-sharrma.jpeg" alt="Srrinivas Sharrma" class="founder-img" onerror="this.onerror=null; this.src='https://placehold.co/300x300/F4F9FD/0F1F3D?text=SS'">
+        <img src="assets/srrinivas-sharrma.jpeg" alt="Srrinivas Sharrma" class="founder-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Srrinivas+Sharrma&background=F4F9FD&color=0F1F3D&bold=true'">
         <h3>Srrinivas Sharrma</h3>
         <span class="mono role">Business Excellence Lead</span>
         <p>18+ years architecting revenue and operational synergy. MBA (SCMHRD). Specialist in supply chain resilience and GTM expansion.</p>
@@ -1167,20 +1165,17 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 </main>
 
 <footer class="site-footer">
-  <div class="container" style="padding: 0;">
+  <div style="width: 100%; margin-bottom: 1rem;">
     <a href="#top">
-      <img src="logo.png" alt="PathWeave" class="footer-logo-img" onerror="this.onerror=null; this.src='https://placehold.co/300x90/F4F9FD/0F1F3D?text=PathWeave'">
+      <img src="logo.png" alt="PathWeave Logo" style="height: 60px; width: auto; object-fit: contain;" onerror="this.onerror=null; this.src='https://placehold.co/300x100/F4F9FD/0F1F3D?text=PathWeave+Logo'">
     </a>
-    
-    <p class="footer-tagline">Weaving the Operational Architecture for India&rsquo;s Most Ambitious Organisations.</p>
-    
-    <div class="footer-bottom">
-      <span class="mono">Offices: Hyderabad &middot; Nagpur &middot; Bhopal &middot; Delhi NCR</span>
-      <span class="mono footer-copy">&copy; <span id="year"></span> PathWeave. All rights reserved.</span>
-    </div>
   </div>
+  <span class="footer-tagline">Weaving the Operational Architecture for India&rsquo;s Most Ambitious Organisations.</span>
+  <span class="mono">Offices: Hyderabad &middot; Nagpur &middot; Bhopal &middot; Delhi NCR</span>
+  <span class="mono footer-copy">&copy; <span id="year"></span> PathWeave. All rights reserved.</span>
 </footer>
 
+<!-- GSAP and ScrollTrigger -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
