@@ -25,7 +25,7 @@
   --text-main: #2A2E35;
   --muted: #5A6070;
   --grid-line: rgba(15, 31, 61, 0.12);
-  --max-width: 1000px; /* Reduced by ~20% to bring menu items closer together */
+  --max-width: 1080px;
 }
 
 html { scroll-behavior: smooth; }
@@ -67,31 +67,30 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   background: var(--ice-blue); 
   border-bottom: 1px solid var(--grid-line);
   transition: all 0.3s ease;
-  padding: 2px 0;}
+  padding: 14px 0;
+}
 .site-header.scrolled {
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 0px 0;
+  padding: 10px 0;
 }
 .nav-inner {
   max-width: var(--max-width); margin: 0 auto; padding: 0 32px;
   display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: nowrap; /* Strictly forces a single line container */
 }
 .header-logo {
-  height: 72px; width: auto; object-fit: contain; display: block;}
+  height: 90px; width: auto; object-fit: contain; display: block;
+}
 
-.main-nav { display: flex; align-items: center; gap: 1.1rem; flex-wrap: nowrap; } /* Reduced gap to fit narrower container */
+.main-nav { display: flex; align-items: center; gap: 2rem; }
 .nav-link {
   font-family: 'Roboto Mono', monospace; font-size: 0.75rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
   transition: color 0.2s ease;
-  white-space: nowrap; /* Strictly prevents text from wrapping to 2 lines */
 }
 .nav-link:hover { color: var(--navy); }
 .nav-cta {
   background: var(--navy); color: var(--white) !important;
   padding: 0.6rem 1.1rem; border-radius: 2px;
-  white-space: nowrap; /* Strictly prevents button text from wrapping */
 }
 .nav-cta:hover { background: var(--accent-blue); color: var(--navy) !important; }
 .nav-toggle {
@@ -108,7 +107,8 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   position: relative; min-height: 100vh;
   background: var(--navy);
   display: flex; align-items: center;
-  padding: 100px 0 80px;  overflow: hidden;
+  padding: 140px 0 80px; /* added top padding to clear the solid header */
+  overflow: hidden;
 }
 .diamond-bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
 .hero-inner { position: relative; z-index: 2; max-width: var(--max-width); margin: 0 auto; padding: 0 32px; width: 100%; }
@@ -136,13 +136,13 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 .btn-ghost:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
 
 .module-strip {
-  margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.12);
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
 }
 .module-chip { display: flex; flex-direction: column; gap: 0.5rem; }
 .module-chip .mono { font-size: 0.68rem; color: var(--accent-blue); }
-/* Standard casing for OS names is respected because we removed text-transform */
-.module-chip span:last-child { font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; color: var(--white); }
+/* Ensures standard casing for OS names */
+.module-chip span:last-child { font-weight: 600; font-size: 0.95rem; text-transform: none; letter-spacing: 0.02em; color: var(--white); }
 
 /* ---------- SECTIONS ---------- */
 .section { padding: 6.5rem 0; background: var(--white); }
@@ -262,7 +262,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   margin-top: 3.5rem; border-left: 4px solid var(--accent-blue);
   box-shadow: 0 10px 30px rgba(15,31,61,0.1);
 }
-.constraint-block .mono { color: var(--accent-blue); margin-bottom: 0.6rem; display: block; font-size: 0.75rem; letter-spacing: 0.12em; font-weight: 700; text-transform: uppercase; }
+.constraint-block .mono { color: var(--accent-blue); margin-bottom: 0.6rem; display: block; font-size: 0.75rem; letter-spacing: 0.12em; font-weight: 700; }
 .constraint-block p { margin: 0; font-style: italic; font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 500; color: var(--white); }
 
 /* ---------- MODULE OFFERINGS (Detailed Sub-pages) ---------- */
@@ -365,7 +365,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   background: var(--navy); padding: 1.6rem 2.2rem; display: flex; flex-direction: column;
   gap: 0.4rem; border-left: 4px solid var(--accent-blue); margin-bottom: 4rem;
 }
-.approach-banner-title { color: var(--accent-blue); font-size: 0.78rem; text-transform: uppercase; }
+.approach-banner-title { color: var(--accent-blue); font-size: 0.78rem; }
 .approach-banner p { color: var(--white); margin: 0; font-size: 0.98rem; font-weight: 300; }
 
 /* ---------- TRACK RECORD GRID ---------- */
@@ -389,7 +389,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 .cta-section { position: relative; background: var(--navy); overflow: hidden; }
 .cta-container { position: relative; z-index: 2; }
 .cta-block { background: var(--white); padding: 3.5rem; border-left: 6px solid var(--accent-blue); box-shadow: 0 20px 50px rgba(0,0,0,0.25); }
-.cta-eyebrow { color: var(--accent-blue); font-size: 0.82rem; margin-bottom: 1.1rem; display: block; text-transform: uppercase; }
+.cta-eyebrow { color: var(--accent-blue); font-size: 0.82rem; margin-bottom: 1.1rem; display: block; }
 .cta-h2 { font-size: 2.8rem; text-transform: uppercase; margin-bottom: 1.4rem; }
 .cta-copy { max-width: 90%; margin-bottom: 0; }
 .contact-grid { display: flex; gap: 3rem; margin-top: 2.2rem; border-top: 1px solid var(--grid-line); padding-top: 1.4rem; flex-wrap: wrap; }
@@ -406,11 +406,11 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 }
 .footer-logo-img { height: 90px; width: auto; margin-bottom: 1rem; }
 .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--grid-line); padding-top: 1.5rem; margin-top: 2rem;}
-.site-footer .mono { font-size: 0.72rem; text-transform: uppercase; }
+.site-footer .mono { font-size: 0.72rem; }
 .footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--navy); max-width: 500px;}
 
 /* =========== RESPONSIVE =========== */
-@media (max-width: 1050px) { /* Increased breakpoint to catch cramped nav earlier */
+@media (max-width: 860px) {
   h1 { font-size: 2.8rem; }
   h2 { font-size: 2rem; }
   .quote-h2 { font-size: 2.1rem; }
@@ -426,7 +426,6 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
   .offering-list { grid-template-columns: 1fr; gap: 0.6rem; }
   .offering-title { font-size: 1.4rem; }
 
-  /* Mobile Menu */
   .main-nav {
     position: fixed; top: 0; right: 0; height: 100vh; width: 78%; max-width: 320px;
     background: var(--white); flex-direction: column; align-items: flex-start;
@@ -441,7 +440,7 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
 }
 
 @media (max-width: 500px) {
-  .hero { padding-top: 100px; }
+  .hero { padding-top: 140px; }
   h1 { font-size: 2.2rem; }
   .lede { font-size: 1.2rem; }
   .section { padding: 4rem 0; }
@@ -463,10 +462,10 @@ p { font-size: 1.05rem; line-height: 1.7; font-weight: 300; color: var(--text-ma
     </a>
     <nav class="main-nav" id="mainNav">
       <a href="#top" class="nav-link">Home</a>
-      <a href="#thesis" class="nav-link">Thesis</a>
-      <a href="#method" class="nav-link">Framework</a>
+      <a href="#thesis" class="nav-link">Scale Readiness Roadmap</a>
+      <a href="#method" class="nav-link">PW-3 Framework</a>
       <a href="#modules" class="nav-link">Modules</a>
-      <a href="#approach" class="nav-link">Approach</a>
+      <a href="#approach" class="nav-link">PW-Approach</a>
       <a href="#testimonials" class="nav-link">Testimonials</a>
       <a href="#founders" class="nav-link">Founders</a>
       <a href="#contact" class="nav-link nav-cta">Start the Conversation</a>
