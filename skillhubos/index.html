@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill HubOS | PathWeave</title>
+<meta name="description" content="PathWeave Skill HubOS connects students, academia, industry, government, employers and educators to build genuine employability.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0b2238;
+  --navy-dark:#071a2b;
+  --blue:#2455d6;
+  --ice:#f4f8fd;
+  --white:#ffffff;
+  --text:#173047;
+  --muted:#5c7187;
+  --line:#d7e1eb;
+  --soft:#edf3f8;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"DM Sans",Arial,sans-serif;
+  color:var(--text);
+  background:var(--white);
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+
+.container{
+  width:92%;
+  max-width:1480px;
+  margin:0 auto;
+}
+
+/* =========================
+   HEADER — LOCKED PATHWEAVE
+   ========================= */
+header{
+  height:110px;
+  background:var(--white);
+  border-bottom:1px solid #edf1f5;
+}
+.nav{
+  width:92%;
+  max-width:1480px;
+  height:110px;
+  margin:0 auto;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  width:92px;
+  height:auto;
+  display:block;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:32px;
+  font-size:17px;
+  color:#0b2238;
+}
+.nav-links a{transition:color .2s ease}
+.nav-links a:hover,
+.nav-links a.active{color:var(--blue)}
+.nav-cta{
+  background:var(--navy);
+  color:var(--white)!important;
+  padding:16px 28px;
+  border-radius:30px;
+  font-weight:700;
+}
+
+/* =========================
+   COMMON TYPE
+   ========================= */
+.eyebrow{
+  color:var(--blue);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+h1,h2,h3{
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:500;
+  color:var(--navy);
+}
+h1{
+  font-size:clamp(52px,5vw,72px);
+  line-height:1.04;
+  letter-spacing:-2px;
+  margin:0;
+}
+h2{
+  font-size:clamp(38px,4vw,50px);
+  line-height:1.08;
+  letter-spacing:-1.2px;
+  margin:0 0 18px;
+}
+h3{
+  font-size:22px;
+  line-height:1.2;
+  margin:0 0 8px;
+}
+p{margin:0}
+
+/* =========================
+   HERO
+   ========================= */
+.hero{
+  background:var(--ice);
+  padding:104px 0 92px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.02fr .98fr;
+  gap:72px;
+  align-items:center;
+}
+.hero-copy{
+  margin-top:24px;
+  max-width:650px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.75;
+}
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 25px;
+  border-radius:30px;
+  border:1px solid var(--navy);
+  font-size:14px;
+  font-weight:700;
+}
+.btn.primary{background:var(--navy);color:var(--white)}
+.btn.secondary{background:var(--white);border-color:#cbd9e6}
+.hero-note{
+  margin-top:16px;
+  color:#6e8193;
+  font-size:13px;
+}
+
+/* =========================
+   HERO ECOSYSTEM VISUAL
+   ========================= */
+.hero-art{
+  min-height:510px;
+  border-radius:20px;
+  background:var(--navy);
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+}
+.hero-art:before,
+.hero-art:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.16);
+  pointer-events:none;
+}
+.hero-art:before{
+  width:520px;height:520px;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+}
+.hero-art:after{
+  width:380px;height:380px;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+}
+.hub-title{
+  position:absolute;
+  top:27px;
+  left:30px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  opacity:.72;
+}
+.hub-core{
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  width:150px;height:150px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--white);
+  color:var(--navy);
+  text-align:center;
+  font-size:13px;
+  line-height:1.35;
+  font-weight:700;
+  letter-spacing:1px;
+  box-shadow:0 0 0 18px rgba(255,255,255,.05);
+  z-index:2;
+}
+.node{
+  position:absolute;
+  z-index:3;
+  padding:9px 13px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.06);
+  border-radius:999px;
+  font-size:12px;
+  white-space:nowrap;
+}
+.n1{top:52px;left:42px}
+.n2{top:52px;right:42px}
+.n3{bottom:58px;left:35px}
+.n4{bottom:58px;right:42px}
+.n5{top:50%;right:22px;transform:translateY(-50%)}
+.n6{top:50%;left:22px;transform:translateY(-50%)}
+
+/* =========================
+   SECTIONS
+   ========================= */
+section{padding:78px 0}
+.section-head{
+  max-width:720px;
+  margin-bottom:40px;
+}
+.section-head p{
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.8;
+}
+.problem{
+  background:var(--white);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.problem-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:70px;
+}
+.problem-statement{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:31px;
+  line-height:1.25;
+  letter-spacing:-.5px;
+  color:var(--navy);
+}
+.problem-statement em{
+  color:var(--blue);
+  font-style:normal;
+}
+.points{display:grid;gap:18px}
+.point{
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:15px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--line);
+}
+.point:last-child{border-bottom:0}
+.point-num{
+  width:30px;height:30px;
+  border-radius:50%;
+  background:var(--soft);
+  display:grid;
+  place-items:center;
+  font-size:12px;
+  font-weight:700;
+  color:var(--blue);
+}
+.point h3{
+  font-family:"DM Sans",Arial,sans-serif;
+  font-size:17px;
+  font-weight:700;
+  color:var(--navy);
+}
+.point p{
+  color:var(--muted);
+  font-size:15px;
+}
+
+/* =========================
+   ECOSYSTEM CARDS
+   ========================= */
+.ecosystem-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:25px;
+  min-height:220px;
+}
+.card-icon{
+  color:var(--blue);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+.card h3{
+  font-size:21px;
+}
+.card p{
+  color:var(--muted);
+  font-size:15px;
+}
+.card ul{
+  padding:0;
+  margin:15px 0 0;
+  list-style:none;
+  color:#526a80;
+  font-size:14px;
+}
+.card li{margin:6px 0}
+.card li:before{
+  content:"→ ";
+  color:var(--blue);
+  font-weight:700;
+}
+
+/* =========================
+   AUDIENCES
+   ========================= */
+.audiences{background:var(--ice)}
+.audience-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.audience{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:23px;
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+}
+.audience-badge{
+  min-width:44px;height:44px;
+  border-radius:50%;
+  background:var(--navy);
+  color:var(--white);
+  display:grid;
+  place-items:center;
+  font-size:13px;
+  font-weight:700;
+}
+.audience h3{
+  font-family:"DM Sans",Arial,sans-serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--navy);
+}
+.audience p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* =========================
+   JOURNEY
+   ========================= */
+.path{background:var(--white)}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+}
+.step{
+  padding:25px 20px;
+  border-right:1px solid var(--line);
+}
+.step:last-child{border-right:0}
+.step-number{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+.step h3{
+  font-family:"DM Sans",Arial,sans-serif;
+  font-size:17px;
+  font-weight:700;
+  color:var(--navy);
+}
+.step p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.65;
+}
+
+/* =========================
+   PARTNERS
+   ========================= */
+.partners{background:var(--ice)}
+.partner-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+.partner-box{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:28px;
+}
+.partner-box h3{
+  font-size:23px;
+}
+.partner-box p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+.partner-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.partner-list div{
+  padding:11px 13px;
+  background:var(--soft);
+  border-radius:10px;
+  font-size:13px;
+  font-weight:600;
+  color:var(--text);
+}
+
+/* =========================
+   CTA
+   ========================= */
+.cta{padding:78px 0}
+.cta-box{
+  background:var(--navy);
+  color:var(--white);
+  border-radius:18px;
+  padding:48px 52px;
+  display:flex;
+  justify-content:space-between;
+  gap:35px;
+  align-items:center;
+}
+.cta-box h2{
+  color:var(--white);
+  font-size:clamp(34px,4vw,48px);
+  margin-bottom:12px;
+}
+.cta-box p{
+  max-width:650px;
+  color:#c6d3df;
+}
+.cta .btn{
+  background:var(--white);
+  color:var(--navy);
+  border-color:var(--white);
+  white-space:nowrap;
+}
+
+/* =========================
+   FOOTER — LOCKED PATHWEAVE
+   ========================= */
+footer{
+  background:var(--navy-dark);
+  color:var(--white);
+  padding:70px 0 30px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr 1fr;
+  gap:50px;
+}
+.footer-logo{
+  width:125px;
+  height:auto;
+  display:block;
+  margin-bottom:25px;
+}
+.footer-description{
+  color:#a9bdd0;
+  max-width:350px;
+  font-size:15px;
+  line-height:1.7;
+}
+.footer-column h4{
+  margin:0 0 24px;
+  font-size:13px;
+  letter-spacing:1px;
+  font-weight:700;
+}
+.footer-column a{
+  display:block;
+  color:#a9bdd0;
+  font-size:15px;
+  margin-bottom:12px;
+}
+.footer-column a:hover{color:var(--white)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);
+  margin-top:55px;
+  padding-top:25px;
+  display:flex;
+  justify-content:space-between;
+  color:#7f98ae;
+  font-size:13px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media(max-width:1100px){
+  .nav{width:92%}
+  .nav-links{gap:18px;font-size:14px}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-art{min-height:360px}
+  .problem-grid,.partner-layout{grid-template-columns:1fr;gap:45px}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .cta-box{display:block}
+  .cta .btn{margin-top:25px}
+}
+@media(max-width:720px){
+  header,.nav{height:82px}
+  .nav-links a:not(.nav-cta){display:none}
+  .logo{width:88px}
+  .nav-cta{padding:12px 18px}
+  .container{width:calc(100% - 34px);max-width:none}
+  .hero{padding:60px 0 70px}
+  h1{font-size:clamp(42px,11vw,58px);letter-spacing:-1.2px}
+  section{padding:65px 0}
+  .ecosystem-grid,.audience-grid{grid-template-columns:1fr}
+  .hero-art{min-height:330px}
+  .node{font-size:10px;padding:8px 10px}
+  .n1{left:16px}.n2{right:16px}
+  .n3{left:12px}.n4{right:12px}
+  .n5{right:5px}.n6{left:5px}
+  .hub-core{width:118px;height:118px}
+  .partner-list{grid-template-columns:1fr}
+  .cta-box{padding:35px 27px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:35px}
+  .footer-grid>div:first-child{grid-column:1/-1}
+  .footer-bottom{display:block}
+  .footer-bottom div+div{margin-top:8px}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-grid>div:first-child{grid-column:auto}
+  .hero-art{min-height:300px}
+  .hub-title{font-size:10px;left:20px}
+}
+</style>
+
+
+
+<style id="pathweave-skillhubos-final-lock">
+/* =========================================================
+   PATHWEAVE GLOBAL LOCK — SKILL HUBOS
+   Shared shell follows the locked How We Work master.
+   Skill HubOS ecosystem artwork retains its own dimensions.
+   ========================================================= */
+.container{
+    width:min(1180px,88%) !important;
+    max-width:none !important;
+}
+
+header{
+    width:100% !important;
+    height:96px !important;
+    background:#fff !important;
+    border-bottom:1px solid #edf1f5 !important;
+    position:sticky !important;
+    top:0 !important;
+    z-index:1000 !important;
+}
+header .nav{
+    width:min(1180px,88%) !important;
+    height:96px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:30px !important;
+}
+header .nav > a:first-child{
+    flex:0 0 auto !important;
+    display:flex !important;
+    align-items:center !important;
+}
+header .nav .logo{
+    width:100px !important;
+    max-width:100px !important;
+    height:auto !important;
+    display:block !important;
+    object-fit:contain !important;
+}
+header .nav-links{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:30px !important;
+    flex:1 1 auto !important;
+    white-space:nowrap !important;
+    font-size:15px !important;
+    color:#0b2942 !important;
+}
+header .nav-links a{
+    display:inline-flex !important;
+    align-items:center !important;
+    white-space:nowrap !important;
+    text-decoration:none !important;
+    color:#0b2942 !important;
+    font-family:"DM Sans",sans-serif !important;
+    font-size:15px !important;
+    line-height:1 !important;
+}
+header .nav-links a:hover,
+header .nav-links a.active{
+    color:#2455d6 !important;
+}
+header .nav-links .nav-cta{
+    flex:0 0 auto !important;
+    padding:14px 25px !important;
+    border-radius:30px !important;
+    background:#0b2942 !important;
+    color:#fff !important;
+    font-weight:600 !important;
+}
+
+/* Shared desktop typography lock */
+.hero{
+    padding:78px 0 !important;
+}
+.hero h1{
+    font-size:clamp(42px,4.15vw,58px) !important;
+    line-height:1.08 !important;
+    letter-spacing:-1.5px !important;
+    margin-bottom:22px !important;
+}
+.hero-copy{
+    font-size:16px !important;
+    line-height:1.75 !important;
+}
+.eyebrow{
+    font-size:13px !important;
+    margin-bottom:18px !important;
+}
+.btn{
+    font-size:14px !important;
+}
+
+/* Keep Skill HubOS's ecosystem visual intact while aligning its card language. */
+.hero-art{
+    border-radius:20px !important;
+}
+
+/* Shared footer lock */
+footer{
+    background:#071a2b !important;
+    color:#fff !important;
+    padding:70px 0 30px !important;
+}
+.footer-grid{
+    display:grid !important;
+    grid-template-columns:1.3fr 1fr 1fr 1fr !important;
+    gap:50px !important;
+}
+.footer-logo{
+    width:125px !important;
+    max-width:125px !important;
+    height:auto !important;
+    display:block !important;
+    filter:brightness(0) invert(1) !important;
+    margin-bottom:25px !important;
+}
+.footer-description{
+    color:#a9bdd0 !important;
+    max-width:350px !important;
+    font-size:15px !important;
+    line-height:1.7 !important;
+}
+.footer-column h4{
+    color:#fff !important;
+    font-family:"DM Sans",sans-serif !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+    letter-spacing:1px !important;
+    margin-bottom:24px !important;
+}
+.footer-column a{
+    display:block !important;
+    color:#a9bdd0 !important;
+    margin-bottom:12px !important;
+    font-size:15px !important;
+    line-height:1.5 !important;
+}
+.footer-column a:hover{color:#fff !important}
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12) !important;
+    margin-top:55px !important;
+    padding-top:25px !important;
+    display:flex !important;
+    justify-content:space-between !important;
+    color:#7f98ae !important;
+    font-size:13px !important;
+}
+
+@media(max-width:1100px){
+    header .nav{width:92% !important;gap:20px !important}
+    header .nav-links{gap:18px !important}
+    header .nav-links a{font-size:15px !important}
+    header .nav-links .nav-cta{padding:14px 22px !important}
+}
+@media(max-width:900px){
+    header .nav{
+        height:auto !important;
+        min-height:82px !important;
+        padding:16px 0 !important;
+        flex-wrap:wrap !important;
+    }
+    header .nav-links{
+        width:100% !important;
+        flex-wrap:wrap !important;
+        justify-content:flex-start !important;
+        gap:16px 22px !important;
+    }
+    .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important}
+}
+@media(max-width:720px){
+    header,header .nav{height:82px !important}
+    header .nav{padding:0 6% !important}
+    header .nav-links a:not(.nav-cta){display:none !important}
+    header .nav-links{width:auto !important;flex-wrap:nowrap !important;justify-content:flex-end !important;gap:0 !important}
+    header .nav .logo{width:88px !important;max-width:88px !important}
+    header .nav-links .nav-cta{padding:12px 18px !important}
+    .footer-grid{grid-template-columns:1fr 1fr !important}
+    .footer-grid>div:first-child{grid-column:1/-1 !important}
+    .footer-bottom{display:block !important}
+    .footer-bottom div+div{margin-top:8px !important}
+}
+@media(max-width:480px){
+    .footer-grid{grid-template-columns:1fr !important}
+    .footer-grid>div:first-child{grid-column:auto !important}
+}
+</style>
+
+<style id="pathweave-global-header-lock-v1">/* =========================================================
+   PATHWEAVE — GLOBAL HEADER LOCK v1 — BUSINESSOS TEST
+   ========================================================= */
+header{
+  width:100% !important;
+  height:96px !important;
+  background:#fff !important;
+  border-bottom:1px solid #edf1f5 !important;
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+}
+header .nav{
+  width:min(1180px,88%) !important;
+  height:96px !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:30px !important;
+}
+header .nav > a:first-child{
+  flex:0 0 auto !important;
+  display:flex !important;
+  align-items:center !important;
+}
+header .nav .logo{
+  width:100px !important;
+  max-width:100px !important;
+  height:auto !important;
+  display:block !important;
+  object-fit:contain !important;
+}
+header .nav-links{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:30px !important;
+  flex:1 1 auto !important;
+  white-space:nowrap !important;
+}
+header .nav-links a{
+  display:inline-flex !important;
+  align-items:center !important;
+  white-space:nowrap !important;
+  text-decoration:none !important;
+  color:#0b2942 !important;
+  font-family:"DM Sans",sans-serif !important;
+  font-size:15px !important;
+  font-weight:500 !important;
+  line-height:1 !important;
+}
+header .nav-links a:hover{
+  color:#0b2942 !important;
+}
+header .nav-links a.active{
+  color:#2455d6 !important;
+  font-weight:500 !important;
+}
+header .nav-links .nav-cta{
+  flex:0 0 auto !important;
+  padding:14px 25px !important;
+  border-radius:30px !important;
+  background:#0b2942 !important;
+  color:#fff !important;
+  font-size:15px !important;
+  font-weight:600 !important;
+}
+header .nav-links .nav-cta:hover{
+  color:#fff !important;
+  background:#0b2942 !important;
+}
+@media(max-width:1100px){
+  header .nav{width:92% !important;gap:20px !important}
+  header .nav-links{gap:18px !important}
+  header .nav-links a{font-size:15px !important}
+  header .nav-links .nav-cta{padding:14px 22px !important}
+}
+@media(max-width:900px){
+  header .nav{
+    height:auto !important;
+    min-height:82px !important;
+    padding:16px 0 !important;
+    flex-wrap:wrap !important;
+  }
+  header .nav-links{
+    width:100% !important;
+    flex-wrap:wrap !important;
+    justify-content:flex-start !important;
+    gap:16px 22px !important;
+  }
+}
+@media(max-width:720px){
+  header,header .nav{height:82px !important}
+  header .nav{padding:0 6% !important}
+  header .nav-links a:not(.nav-cta){display:none !important}
+  header .nav-links{
+    width:auto !important;
+    flex-wrap:nowrap !important;
+    justify-content:flex-end !important;
+    gap:0 !important;
+  }
+  header .nav .logo{width:88px !important;max-width:88px !important}
+  header .nav-links .nav-cta{padding:12px 18px !important}
+}</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="../index.html" aria-label="PathWeave home">
+      <img class="logo" src="../logo.png" alt="PathWeave">
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="../businessos/index.html">BusinessOS</a>
+      <a href="../peopleos/index.html">PeopleOS</a>
+      <a class="active" aria-current="page" href="../skillhubos/index.html">Skill HubOS</a>
+      <a href="../government-advisory/index.html">Government Advisory</a>
+      <a href="../how-we-work/index.html">How We Work</a>
+      <a href="../about/index.html">About</a>
+      <a href="../insights/index.html">Insights</a>
+      <a class="nav-cta" href="../contact/index.html">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">PathWeave Skill HubOS</div>
+        <h1>Bridging the gap between education and employment.</h1>
+        <p class="hero-copy">
+          A collaborative ecosystem bringing students, academia, industry, government and educators together
+          to build people who are not just qualified — but genuinely ready for work.
+        </p>
+
+        <div class="buttons">
+          <a class="btn primary" href="#ecosystem">Explore the ecosystem</a>
+          <a class="btn secondary" href="#partners">Become a partner</a>
+        </div>
+
+        <div class="hero-note">
+          Built around capability, practical exposure and employability — not just certificates.
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Skill HubOS ecosystem visual">
+        <div class="hub-title">One ecosystem. Many contributors.</div>
+        <div class="hub-core">SKILL<br>HUBOS</div>
+        <div class="node n1">Students</div>
+        <div class="node n2">Industry</div>
+        <div class="node n3">Academia</div>
+        <div class="node n4">Government</div>
+        <div class="node n5">Employers</div>
+        <div class="node n6">Tutors &amp; Coaches</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="problem">
+    <div class="container problem-grid">
+      <div>
+        <div class="eyebrow">The problem</div>
+        <div class="problem-statement">
+          A degree can open the door. It does not always prepare someone to
+          <em>perform once inside.</em>
+        </div>
+      </div>
+
+      <div class="points">
+        <div class="point">
+          <div class="point-num">01</div>
+          <div>
+            <h3>Graduates are often qualified, but not workplace-ready.</h3>
+            <p>Academic knowledge and practical workplace capability do not always develop at the same pace.</p>
+          </div>
+        </div>
+
+        <div class="point">
+          <div class="point-num">02</div>
+          <div>
+            <h3>Employers continue to invest heavily after hiring.</h3>
+            <p>Organizations still need to bridge gaps in functional skills, communication, behaviour, tools and execution.</p>
+          </div>
+        </div>
+
+        <div class="point">
+          <div class="point-num">03</div>
+          <div>
+            <h3>The people who can close the gap are often disconnected.</h3>
+            <p>Students, colleges, employers, government programs and experienced practitioners frequently operate in separate systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">The ecosystem</div>
+        <h2>Everyone who shapes employability has a place here.</h2>
+        <p>Skill HubOS is designed as a collaborative network, not simply another training catalogue.</p>
+      </div>
+
+      <div class="ecosystem-grid">
+        <article class="card">
+          <div class="card-icon">01</div>
+          <h3>Students &amp; Freshers</h3>
+          <p>Build capability, confidence and evidence of what they can actually do.</p>
+          <ul>
+            <li>Skill development</li>
+            <li>Projects &amp; exposure</li>
+            <li>Mentoring &amp; career readiness</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">02</div>
+          <h3>Academia</h3>
+          <p>Connect academic learning more closely with evolving workplace requirements.</p>
+          <ul>
+            <li>Employability programs</li>
+            <li>Assessments</li>
+            <li>Industry engagement</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">03</div>
+          <h3>Industry &amp; Employers</h3>
+          <p>Bring real requirements into the talent-development journey.</p>
+          <ul>
+            <li>Projects &amp; mentors</li>
+            <li>Industry assessments</li>
+            <li>Internships &amp; hiring</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">04</div>
+          <h3>Government</h3>
+          <p>Support employment and skilling initiatives with scalable capability-building ecosystems.</p>
+          <ul>
+            <li>Programs &amp; institutions</li>
+            <li>Scale</li>
+            <li>Employment outcomes</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">05</div>
+          <h3>Tutors, Trainers &amp; Coaches</h3>
+          <p>Bring expertise, mentoring and practical knowledge into the ecosystem.</p>
+          <ul>
+            <li>Teach &amp; mentor</li>
+            <li>Assess &amp; coach</li>
+            <li>Build professional reach</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">06</div>
+          <h3>PathWeave Skill HubOS</h3>
+          <p>Connect the participants, create frameworks and enable the journey from learning to employment.</p>
+          <ul>
+            <li>Capability frameworks</li>
+            <li>Coordination</li>
+            <li>Technology &amp; measurement</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="audiences">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Built for participation</div>
+        <h2>Different needs. One connected journey.</h2>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience"><div class="audience-badge">S</div><div><h3>For Students</h3><p>Understand expectations, build relevant skills, practise in realistic settings, receive guidance and demonstrate readiness.</p></div></div>
+        <div class="audience"><div class="audience-badge">A</div><div><h3>For Academia</h3><p>Strengthen employability outcomes through industry-aligned learning, assessments, projects and practitioner engagement.</p></div></div>
+        <div class="audience"><div class="audience-badge">I</div><div><h3>For Industry</h3><p>Shape the talent pipeline, contribute real-world context and access candidates with stronger evidence of capability.</p></div></div>
+        <div class="audience"><div class="audience-badge">G</div><div><h3>For Government</h3><p>Collaborate on scalable skilling and employment initiatives with measurable capability and employment outcomes.</p></div></div>
+        <div class="audience"><div class="audience-badge">C</div><div><h3>For Coaches &amp; Tutors</h3><p>Share expertise, mentor learners and participate in a wider employability ecosystem.</p></div></div>
+        <div class="audience"><div class="audience-badge">E</div><div><h3>For Employers</h3><p>Help define what job-readiness means and build a more productive entry-level talent pipeline.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="path">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">The journey</div>
+        <h2>From potential to productive contribution.</h2>
+        <p>The long-term Skill HubOS model is designed around a continuous journey rather than a one-time course.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step"><div class="step-number">01</div><h3>Understand</h3><p>Know yourself, the role and the expectations.</p></div>
+        <div class="step"><div class="step-number">02</div><h3>Build</h3><p>Develop the skills and behaviours that matter.</p></div>
+        <div class="step"><div class="step-number">03</div><h3>Practise</h3><p>Apply learning through projects and real situations.</p></div>
+        <div class="step"><div class="step-number">04</div><h3>Demonstrate</h3><p>Validate capability through evidence and assessment.</p></div>
+        <div class="step"><div class="step-number">05</div><h3>Connect</h3><p>Move towards internships, employment and workplace success.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="partners" class="partners">
+    <div class="container partner-layout">
+      <div>
+        <div class="eyebrow">Partnerships</div>
+        <div class="section-head">
+          <h2>Skill Hub grows through collaboration.</h2>
+          <p>We are building an ecosystem where organizations and individuals can contribute what they know, what they can provide and the opportunities they can create.</p>
+        </div>
+      </div>
+
+      <div class="partner-box">
+        <h3>We are open to conversations with</h3>
+        <p>Organizations and practitioners who want to help improve the transition from education to employment.</p>
+        <div class="partner-list">
+          <div>Colleges &amp; Universities</div>
+          <div>Employers &amp; Corporates</div>
+          <div>Government Bodies</div>
+          <div>Industry Associations</div>
+          <div>Trainers &amp; Coaches</div>
+          <div>Technology Partners</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect" class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>Have something to contribute?</h2>
+          <p>Whether you are an institution, employer, government organization, educator, coach or student, we would like to explore how you could be part of the Skill HubOS ecosystem.</p>
+        </div>
+        <a class="btn" href="../contact/index.html">Start a conversation</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="../logo.png" alt="PathWeave">
+        <div class="footer-description">
+          Strategy, transformation and growth across business, people, technology and government.
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>OUR PRACTICES</h4>
+        <a href="../businessos/index.html">BusinessOS</a>
+        <a href="../peopleos/index.html">PeopleOS</a>
+        <a href="../skillhubos/index.html">Skill HubOS</a>
+
+        <a href="../government-advisory/index.html">Government Advisory</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>PATHWEAVE</h4>
+        <a href="../how-we-work/index.html">How We Work</a>
+        <a href="../about/index.html">About</a>
+        <a href="../insights/index.html">Insights</a>
+
+      </div>
+
+      <div class="footer-column">
+        <h4>CONNECT</h4>
+        <a href="../contact/index.html">Start a Conversation</a>
+        <a href="https://www.linkedin.com/company/pathweave-consulting" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 PathWeave. All rights reserved.</div>
+      <div>People · Process · Technology</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

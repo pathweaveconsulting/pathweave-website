@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PeopleOS | People & HR Transformation | PathWeave</title>
+
+    <meta
+        name="description"
+        content="PeopleOS by PathWeave helps organisations build stronger people systems through people strategy, organisation design, HR transformation, HR operations, technology, AI and offshoring."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+        --navy-deep: #071a2b;
+            --navy: #0b2238;
+            --navy-dark: #071a2b;
+            --blue: #2455d6;
+            --ice: #f4f8fd;
+            --white: #ffffff;
+            --text: #173047;
+            --muted: #5c7187;
+            --line: #d7e1eb;
+            --card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        .container {
+            width: min(1180px, 88%);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 500;
+            line-height: 1.08;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: var(--ice);
+            padding: 78px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px,4.15vw,58px);
+            max-width: 760px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero-copy {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.75;
+            margin-bottom: 34px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            border: 1px solid var(--line);
+        }
+
+        .button-primary {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--text);
+        }
+
+        .hero-visual {
+            background: var(--navy);
+            border-radius: 28px;
+            padding: 48px;
+            min-height: 410px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .people-system {
+            width: 270px;
+            height: 270px;
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .people-core {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .system-node {
+            position: absolute;
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.28);
+            background: rgba(255,255,255,0.06);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+        }
+
+        .node-one {
+            top: -32px;
+            left: 89px;
+        }
+
+        .node-two {
+            bottom: -32px;
+            left: -12px;
+        }
+
+        .node-three {
+            bottom: -32px;
+            right: -12px;
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            padding: 105px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 90px;
+        }
+
+        .intro h2 {
+            font-size: clamp(38px,4vw,50px);
+        }
+
+        .intro-copy {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .intro-copy p + p {
+            margin-top: 22px;
+        }
+
+        /* =========================
+           CAPABILITIES
+        ========================= */
+
+        .capabilities {
+            background: var(--ice);
+            padding: 105px 0;
+        }
+
+        .section-heading {
+            max-width: 850px;
+            margin-bottom: 55px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(38px,4vw,50px);
+            margin-bottom: 22px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 16px;
+            max-width: 760px;
+        }
+
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .capability {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 34px;
+            min-height: 205px;
+        }
+
+        .capability-number {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 45px;
+        }
+
+        .capability h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .capability p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* =========================
+           OFFSHORING
+        ========================= */
+
+        .offshoring {
+            padding: 105px 0;
+        }
+
+        .offshoring-box {
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 26px;
+            padding: 65px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .offshoring-box .eyebrow {
+            color: #9db9ff;
+        }
+
+        .offshoring-box h2 {
+            font-size: clamp(38px,4vw,50px);
+        }
+
+        .offshoring-copy {
+            color: #c5d4e3;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .offshoring-copy p + p {
+            margin-top: 20px;
+        }
+
+        .offshore-list {
+            margin-top: 28px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .offshore-list div {
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            color: #e4edf6;
+        }
+
+        /* =========================
+           PW-3
+        ========================= */
+
+        .sutra {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 105px 0;
+        }
+
+        .sutra-heading {
+            max-width: 900px;
+            margin-bottom: 55px;
+        }
+
+        .sutra-heading .eyebrow {
+            color: #9db9ff;
+        }
+
+        .sutra-heading h2 {
+            font-size: clamp(38px,4vw,50px);
+        }
+
+        .sutra-heading p {
+            margin-top: 25px;
+            color: #c5d4e3;
+            font-size: 16px;
+            max-width: 760px;
+        }
+
+        .sutra-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .sutra-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 18px;
+            padding: 35px;
+            min-height: 220px;
+        }
+
+        .sutra-card h3 {
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .sutra-card p {
+            color: #c5d4e3;
+            font-size: 15px;
+        }
+
+        /* =========================
+           HOW WE WORK
+        ========================= */
+
+        .how {
+            padding: 105px 0;
+            background: var(--white);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid var(--line);
+            margin-top: 55px;
+        }
+
+        .step {
+            padding: 32px 24px 10px 0;
+            border-right: 1px solid var(--line);
+            margin-right: 24px;
+        }
+
+        .step:last-child {
+            border-right: none;
+            margin-right: 0;
+        }
+
+        .step-number {
+            color: var(--blue);
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 42px;
+        }
+
+        .step h3 {
+            font-family: "DM Sans", sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: var(--navy);
+            color: var(--white);
+            padding: 75px 0;
+        }
+
+        .cta-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .cta h2 {
+            font-size: clamp(38px,4vw,50px);
+            max-width: 800px;
+        }
+
+        .cta .button {
+            background: var(--white);
+            color: var(--navy);
+            border-color: var(--white);
+            white-space: nowrap;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+/* =========================================================
+   PATHWEAVE FOOTER — PEOPLEOS MASTER
+   ========================================================= */
+footer{
+    background:#071a2b !important;
+    color:#fff;
+    padding:70px 0 30px !important;
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr 1fr;
+    gap:50px;
+}
+.footer-logo{
+    width:125px !important;
+    max-width:125px !important;
+    height:auto !important;
+    display:block !important;
+    filter:brightness(0) invert(1);
+    margin-bottom:25px;
+}
+.footer-description{
+    color:#a9bdd0;
+    max-width:350px;
+    font-size:15px !important;
+    line-height:1.7;
+}
+.footer-column h4{
+    color:#fff;
+    font-family:"DM Sans",sans-serif;
+    font-size:13px !important;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:24px;
+}
+.footer-column a{
+    display:block;
+    color:#a9bdd0;
+    margin-bottom:12px;
+    font-size:15px !important;
+    line-height:1.5;
+}
+.footer-column a:hover{
+    color:#fff;
+}
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:55px;
+    padding-top:25px;
+    display:flex;
+    justify-content:space-between;
+    color:#7f98ae;
+    font-size:13px !important;
+}
+@media (max-width:900px){
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:35px;
+    }
+}
+@media (max-width:720px){
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+    .footer-grid > div:first-child{
+        grid-column:1 / -1;
+    }
+    .footer-bottom{
+        display:block;
+    }
+    .footer-bottom div + div{
+        margin-top:8px;
+    }
+}
+@media (max-width:480px){
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+    .footer-grid > div:first-child{
+        grid-column:auto;
+    }
+}
+
+
+
+        @media (max-width: 650px) {
+.nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-copy {
+                font-size: 17px;
+            }
+
+            .hero-visual {
+                padding: 30px;
+            }
+
+            .intro,
+            .capabilities,
+            .offshoring,
+            .sutra,
+            .how {
+                padding: 75px 0;
+            }
+
+            .offshoring-box {
+                padding: 38px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+<style id="pathweave-locked-typography">
+
+/* =========================================================
+   PATHWEAVE TYPOGRAPHY — LOCKED TO SKILL HUBOS
+   ========================================================= */
+.hero{
+    padding:78px 0 !important;
+}
+.hero h1{
+    font-size:clamp(42px,4.15vw,58px) !important;
+    line-height:1.08 !important;
+    letter-spacing:-1.5px;
+    margin-bottom:22px;
+}
+.hero-copy{
+    font-size:16px !important;
+    line-height:1.75 !important;
+}
+.eyebrow{
+    font-size:13px !important;
+    margin-bottom:18px;
+}
+.approach h2,
+.steps-heading h2,
+.practice-header h2,
+.perspective h2,
+.readiness h2,
+.cta h2{
+    font-size:clamp(38px,4vw,50px) !important;
+    line-height:1.08 !important;
+}
+.section-copy,
+.steps-heading p,
+.perspective-copy,
+.readiness-copy{
+    font-size:16px !important;
+    line-height:1.8 !important;
+}
+.step h3{
+    font-size:17px !important;
+}
+.step p{
+    font-size:13px !important;
+}
+.practice-card h3{
+    font-size:22px !important;
+}
+.practice-card p{
+    font-size:15px !important;
+}
+.principle-card h3{
+    font-size:22px !important;
+}
+.principle-card p{
+    font-size:15px !important;
+}
+.button{
+    font-size:14px !important;
+}
+
+</style>
+<style id="pathweave-locked-footer">
+
+/* =========================================================
+   PATHWEAVE FOOTER — PEOPLEOS MASTER
+   ========================================================= */
+footer{
+    background:#071a2b !important;
+    color:#fff;
+    padding:70px 0 30px !important;
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr 1fr;
+    gap:50px;
+}
+.footer-logo{
+    width:125px !important;
+    max-width:125px !important;
+    height:auto !important;
+    display:block !important;
+    filter:brightness(0) invert(1);
+    margin-bottom:25px;
+}
+.footer-description{
+    color:#a9bdd0;
+    max-width:350px;
+    font-size:15px !important;
+    line-height:1.7;
+}
+.footer-column h4{
+    color:#fff;
+    font-family:"DM Sans",sans-serif;
+    font-size:13px !important;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:24px;
+}
+.footer-column a{
+    display:block;
+    color:#a9bdd0;
+    margin-bottom:12px;
+    font-size:15px !important;
+    line-height:1.5;
+}
+.footer-column a:hover{
+    color:#fff;
+}
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:55px;
+    padding-top:25px;
+    display:flex;
+    justify-content:space-between;
+    color:#7f98ae;
+    font-size:13px !important;
+}
+@media (max-width:900px){
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:35px;
+    }
+}
+@media (max-width:720px){
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+    .footer-grid > div:first-child{
+        grid-column:1 / -1;
+    }
+    .footer-bottom{
+        display:block;
+    }
+    .footer-bottom div + div{
+        margin-top:8px;
+    }
+}
+@media (max-width:480px){
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+    .footer-grid > div:first-child{
+        grid-column:auto;
+    }
+}
+
+</style>
+<style id="pathweave-global-header-lock-v1">/* =========================================================
+   PATHWEAVE — GLOBAL HEADER LOCK v1 — BUSINESSOS TEST
+   ========================================================= */
+header{
+  width:100% !important;
+  height:96px !important;
+  background:#fff !important;
+  border-bottom:1px solid #edf1f5 !important;
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+}
+header .nav{
+  width:min(1180px,88%) !important;
+  height:96px !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:30px !important;
+}
+header .nav > a:first-child{
+  flex:0 0 auto !important;
+  display:flex !important;
+  align-items:center !important;
+}
+header .nav .logo{
+  width:100px !important;
+  max-width:100px !important;
+  height:auto !important;
+  display:block !important;
+  object-fit:contain !important;
+}
+header .nav-links{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:30px !important;
+  flex:1 1 auto !important;
+  white-space:nowrap !important;
+}
+header .nav-links a{
+  display:inline-flex !important;
+  align-items:center !important;
+  white-space:nowrap !important;
+  text-decoration:none !important;
+  color:#0b2942 !important;
+  font-family:"DM Sans",sans-serif !important;
+  font-size:15px !important;
+  font-weight:500 !important;
+  line-height:1 !important;
+}
+header .nav-links a:hover{
+  color:#0b2942 !important;
+}
+header .nav-links a.active{
+  color:#2455d6 !important;
+  font-weight:500 !important;
+}
+header .nav-links .nav-cta{
+  flex:0 0 auto !important;
+  padding:14px 25px !important;
+  border-radius:30px !important;
+  background:#0b2942 !important;
+  color:#fff !important;
+  font-size:15px !important;
+  font-weight:600 !important;
+}
+header .nav-links .nav-cta:hover{
+  color:#fff !important;
+  background:#0b2942 !important;
+}
+@media(max-width:1100px){
+  header .nav{width:92% !important;gap:20px !important}
+  header .nav-links{gap:18px !important}
+  header .nav-links a{font-size:15px !important}
+  header .nav-links .nav-cta{padding:14px 22px !important}
+}
+@media(max-width:900px){
+  header .nav{
+    height:auto !important;
+    min-height:82px !important;
+    padding:16px 0 !important;
+    flex-wrap:wrap !important;
+  }
+  header .nav-links{
+    width:100% !important;
+    flex-wrap:wrap !important;
+    justify-content:flex-start !important;
+    gap:16px 22px !important;
+  }
+}
+@media(max-width:720px){
+  header,header .nav{height:82px !important}
+  header .nav{padding:0 6% !important}
+  header .nav-links a:not(.nav-cta){display:none !important}
+  header .nav-links{
+    width:auto !important;
+    flex-wrap:nowrap !important;
+    justify-content:flex-end !important;
+    gap:0 !important;
+  }
+  header .nav .logo{width:88px !important;max-width:88px !important}
+  header .nav-links .nav-cta{padding:12px 18px !important}
+}</style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+  <div class="nav">
+    <a href="../index.html" aria-label="PathWeave home">
+      <img class="logo" src="../logo.png" alt="PathWeave">
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="../businessos/index.html">BusinessOS</a>
+      <a class="active" aria-current="page" href="../peopleos/index.html">PeopleOS</a>
+      <a href="../skillhubos/index.html">Skill HubOS</a>
+      <a href="../government-advisory/index.html">Government Advisory</a>
+      <a href="../how-we-work/index.html">How We Work</a>
+      <a href="../about/index.html">About</a>
+      <a href="../insights/index.html">Insights</a>
+      <a class="nav-cta" href="../contact/index.html">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        PEOPLEOS
+                    </div>
+
+                    <h1>
+                        Building stronger
+                        <span>people systems</span>
+                        for the next stage of growth.
+                    </h1>
+
+                    <p class="hero-copy">
+                        PeopleOS is PathWeave's People & HR Transformation
+                        practice — helping organisations build the people,
+                        structures, processes and technology required to grow
+                        with greater clarity and consistency.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="../contact/index.html"
+                            class="button button-primary"
+                        >
+                            Talk to PathWeave
+                        </a>
+
+                        <a
+                            href="#capabilities"
+                            class="button button-secondary"
+                        >
+                            Explore PeopleOS
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="people-system">
+
+                        <div class="people-core">
+                            PEOPLEOS
+                        </div>
+
+                        <div class="system-node node-one">
+                            PEOPLE
+                        </div>
+
+                        <div class="system-node node-two">
+                            PROCESS
+                        </div>
+
+                        <div class="system-node node-three">
+                            TECHNOLOGY
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRO
+        ========================== -->
+
+        <section class="intro">
+
+            <div class="container intro-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        THE PEOPLEOS APPROACH
+                    </div>
+
+                    <h2>
+                        HR is not just a function.
+                        It is part of the operating system of the business.
+                    </h2>
+
+                </div>
+
+                <div class="intro-copy">
+
+                    <p>
+                        As organisations grow, people decisions increasingly
+                        become business decisions. Structures, roles,
+                        capabilities, processes and HR systems need to evolve
+                        with the organisation.
+                    </p>
+
+                    <p>
+                        PeopleOS brings these dimensions together to help
+                        organisations move from fragmented people practices
+                        to practical systems that leaders and teams can
+                        actually operate.
+                    </p>
+
+                    <p>
+                        The focus is not simply on HR policy or administration.
+                        It is on building the people infrastructure required
+                        for sustainable growth.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CAPABILITIES
+        ========================== -->
+
+        <section class="capabilities" id="capabilities">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        PEOPLEOS CAPABILITIES
+                    </div>
+
+                    <h2>
+                        From people strategy to the systems that make it work.
+                    </h2>
+
+                    <p>
+                        PeopleOS brings together advisory, transformation,
+                        operations and technology across the employee and
+                        organisation lifecycle.
+                    </p>
+
+                </div>
+
+
+                <div class="capability-grid">
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            01
+                        </div>
+
+                        <h3>
+                            People Strategy
+                        </h3>
+
+                        <p>
+                            Aligning people priorities, workforce needs and
+                            organisational capabilities with business strategy
+                            and growth plans.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Organisation Design
+                        </h3>
+
+                        <p>
+                            Designing structures, roles, responsibilities and
+                            decision rights that support the way the business
+                            needs to operate.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Talent & Capability
+                        </h3>
+
+                        <p>
+                            Building the capabilities, leadership systems and
+                            talent practices required for the organisation's
+                            next stage.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            04
+                        </div>
+
+                        <h3>
+                            HR Transformation
+                        </h3>
+
+                        <p>
+                            Re-designing HR operating models, processes,
+                            governance and ways of working to create a more
+                            effective people function.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            05
+                        </div>
+
+                        <h3>
+                            HR Operations
+                        </h3>
+
+                        <p>
+                            Creating practical and scalable systems for
+                            recruitment, onboarding, employee lifecycle,
+                            performance and everyday HR operations.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            06
+                        </div>
+
+                        <h3>
+                            HR Technology & AI
+                        </h3>
+
+                        <p>
+                            Using HR technology, automation, data and AI to
+                            improve visibility, efficiency and decision-making
+                            across the people function.
+                        </p>
+
+                    </article>
+<article class="capability">
+
+    <div class="capability-number">
+        07
+    </div>
+
+    <h3>
+        HR Offshoring & Managed Services
+    </h3>
+
+    <p>
+        Extending people operations through scalable
+        offshore delivery models, supported by defined
+        processes, technology and governance.
+    </p>
+
+</article>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OFFSHORING
+        ========================== -->
+
+        <section class="offshoring">
+
+            <div class="container">
+
+                <div class="offshoring-box">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            PEOPLEOS OFFSHORING
+                        </div>
+
+                        <h2>
+                            Extend your people function without extending
+                            your complexity.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="offshoring-copy">
+
+                        <p>
+                            PeopleOS can support organisations looking to
+                            build or extend HR and people operations through
+                            an offshore delivery model.
+                        </p>
+
+                        <p>
+                            The objective is not simply to move work offshore.
+                            It is to create a dependable operating model with
+                            clear ownership, processes, technology and
+                            governance.
+                        </p>
+
+                        <div class="offshore-list">
+
+                            <div>
+                                HR operations support
+                            </div>
+
+                            <div>
+                                People process management
+                            </div>
+
+                            <div>
+                                Recruitment and talent support
+                            </div>
+
+                            <div>
+                                HR technology and administrative support
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PW-3 SUTRA
+        ========================== -->
+
+        <section class="sutra">
+
+            <div class="container">
+
+                <div class="sutra-heading">
+
+                    <div class="eyebrow">
+                        THE PW-3 SUTRA
+                    </div>
+
+                    <h2>
+                        Sustainable people transformation happens when
+                        People, Process and Technology work together.
+                    </h2>
+
+                    <p>
+                        The PW-3 Sutra is the common thinking framework
+                        connecting PathWeave's practices. Within PeopleOS,
+                        it ensures that HR transformation is grounded in
+                        people realities, operational discipline and
+                        technology enablement.
+                    </p>
+
+                </div>
+
+
+                <div class="sutra-grid">
+
+                    <article class="sutra-card">
+
+                        <h3>
+                            People
+                        </h3>
+
+                        <p>
+                            Leadership, talent, capability and organisational
+                            alignment required to execute and sustain change.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sutra-card">
+
+                        <h3>
+                            Process
+                        </h3>
+
+                        <p>
+                            Operating models, workflows, governance and
+                            accountability that make people systems
+                            repeatable.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sutra-card">
+
+                        <h3>
+                            Technology
+                        </h3>
+
+                        <p>
+                            HR technology, data, automation and AI that create
+                            visibility, efficiency and leverage.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HOW WE WORK
+        ========================== -->
+
+        <section class="how">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        HOW WE WORK
+                    </div>
+
+                    <h2>
+                        From understanding the problem to making the system work.
+                    </h2>
+
+                    <p>
+                        PeopleOS combines advisory thinking with practical
+                        implementation so that transformation becomes
+                        something the organisation can actually operate.
+                    </p>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Diagnose
+                        </h3>
+
+                        <p>
+                            Understand the current people systems,
+                            constraints and opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Design
+                        </h3>
+
+                        <p>
+                            Define the target organisation, operating model
+                            and priorities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Implement
+                        </h3>
+
+                        <p>
+                            Translate recommendations into practical systems
+                            and actions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Enable
+                        </h3>
+
+                        <p>
+                            Equip leaders and teams to operate the new
+                            systems effectively.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Measure
+                        </h3>
+
+                        <p>
+                            Track adoption, effectiveness and organisational
+                            impact.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta">
+
+            <div class="container cta-inner">
+
+                <h2>
+                    Ready to build stronger people systems?
+                </h2>
+
+                <a
+                    href="../contact/index.html"
+                    class="button"
+                >
+                    Start a Conversation
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a href="../index.html">
+                    <img src="../logo.png" alt="PathWeave" class="footer-logo">
+                </a>
+                <p class="footer-description">
+                    Strategy, transformation and growth across business,
+                    people, technology and government.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>OUR PRACTICES</h4>
+                <a href="../businessos/index.html">BusinessOS</a>
+                <a href="index.html">PeopleOS</a>
+                <a href="../skillhubos/index.html">Skill HubOS</a>
+                <a href="../government-advisory/index.html">Government Advisory</a>
+            </div>
+            <div class="footer-column">
+                <h4>PATHWEAVE</h4>
+                <a href="../how-we-work/index.html">How We Work</a>
+                <a href="../about/index.html">About</a>
+                <a href="../insights/index.html">Insights</a>
+            </div>
+            <div class="footer-column">
+                <h4>CONNECT</h4>
+                <a href="../contact/index.html">Start a Conversation</a>
+                <a href="https://www.linkedin.com/company/pathweave-consulting"
+                   target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 PathWeave. All rights reserved.</span>
+            <span>People · Process · Technology</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

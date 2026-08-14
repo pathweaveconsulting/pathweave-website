@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BusinessOS | Business, Management & Technology Transformation | PathWeave</title>
+
+    <meta
+        name="description"
+        content="BusinessOS by PathWeave helps organisations strengthen growth, commercial effectiveness, operating models, technology and execution through integrated business, management and technology transformation."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --navy: #0b2238;
+            --navy-dark: #071a2b;
+            --blue: #2455d6;
+            --ice: #f4f8fd;
+            --white: #ffffff;
+            --text: #173047;
+            --muted: #5c7187;
+            --line: #d7e1eb;
+            --card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================
+           PATHWEAVE GLOBAL HEADER — LOCKED
+        ========================== */
+
+        header {
+            height: 96px;
+            background: var(--white);
+            border-bottom: 1px solid #edf1f5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            height: 96px;
+            padding: 0 11%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: 15px;
+            color: var(--navy);
+        }
+
+        .nav-links a {
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .nav-links a.active {
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        .nav-cta {
+            background: var(--navy);
+            color: var(--white) !important;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           COMMON
+        ========================== */
+
+        .container {
+            width: min(1180px, 88%);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .button-primary {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--line);
+            color: var(--navy);
+            background: var(--white);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            background: var(--ice);
+            padding: 78px 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 75px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(46px, 4.15vw, 60px);
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            margin: 0;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero-copy {
+            color: var(--muted);
+            font-size: 16px;
+            max-width: 680px;
+            margin-top: 28px;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .hero-visual {
+            min-height: 390px;
+            border-radius: 22px;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-system {
+            width: 270px;
+            height: 270px;
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .business-system::before {
+            content: "";
+            position: absolute;
+            inset: 35px;
+            border: 1px solid rgba(255,255,255,0.13);
+            border-radius: 50%;
+        }
+
+        .business-core {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+
+        .system-node {
+            position: absolute;
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.28);
+            background: rgba(255,255,255,0.06);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            line-height: 1.25;
+            z-index: 3;
+        }
+
+        .node-one {
+            top: -32px;
+            left: 89px;
+        }
+
+        .node-two {
+            bottom: -32px;
+            left: -12px;
+        }
+
+        .node-three {
+            bottom: -32px;
+            right: -12px;
+        }
+
+        /* =========================
+           INTRO
+        ========================== */
+
+        .intro {
+            padding: 105px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 90px;
+        }
+
+        .intro h2 {
+            font-size: clamp(40px, 3.8vw, 52px);
+            line-height: 1.08;
+            letter-spacing: -1.2px;
+            margin: 0 0 18px;
+        }
+
+        .intro-copy {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .intro-copy p + p {
+            margin-top: 22px;
+        }
+
+        /* =========================
+           CAPABILITIES
+        ========================== */
+
+        .capabilities {
+            background: var(--ice);
+            padding: 105px 0;
+        }
+
+        .section-heading {
+            max-width: 850px;
+            margin-bottom: 55px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(40px, 3.65vw, 52px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+            color: var(--navy);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 16px;
+            max-width: 760px;
+        }
+
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .capability {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 34px;
+            min-height: 205px;
+        }
+
+        .capability-number {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 45px;
+        }
+
+        .capability h3 {
+            color: var(--navy);
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .capability p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           COMMERCIAL TRANSFORMATION
+        ========================== */
+
+        .commercial {
+            padding: 105px 0;
+        }
+
+        .commercial-box {
+            background: var(--navy);
+            border-radius: 22px;
+            padding: 62px;
+            color: var(--white);
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 75px;
+            align-items: start;
+        }
+
+        .commercial-box .eyebrow {
+            color: #8fb3ff;
+        }
+
+        .commercial-box h2 {
+            color: var(--white);
+            font-size: clamp(38px, 3.55vw, 52px);
+            line-height: 1.08;
+        }
+
+        .commercial-copy {
+            color: #c3d2e2;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .commercial-copy p + p {
+            margin-top: 20px;
+        }
+
+        .commercial-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .commercial-list div {
+            padding: 16px 18px;
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 12px;
+            color: #e2ebf5;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PW-3 SUTRA
+        ========================== */
+
+        .sutra {
+            background: var(--ice);
+            padding: 105px 0;
+        }
+
+        .sutra-heading {
+            max-width: 850px;
+            margin-bottom: 55px;
+        }
+
+        .sutra-heading h2 {
+            font-size: clamp(40px, 3.65vw, 52px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+            color: var(--navy);
+        }
+
+        .sutra-heading p {
+            color: var(--muted);
+            font-size: 16px;
+            max-width: 760px;
+        }
+
+        .sutra-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .sutra-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 36px;
+            min-height: 220px;
+        }
+
+        .sutra-card h3 {
+            font-size: 28px;
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .sutra-card p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           HOW WE WORK
+        ========================== */
+
+        .how {
+            padding: 105px 0;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .step {
+            padding: 32px 24px 35px;
+            border-right: 1px solid var(--line);
+            min-height: 230px;
+        }
+
+        .step:first-child {
+            padding-left: 0;
+        }
+
+        .step:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .step-number {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 55px;
+        }
+
+        .step h3 {
+            font-family: "DM Sans", sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .cta {
+            background: var(--navy);
+            padding: 72px 0;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .cta h2 {
+            color: var(--white);
+            font-size: clamp(38px, 3.55vw, 52px);
+            line-height: 1.08;
+            max-width: 850px;
+        }
+
+        .button-light {
+            background: var(--white);
+            color: var(--navy);
+            flex-shrink: 0;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-logo {
+            width: 125px;
+            height: auto;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        .footer-description {
+            color: #a9bdd0;
+            max-width: 350px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            margin: 0 0 24px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #a9bdd0;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .footer-column a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.12);
+            margin-top: 55px;
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            color: #7f98ae;
+            font-size: 13px;
+        }
+
+/* =========================
+           TYPOGRAPHY LOCK
+        ========================== */
+        .hero h1,
+        .intro h2,
+        .section-heading h2,
+        .commercial-box h2,
+        .sutra-heading h2,
+        .cta h2 {
+            letter-spacing: -0.9px;
+        }
+
+        .hero-copy,
+        .intro-copy,
+        .section-heading p,
+        .commercial-copy,
+        .sutra-heading p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .capability h3 {
+            font-size: 25px;
+            line-height: 1.25;
+        }
+
+        .sutra-card h3 {
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        .step h3 {
+            font-family: "DM Sans", sans-serif;
+            font-size: 19px;
+            line-height: 1.35;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+            .hero-grid,
+            .intro-grid,
+            .commercial-box {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                min-height: 340px;
+            }
+
+            .capability-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sutra-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .step:nth-child(2) {
+                border-right: none;
+            }
+
+            .step:nth-child(3),
+            .step:nth-child(4),
+            .step:nth-child(5) {
+                border-top: 1px solid var(--line);
+            }
+
+            .step:nth-child(5) {
+                grid-column: 1 / -1;
+                border-right: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 720px) {
+            header,
+            .nav {
+                height: 82px;
+            }
+
+            .nav {
+                padding: 0 6%;
+            }
+
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+
+            .logo {
+                width: 88px;
+            }
+
+            .nav-cta {
+                padding: 12px 18px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-copy {
+                font-size: 16px;
+            }
+
+            .hero-visual {
+                padding: 30px;
+            }
+
+            .intro,
+            .capabilities,
+            .commercial,
+            .sutra,
+            .how {
+                padding: 75px 0;
+            }
+
+            .commercial-box {
+                padding: 38px;
+            }
+
+            .commercial-list {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+                padding-bottom: 25px;
+                margin-right: 0;
+            }
+
+            .step:nth-child(3),
+            .step:nth-child(4),
+            .step:nth-child(5) {
+                border-top: none;
+            }
+
+            .step:last-child {
+                border-bottom: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 10px;
+                padding: 18px 0;
+            }
+        }
+    </style>
+<style id="pathweave-businessos-global-header-test">
+/* =========================================================
+   PATHWEAVE — GLOBAL HEADER LOCK v1 — BUSINESSOS TEST
+   ========================================================= */
+header{
+  width:100% !important;
+  height:96px !important;
+  background:#fff !important;
+  border-bottom:1px solid #edf1f5 !important;
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+}
+header .nav{
+  width:min(1180px,88%) !important;
+  height:96px !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:30px !important;
+}
+header .nav > a:first-child{
+  flex:0 0 auto !important;
+  display:flex !important;
+  align-items:center !important;
+}
+header .nav .logo{
+  width:100px !important;
+  max-width:100px !important;
+  height:auto !important;
+  display:block !important;
+  object-fit:contain !important;
+}
+header .nav-links{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:30px !important;
+  flex:1 1 auto !important;
+  white-space:nowrap !important;
+}
+header .nav-links a{
+  display:inline-flex !important;
+  align-items:center !important;
+  white-space:nowrap !important;
+  text-decoration:none !important;
+  color:#0b2942 !important;
+  font-family:"DM Sans",sans-serif !important;
+  font-size:15px !important;
+  font-weight:500 !important;
+  line-height:1 !important;
+}
+header .nav-links a:hover{
+  color:#0b2942 !important;
+}
+header .nav-links a.active{
+  color:#2455d6 !important;
+  font-weight:500 !important;
+}
+header .nav-links .nav-cta{
+  flex:0 0 auto !important;
+  padding:14px 25px !important;
+  border-radius:30px !important;
+  background:#0b2942 !important;
+  color:#fff !important;
+  font-size:15px !important;
+  font-weight:600 !important;
+}
+header .nav-links .nav-cta:hover{
+  color:#fff !important;
+  background:#0b2942 !important;
+}
+@media(max-width:1100px){
+  header .nav{width:92% !important;gap:20px !important}
+  header .nav-links{gap:18px !important}
+  header .nav-links a{font-size:15px !important}
+  header .nav-links .nav-cta{padding:14px 22px !important}
+}
+@media(max-width:900px){
+  header .nav{
+    height:auto !important;
+    min-height:82px !important;
+    padding:16px 0 !important;
+    flex-wrap:wrap !important;
+  }
+  header .nav-links{
+    width:100% !important;
+    flex-wrap:wrap !important;
+    justify-content:flex-start !important;
+    gap:16px 22px !important;
+  }
+}
+@media(max-width:720px){
+  header,header .nav{height:82px !important}
+  header .nav{padding:0 6% !important}
+  header .nav-links a:not(.nav-cta){display:none !important}
+  header .nav-links{
+    width:auto !important;
+    flex-wrap:nowrap !important;
+    justify-content:flex-end !important;
+    gap:0 !important;
+  }
+  header .nav .logo{width:88px !important;max-width:88px !important}
+  header .nav-links .nav-cta{padding:12px 18px !important}
+}
+</style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+  <div class="nav">
+    <a href="../index.html" aria-label="PathWeave home">
+      <img class="logo" src="../logo.png" alt="PathWeave">
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="../businessos/index.html" aria-current="page">BusinessOS</a>
+      <a href="../peopleos/index.html">PeopleOS</a>
+      <a href="../skillhubos/index.html">Skill HubOS</a>
+      <a href="../government-advisory/index.html">Government Advisory</a>
+      <a href="../how-we-work/index.html">How We Work</a>
+      <a href="../about/index.html">About</a>
+      <a href="../insights/index.html">Insights</a>
+      <a class="nav-cta" href="../contact/index.html">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        BUSINESSOS
+                    </div>
+
+                    <h1>
+                        Building stronger
+                        <span>business systems</span>
+                        for the next stage of growth.
+                    </h1>
+
+                    <p class="hero-copy">
+                        BusinessOS is PathWeave's Business, Management & Technology
+                        Transformation practice — helping organisations strengthen
+                        growth, commercial effectiveness, operating models and the
+                        technology systems that support execution.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="../contact/index.html"
+                            class="button button-primary"
+                        >
+                            Talk to PathWeave
+                        </a>
+
+                        <a
+                            href="#capabilities"
+                            class="button button-secondary"
+                        >
+                            Explore BusinessOS
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="business-system">
+
+                        <div class="business-core">
+                            BUSINESSOS
+                        </div>
+
+                        <div class="system-node node-one">
+                            GROWTH
+                        </div>
+
+                        <div class="system-node node-two">
+                            OPERATIONS
+                        </div>
+
+                        <div class="system-node node-three">
+                            TECHNOLOGY
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRO
+        ========================== -->
+
+        <section class="intro">
+
+            <div class="container intro-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        THE BUSINESSOS APPROACH
+                    </div>
+
+                    <h2>
+                        Growth is not just a strategy.
+                        It is an operating system.
+                    </h2>
+
+                </div>
+
+
+                <div class="intro-copy">
+
+                    <p>
+                        As organisations grow, the systems that support the business
+                        need to evolve with them. Strategy, sales, processes, data,
+                        technology and execution cannot operate as disconnected pieces.
+                    </p>
+
+                    <p>
+                        BusinessOS brings these dimensions together to help organisations
+                        move from fragmented ways of working to practical systems that
+                        leaders and teams can actually operate.
+                    </p>
+
+                    <p>
+                        The focus is not simply on recommending what the business should
+                        do. It is on building the commercial, operational and technology
+                        foundations required to execute and scale.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CAPABILITIES
+        ========================== -->
+
+        <section class="capabilities" id="capabilities">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        BUSINESSOS CAPABILITIES
+                    </div>
+
+                    <h2>
+                        From business strategy to the systems that make growth work.
+                    </h2>
+
+                    <p>
+                        BusinessOS brings together business transformation,
+                        commercial excellence, operating models and technology
+                        enablement around the organisation's growth agenda.
+                    </p>
+
+                </div>
+
+
+                <div class="capability-grid">
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Business & Growth Strategy
+                        </h3>
+
+                        <p>
+                            Clarifying growth priorities, market opportunities,
+                            business models and execution roadmaps that connect
+                            strategy with practical action.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Sales & Commercial Excellence
+                        </h3>
+
+                        <p>
+                            Strengthening sales effectiveness through commercial
+                            operating models, sales planning, performance management,
+                            incentives and execution discipline.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            03
+                        </div>
+
+                        <h3>
+                            GTM, Channel & Market Expansion
+                        </h3>
+
+                        <p>
+                            Designing go-to-market, route-to-market, channel and
+                            market expansion approaches that improve customer
+                            reach and commercial execution.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            04
+                        </div>
+
+                        <h3>
+                            CRM & Revenue Operations
+                        </h3>
+
+                        <p>
+                            Connecting customer processes, CRM, pipeline governance,
+                            forecasting and sales workflows to create greater
+                            visibility and execution consistency.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Data, BI & Decision Systems
+                        </h3>
+
+                        <p>
+                            Building dashboards, reporting frameworks, data structures
+                            and decision systems that improve visibility and support
+                            better business decisions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            06
+                        </div>
+
+                        <h3>
+                            Process & Automation
+                        </h3>
+
+                        <p>
+                            Simplifying workflows, standardising processes and using
+                            automation to improve productivity, control and scalability
+                            across business functions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            07
+                        </div>
+
+                        <h3>
+                            Digital & Technology Enablement
+                        </h3>
+
+                        <p>
+                            Translating business requirements into practical technology
+                            roadmaps, digital capabilities and systems that enable
+                            better execution.
+                        </p>
+
+                    </article>
+
+
+                    <article class="capability">
+
+                        <div class="capability-number">
+                            08
+                        </div>
+
+                        <h3>
+                            Operating Model & Transformation
+                        </h3>
+
+                        <p>
+                            Designing clearer roles, processes, governance and
+                            operating rhythms so the organisation can execute with
+                            greater consistency as it grows.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COMMERCIAL TRANSFORMATION
+        ========================== -->
+
+        <section class="commercial">
+
+            <div class="container">
+
+                <div class="commercial-box">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            COMMERCIAL TRANSFORMATION
+                        </div>
+
+                        <h2>
+                            Turn growth ambition into a system the business can execute.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="commercial-copy">
+
+                        <p>
+                            Growth often slows not because the opportunity is missing,
+                            but because the systems behind growth have not kept pace.
+                        </p>
+
+                        <p>
+                            BusinessOS helps connect strategy with the commercial
+                            processes, technology, data and operating discipline
+                            required to turn opportunity into repeatable execution.
+                        </p>
+
+
+                        <div class="commercial-list">
+
+                            <div>
+                                Sales planning & governance
+                            </div>
+
+                            <div>
+                                CRM & pipeline management
+                            </div>
+
+                            <div>
+                                GTM & channel effectiveness
+                            </div>
+
+                            <div>
+                                Sales automation & productivity
+                            </div>
+
+                            <div>
+                                BI & performance dashboards
+                            </div>
+
+                            <div>
+                                Commercial process redesign
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PW-3 SUTRA
+        ========================== -->
+
+        <section class="sutra">
+
+            <div class="container">
+
+                <div class="sutra-heading">
+
+                    <div class="eyebrow">
+                        THE PW-3 SUTRA
+                    </div>
+
+                    <h2>
+                        Sustainable business transformation happens when
+                        People, Process and Technology work together.
+                    </h2>
+
+                    <p>
+                        The PW-3 Sutra is the common thinking framework connecting
+                        PathWeave's practices. Within BusinessOS, it ensures that
+                        growth and transformation are grounded in people realities,
+                        operational discipline and technology enablement.
+                    </p>
+
+                </div>
+
+
+                <div class="sutra-grid">
+
+                    <article class="sutra-card">
+
+                        <h3>
+                            People
+                        </h3>
+
+                        <p>
+                            Leadership, capability, ownership and organisational
+                            alignment required to execute strategy and sustain change.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sutra-card">
+
+                        <h3>
+                            Process
+                        </h3>
+
+                        <p>
+                            Operating models, workflows, governance and accountability
+                            that make execution repeatable and scalable.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sutra-card">
+
+                        <h3>
+                            Technology
+                        </h3>
+
+                        <p>
+                            CRM, data, automation, analytics and digital systems that
+                            create visibility, efficiency and leverage.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HOW WE WORK
+        ========================== -->
+
+        <section class="how">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        HOW WE WORK
+                    </div>
+
+                    <h2>
+                        From understanding the problem to making the system work.
+                    </h2>
+
+                    <p>
+                        BusinessOS combines advisory thinking with practical
+                        implementation so that transformation becomes something
+                        the organisation can actually operate.
+                    </p>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Diagnose
+                        </h3>
+
+                        <p>
+                            Understand the business, operating model,
+                            commercial systems and constraints.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Design
+                        </h3>
+
+                        <p>
+                            Define the target business model, priorities,
+                            processes and technology requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Implement
+                        </h3>
+
+                        <p>
+                            Translate recommendations into practical
+                            systems, workflows and actions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Enable
+                        </h3>
+
+                        <p>
+                            Equip leaders and teams to operate the new
+                            systems effectively.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Measure
+                        </h3>
+
+                        <p>
+                            Track adoption, effectiveness and business
+                            impact to keep improving.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CTA
+        ========================== -->
+
+        <section class="cta">
+
+            <div class="container cta-inner">
+
+                <h2>
+                    Ready to build a stronger operating system for growth?
+                </h2>
+
+                <a
+                    href="../contact/index.html"
+                    class="button button-light"
+                >
+                    Start a Conversation
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+
+                <div>
+                    <img class="footer-logo" src="../logo.png" alt="PathWeave">
+                    <div class="footer-description">
+                        Strategy, transformation and growth across business, people,
+                        technology and government.
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>OUR PRACTICES</h4>
+                    <a href="index.html">BusinessOS</a>
+                    <a href="../peopleos/index.html">PeopleOS</a>
+                    <a href="../skillhubos/index.html">Skill HubOS</a>
+                    <a href="../government-advisory/index.html">Government Advisory</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>PATHWEAVE</h4>
+                    <a href="../how-we-work/index.html">How We Work</a>
+                    <a href="../about/index.html">About</a>
+                    <a href="../insights/index.html">Insights</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>CONNECT</h4>
+                    <a href="../contact/index.html">Start a Conversation</a>
+                    <a href="https://www.linkedin.com/company/pathweave-consulting"
+                       target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 PathWeave. All rights reserved.</div>
+                <div>People · Process · Technology</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

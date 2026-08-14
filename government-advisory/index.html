@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Government Advisory | PathWeave</title>
+
+    <meta
+        name="description"
+        content="PathWeave Government Advisory helps organisations navigate policy, incentives, approvals, regulation and government interfaces."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --navy: #0b2238;
+            --navy-dark: #071a2b;
+            --blue: #2455d6;
+            --ice: #f4f8fd;
+            --white: #ffffff;
+            --text: #173047;
+            --muted: #5c7187;
+            --line: #d7e1eb;
+            --dark-card: #1b344b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: white;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1180px, 88%);
+            margin: 0 auto;
+        }
+
+        .label {
+            color: var(--blue);
+            font-size: 13px;
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .serif {
+            font-family: "Playfair Display", serif;
+        }
+
+        /* ================================
+           NAVIGATION
+        ================================= */
+
+        .nav {
+            height: 96px;
+            padding: 0 11%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border-bottom: 1px solid #e7edf3;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .nav-cta {
+            background: var(--navy);
+            color: white !important;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        /* ================================
+           BUTTONS
+        ================================= */
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 22px;
+            border-radius: 28px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: white;
+        }
+
+        .btn-light {
+            background: transparent;
+            border: 1px solid var(--line);
+            color: var(--navy);
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--navy);
+        }
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            background: var(--ice);
+            padding: 95px 0 100px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 5vw, 68px);
+            line-height: 1.04;
+            font-weight: 500;
+            letter-spacing: -1.5px;
+            max-width: 760px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero-copy {
+            color: var(--muted);
+            max-width: 680px;
+            font-size: 16px;
+            line-height: 1.75;
+            margin-bottom: 28px;
+        }
+
+        /* ================================
+           HERO DIAGRAM
+        ================================= */
+
+        .system {
+            background: var(--navy);
+            border-radius: 18px;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .orbit {
+            width: 270px;
+            height: 270px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .orbit::before {
+            content: "";
+            position: absolute;
+            inset: 48px;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 50%;
+        }
+
+        .center-node {
+            position: absolute;
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            background: white;
+            color: var(--navy);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .5px;
+        }
+
+        .node {
+            position: absolute;
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,.24);
+            background: rgba(255,255,255,.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .node.one {
+            top: -29px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .node.two {
+            bottom: -3px;
+            left: -38px;
+        }
+
+        .node.three {
+            bottom: -3px;
+            right: -38px;
+        }
+
+        /* ================================
+           INTRO
+        ================================= */
+
+        .intro {
+            padding: 78px 0;
+            background: white;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .two-col h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 3.7vw, 54px);
+            line-height: 1.08;
+            font-weight: 500;
+            letter-spacing: -1px;
+            max-width: 600px;
+        }
+
+        .copy {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.85;
+            max-width: 720px;
+        }
+
+        .copy p + p {
+            margin-top: 18px;
+        }
+
+        /* ================================
+           ADVISORY AREAS
+        ================================= */
+
+        .practices {
+            background: var(--ice);
+            padding: 78px 0 82px;
+        }
+
+        .section-heading {
+            margin-bottom: 38px;
+        }
+
+        .section-heading h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 4.2vw, 58px);
+            line-height: 1.07;
+            font-weight: 500;
+            letter-spacing: -1px;
+            max-width: 850px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            padding: 30px 34px;
+            min-height: 185px;
+        }
+
+        .service-number {
+            color: var(--blue);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 38px;
+        }
+
+        .service-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.65;
+            max-width: 650px;
+        }
+
+        /* Make the last card occupy half the row cleanly */
+        .service-card:last-child {
+            grid-column: 1 / 2;
+        }
+
+        /* ================================
+           PATHWEAVE PERSPECTIVE
+        ================================= */
+
+        .dark-section {
+            background: var(--navy);
+            color: white;
+            padding: 82px 0 88px;
+        }
+
+        .dark-section .label {
+            color: #8eafff;
+        }
+
+        .dark-section h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 4.5vw, 60px);
+            line-height: 1.07;
+            font-weight: 500;
+            max-width: 1050px;
+            letter-spacing: -1px;
+            margin-bottom: 22px;
+        }
+
+        .dark-section h2 span {
+            color: #8eafff;
+        }
+
+        .dark-copy {
+            color: #bfd1e5;
+            max-width: 760px;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .dark-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 48px;
+        }
+
+        .dark-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(255,255,255,.13);
+            border-radius: 15px;
+            padding: 28px 30px;
+            min-height: 170px;
+        }
+
+        .dark-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .dark-card p {
+            color: #c5d5e6;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ================================
+           WHERE WE HELP
+        ================================= */
+
+        .help {
+            padding: 78px 0 82px;
+            background: white;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 40px;
+        }
+
+        .help-card {
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            padding: 28px 34px;
+            min-height: 145px;
+        }
+
+        .help-card h3 {
+            font-size: 17px;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .help-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+        /* ================================
+           HOW WE WORK
+        ================================= */
+
+        .process {
+            background: var(--ice);
+            padding: 78px 0 82px;
+        }
+
+        .process-intro {
+            max-width: 850px;
+            margin-bottom: 48px;
+        }
+
+        .process-intro h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 4.5vw, 58px);
+            font-weight: 500;
+            line-height: 1.07;
+            letter-spacing: -1px;
+            margin-bottom: 18px;
+        }
+
+        .process-intro p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid var(--line);
+        }
+
+        .process-step {
+            padding: 27px 20px 10px 0;
+            margin-right: 20px;
+            border-right: 1px solid var(--line);
+            min-height: 175px;
+        }
+
+        .process-step:last-child {
+            border-right: none;
+            margin-right: 0;
+        }
+
+        .process-number {
+            color: var(--blue);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 34px;
+        }
+
+        .process-step h3 {
+            font-size: 16px;
+            margin-bottom: 9px;
+        }
+
+        .process-step p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        /* ================================
+           GOVERNMENT READINESS
+        ================================= */
+
+        .scale {
+            padding: 78px 0;
+            background: white;
+        }
+
+        .scale-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .scale h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 4.4vw, 58px);
+            line-height: 1.07;
+            font-weight: 500;
+            letter-spacing: -1px;
+            max-width: 620px;
+        }
+
+        .scale-copy {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .scale-copy p + p {
+            margin-top: 18px;
+        }
+
+        .scale-copy .btn {
+            margin-top: 22px;
+        }
+
+        /* ================================
+           CTA
+        ================================= */
+
+        .cta {
+            background: var(--navy);
+            color: white;
+            padding: 58px 0;
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .cta h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 4vw, 54px);
+            line-height: 1.08;
+            font-weight: 500;
+            letter-spacing: -1px;
+            max-width: 900px;
+        }
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        .footer {
+            background: var(--navy-dark);
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-logo {
+            width: 125px;
+            height: auto;
+            display: block;
+            margin-bottom: 25px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-description {
+            color: #a9bdd0;
+            max-width: 350px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #a9bdd0;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.12);
+            margin-top: 55px;
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            color: #7f98ae;
+            font-size: 13px;
+        }
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 1000px) {
+
+            .container {
+                width: min(100% - 48px, 1180px);
+            }
+
+            .nav {
+                padding: 0 6%;
+            }
+
+            .nav-links {
+                gap: 18px;
+                font-size: 13px;
+            }
+
+            .hero-grid,
+            .two-col,
+            .scale-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .dark-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-step:nth-child(2) {
+                border-right: none;
+            }
+
+            .process-step:nth-child(3),
+            .process-step:nth-child(4),
+            .process-step:nth-child(5) {
+                border-top: 1px solid var(--line);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+
+            .container {
+                width: min(100% - 34px, 1180px);
+            }
+
+            .nav {
+                height: 72px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 0 70px;
+            }
+
+            .hero h1 {
+                font-size: 46px;
+            }
+
+            .system {
+                min-height: 300px;
+            }
+
+            .orbit {
+                transform: scale(.8);
+            }
+
+            .service-grid,
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card:last-child {
+                grid-column: auto;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-step {
+                border-right: none !important;
+                border-bottom: 1px solid var(--line);
+                margin-right: 0;
+            }
+
+            .process-step:last-child {
+                border-bottom: none;
+            }
+
+            .cta-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+    </style>
+<style id="pathweave-locked-system-qc">
+/* =========================================================
+   PATHWEAVE LOCKED SYSTEM — GOVERNMENT ADVISORY QC
+   Reference: Skill HubOS / PeopleOS locked architecture
+   ========================================================= */
+
+/* Sticky global header */
+header{
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    width: 100%;
+    background: #fff;
+}
+
+/* Locked header proportions */
+header .nav{
+    width: min(1180px, 88%);
+    height: 96px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .nav .logo{
+    width: 100px !important;
+    max-width: 100px !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain;
+}
+
+header .nav-links{
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px !important;
+    flex: 1 1 auto;
+    white-space: nowrap;
+    font-size: 15px !important;
+}
+
+header .nav-links a{
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px !important;
+    line-height: 1 !important;
+    font-weight: 400;
+    color: #0b2942;
+}
+
+header .nav-links a[href="../government-advisory/index.html"]{
+    color: #2455d6;
+}
+
+header .nav-links .nav-cta{
+    padding: 14px 25px !important;
+    border-radius: 999px;
+    background: #0b2942;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* Locked hero type scale */
+.hero{
+    padding: 78px 0 !important;
+}
+
+.hero h1{
+    font-size: clamp(42px, 4.15vw, 58px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+}
+
+.hero-copy{
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+}
+
+/* Locked major heading scale */
+.two-col h2,
+.section-heading h2,
+.dark-section h2,
+.process-intro h2,
+.scale h2,
+.cta h2{
+    font-size: clamp(38px, 4vw, 50px) !important;
+    line-height: 1.08 !important;
+}
+
+/* Locked body scale */
+.copy,
+.dark-copy,
+.scale-copy,
+.process-intro p{
+    font-size: 16px !important;
+    line-height: 1.8;
+}
+
+/* Locked card hierarchy */
+.service-card h3,
+.dark-card h3{
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+}
+
+.service-card p,
+.dark-card p{
+    font-size: 15px !important;
+    line-height: 1.65;
+}
+
+.help-card h3{
+    font-size: 17px !important;
+}
+
+.help-card p{
+    font-size: 15px !important;
+}
+
+.process-step h3{
+    font-size: 17px !important;
+}
+
+.process-step p{
+    font-size: 13px !important;
+}
+
+/* Locked labels */
+.label{
+    font-size: 13px !important;
+    line-height: 1 !important;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+/* Locked buttons */
+.btn{
+    font-size: 14px !important;
+    padding: 13px 22px;
+}
+
+/* PeopleOS locked footer */
+.footer{
+    background: #071a2b !important;
+    color: #fff;
+    padding: 70px 0 30px !important;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-logo{
+    width: 125px !important;
+    max-width: 125px !important;
+    height: auto !important;
+    display: block !important;
+    margin-bottom: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-description{
+    color: #a9bdd0;
+    max-width: 350px;
+    font-size: 15px !important;
+    line-height: 1.7;
+}
+
+.footer-column h4{
+    font-size: 13px !important;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.footer-column a{
+    display: block;
+    color: #a9bdd0;
+    font-size: 15px !important;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.footer-column a:hover{
+    color: #fff;
+}
+
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,.12);
+    margin-top: 55px;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #7f98ae;
+    font-size: 13px !important;
+}
+
+/* Responsive locked behaviour */
+@media (max-width: 1100px){
+    header .nav{
+        width: 92%;
+        gap: 20px;
+    }
+
+    header .nav-links{
+        gap: 18px !important;
+        font-size: 13px !important;
+    }
+
+    header .nav-links a{
+        font-size: 15px !important;
+    }
+
+    header .nav-links .nav-cta{
+        padding: 14px 22px !important;
+    }
+}
+
+@media (max-width: 900px){
+    header .nav{
+        min-height: 82px;
+        height: auto;
+        padding: 16px 0;
+        flex-wrap: wrap;
+    }
+
+    header .nav-links{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px 22px;
+    }
+}
+
+@media (max-width: 720px){
+    header,
+    header .nav{
+        height: 82px;
+    }
+
+    header .nav{
+        padding: 0 6%;
+    }
+
+    header .nav-links a:not(.nav-cta){
+        display: none !important;
+    }
+
+    header .nav-links{
+        width: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        gap: 0;
+    }
+
+    header .nav .logo{
+        width: 88px !important;
+        max-width: 88px !important;
+    }
+
+    header .nav-links .nav-cta{
+        padding: 12px 18px !important;
+    }
+
+    .hero{
+        padding: 60px 0 70px !important;
+    }
+
+    .hero h1{
+        font-size: 42px !important;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-grid > div:first-child{
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom{
+        display: block;
+    }
+
+    .footer-bottom div + div{
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px){
+    .footer-grid{
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-grid > div:first-child{
+        grid-column: auto;
+    }
+}
+</style>
+<style id="pathweave-global-header-lock-v1">/* =========================================================
+   PATHWEAVE — GLOBAL HEADER LOCK v1 — BUSINESSOS TEST
+   ========================================================= */
+header{
+  width:100% !important;
+  height:96px !important;
+  background:#fff !important;
+  border-bottom:1px solid #edf1f5 !important;
+  position:sticky !important;
+  top:0 !important;
+  z-index:1000 !important;
+}
+header .nav{
+  width:min(1180px,88%) !important;
+  height:96px !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:30px !important;
+}
+header .nav > a:first-child{
+  flex:0 0 auto !important;
+  display:flex !important;
+  align-items:center !important;
+}
+header .nav .logo{
+  width:100px !important;
+  max-width:100px !important;
+  height:auto !important;
+  display:block !important;
+  object-fit:contain !important;
+}
+header .nav-links{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:30px !important;
+  flex:1 1 auto !important;
+  white-space:nowrap !important;
+}
+header .nav-links a{
+  display:inline-flex !important;
+  align-items:center !important;
+  white-space:nowrap !important;
+  text-decoration:none !important;
+  color:#0b2942 !important;
+  font-family:"DM Sans",sans-serif !important;
+  font-size:15px !important;
+  font-weight:500 !important;
+  line-height:1 !important;
+}
+header .nav-links a:hover{
+  color:#0b2942 !important;
+}
+header .nav-links a.active{
+  color:#2455d6 !important;
+  font-weight:500 !important;
+}
+header .nav-links .nav-cta{
+  flex:0 0 auto !important;
+  padding:14px 25px !important;
+  border-radius:30px !important;
+  background:#0b2942 !important;
+  color:#fff !important;
+  font-size:15px !important;
+  font-weight:600 !important;
+}
+header .nav-links .nav-cta:hover{
+  color:#fff !important;
+  background:#0b2942 !important;
+}
+@media(max-width:1100px){
+  header .nav{width:92% !important;gap:20px !important}
+  header .nav-links{gap:18px !important}
+  header .nav-links a{font-size:15px !important}
+  header .nav-links .nav-cta{padding:14px 22px !important}
+}
+@media(max-width:900px){
+  header .nav{
+    height:auto !important;
+    min-height:82px !important;
+    padding:16px 0 !important;
+    flex-wrap:wrap !important;
+  }
+  header .nav-links{
+    width:100% !important;
+    flex-wrap:wrap !important;
+    justify-content:flex-start !important;
+    gap:16px 22px !important;
+  }
+}
+@media(max-width:720px){
+  header,header .nav{height:82px !important}
+  header .nav{padding:0 6% !important}
+  header .nav-links a:not(.nav-cta){display:none !important}
+  header .nav-links{
+    width:auto !important;
+    flex-wrap:nowrap !important;
+    justify-content:flex-end !important;
+    gap:0 !important;
+  }
+  header .nav .logo{width:88px !important;max-width:88px !important}
+  header .nav-links .nav-cta{padding:12px 18px !important}
+}</style>
+</head>
+
+<body>
+
+    <!-- ================================
+         NAVIGATION
+    ================================= -->
+
+    <header>
+  <div class="nav">
+    <a href="../index.html" aria-label="PathWeave home">
+      <img class="logo" src="../logo.png" alt="PathWeave">
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="../businessos/index.html">BusinessOS</a>
+      <a href="../peopleos/index.html">PeopleOS</a>
+      <a href="../skillhubos/index.html">Skill HubOS</a>
+      <a class="active" aria-current="page" href="../government-advisory/index.html">Government Advisory</a>
+      <a href="../how-we-work/index.html">How We Work</a>
+      <a href="../about/index.html">About</a>
+      <a href="../insights/index.html">Insights</a>
+      <a class="nav-cta" href="../contact/index.html">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- ================================
+         HERO
+    ================================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+                    <div>
+
+                        <div class="label">
+                            Government Advisory
+                        </div>
+
+                        <h1>
+                            Helping businesses
+                            <span>navigate government</span>
+                            with greater clarity.
+                        </h1>
+
+                        <p class="hero-copy">
+                            PathWeave helps organisations understand and navigate
+                            policy, incentives, approvals, regulatory requirements
+                            and government interfaces — turning complexity into
+                            practical pathways for action.
+                        </p>
+
+                        <div class="buttons">
+
+                            <a
+                                href="../contact/index.html"
+                                class="btn btn-dark"
+                            >
+                                Talk to PathWeave
+                            </a>
+
+                            <a
+                                href="#advisory-areas"
+                                class="btn btn-light"
+                            >
+                                Explore Advisory
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="system">
+
+                        <div class="orbit">
+
+                            <div class="center-node">
+                                PATHWEAVE
+                            </div>
+
+                            <div class="node one">
+                                POLICY
+                            </div>
+
+                            <div class="node two">
+                                BUSINESS
+                            </div>
+
+                            <div class="node three">
+                                GOVERNMENT
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             INTRO
+        ================================= -->
+
+        <section class="intro">
+
+            <div class="container">
+
+                <div class="two-col">
+
+                    <div>
+
+                        <div class="label">
+                            The Government Advisory Approach
+                        </div>
+
+                        <h2>
+                            Government interface is not just about compliance.
+                        </h2>
+
+                    </div>
+
+                    <div class="copy">
+
+                        <p>
+                            As organisations grow, government requirements can
+                            become increasingly complex — from understanding
+                            policies and incentives to securing approvals,
+                            managing regulatory requirements and engaging with
+                            government stakeholders.
+                        </p>
+
+                        <p>
+                            PathWeave helps businesses make sense of these
+                            environments and identify the actions, relationships
+                            and processes required to move forward.
+                        </p>
+
+                        <p>
+                            The focus is practical: helping organisations
+                            navigate the system with greater clarity while
+                            remaining grounded in their business objectives.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             ADVISORY AREAS
+        ================================= -->
+
+        <section
+            class="practices"
+            id="advisory-areas"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="label">
+                        Our Advisory Areas
+                    </div>
+
+                    <h2>
+                        From government requirements to actionable pathways.
+                    </h2>
+
+                </div>
+
+
+                <div class="service-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Policy & Government Advisory
+                        </h3>
+
+                        <p>
+                            Helping organisations understand relevant policies,
+                            government priorities and institutional environments
+                            that may affect their business.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Incentives & Schemes
+                        </h3>
+
+                        <p>
+                            Identifying relevant government incentives, schemes
+                            and support mechanisms and helping businesses
+                            understand their applicability and requirements.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Approvals & Facilitation
+                        </h3>
+
+                        <p>
+                            Supporting businesses in navigating approval
+                            pathways, documentation requirements and stakeholder
+                            interfaces required to move projects forward.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Regulatory Interface
+                        </h3>
+
+                        <p>
+                            Helping organisations understand regulatory
+                            environments and build structured approaches to
+                            managing government and regulatory interactions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Trade & Market Access
+                        </h3>
+
+                        <p>
+                            Supporting organisations in understanding trade,
+                            market-access and government-related requirements
+                            that influence expansion and commercial opportunity.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            06
+                        </div>
+
+                        <h3>
+                            Government Stakeholder Management
+                        </h3>
+
+                        <p>
+                            Creating structured approaches for engaging with
+                            government stakeholders, coordinating requirements
+                            and maintaining clarity across multiple interfaces.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-number">
+                            07
+                        </div>
+
+                        <h3>
+                            Project & Investment Facilitation
+                        </h3>
+
+                        <p>
+                            Helping organisations navigate government
+                            requirements associated with expansion, investment,
+                            projects and new business initiatives.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             PATHWEAVE PERSPECTIVE
+        ================================= -->
+
+        <section class="dark-section">
+
+            <div class="container">
+
+                <div class="label">
+                    The PathWeave Perspective
+                </div>
+
+                <h2>
+                    Better government interface happens when
+                    <span>business context, process and relationships</span>
+                    come together.
+                </h2>
+
+                <p class="dark-copy">
+                    Government advisory cannot operate in isolation from the
+                    business itself. Understanding the organisation, its
+                    objectives, operating model and constraints is essential
+                    to building an effective pathway.
+                </p>
+
+
+                <div class="dark-grid">
+
+                    <article class="dark-card">
+
+                        <h3>
+                            Business
+                        </h3>
+
+                        <p>
+                            Understand the commercial objective, project,
+                            investment or growth requirement driving the
+                            government interface.
+                        </p>
+
+                    </article>
+
+
+                    <article class="dark-card">
+
+                        <h3>
+                            Process
+                        </h3>
+
+                        <p>
+                            Map approvals, documentation, regulatory
+                            requirements, dependencies and actions required
+                            to move forward.
+                        </p>
+
+                    </article>
+
+
+                    <article class="dark-card">
+
+                        <h3>
+                            Government
+                        </h3>
+
+                        <p>
+                            Build clarity around relevant departments,
+                            institutions, stakeholders and government
+                            mechanisms involved.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             WHERE WE HELP
+        ================================= -->
+
+        <section class="help">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="label">
+                        Where We Help
+                    </div>
+
+                    <h2>
+                        When government complexity becomes a business constraint.
+                    </h2>
+
+                </div>
+
+
+                <div class="help-grid">
+
+                    <article class="help-card">
+
+                        <h3>
+                            Entering a new market
+                        </h3>
+
+                        <p>
+                            Understanding policy, regulatory and government
+                            requirements when expanding into a new geography
+                            or market.
+                        </p>
+
+                    </article>
+
+
+                    <article class="help-card">
+
+                        <h3>
+                            Setting up or expanding operations
+                        </h3>
+
+                        <p>
+                            Navigating approvals, incentives and institutional
+                            interfaces associated with new facilities,
+                            investments or expansion.
+                        </p>
+
+                    </article>
+
+
+                    <article class="help-card">
+
+                        <h3>
+                            Accessing government incentives
+                        </h3>
+
+                        <p>
+                            Identifying relevant schemes and understanding
+                            eligibility, processes and documentation.
+                        </p>
+
+                    </article>
+
+
+                    <article class="help-card">
+
+                        <h3>
+                            Managing regulatory complexity
+                        </h3>
+
+                        <p>
+                            Bringing structure and clarity to requirements
+                            spanning multiple departments, agencies or
+                            regulatory interfaces.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             HOW WE WORK
+        ================================= -->
+
+        <section class="process">
+
+            <div class="container">
+
+                <div class="process-intro">
+
+                    <div class="label">
+                        How We Work
+                    </div>
+
+                    <h2>
+                        We don't just explain the system. We help build the pathway.
+                    </h2>
+
+                    <p>
+                        Our work moves from understanding the business requirement
+                        to creating a practical roadmap for navigating government
+                        processes and interfaces.
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <article class="process-step">
+
+                        <div class="process-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+                            Understand the business objective, context and
+                            government requirement.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <div class="process-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Map
+                        </h3>
+
+                        <p>
+                            Identify policies, stakeholders, approvals,
+                            dependencies and pathways.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <div class="process-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Design
+                        </h3>
+
+                        <p>
+                            Define the practical approach, actions,
+                            documentation and engagement model.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <div class="process-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Facilitate
+                        </h3>
+
+                        <p>
+                            Support structured engagement and coordination
+                            across relevant interfaces.
+                        </p>
+
+                    </article>
+
+
+                    <article class="process-step">
+
+                        <div class="process-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Progress
+                        </h3>
+
+                        <p>
+                            Track actions, dependencies and progress toward
+                            the intended business outcome.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             GOVERNMENT READINESS
+        ================================= -->
+
+        <section class="scale">
+
+            <div class="container">
+
+                <div class="scale-grid">
+
+                    <div>
+
+                        <div class="label">
+                            Government Readiness
+                        </div>
+
+                        <h2>
+                            Is government complexity slowing your next move?
+                        </h2>
+
+                    </div>
+
+                    <div class="scale-copy">
+
+                        <p>
+                            As organisations grow, government interfaces can
+                            become increasingly important to commercial
+                            decisions, investments and expansion.
+                        </p>
+
+                        <p>
+                            PathWeave helps identify where the complexity sits,
+                            what needs to happen next and how the organisation
+                            can move forward with greater clarity.
+                        </p>
+
+                        <a
+                            href="../contact/index.html"
+                            class="btn btn-dark"
+                        >
+                            Talk to PathWeave
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             CTA
+        ================================= -->
+
+        <section class="cta">
+
+            <div class="container">
+
+                <div class="cta-grid">
+
+                    <h2>
+                        Ready to navigate what your next stage of growth requires?
+                    </h2>
+
+                    <a
+                        href="../contact/index.html"
+                        class="btn btn-white"
+                    >
+                        Start a Conversation
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer class="footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <img class="footer-logo" src="../logo.png" alt="PathWeave">
+
+                <div class="footer-description">
+                    Strategy, transformation and growth across
+                    business, people, technology and government.
+                </div>
+            </div>
+
+            <div class="footer-column">
+
+                <h4>OUR PRACTICES</h4>
+
+                <a href="../businessos/index.html">
+                    BusinessOS
+                </a>
+
+                <a href="../peopleos/index.html">
+                    PeopleOS
+                </a>
+
+                <a href="../skillhubos/index.html">
+                    Skill HubOS
+                </a>
+
+                <a href="../government-advisory/index.html">
+                    Government Advisory
+                </a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h4>PATHWEAVE</h4>
+
+                <a href="../how-we-work/index.html">
+                    How We Work
+                </a>
+
+                <a href="../about/index.html">
+                    About
+                </a>
+
+                <a href="../insights/index.html">
+                    Insights
+                </a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h4>CONNECT</h4>
+
+                <a href="../contact/index.html">
+                    Start a Conversation
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/company/pathweave-consulting"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <div>
+                © 2026 PathWeave. All rights reserved.
+            </div>
+
+            <div>
+                People · Process · Technology
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
