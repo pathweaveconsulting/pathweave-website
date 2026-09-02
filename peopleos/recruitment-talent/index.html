@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recruitment &amp; Talent Support | PathWeave</title>
+<meta content="Improve how your organisation hires. PathWeave helps businesses strengthen recruitment processes, role clarity, hiring workflows and talent systems." name="description"/>
+<link href="https://pathweave.in/peopleos/recruitment-talent/" rel="canonical"/>
+
+<meta content="website" property="og:type"/>
+<meta content="Recruitment &amp; Talent Support | PathWeave" property="og:title"/>
+<meta content="Improve how your organisation hires. PathWeave helps businesses strengthen recruitment processes, role clarity, hiring workflows and talent systems." property="og:description"/>
+<meta content="https://pathweave.in/peopleos/recruitment-talent/" property="og:url"/>
+<meta content="PathWeave" property="og:site_name"/>
+
+<meta content="summary" name="twitter:card"/>
+<meta content="Recruitment &amp; Talent Support | PathWeave" name="twitter:title"/>
+<meta content="Improve how your organisation hires. PathWeave helps businesses strengthen recruitment processes, role clarity, hiring workflows and talent systems." name="twitter:description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+
+<style>
+        :root {
+            --navy-deep: #071a2b;
+            --navy: #0b2238;
+            --blue: #2455d6;
+            --ice: #f4f8fd;
+            --white: #ffffff;
+            --text: #173047;
+            --muted: #5c7187;
+            --line: #d7e1eb;
+            --card: #ffffff;
+            --soft-blue: #eaf0ff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            width: min(1180px, 88%);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1, h2, h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 500;
+            line-height: 1.08;
+        }
+
+        header {
+            width: 100%;
+            height: 96px;
+            background: #fff;
+            border-bottom: 1px solid #edf1f5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .nav {
+            width: min(1180px, 88%);
+            height: 96px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        header .nav > a:first-child {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        header .nav .logo {
+            width: 100px;
+            max-width: 100px;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        header .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 30px;
+            flex: 1 1 auto;
+            white-space: nowrap;
+        }
+
+        header .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            color: #0b2942;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        header .nav-links a.active {
+            color: var(--blue);
+        }
+
+        header .nav-links .nav-cta {
+            flex: 0 0 auto;
+            padding: 14px 25px;
+            border-radius: 30px;
+            background: #0b2942;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .breadcrumb {
+            padding: 18px 0 0;
+            background: var(--ice);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb a { color: var(--text); }
+        .breadcrumb .separator { padding: 0 8px; color: #9aabba; }
+
+        .hero {
+            background: var(--ice);
+            padding: 62px 0 88px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 4.15vw, 58px);
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+            max-width: 760px;
+        }
+
+        .hero h1 span { color: var(--blue); }
+
+        .hero-copy {
+            max-width: 820px;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--line);
+        }
+
+        .button-primary {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--text);
+        }
+
+        /* AUDIENCE BLOCK */
+        .audience-inner { display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+        .audience-label { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+        .audience-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+        .audience-pill { padding: 9px 15px; border: 1px solid var(--line); border-radius: 24px; font-size: 13px; color: var(--text); background: #fff; }
+
+        /* GENERAL SECTIONS */
+        .section { padding: 105px 0; }
+        .section-ice { background: var(--ice); }
+        .split { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
+        
+        .section-heading { max-width: 850px; margin-bottom: 55px; }
+        .section-heading h2 { font-size: clamp(38px, 4vw, 50px); margin-bottom: 20px; }
+        .section-heading p { color: var(--muted); font-size: 16px; max-width: 780px; }
+        
+        .copy { color: var(--muted); font-size: 16px; line-height: 1.8; }
+        .copy p + p { margin-top: 22px; }
+
+        /* PAIN POINTS */
+        .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 55px; }
+        .pain { padding: 25px 0; border-top: 1px solid var(--line); }
+        .pain h3 { font-size: 21px; margin-bottom: 9px; }
+        .pain p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* CAPABILITIES */
+        .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .cap-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px; min-height: 270px; }
+        .section-ice .cap-card { background: var(--white); }
+        .card-number { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 38px; }
+        .cap-card h3 { font-size: 22px; margin-bottom: 13px; }
+        .cap-card p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* LIFECYCLE */
+        .lifecycle { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+        .life-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 28px 22px; }
+        .life-number { color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: 1px; margin-bottom: 28px; }
+        .life-card h3 { font-size: 20px; margin-bottom: 10px; }
+        .life-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+        /* APPROACH */
+        .approach { background: var(--navy); color: var(--white); }
+        .approach .eyebrow { color: #9db9ff; }
+        .approach .section-heading p { color: #c5d4e3; }
+        .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 45px; }
+        .step { padding: 25px 0; border-top: 1px solid rgba(255,255,255,.15); }
+        .step-number { color: #9db9ff; font-size: 12px; font-weight: 700; letter-spacing: 1px; margin-bottom: 22px; }
+        .step h3 { font-size: 22px; margin-bottom: 9px; }
+        .step p { color: #c5d4e3; font-size: 15px; line-height: 1.7; }
+
+        /* ENGAGEMENT */
+        .engagement-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .engagement-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px; }
+        .engagement-card h3 { font-size: 22px; margin-bottom: 10px; }
+        .engagement-card p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* FIT */
+        .fit-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
+        .fit-list { display: grid; gap: 0; }
+        .fit-item { padding: 20px 0; border-bottom: 1px solid var(--line); }
+        .fit-item strong { display: block; margin-bottom: 5px; font-size: 16px; }
+        .fit-item span { color: var(--muted); font-size: 15px; line-height: 1.65; }
+
+        /* WHY PATHWEAVE FLOW */
+        .why { padding: 105px 0; }
+        .why-copy { color: var(--muted); font-size: 16px; line-height: 1.8; }
+        .why-copy p + p { margin-top: 22px; }
+        .flow { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 9px; font-weight: 700; font-size: 15px; }
+        .flow span { padding: 12px 15px; background: var(--ice); border-radius: 9px; }
+        .flow b { color: #9aaabb; }
+
+        /* LOCAL PAGE GATE BLOCK */
+        .local {
+            background: var(--navy);
+            color: #fff;
+            padding: 90px 0;
+        }
+
+        .local .eyebrow { color: #9db9ff; }
+
+        .local-grid {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .local-copy {
+            color: #c5d4e3;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 760px;
+        }
+
+        .local-copy strong { color: #fff; }
+
+        /* RELATED & LOCAL LINKS */
+        .related-links {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .related-links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 52px;
+            box-sizing: border-box;
+            padding: 14px 16px;
+            border: 1px solid rgba(20, 48, 78, 0.16);
+            border-radius: 8px;
+            color: var(--navy);
+            background: rgba(255, 255, 255, 0.72);
+            font-weight: 600;
+            line-height: 1.25;
+            text-decoration: none;
+            white-space: normal;
+            transition: opacity .2s ease, transform .2s ease, border-color .2s ease;
+        }
+
+        .related-links a::after {
+            content: "→";
+            flex: 0 0 auto;
+            margin-left: 14px;
+            font-size: 1rem;
+            opacity: .65;
+        }
+
+        .related-links a:hover {
+            transform: translateY(-1px);
+            border-color: rgba(20, 48, 78, .32);
+        }
+
+        .local-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 0;
+            width: 100%;
+            margin-top: 18px;
+            white-space: nowrap;
+        }
+
+        .local-links a {
+            color: #9db9ff;
+            font-weight: 600;
+            line-height: 1.3;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity .2s ease;
+        }
+
+        .local-links a:hover { opacity: .82; }
+
+        .local-links a:not(:last-child)::after {
+            content: "|";
+            display: inline-block;
+            margin: 0 14px;
+            color: rgba(157, 185, 255, 0.55);
+            text-decoration: none;
+        }
+
+        /* CTA */
+        .cta { background: var(--white); padding: 90px 0; }
+        .cta-inner { background: var(--ice); border: 1px solid var(--line); border-radius: 26px; padding: 60px; display: flex; justify-content: space-between; align-items: center; gap: 45px; }
+        .cta h2 { max-width: 800px; font-size: clamp(38px, 4vw, 50px); }
+        .cta .button { background: var(--navy); color: var(--white); border-color: var(--navy); white-space: nowrap; }
+
+        /* FOOTER */
+        footer { background: var(--navy-deep); color: var(--white); padding: 70px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns:1.3fr 1fr 1fr 1fr 1fr; gap: 50px; }
+        .footer-logo { width: 125px; height: auto; display: block; filter: brightness(0) invert(1); margin-bottom: 25px; }
+        .footer-description { color: #a9bdd0; max-width: 350px; font-size: 15px; line-height: 1.7; }
+        .footer-heading { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 24px; }
+        .footer-column a { display: block; color: #a9bdd0; margin-bottom: 12px; font-size: 15px; }
+        .footer-column a:hover { color: #fff; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 55px; padding-top: 25px; display: flex; justify-content: space-between; color: #7f98ae; font-size: 13px; }
+
+        @media (max-width: 1000px) {
+            header .nav, .container { width: 92%; }
+            .split, .fit-grid, .local-grid { grid-template-columns: 1fr; gap: 50px; }
+            .cap-grid { grid-template-columns: repeat(2, 1fr); }
+            .lifecycle { grid-template-columns: repeat(3, 1fr); }
+            .approach-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 900px) {
+            .related-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .local-links { flex-wrap: wrap; white-space: normal; row-gap: 8px; }
+            .local-links a:not(:last-child)::after { margin: 0 10px; }
+        }
+
+        @media (max-width: 820px) {
+            header { height: auto; min-height: 82px; }
+            header .nav { min-height: 82px; height: auto; padding: 16px 0; flex-wrap: wrap; }
+            header .nav-links { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: 16px 22px; }
+            .audience-inner { align-items: flex-start; flex-direction: column; }
+            .audience-list { justify-content: flex-start; }
+            .cta-inner { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 720px) {
+            header, header .nav { height: 82px; }
+            header .nav { padding: 0 6%; }
+            header .nav-links a:not(.nav-cta) { display: none; }
+            header .nav-links { width: auto; flex-wrap: nowrap; justify-content: flex-end; gap: 0; }
+            header .nav .logo { width: 88px; max-width: 88px; }
+            
+            .section, .why { padding: 75px 0; }
+            .cap-grid, .pain-grid, .lifecycle, .approach-grid, .engagement-grid { grid-template-columns: 1fr; }
+            
+            .flow { align-items: flex-start; }
+            .flow b { display: none; }
+            
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { display: block; }
+            .footer-bottom span + span { display: block; margin-top: 8px; }
+        }
+
+        @media (max-width: 600px) {
+            .related-links { grid-template-columns: 1fr; }
+            .local-links { gap: 6px 0; }
+        }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "@id":"https://pathweave.in/peopleos/recruitment-talent/#webpage",
+      "url":"https://pathweave.in/peopleos/recruitment-talent/",
+      "name":"Recruitment & Talent Support | PathWeave",
+      "description":"Improve how your organisation hires. PathWeave helps businesses strengthen recruitment processes, role clarity, hiring workflows and talent systems."
+    },
+    {
+      "@type":"Service",
+      "@id":"https://pathweave.in/peopleos/recruitment-talent/#service",
+      "name":"Recruitment & Talent Support",
+      "serviceType":"Recruitment and Talent",
+      "provider":{
+        "@type":"Organization",
+        "name":"PathWeave",
+        "url":"https://pathweave.in/"
+      }
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"PathWeave","item":"https://pathweave.in/"},
+        {"@type":"ListItem","position":2,"name":"PeopleOS","item":"https://pathweave.in/peopleos/"},
+        {"@type":"ListItem","position":3,"name":"Recruitment & Talent Support","item":"https://pathweave.in/peopleos/recruitment-talent/"}
+      ]
+    }
+  ]
+}
+</script>
+<style id="pathweave-global-footer-master-lock">footer{background:#071a2b !important;color:#fff !important;padding:70px 0 30px !important;}footer .footer-grid{display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr !important;gap:50px !important;}footer .footer-logo{width:125px !important;max-width:125px !important;height:auto !important;display:block !important;filter:brightness(0) invert(1) !important;margin:0 0 25px !important;}footer .footer-description{color:#a9bdd0 !important;max-width:350px !important;font-size:15px !important;line-height:1.7 !important;}footer .footer-column h4{margin:0 0 24px !important;color:#fff !important;font-family:"DM Sans",Arial,sans-serif !important;font-size:13px !important;font-weight:700 !important;letter-spacing:1px !important;}footer .footer-column a{display:block !important;color:#a9bdd0 !important;font-size:15px !important;line-height:1.5 !important;margin:0 0 12px !important;}footer .footer-column a:hover{color:#fff !important;}footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12) !important;margin-top:55px !important;padding-top:25px !important;display:flex !important;justify-content:space-between !important;color:#7f98ae !important;font-size:13px !important;}@media(max-width:900px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}}@media(max-width:720px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}footer .footer-grid>div:first-child{grid-column:1/-1 !important;}footer .footer-bottom{display:block !important;}footer .footer-bottom div+div{margin-top:8px !important;}}@media(max-width:480px){footer .footer-grid{grid-template-columns:1fr !important;}footer .footer-grid>div:first-child{grid-column:auto !important;}}</style>
+    <link rel="canonical" href="https://pathweave.in/peopleos/recruitment-talent/">
+</head>
+
+<body>
+<header>
+    <div class="nav">
+        <a href="../../index.html" aria-label="PathWeave home">
+            <img class="logo" src="../../logo.png" alt="PathWeave">
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="../../businessos/index.html">BusinessOS</a>
+            <a class="active" aria-current="page" href="/peopleos/index.html">PeopleOS</a>
+            <a href="../../skillhubos/index.html">Skill HubOS</a>
+            <a href="../../government-advisory/index.html">Government Advisory</a>
+            <a href="../../how-we-work/index.html">How We Work</a>
+            <a href="../../about/index.html">About</a>
+            <a href="../../insights/index.html">Insights</a>
+            <a class="nav-cta" href="../../contact/index.html">Let's Talk</a>
+        </nav>
+    </div>
+</header>
+
+<div class="breadcrumb">
+    <div class="container">
+        <a href="../../index.html">Home</a>
+        <span class="separator">→</span>
+        <a href="/peopleos/index.html">PeopleOS</a>
+        <span class="separator">→</span>
+        <span aria-current="page">Recruitment &amp; Talent Support</span>
+    </div>
+</div>
+
+<main>
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="eyebrow">PEOPLEOS · RECRUITMENT &amp; TALENT</div>
+            <h1><span>Recruitment &amp; Talent</span> Support.</h1>
+            <p class="hero-copy">
+                Improve how your organisation hires, assesses and retains talent.
+                PathWeave helps businesses strengthen their recruitment processes, clarify roles, improve hiring workflows and build the systems needed to build a stronger team.
+            </p>
+            <div class="hero-actions">
+                <a href="../../contact/index.html" class="button button-primary">Talk to PathWeave</a>
+                <a href="/peopleos/index.html" class="button button-secondary">Explore PeopleOS</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-label="Organisations we support" class="audience">
+    <div class="container audience-inner">
+        <div class="audience-label">Supporting hiring processes across growing organisations</div>
+        <div class="audience-list">
+            <span class="audience-pill">Startups</span>
+            <span class="audience-pill">SMEs</span>
+            <span class="audience-pill">Growing Businesses</span>
+            <span class="audience-pill">Mid-Sized Organisations</span>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container split">
+        <div>
+            <div class="eyebrow">WHEN HIRING BECOMES A BOTTLENECK</div>
+            <h2>Finding people is difficult. A weak hiring process makes it harder.</h2>
+        </div>
+        <div class="copy">
+            <p>For growing organisations, the challenge isn't just identifying candidates. It's often the process of evaluating, managing and successfully onboarding them.</p>
+            <p>Hiring managers may lack clarity on what the role actually requires. Interviews may lack structure, leading to inconsistent decisions. Communication with candidates may be slow or disorganised. And once a candidate is selected, poor onboarding can undermine the entire effort.</p>
+            <p>PathWeave helps organisations build <strong>a more reliable, structured and effective approach to recruitment and talent.</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">WHERE RECRUITMENT TYPICALLY BREAKS DOWN</div>
+            <h2>Is your hiring process working against you?</h2>
+        </div>
+        <div class="pain-grid">
+            <article class="pain">
+                <h3>Unclear Role Requirements</h3>
+                <p>Hiring starts before the business has fully defined what the role requires and how success will be measured.</p>
+            </article>
+            <article class="pain">
+                <h3>Inconsistent Interviews</h3>
+                <p>Interviewers ask different questions, making it difficult to objectively compare candidates.</p>
+            </article>
+            <article class="pain">
+                <h3>Slow Decision Making</h3>
+                <p>A disorganised process extends the hiring timeline, causing the organisation to lose good candidates.</p>
+            </article>
+            <article class="pain">
+                <h3>Poor Candidate Experience</h3>
+                <p>Lack of communication or a confusing interview process damages the employer brand.</p>
+            </article>
+            <article class="pain">
+                <h3>Ineffective Onboarding</h3>
+                <p>New hires are brought in but aren't given the structure or support they need to become productive quickly.</p>
+            </article>
+            <article class="pain">
+                <h3>Lack of Hiring Data</h3>
+                <p>The organisation cannot track its hiring metrics, making it hard to improve the process.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="capabilities">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">WHAT WE SUPPORT</div>
+            <h2>Strengthen how you hire.</h2>
+            <p>PathWeave supports organisations across the full recruitment lifecycle, from role design to onboarding.</p>
+        </div>
+        <div class="cap-grid">
+            <article class="cap-card">
+                <div class="card-number">01</div>
+                <h3>Workforce Planning &amp; Role Design</h3>
+                <p>Define the roles your organisation actually needs, aligning your hiring plans with your <a href="../hr-consulting-startups/" style="text-decoration: underline; text-underline-offset: 3px;">startup's early-stage HR foundation</a> before you start hiring.</p>
+            </article>
+            <article class="cap-card">
+                <div class="card-number">02</div>
+                <h3>Recruitment Process Improvement</h3>
+                <p>Map and streamline your end-to-end hiring process to improve speed, consistency and candidate experience.</p>
+            </article>
+            <article class="cap-card">
+                <div class="card-number">03</div>
+                <h3>Interview &amp; Assessment Structure</h3>
+                <p>Develop structured interview frameworks, assessment criteria and interviewer guidelines so hiring decisions are based on evidence rather than intuition.</p>
+            </article>
+            <article class="cap-card">
+                <div class="card-number">04</div>
+                <h3>Recruitment Technology &amp; ATS</h3>
+                <p>Evaluate, select and implement Applicant Tracking Systems (ATS) and recruitment tools that fit your process, integrating your ATS smoothly with your broader <a href="../hr-operations-hrms/" style="text-decoration: underline; text-underline-offset: 3px;">HR operations and systems</a>.</p>
+            </article>
+            <article class="cap-card">
+                <div class="card-number">05</div>
+                <h3>Onboarding Design</h3>
+                <p>Build structured onboarding processes that connect new hires to the organisation, clarify expectations and accelerate their time to productivity.</p>
+            </article>
+            <article class="cap-card">
+                <div class="card-number">06</div>
+                <h3>Employer Branding &amp; Talent Attraction</h3>
+                <p>Clarify your employee value proposition and improve how your organisation presents itself to potential candidates.</p>
+            </article>
+        </div>
+
+        <div aria-label="Related PeopleOS services" class="related-links">
+            <a href="/peopleos/hr-services/">HR Services</a>
+            <a href="/peopleos/fractional-hr/">Fractional HR</a>
+            <a href="/peopleos/hr-consulting-startups/">HR Consulting for Startups</a>
+            <a href="/peopleos/hr-consulting-smes/">HR Consulting for SMEs</a>
+            <a href="/peopleos/hr-operations-hrms/">HR Operations &amp; HRMS</a>
+            <a href="/peopleos/hr-outsourcing/">HR Outsourcing</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">ACROSS THE RECRUITMENT LIFECYCLE</div>
+            <h2>Connect the process from need to onboarding.</h2>
+        </div>
+        <div class="lifecycle">
+            <article class="life-card">
+                <div class="life-number">01 · PLAN</div>
+                <h3>Plan</h3>
+                <p>Define the need, design the role and clarify the budget.</p>
+            </article>
+            <article class="life-card">
+                <div class="life-number">02 · SOURCING</div>
+                <h3>Sourcing</h3>
+                <p>Attract candidates and manage applications effectively.</p>
+            </article>
+            <article class="life-card">
+                <div class="life-number">03 · ASSESS</div>
+                <h3>Assess</h3>
+                <p>Structure interviews, evaluate skills and ensure consistent assessment.</p>
+            </article>
+            <article class="life-card">
+                <div class="life-number">04 · SELECT</div>
+                <h3>Select</h3>
+                <p>Make evidence-based decisions, manage offers and handle negotiations.</p>
+            </article>
+            <article class="life-card">
+                <div class="life-number">05 · ONBOARD</div>
+                <h3>Onboard</h3>
+                <p>Integrate new hires and manage their transition into the organisation.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section approach">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">OUR APPROACH</div>
+            <h2>Process first, tools second.</h2>
+            <p>Hiring software won't fix a broken hiring process.</p>
+        </div>
+        <div class="approach-grid">
+            <article class="step">
+                <div class="step-number">01</div>
+                <h3>Understand</h3>
+                <p>Review how your organisation currently identifies, assesses and hires talent.</p>
+            </article>
+            <article class="step">
+                <div class="step-number">02</div>
+                <h3>Clarify</h3>
+                <p>Ensure roles, responsibilities and assessment criteria are clearly defined.</p>
+            </article>
+            <article class="step">
+                <div class="step-number">03</div>
+                <h3>Structure</h3>
+                <p>Build a consistent, repeatable process for interviews and selection.</p>
+            </article>
+            <article class="step">
+                <div class="step-number">04</div>
+                <h3>Enable</h3>
+                <p>Equip hiring managers with the tools and training they need to assess candidates.</p>
+            </article>
+            <article class="step">
+                <div class="step-number">05</div>
+                <h3>Digitise</h3>
+                <p>Implement the right ATS or recruitment technology to support the improved process.</p>
+            </article>
+            <article class="step">
+                <div class="step-number">06</div>
+                <h3>Measure</h3>
+                <p>Establish key recruitment metrics to track and improve hiring performance.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">HOW WE CAN SUPPORT YOU</div>
+            <h2>Support where you need it.</h2>
+            <p>Every organisation has different recruitment needs.</p>
+        </div>
+        <div class="engagement-grid">
+            <article class="engagement-card">
+                <h3>Recruitment Process Improvement</h3>
+                <p>A focused engagement to review, redesign and improve your end-to-end hiring workflows, or handling your talent acquisition as part of an end-to-end <a href="../hr-outsourcing/" style="text-decoration: underline; text-underline-offset: 3px;">outsourced HR function</a>.</p>
+            </article>
+            <article class="engagement-card">
+                <h3>Role Design &amp; Assessment Frameworks</h3>
+                <p>Support in defining specific roles, creating structured interview guides and establishing assessment criteria.</p>
+            </article>
+            <article class="engagement-card">
+                <h3>ATS Implementation &amp; Optimisation</h3>
+                <p>Guidance in selecting, implementing or getting more value out of your Applicant Tracking System.</p>
+            </article>
+            <article class="engagement-card">
+                <h3>Onboarding Design</h3>
+                <p>Developing a structured onboarding programme that connects new hires to the business and their roles effectively.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice fit">
+    <div class="container fit-grid">
+        <div>
+            <div class="eyebrow">IS THIS THE RIGHT SUPPORT FOR YOU?</div>
+            <h2>You may need Recruitment &amp; Talent support if…</h2>
+        </div>
+        <div class="fit-list">
+            <div class="fit-item">
+                <strong>Your hiring process is slow or disorganised.</strong>
+                <span>You are losing good candidates because decisions take too long or communication is poor.</span>
+            </div>
+            <div class="fit-item">
+                <strong>Interviews are inconsistent.</strong>
+                <span>Different managers evaluate candidates differently, leading to unpredictable hiring outcomes.</span>
+            </div>
+            <div class="fit-item">
+                <strong>New hires are struggling to integrate.</strong>
+                <span>Your onboarding process lacks structure, delaying time to productivity or increasing early attrition.</span>
+            </div>
+            <div class="fit-item">
+                <strong>Roles aren't clearly defined.</strong>
+                <span>You find yourself hiring for a title without a clear understanding of the specific responsibilities and required skills.</span>
+            </div>
+            <div class="fit-item">
+                <strong>Your ATS isn't helping.</strong>
+                <span>You are either managing recruitment on spreadsheets or using an ATS that doesn't fit your actual process.</span>
+            </div>
+            <div class="fit-item">
+                <strong>You lack visibility into hiring metrics.</strong>
+                <span>You cannot easily track time-to-hire, source quality or recruitment bottlenecks.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why">
+    <div class="container split">
+        <div>
+            <div class="eyebrow">WHY PATHWEAVE</div>
+            <h2>A structured approach to building your team.</h2>
+        </div>
+        <div class="why-copy">
+            <p>We believe that effective recruitment requires more than just sourcing resumes. It requires a clear understanding of the role, a structured assessment process and a focus on candidate experience.</p>
+            <p>By connecting role design, process improvement and the right technology, PathWeave helps organisations build a hiring capability that supports their growth.</p>
+            <div class="flow" aria-label="PathWeave operating approach">
+                <span>Define</span><b>→</b><span>Structure</span><b>→</b><span>Assess</span><b>→</b><span>Integrate</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="local">
+    <div class="container local-grid">
+        <div>
+            <div class="eyebrow">WHERE WE SERVE</div>
+            <h2>Recruitment &amp; Talent support across the markets we serve.</h2>
+        </div>
+        <div class="local-copy">
+            <p>
+                PathWeave supports organisations across Hyderabad, Indore, Bhopal and Nagpur. We help growing businesses build structured hiring processes, improve role clarity, and enhance their recruitment systems.
+            </p>
+            <p>
+                Where a city has a dedicated service page, that page provides the deeper local context. Otherwise, this service pillar remains the main reference point for Recruitment &amp; Talent support PathWeave provides in that market.
+            </p>
+            <div aria-label="PathWeave locations" class="local-links">
+                <a href="../../locations/hyderabad/">Hyderabad</a>
+                <a href="../../locations/indore/">Indore</a>
+                <a href="../../locations/bhopal/">Bhopal</a>
+                <a href="../../locations/nagpur/">Nagpur</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <div class="cta-inner">
+            <div class="cta-copy">
+                <h2>Is your hiring process working against you?</h2>
+            </div>
+            <a class="button" href="../../contact/index.html">Start a Conversation</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="../../logo.png" alt="PathWeave">
+        <div class="footer-description">Strategy, transformation and growth across business, people, technology and government.</div>
+      </div>
+      <div class="footer-column">
+        <h4>OUR PRACTICES</h4>
+        <a href="../../businessos/index.html">BusinessOS</a>
+        <a href="../../peopleos/index.html">PeopleOS</a>
+        <a href="../../skillhubos/index.html">Skill HubOS</a>
+        <a href="../../government-advisory/index.html">Government Advisory</a>
+      </div>
+      <div class="footer-column">
+        <h4>PATHWEAVE</h4>
+        <a href="../../how-we-work/index.html">How We Work</a>
+        <a href="../../about/index.html">About</a>
+        <a href="../../insights/index.html">Insights</a>
+      </div>
+      <div class="footer-column">
+        <h4>LOCATIONS</h4>
+        <a href="/locations/hyderabad/">Hyderabad</a>
+        <a href="/locations/indore/">Indore</a>
+        <a href="/locations/bhopal/">Bhopal</a>
+        <a href="/locations/nagpur/">Nagpur</a>
+      </div>
+      <div class="footer-column">
+        <h4>CONNECT</h4>
+        <a href="../../contact/index.html">Start a Conversation</a>
+        <a href="https://www.linkedin.com/company/pathweave-consulting" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 PathWeave. All rights reserved.</div>
+      <div>People · Process · Technology</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

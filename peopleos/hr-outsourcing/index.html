@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>End-to-End HR Outsourcing | PathWeave</title>
+<meta content="End-to-end HR outsourcing. PathWeave provides connected HR support across operations, recruitment, employee lifecycle, HRMS and reporting." name="description"/>
+<link href="https://pathweave.in/peopleos/hr-outsourcing/" rel="canonical"/>
+
+<meta content="website" property="og:type"/>
+<meta content="End-to-End HR Outsourcing | PathWeave" property="og:title"/>
+<meta content="Connected HR outsourcing support across operations, recruitment, employee lifecycle, HRMS, reporting and ongoing people processes." property="og:description"/>
+<meta content="https://pathweave.in/peopleos/hr-outsourcing/" property="og:url"/>
+<meta content="PathWeave" property="og:site_name"/>
+
+<meta content="summary" name="twitter:card"/>
+<meta content="End-to-End HR Outsourcing | PathWeave" name="twitter:title"/>
+<meta content="Connected HR outsourcing support across operations, recruitment, employee lifecycle, HRMS, reporting and ongoing people processes." name="twitter:description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+
+<style>
+        :root {
+            --navy-deep: #071a2b;
+            --navy: #0b2238;
+            --blue: #2455d6;
+            --ice: #f4f8fd;
+            --white: #ffffff;
+            --text: #173047;
+            --muted: #5c7187;
+            --line: #d7e1eb;
+            --card: #ffffff;
+            --soft-blue: #eaf0ff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            width: min(1180px, 88%);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1, h2, h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 500;
+            line-height: 1.08;
+        }
+
+        header {
+            width: 100%;
+            height: 96px;
+            background: #fff;
+            border-bottom: 1px solid #edf1f5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .nav {
+            width: min(1180px, 88%);
+            height: 96px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        header .nav > a:first-child {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        header .nav .logo {
+            width: 100px;
+            max-width: 100px;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        header .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 30px;
+            flex: 1 1 auto;
+            white-space: nowrap;
+        }
+
+        header .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            color: #0b2942;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        header .nav-links a.active {
+            color: var(--blue);
+        }
+
+        header .nav-links .nav-cta {
+            flex: 0 0 auto;
+            padding: 14px 25px;
+            border-radius: 30px;
+            background: #0b2942;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .breadcrumb {
+            padding: 18px 0 0;
+            background: var(--ice);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb a { color: var(--text); }
+        .breadcrumb .separator { padding: 0 8px; color: #9aabba; }
+
+        .hero {
+            background: var(--ice);
+            padding: 62px 0 88px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 4.15vw, 58px);
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+            max-width: 760px;
+        }
+
+        .hero h1 span { color: var(--blue); }
+
+        .hero-copy {
+            max-width: 820px;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--line);
+        }
+
+        .button-primary {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--text);
+        }
+
+        /* AUDIENCE BLOCK */
+        .audience-inner { display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+        .audience-label { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+        .audience-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+        .audience-pill { padding: 9px 15px; border: 1px solid var(--line); border-radius: 24px; font-size: 13px; color: var(--text); background: #fff; }
+
+        /* GENERAL SECTIONS */
+        .section { padding: 105px 0; }
+        .section-ice { background: var(--ice); }
+        .split { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
+        
+        .section-heading { max-width: 900px; margin-bottom: 55px; }
+        .section-heading h2 { font-size: clamp(38px, 4vw, 50px); margin-bottom: 20px; }
+        .section-heading p { color: var(--muted); font-size: 16px; max-width: 800px; }
+        
+        .copy { color: var(--muted); font-size: 16px; line-height: 1.8; }
+        .copy p + p { margin-top: 22px; }
+
+        /* CARDS */
+        .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .cap-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px; min-height: 270px; }
+        .section-ice .cap-card { background: var(--white); }
+        .card-number { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 34px; }
+        .cap-card h3 { font-size: 22px; margin-bottom: 13px; }
+        .cap-card p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* LIFECYCLE */
+        .lifecycle { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+        .lifecycle-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 27px; min-height: 240px; }
+        .lifecycle-card h3 { font-size: 21px; margin-bottom: 13px; }
+        .lifecycle-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+        .lifecycle-card ul { margin-top: 15px; padding-left: 17px; color: var(--muted); font-size: 14px; }
+        .lifecycle-card li { margin-bottom: 6px; }
+
+        /* FLEX */
+        .flex-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .flex-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px; }
+        .flex-card h3 { font-size: 23px; margin-bottom: 11px; }
+        .flex-card p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* APPROACH */
+        .approach { background: var(--navy); color: var(--white); }
+        .approach .eyebrow { color: #9db9ff; }
+        .approach .section-heading p { color: #c5d4e3; }
+        .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 45px; }
+        .step { padding: 25px 0; border-top: 1px solid rgba(255,255,255,.15); }
+        .step-number { color: #9db9ff; font-size: 12px; font-weight: 700; letter-spacing: 1px; margin-bottom: 22px; }
+        .step h3 { font-size: 22px; margin-bottom: 9px; }
+        .step p { color: #c5d4e3; font-size: 15px; line-height: 1.7; }
+
+        /* INTERNAL + EXTERNAL */
+        .internal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .internal-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 30px; }
+        .internal-card h3 { font-size: 22px; margin-bottom: 10px; }
+        .internal-card p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* TECH */
+        .tech-box { max-width: 900px; }
+        .tech-flow { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 9px; font-weight: 700; font-size: 15px; }
+        .tech-flow span { padding: 12px 15px; background: var(--ice); border-radius: 9px; }
+        .tech-flow b { color: #9aaabb; }
+
+        /* GOVERNANCE / METRICS */
+        .metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .metric { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 23px; color: var(--muted); font-size: 15px; }
+        .metric strong { display: block; color: var(--text); margin-bottom: 6px; }
+
+        /* ENGAGEMENT */
+        .engagement-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .engagement-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px; }
+        .engagement-card h3 { font-size: 22px; margin-bottom: 10px; }
+        .engagement-card p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* FIT */
+        .fit-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
+        .fit-list { display: grid; gap: 0; }
+        .fit-item { padding: 20px 0; border-bottom: 1px solid var(--line); }
+        .fit-item strong { display: block; margin-bottom: 5px; font-size: 16px; }
+        .fit-item span { color: var(--muted); font-size: 15px; line-height: 1.65; }
+
+        /* WHY PATHWEAVE FLOW */
+        .why { padding: 105px 0; }
+        .why-copy { color: var(--muted); font-size: 16px; line-height: 1.8; }
+        .why-copy p + p { margin-top: 22px; }
+        .principles { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+        .principle { padding: 20px; background: var(--ice); border-left: 3px solid var(--blue); }
+        .principle strong { display: block; color: var(--text); margin-bottom: 4px; }
+
+        /* LOCAL PAGE GATE BLOCK */
+        .local {
+            background: var(--navy);
+            color: #fff;
+            padding: 90px 0;
+        }
+
+        .local .eyebrow { color: #9db9ff; }
+
+        .local-grid {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .local-copy {
+            color: #c5d4e3;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 760px;
+        }
+
+        .local-copy strong { color: #fff; }
+
+        /* RELATED & LOCAL LINKS */
+        .related-links {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .related-links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 52px;
+            box-sizing: border-box;
+            padding: 14px 16px;
+            border: 1px solid rgba(20, 48, 78, 0.16);
+            border-radius: 8px;
+            color: var(--navy);
+            background: rgba(255, 255, 255, 0.72);
+            font-weight: 600;
+            line-height: 1.25;
+            text-decoration: none;
+            white-space: normal;
+            transition: opacity .2s ease, transform .2s ease, border-color .2s ease;
+        }
+
+        .related-links a::after {
+            content: "→";
+            flex: 0 0 auto;
+            margin-left: 14px;
+            font-size: 1rem;
+            opacity: .65;
+        }
+
+        .related-links a:hover {
+            transform: translateY(-1px);
+            border-color: rgba(20, 48, 78, .32);
+        }
+
+        .local-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 0;
+            width: 100%;
+            margin-top: 18px;
+            white-space: nowrap;
+        }
+
+        .local-links a {
+            color: #9db9ff;
+            font-weight: 600;
+            line-height: 1.3;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity .2s ease;
+        }
+
+        .local-links a:hover { opacity: .82; }
+
+        .local-links a:not(:last-child)::after {
+            content: "|";
+            display: inline-block;
+            margin: 0 14px;
+            color: rgba(157, 185, 255, 0.55);
+            text-decoration: none;
+        }
+
+        /* CTA */
+        .cta { background: var(--white); padding: 90px 0; }
+        .cta-inner { background: var(--ice); border: 1px solid var(--line); border-radius: 26px; padding: 60px; display: flex; justify-content: space-between; align-items: center; gap: 45px; }
+        .cta h2 { max-width: 800px; font-size: clamp(38px, 4vw, 50px); }
+        .cta .button { background: var(--navy); color: var(--white); border-color: var(--navy); white-space: nowrap; }
+
+        /* FOOTER */
+        footer { background: var(--navy-deep); color: var(--white); padding: 70px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns:1.3fr 1fr 1fr 1fr 1fr; gap: 50px; }
+        .footer-logo { width: 125px; height: auto; display: block; filter: brightness(0) invert(1); margin-bottom: 25px; }
+        .footer-description { color: #a9bdd0; max-width: 350px; font-size: 15px; line-height: 1.7; }
+        .footer-heading { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 24px; }
+        .footer-column a { display: block; color: #a9bdd0; margin-bottom: 12px; font-size: 15px; }
+        .footer-column a:hover { color: #fff; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 55px; padding-top: 25px; display: flex; justify-content: space-between; color: #7f98ae; font-size: 13px; }
+
+        @media (max-width: 1000px) {
+            header .nav, .container { width: 92%; }
+            .split, .fit-grid, .local-grid { grid-template-columns: 1fr; gap: 50px; }
+            .cap-grid, .metric-grid { grid-template-columns: repeat(2, 1fr); }
+            .lifecycle { grid-template-columns: repeat(2, 1fr); }
+            .approach-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 900px) {
+            .related-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .local-links { flex-wrap: wrap; white-space: normal; row-gap: 8px; }
+            .local-links a:not(:last-child)::after { margin: 0 10px; }
+        }
+
+        @media (max-width: 820px) {
+            header { height: auto; min-height: 82px; }
+            header .nav { min-height: 82px; height: auto; padding: 16px 0; flex-wrap: wrap; }
+            header .nav-links { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: 16px 22px; }
+            .audience-inner { align-items: flex-start; flex-direction: column; }
+            .audience-list { justify-content: flex-start; }
+            .cta-inner { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 720px) {
+            header, header .nav { height: 82px; }
+            header .nav { padding: 0 6%; }
+            header .nav-links a:not(.nav-cta) { display: none; }
+            header .nav-links { width: auto; flex-wrap: nowrap; justify-content: flex-end; gap: 0; }
+            header .nav .logo { width: 88px; max-width: 88px; }
+            
+            .section, .why { padding: 75px 0; }
+            .cap-grid, .lifecycle, .flex-grid, .internal-grid, .metric-grid, .approach-grid, .engagement-grid, .principles { grid-template-columns: 1fr; }
+            
+            .tech-flow { align-items: flex-start; }
+            .tech-flow b { display: none; }
+            
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { display: block; }
+            .footer-bottom span + span { display: block; margin-top: 8px; }
+        }
+
+        @media (max-width: 600px) {
+            .related-links { grid-template-columns: 1fr; }
+            .local-links { gap: 6px 0; }
+        }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "@id":"https://pathweave.in/peopleos/hr-outsourcing/#webpage",
+      "url":"https://pathweave.in/peopleos/hr-outsourcing/",
+      "name":"End-to-End HR Outsourcing | PathWeave",
+      "description":"End-to-end HR outsourcing. PathWeave provides connected HR support across operations, recruitment, employee lifecycle, HRMS and reporting."
+    },
+    {
+      "@type":"Service",
+      "@id":"https://pathweave.in/peopleos/hr-outsourcing/#service",
+      "name":"End-to-End HR Outsourcing",
+      "serviceType":"End-to-End HR Outsourcing",
+      "provider":{
+        "@type":"Organization",
+        "name":"PathWeave",
+        "url":"https://pathweave.in/"
+      }
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"PathWeave","item":"https://pathweave.in/"},
+        {"@type":"ListItem","position":2,"name":"PeopleOS","item":"https://pathweave.in/peopleos/"},
+        {"@type":"ListItem","position":3,"name":"End-to-End HR Outsourcing","item":"https://pathweave.in/peopleos/hr-outsourcing/"}
+      ]
+    }
+  ]
+}
+</script>
+<style id="pathweave-global-footer-master-lock">footer{background:#071a2b !important;color:#fff !important;padding:70px 0 30px !important;}footer .footer-grid{display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr !important;gap:50px !important;}footer .footer-logo{width:125px !important;max-width:125px !important;height:auto !important;display:block !important;filter:brightness(0) invert(1) !important;margin:0 0 25px !important;}footer .footer-description{color:#a9bdd0 !important;max-width:350px !important;font-size:15px !important;line-height:1.7 !important;}footer .footer-column h4{margin:0 0 24px !important;color:#fff !important;font-family:"DM Sans",Arial,sans-serif !important;font-size:13px !important;font-weight:700 !important;letter-spacing:1px !important;}footer .footer-column a{display:block !important;color:#a9bdd0 !important;font-size:15px !important;line-height:1.5 !important;margin:0 0 12px !important;}footer .footer-column a:hover{color:#fff !important;}footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12) !important;margin-top:55px !important;padding-top:25px !important;display:flex !important;justify-content:space-between !important;color:#7f98ae !important;font-size:13px !important;}@media(max-width:900px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}}@media(max-width:720px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}footer .footer-grid>div:first-child{grid-column:1/-1 !important;}footer .footer-bottom{display:block !important;}footer .footer-bottom div+div{margin-top:8px !important;}}@media(max-width:480px){footer .footer-grid{grid-template-columns:1fr !important;}footer .footer-grid>div:first-child{grid-column:auto !important;}}</style>
+    <link rel="canonical" href="https://pathweave.in/peopleos/hr-outsourcing/">
+</head>
+
+<body>
+<header>
+    <div class="nav">
+        <a href="../../index.html" aria-label="PathWeave home">
+            <img class="logo" src="../../logo.png" alt="PathWeave">
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="../../businessos/index.html">BusinessOS</a>
+            <a class="active" aria-current="page" href="/peopleos/index.html">PeopleOS</a>
+            <a href="../../skillhubos/index.html">Skill HubOS</a>
+            <a href="../../government-advisory/index.html">Government Advisory</a>
+            <a href="../../how-we-work/index.html">How We Work</a>
+            <a href="../../about/index.html">About</a>
+            <a href="../../insights/index.html">Insights</a>
+            <a class="nav-cta" href="../../contact/index.html">Let's Talk</a>
+        </nav>
+    </div>
+</header>
+
+<div class="breadcrumb">
+    <div class="container">
+        <a href="../../index.html">Home</a>
+        <span class="separator">→</span>
+        <a href="/peopleos/index.html">PeopleOS</a>
+        <span class="separator">→</span>
+        <span aria-current="page">End-to-End HR Outsourcing</span>
+    </div>
+</div>
+
+<main>
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="eyebrow">PEOPLEOS · END-TO-END HR OUTSOURCING</div>
+            <h1><span>End-to-End HR Outsourcing</span>.</h1>
+            <p class="hero-copy">
+                <strong>Your HR function, supported end-to-end.</strong>
+                PathWeave provides end-to-end HR outsourcing support for organisations that want a structured HR function
+                without having to build every capability internally. From HR operations and recruitment to employee lifecycle
+                support, HR systems, reporting and ongoing people processes, we help connect the different parts of HR into one practical operating model.
+            </p>
+            <div class="hero-actions">
+                <a href="../../contact/index.html" class="button button-primary">Talk to PathWeave</a>
+                <a href="/peopleos/index.html" class="button button-secondary">Explore PeopleOS</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-label="Organisations we support" class="audience">
+    <div class="container audience-inner">
+        <div class="audience-label">Supporting HR functions across growing organisations</div>
+        <div class="audience-list">
+            <span class="audience-pill">Startups</span>
+            <span class="audience-pill">SMEs</span>
+            <span class="audience-pill">Growing Businesses</span>
+            <span class="audience-pill">Mid-Sized Organisations</span>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container split">
+        <div>
+            <div class="eyebrow">WHEN HR BECOMES TOO MUCH TO MANAGE INTERNALLY</div>
+            <h2>HR isn't a collection of disconnected tasks.</h2>
+        </div>
+        <div class="copy">
+            <p>As organisations grow, HR responsibilities multiply.</p>
+            <p>Recruitment needs to keep pace with growth. Employees need consistent onboarding and support. Policies need to be maintained. HR records need to stay organised. Managers need support with people matters. Performance processes need to happen. HR systems need to work. Leadership needs reliable people information.</p>
+            <p>And someone needs to keep all of these activities connected.</p>
+            <p>For some organisations, building a large internal HR team for every requirement doesn't make sense.</p>
+            <p>The challenge becomes: <strong>How do you build a reliable HR function without having to build every capability yourself?</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">A CONNECTED HR FUNCTION</div>
+            <h2>Not just outsourcing tasks. Building and operating a connected HR function.</h2>
+            <p>End-to-end HR outsourcing should not mean simply handing individual administrative tasks to an external provider. It should create a clearer operating model for HR.</p>
+        </div>
+        <div class="cap-grid">
+            <article class="cap-card"><div class="card-number">01</div><h3>Defined HR processes</h3><p>Clear processes that make recurring HR work easier to understand, manage and improve.</p></article>
+            <article class="cap-card"><div class="card-number">02</div><h3>Clear ownership</h3><p>Defined responsibilities so internal leaders, managers and the external HR partner know what they own.</p></article>
+            <article class="cap-card"><div class="card-number">03</div><h3>Documented workflows</h3><p>Practical workflows that connect HR activities rather than leaving them as isolated tasks.</p></article>
+            <article class="cap-card"><div class="card-number">04</div><h3>Employee support</h3><p>Structured support for employees and managers across recurring people-related requirements.</p></article>
+            <article class="cap-card"><div class="card-number">05</div><h3>HR systems &amp; reporting</h3><p>Connected people data, HR systems and reporting to improve operational visibility.</p></article>
+            <article class="cap-card"><div class="card-number">06</div><h3>Ongoing improvement</h3><p>Regular review of processes and opportunities to simplify, strengthen and improve the HR function.</p></article>
+        </div>
+        <p class="copy" style="margin-top:32px;">PathWeave works with organisations to determine <strong>which parts of HR should be supported externally and how those responsibilities should work together.</strong></p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">THE HR FUNCTION WE CAN SUPPORT</div>
+            <h2>Connect the different parts of HR into one practical operating model.</h2>
+        </div>
+        <div class="cap-grid">
+            <article class="cap-card"><div class="card-number">01</div><h3>HR Strategy &amp; Planning</h3><p>Connect HR priorities with business growth, organisational needs and workforce requirements.</p></article>
+            <article class="cap-card"><div class="card-number">02</div><h3>HR Operations &amp; Administration</h3><p>Support recurring HR processes, taking over the day-to-day execution of your <a href="../hr-operations-hrms/" style="text-decoration: underline; text-underline-offset: 3px;">HR processes and data management</a>.</p></article>
+            <article class="cap-card"><div class="card-number">03</div><h3>Recruitment &amp; Talent</h3><p>Support hiring requirements across role definition, sourcing, screening, assessment and providing dedicated, ongoing support for <a href="../recruitment-talent/" style="text-decoration: underline; text-underline-offset: 3px;">recruitment and talent assessment</a>.</p></article>
+            <article class="cap-card"><div class="card-number">04</div><h3>Employee Lifecycle</h3><p>Support processes across joining, onboarding, employee changes, internal movements and exits.</p></article>
+            <article class="cap-card"><div class="card-number">05</div><h3>Policies &amp; HR Processes</h3><p>Help create, structure, document and maintain practical HR policies and processes.</p></article>
+            <article class="cap-card"><div class="card-number">06</div><h3>Performance Management</h3><p>Support performance cycles, goal-setting processes, reviews and manager enablement.</p></article>
+            <article class="cap-card"><div class="card-number">07</div><h3>HRMS &amp; People Technology</h3><p>Support HRMS, people data, workflows, reporting and appropriate digitalisation.</p></article>
+            <article class="cap-card"><div class="card-number">08</div><h3>Employee Support</h3><p>Provide structured HR support for employees and managers across recurring people-related requirements.</p></article>
+            <article class="cap-card"><div class="card-number">09</div><h3>HR Reporting &amp; Insights</h3><p>Create reliable people information and reporting to improve management visibility.</p></article>
+            <article class="cap-card"><div class="card-number">10</div><h3>HR Process Improvement</h3><p>Continuously identify opportunities to simplify, standardise, digitise and improve HR processes.</p></article>
+        </div>
+
+        <div aria-label="Related PeopleOS services" class="related-links">
+            <a href="/peopleos/hr-services/">HR Services</a>
+            <a href="/peopleos/fractional-hr/">Fractional HR</a>
+            <a href="/peopleos/hr-consulting-startups/">HR Consulting for Startups</a>
+            <a href="/peopleos/hr-consulting-smes/">HR Consulting for SMEs</a>
+            <a href="/peopleos/hr-operations-hrms/">HR Operations &amp; HRMS</a>
+            <a href="/peopleos/recruitment-talent/">Recruitment &amp; Talent</a>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">ACROSS THE EMPLOYEE JOURNEY</div>
+            <h2>HR support from joining to leaving.</h2>
+            <p>One connected HR journey rather than isolated activities.</p>
+        </div>
+        <div class="lifecycle">
+            <article class="lifecycle-card">
+                <h3>Before joining</h3>
+                <p>Prepare the organisation and candidate for a smooth start.</p>
+                <ul><li>Workforce requirements</li><li>Role definition</li><li>Recruitment</li><li>Offer coordination</li><li>Documentation</li></ul>
+            </article>
+            <article class="lifecycle-card">
+                <h3>Joining &amp; onboarding</h3>
+                <p>Make the first stage of employment structured and consistent.</p>
+                <ul><li>Joining documentation</li><li>Onboarding workflows</li><li>Employee records</li><li>HRMS setup</li><li>Induction coordination</li></ul>
+            </article>
+            <article class="lifecycle-card">
+                <h3>During employment</h3>
+                <p>Support the recurring processes employees and managers rely on.</p>
+                <ul><li>Employee records</li><li>Attendance and leave</li><li>HR requests</li><li>Manager support</li><li>Policies</li><li>Performance processes</li></ul>
+            </article>
+            <article class="lifecycle-card">
+                <h3>Growth &amp; development</h3>
+                <p>Connect performance, learning and talent-related processes.</p>
+                <ul><li>Performance cycles</li><li>Learning coordination</li><li>Career-related processes</li><li>Talent information</li></ul>
+            </article>
+            <article class="lifecycle-card">
+                <h3>Exit</h3>
+                <p>Bring structure and consistency to the final stage of the employee journey.</p>
+                <ul><li>Resignation processes</li><li>Exit documentation</li><li>Coordination</li><li>Employee record closure</li><li>Exit insights</li></ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">FLEXIBLE HR OUTSOURCING</div>
+            <h2>You don't have to outsource everything.</h2>
+            <p>Not every organisation needs the same level of external support. Depending on the organisation's size, stage and internal capability, PathWeave can support different parts of the HR function.</p>
+        </div>
+        <div class="flex-grid">
+            <article class="flex-card"><h3>Specific HR functions</h3><p>Support selected areas such as HR operations or recruitment where additional capability is required.</p></article>
+            <article class="flex-card"><h3>Recurring HR activities</h3><p>Support ongoing HR activities for organisations that have internal HR ownership but need additional operating capacity.</p></article>
+            <article class="flex-card"><h3>Multiple connected HR functions</h3><p>Bring together several HR capabilities where the organisation needs broader external support.</p></article>
+            <article class="flex-card"><h3>The wider HR function</h3><p>Operate substantial parts of HR end-to-end where an organisation wants an external partner for ongoing HR capability.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice">
+    <div class="container fit-grid">
+        <div>
+            <div class="eyebrow">DESIGNED FOR GROWING ORGANISATIONS</div>
+            <h2>End-to-end HR outsourcing can make sense when…</h2>
+        </div>
+        <div class="fit-list">
+            <div class="fit-item"><strong>You are growing faster than your HR capability.</strong><span>The organisation needs more HR capacity without immediately building a large internal team.</span></div>
+            <div class="fit-item"><strong>HR responsibilities are spread across too many people.</strong><span>Managers, founders, finance and administrative teams may all be handling pieces of HR.</span></div>
+            <div class="fit-item"><strong>HR processes are inconsistent.</strong><span>The organisation needs clearer ownership, documentation and operating processes.</span></div>
+            <div class="fit-item"><strong>Your HR team needs additional capability.</strong><span>The existing team may need support across specific specialist or operational areas.</span></div>
+            <div class="fit-item"><strong>You need a more structured HR function.</strong><span>The organisation has HR activities but lacks a connected operating model.</span></div>
+            <div class="fit-item"><strong>You want to focus internal leadership on the business.</strong><span>An external HR partner can take responsibility for agreed areas while internal leadership retains appropriate oversight.</span></div>
+            <div class="fit-item"><strong>You are entering a new stage of growth.</strong><span>Expansion may require stronger HR systems, processes and people support.</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="section approach">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">OUR OPERATING MODEL</div>
+            <h2>One partner. Clear responsibilities. Connected HR.</h2>
+        </div>
+        <div class="approach-grid" style="color:var(--text);">
+            <article class="step" style="border-color:var(--line);"><div class="step-number" style="color:var(--blue);">01</div><h3>Understand</h3><p style="color:var(--muted);">Understand the organisation, people, existing HR capability and business priorities.</p></article>
+            <article class="step" style="border-color:var(--line);"><div class="step-number" style="color:var(--blue);">02</div><h3>Design</h3><p style="color:var(--muted);">Define the scope of HR support, responsibilities, workflows and service expectations.</p></article>
+            <article class="step" style="border-color:var(--line);"><div class="step-number" style="color:var(--blue);">03</div><h3>Transition</h3><p style="color:var(--muted);">Document existing processes, information and responsibilities and establish the operating rhythm.</p></article>
+            <article class="step" style="border-color:var(--line);"><div class="step-number" style="color:var(--blue);">04</div><h3>Operate</h3><p style="color:var(--muted);">Provide the agreed HR support across the defined areas.</p></article>
+            <article class="step" style="border-color:var(--line);"><div class="step-number" style="color:var(--blue);">05</div><h3>Measure</h3><p style="color:var(--muted);">Track relevant HR activity, service performance and people metrics.</p></article>
+            <article class="step" style="border-color:var(--line);"><div class="step-number" style="color:var(--blue);">06</div><h3>Improve</h3><p style="color:var(--muted);">Identify opportunities to simplify, strengthen and improve the HR function.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">EXTENDING YOUR HR TEAM</div>
+            <h2>Outsourcing doesn't have to mean replacing your HR team.</h2>
+            <p>An organisation may already have an HR manager, HR executives, founder-led HR, finance or administration teams handling HR, or specialist HR capability in some areas. PathWeave can complement those capabilities.</p>
+        </div>
+        <div class="internal-grid">
+            <article class="internal-card"><h3>What should stay internal?</h3><p>Retain responsibilities where internal ownership creates the most value, partnering seamlessly with your internal team or <a href="../fractional-hr/" style="text-decoration: underline; text-underline-offset: 3px;">fractional HR leaders</a> to deliver results.</p></article>
+            <article class="internal-card"><h3>What should be supported externally?</h3><p>Identify activities where additional operating capacity, specialist capability or consistent execution would help.</p></article>
+            <article class="internal-card"><h3>Where does specialist capability add value?</h3><p>Bring in focused expertise where the organisation does not need to build a permanent internal capability.</p></article>
+            <article class="internal-card"><h3>How should responsibilities connect?</h3><p>Define practical handoffs and ownership so internal and external teams operate as one connected HR function.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="tech-box">
+            <div class="eyebrow">PEOPLE + PROCESS + TECHNOLOGY</div>
+            <h2>Technology should strengthen the HR function, not complicate it.</h2>
+            <div class="copy" style="margin-top:24px;">
+                <p>An outsourced HR model can include appropriate use of HRMS, workflow automation, employee self-service, HR reporting, digital documentation, process automation and AI-assisted HR workflows.</p>
+                <p>But technology should follow process.</p>
+            </div>
+            <div class="tech-flow" aria-label="PathWeave HR technology approach">
+                <span>Understand</span><b>→</b><span>Simplify</span><b>→</b><span>Structure</span><b>→</b><span>Digitise</span><b>→</b><span>Automate</span><b>→</b><span>Improve</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">VISIBILITY &amp; ACCOUNTABILITY</div>
+            <h2>Outsourcing should give leadership more visibility, not less.</h2>
+            <p>A well-run outsourced HR model should have clear reporting and ownership. Depending on the scope, reporting can cover the following areas.</p>
+        </div>
+        <div class="metric-grid">
+            <div class="metric"><strong>Workforce information</strong>Maintain visibility into people and workforce activity.</div>
+            <div class="metric"><strong>Recruitment</strong>Track hiring requirements and progress.</div>
+            <div class="metric"><strong>Employee lifecycle activity</strong>Understand activity across key employee stages.</div>
+            <div class="metric"><strong>HR operations</strong>Monitor recurring HR processes and service activity.</div>
+            <div class="metric"><strong>Attendance and leave</strong>Maintain visibility into agreed workforce processes.</div>
+            <div class="metric"><strong>Performance processes</strong>Track performance-cycle activity and progress.</div>
+            <div class="metric"><strong>HR requests</strong>Understand recurring employee and manager requirements.</div>
+            <div class="metric"><strong>HR process metrics</strong>Review operational measures relevant to the agreed scope.</div>
+            <div class="metric"><strong>Agreed service measures</strong>Maintain accountability around the outsourced operating model.</div>
+        </div>
+        <p class="copy" style="margin-top:30px;"><strong>Leadership should know:</strong> What is happening? Who owns it? What needs attention?</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">HOW WE CAN WORK WITH YOU</div>
+            <h2>The scope can grow with your organisation.</h2>
+        </div>
+        <div class="engagement-grid">
+            <article class="engagement-card"><h3>Core HR Support</h3><p>Support selected HR activities and recurring processes.</p></article>
+            <article class="engagement-card"><h3>Extended HR Support</h3><p>Support multiple HR functions alongside an internal team.</p></article>
+            <article class="engagement-card"><h3>Managed HR Function</h3><p>Operate substantial parts of the HR function on an ongoing basis.</p></article>
+            <article class="engagement-card"><h3>End-to-End HR Outsourcing</h3><p>Provide an integrated external HR capability across agreed areas of the employee and HR lifecycle.</p></article>
+        </div>
+    </div>
+</section>
+
+<section class="section fit">
+    <div class="container fit-grid">
+        <div>
+            <div class="eyebrow">IS END-TO-END HR OUTSOURCING RIGHT FOR YOU?</div>
+            <h2>It may be if you want…</h2>
+        </div>
+        <div class="fit-list">
+            <div class="fit-item"><strong>One partner across multiple HR requirements</strong><span>Connect different HR capabilities through a coordinated operating model.</span></div>
+            <div class="fit-item"><strong>Clearer HR ownership</strong><span>Make responsibilities and handoffs easier to understand.</span></div>
+            <div class="fit-item"><strong>Reliable recurring HR support</strong><span>Build consistent support for ongoing HR activities.</span></div>
+            <div class="fit-item"><strong>Stronger HR processes</strong><span>Improve structure, documentation and execution across HR.</span></div>
+            <div class="fit-item"><strong>Access to specialist HR capability</strong><span>Bring in expertise where building permanent capability isn't necessary.</span></div>
+            <div class="fit-item"><strong>Better HR systems and reporting</strong><span>Improve visibility through connected people data, systems and reporting.</span></div>
+            <div class="fit-item"><strong>Less dependence on individual people</strong><span>Create documented and repeatable HR processes.</span></div>
+            <div class="fit-item"><strong>A scalable HR operating model</strong><span>Allow HR capability to evolve as the organisation grows.</span></div>
+            <div class="fit-item"><strong>Internal leadership to focus on the business</strong><span>Provide external support across agreed HR responsibilities while maintaining appropriate oversight.</span></div>
+            <div class="fit-item"><strong>HR capability without building every function internally</strong><span>Access a broader HR operating capability without creating every specialist role in-house.</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="why section-ice">
+    <div class="container split">
+        <div>
+            <div class="eyebrow">WHY PATHWEAVE</div>
+            <h2>Not just outsourced HR. A connected HR operating model.</h2>
+        </div>
+        <div class="why-copy">
+            <p>PathWeave brings together:</p>
+            <div class="principles">
+                <div class="principle"><strong>People</strong>Human judgement, employee support and practical HR partnership.</div>
+                <div class="principle"><strong>Process</strong>Clear workflows, ownership and repeatable ways of working.</div>
+                <div class="principle"><strong>Technology</strong>HRMS, automation and digital tools that support the process.</div>
+                <div class="principle"><strong>Data</strong>Reliable people information and reporting for better visibility.</div>
+                <div class="principle"><strong>Continuous Improvement</strong>Ongoing review and improvement of the HR operating model.</div>
+            </div>
+            <p style="margin-top:28px;">The objective isn't simply to complete HR tasks. It is to help create an HR function that is <strong>structured, responsive, easier to manage, measurable, scalable and connected to the business.</strong></p>
+            <p>And where the organisation already has internal HR capability, we can work alongside it rather than automatically replacing it.</p>
+        </div>
+    </div>
+</section>
+
+<section class="local">
+    <div class="container local-grid">
+        <div>
+            <div class="eyebrow">WHERE WE SERVE</div>
+            <h2>HR Outsourcing support across the markets we serve.</h2>
+        </div>
+        <div class="local-copy">
+            <p>
+                PathWeave supports organisations across Hyderabad, Indore, Bhopal and Nagpur. We provide end-to-end HR outsourcing solutions tailored to the needs of growing businesses and established organisations in these markets.
+            </p>
+            <p>
+                Where a city has a dedicated service page, that page provides the deeper local context. Otherwise, this service pillar remains the main reference point for HR Outsourcing support PathWeave provides in that market.
+            </p>
+            <div aria-label="PathWeave locations" class="local-links">
+                <a href="../../locations/hyderabad/">Hyderabad</a>
+                <a href="../../locations/indore/">Indore</a>
+                <a href="../../locations/bhopal/">Bhopal</a>
+                <a href="../../locations/nagpur/">Nagpur</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <div class="cta-inner">
+            <div class="cta-copy">
+                <h2>Want a more structured HR function without building everything internally?</h2>
+            </div>
+            <a class="button" href="../../contact/index.html">Start a Conversation</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="../../logo.png" alt="PathWeave">
+        <div class="footer-description">Strategy, transformation and growth across business, people, technology and government.</div>
+      </div>
+      <div class="footer-column">
+        <h4>OUR PRACTICES</h4>
+        <a href="../../businessos/index.html">BusinessOS</a>
+        <a href="../../peopleos/index.html">PeopleOS</a>
+        <a href="../../skillhubos/index.html">Skill HubOS</a>
+        <a href="../../government-advisory/index.html">Government Advisory</a>
+      </div>
+      <div class="footer-column">
+        <h4>PATHWEAVE</h4>
+        <a href="../../how-we-work/index.html">How We Work</a>
+        <a href="../../about/index.html">About</a>
+        <a href="../../insights/index.html">Insights</a>
+      </div>
+      <div class="footer-column">
+        <h4>LOCATIONS</h4>
+        <a href="/locations/hyderabad/">Hyderabad</a>
+        <a href="/locations/indore/">Indore</a>
+        <a href="/locations/bhopal/">Bhopal</a>
+        <a href="/locations/nagpur/">Nagpur</a>
+      </div>
+      <div class="footer-column">
+        <h4>CONNECT</h4>
+        <a href="../../contact/index.html">Start a Conversation</a>
+        <a href="https://www.linkedin.com/company/pathweave-consulting" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 PathWeave. All rights reserved.</div>
+      <div>People · Process · Technology</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
