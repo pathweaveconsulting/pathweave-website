@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                             <a href="/peopleos/">PeopleOS</a>
 
+                            <a href="/skillhubos/">Skill HubOS</a>
+
                             <a href="/government-advisory/">
                                 Government Advisory
                             </a>
@@ -120,6 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                             <h4>PathWeave</h4>
 
+                            <a href="/diagnostic/">
+                                Growth Diagnostic
+                            </a>
+
                             <a href="/how-we-work/">
                                 How We Work
                             </a>
@@ -143,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 Start a Conversation
                             </a>
 
-                            <a href="https://www.linkedin.com/company/pathweaveconsulting/">
+                            <a href="https://www.linkedin.com/company/pathweave-consulting">
                                 LinkedIn
                             </a>
 

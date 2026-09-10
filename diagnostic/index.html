@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Growth Readiness Assessment | PathWeave</title>
+    <meta name="description" content="Assess your organisation's growth readiness across People, Process and Technology with PathWeave's free 15-question diagnostic.">
+    <link rel="canonical" href="https://pathweave.in/diagnostic/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Growth Readiness Assessment | PathWeave">
+    <meta property="og:description" content="Get an immediate scorecard across People, Process and Technology, with practical priorities for what to strengthen next.">
+    <meta property="og:url" content="https://pathweave.in/diagnostic/">
+    <meta property="og:site_name" content="PathWeave">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Growth Readiness Assessment | PathWeave">
+    <meta name="twitter:description" content="A free 15-question readiness assessment across People, Process and Technology.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/site.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://pathweave.in/diagnostic/#webpage",
+          "url": "https://pathweave.in/diagnostic/",
+          "name": "Growth Readiness Assessment | PathWeave",
+          "description": "A free indicative self-assessment of organisational readiness across People, Process and Technology.",
+          "isPartOf": {
+            "@id": "https://pathweave.in/#website"
+          },
+          "about": {
+            "@id": "https://pathweave.in/#organization"
+          },
+          "inLanguage": "en-IN"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pathweave.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Growth Readiness Assessment",
+              "item": "https://pathweave.in/diagnostic/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --diagnostic-navy: #0b2238;
+            --diagnostic-navy-dark: #071a2b;
+            --diagnostic-blue: #2455d6;
+            --diagnostic-ice: #f4f8fd;
+            --diagnostic-text: #173047;
+            --diagnostic-muted: #5c7187;
+            --diagnostic-line: #d7e1eb;
+            --diagnostic-white: #ffffff;
+        }
+
+        body {
+            background: var(--diagnostic-ice);
+            color: var(--diagnostic-text);
+            font-family: "DM Sans", Arial, sans-serif;
+        }
+
+        .pw-logo img {
+            width: 88px;
+        }
+
+        .pw-nav-links {
+            gap: 24px;
+        }
+
+        .diagnostic-main {
+            padding: 58px 0 104px;
+        }
+
+        .diagnostic-container {
+            width: min(1160px, 88%);
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 38px;
+            color: var(--diagnostic-muted);
+            font-size: 14px;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--diagnostic-blue);
+        }
+
+        .assessment-heading {
+            max-width: 880px;
+            margin-bottom: 46px;
+        }
+
+        .assessment-eyebrow {
+            margin-bottom: 18px;
+            color: var(--diagnostic-blue);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .assessment-heading h1 {
+            max-width: 850px;
+            margin: 0 0 20px;
+            color: var(--diagnostic-navy);
+            font-family: "Playfair Display", serif;
+            font-size: clamp(42px, 5vw, 66px);
+            font-weight: 500;
+            line-height: 1.06;
+        }
+
+        .assessment-heading > p {
+            max-width: 760px;
+            margin: 0;
+            color: var(--diagnostic-muted);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .assessment-facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .assessment-facts span {
+            padding: 9px 14px;
+            border: 1px solid #cad8e7;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .72);
+            color: var(--diagnostic-navy);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .assessment-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.55fr) minmax(280px, .65fr);
+            gap: 32px;
+            align-items: start;
+        }
+
+        .assessment-panel,
+        .assessment-aside,
+        .result-panel {
+            border: 1px solid var(--diagnostic-line);
+            border-radius: 26px;
+            background: var(--diagnostic-white);
+            box-shadow: 0 22px 55px rgba(11, 34, 56, .07);
+        }
+
+        .assessment-panel {
+            overflow: hidden;
+        }
+
+        .assessment-intro {
+            padding: 34px 36px;
+            border-bottom: 1px solid var(--diagnostic-line);
+            background: linear-gradient(135deg, #ffffff 0%, #f7faff 100%);
+        }
+
+        .assessment-intro h2 {
+            margin: 0 0 10px;
+            color: var(--diagnostic-navy);
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        .assessment-intro p {
+            margin: 0;
+            color: var(--diagnostic-muted);
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        .scale-key {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 7px;
+            margin-top: 24px;
+        }
+
+        .scale-key span {
+            padding: 9px 6px;
+            border-radius: 9px;
+            background: #eef4fb;
+            color: var(--diagnostic-muted);
+            font-size: 12px;
+            line-height: 1.35;
+            text-align: center;
+        }
+
+        .scale-key strong {
+            display: block;
+            margin-bottom: 2px;
+            color: var(--diagnostic-navy);
+            font-size: 14px;
+        }
+
+        .dimension {
+            margin: 0;
+            padding: 38px 36px;
+            border: 0;
+            border-bottom: 1px solid var(--diagnostic-line);
+        }
+
+        .dimension:last-of-type {
+            border-bottom: 0;
+        }
+
+        .dimension > legend {
+            width: 100%;
+            margin: 0 0 8px;
+            padding: 0;
+            color: var(--diagnostic-navy);
+            font-family: "Playfair Display", serif;
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .dimension-copy {
+            margin: 0 0 28px;
+            color: var(--diagnostic-muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .question {
+            padding: 24px 0;
+            border-top: 1px solid #e8eef5;
+        }
+
+        .question:first-of-type {
+            border-top: 0;
+        }
+
+        .question-text {
+            display: block;
+            margin-bottom: 17px;
+            color: var(--diagnostic-text);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.55;
+        }
+
+        .rating {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 9px;
+        }
+
+        .rating label {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .rating input {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+        }
+
+        .rating span {
+            display: flex;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--diagnostic-line);
+            border-radius: 12px;
+            background: #ffffff;
+            color: var(--diagnostic-muted);
+            font-size: 16px;
+            font-weight: 700;
+            transition: border-color .18s ease, background .18s ease, color .18s ease, transform .18s ease;
+        }
+
+        .rating label:hover span {
+            border-color: #9bb4dc;
+            transform: translateY(-1px);
+        }
+
+        .rating input:focus-visible + span {
+            outline: 3px solid rgba(36, 85, 214, .25);
+            outline-offset: 2px;
+        }
+
+        .rating input:checked + span {
+            border-color: var(--diagnostic-blue);
+            background: var(--diagnostic-blue);
+            color: #ffffff;
+        }
+
+        .form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+            padding: 32px 36px 38px;
+            background: #f8fbff;
+        }
+
+        .assessment-button {
+            display: inline-flex;
+            min-height: 50px;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            border-radius: 999px;
+            padding: 13px 23px;
+            cursor: pointer;
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            transition: transform .18s ease, background .18s ease;
+        }
+
+        .assessment-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .assessment-button--primary {
+            background: var(--diagnostic-navy);
+            color: #ffffff;
+        }
+
+        .assessment-button--primary:hover {
+            background: var(--diagnostic-navy-dark);
+        }
+
+        .assessment-button--secondary {
+            border: 1px solid var(--diagnostic-line);
+            background: #ffffff;
+            color: var(--diagnostic-navy);
+        }
+
+        .form-note {
+            flex-basis: 100%;
+            color: var(--diagnostic-muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .assessment-aside {
+            position: sticky;
+            top: 24px;
+            padding: 30px;
+        }
+
+        .assessment-aside h2 {
+            margin: 0 0 18px;
+            color: var(--diagnostic-navy);
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-weight: 500;
+        }
+
+        .pillar-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pillar-list li {
+            padding: 20px 0;
+            border-top: 1px solid var(--diagnostic-line);
+        }
+
+        .pillar-list li:first-child {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        .pillar-list strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--diagnostic-navy);
+            font-size: 15px;
+        }
+
+        .pillar-list span {
+            color: var(--diagnostic-muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .privacy-note {
+            margin-top: 8px;
+            padding: 17px;
+            border-radius: 14px;
+            background: var(--diagnostic-ice);
+            color: var(--diagnostic-muted);
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .result-panel {
+            margin-top: 34px;
+            overflow: hidden;
+        }
+
+        .result-panel[hidden] {
+            display: none;
+        }
+
+        .result-hero {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 28px;
+            align-items: center;
+            padding: 38px;
+            background: var(--diagnostic-navy);
+            color: #ffffff;
+        }
+
+        .overall-score {
+            display: flex;
+            width: 132px;
+            height: 132px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, .22);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .06);
+        }
+
+        .overall-score strong {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .overall-score span {
+            margin-top: 5px;
+            color: #b8c9d8;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .result-kicker {
+            margin-bottom: 7px;
+            color: #8fb2ff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .result-hero h2 {
+            margin: 0 0 10px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(30px, 4vw, 44px);
+            font-weight: 500;
+            line-height: 1.15;
+        }
+
+        .result-hero p {
+            max-width: 680px;
+            margin: 0;
+            color: #c7d4df;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .result-body {
+            padding: 38px;
+        }
+
+        .dimension-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .dimension-result {
+            padding: 22px;
+            border: 1px solid var(--diagnostic-line);
+            border-radius: 17px;
+        }
+
+        .dimension-result-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 13px;
+            color: var(--diagnostic-navy);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .result-track {
+            height: 8px;
+            overflow: hidden;
+            border-radius: 999px;
+            background: #e7edf4;
+        }
+
+        .result-track span {
+            display: block;
+            width: 0;
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #2455d6, #6e98f5);
+            transition: width .5s ease;
+        }
+
+        .priorities {
+            margin-top: 34px;
+        }
+
+        .priorities h3 {
+            margin: 0 0 16px;
+            color: var(--diagnostic-navy);
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        .priorities ol {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 0;
+            padding: 0;
+            counter-reset: priority;
+            list-style: none;
+        }
+
+        .priorities li {
+            counter-increment: priority;
+            padding: 20px;
+            border-radius: 15px;
+            background: var(--diagnostic-ice);
+            color: var(--diagnostic-muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .priorities li::before {
+            content: "0" counter(priority);
+            display: block;
+            margin-bottom: 11px;
+            color: var(--diagnostic-blue);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .result-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .result-disclaimer {
+            margin-top: 22px;
+            color: var(--diagnostic-muted);
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        noscript {
+            display: block;
+            margin-bottom: 24px;
+            padding: 16px;
+            border: 1px solid #d6a64d;
+            border-radius: 12px;
+            background: #fff8e8;
+            color: #59400f;
+        }
+
+        @media (max-width: 960px) {
+            .assessment-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .assessment-aside {
+                position: static;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .diagnostic-main {
+                padding-top: 38px;
+            }
+
+            .diagnostic-container {
+                width: min(100% - 32px, 1160px);
+            }
+
+            .assessment-intro,
+            .dimension,
+            .form-actions,
+            .result-body {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+
+            .scale-key span {
+                font-size: 0;
+            }
+
+            .scale-key strong {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            .dimension-results,
+            .priorities ol {
+                grid-template-columns: 1fr;
+            }
+
+            .result-hero {
+                grid-template-columns: 1fr;
+                padding: 30px 24px;
+            }
+
+            .overall-score {
+                width: 112px;
+                height: 112px;
+            }
+        }
+
+        @media print {
+            #site-header,
+            #site-footer,
+            .assessment-heading,
+            .assessment-layout,
+            .result-actions {
+                display: none !important;
+            }
+
+            .diagnostic-main {
+                padding: 0;
+            }
+
+            .result-panel {
+                margin: 0;
+                border: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <main class="diagnostic-main">
+        <div class="diagnostic-container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a>
+                <span aria-hidden="true">/</span>
+                <span>Growth Readiness Assessment</span>
+            </nav>
+
+            <header class="assessment-heading">
+                <div class="assessment-eyebrow">PATHWEAVE GROWTH DIAGNOSTIC</div>
+                <h1>Is your operating foundation ready for the next stage of growth?</h1>
+                <p>
+                    Rate how consistently each statement is true today. Your answers generate an
+                    immediate readiness score across People, Process and Technology.
+                </p>
+                <div class="assessment-facts" aria-label="Assessment details">
+                    <span>15 questions</span>
+                    <span>About 5 minutes</span>
+                    <span>No email required</span>
+                </div>
+            </header>
+
+            <noscript>This assessment needs JavaScript to calculate your score. Please enable JavaScript and reload the page.</noscript>
+
+            <div class="assessment-layout">
+                <form id="readiness-form" class="assessment-panel">
+                    <div class="assessment-intro">
+                        <h2>Rate the organisation as it operates today.</h2>
+                        <p>Use the full scale. There are no right answers—the value comes from an honest current-state view.</p>
+                        <div class="scale-key" aria-label="Rating scale">
+                            <span><strong>1</strong>Not yet true</span>
+                            <span><strong>2</strong>Rarely true</span>
+                            <span><strong>3</strong>Partly true</span>
+                            <span><strong>4</strong>Mostly true</span>
+                            <span><strong>5</strong>Consistently true</span>
+                        </div>
+                    </div>
+
+                    <fieldset class="dimension" data-dimension="people">
+                        <legend>People</legend>
+                        <p class="dimension-copy">Leadership capacity, role clarity, ownership and the people systems that support growth.</p>
+
+                        <div class="question">
+                            <span class="question-text" id="q1-label">1. Important decisions have clear owners beyond the founder or a few key individuals.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q1-label">
+                                <label><input type="radio" name="q1" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q1" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q1" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q1" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q1" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q2-label">2. Managers understand the outcomes they own and are regularly accountable for them.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q2-label">
+                                <label><input type="radio" name="q2" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q2" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q2" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q2" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q2" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q3-label">3. Hiring, onboarding, performance and core HR processes follow a consistent structure.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q3-label">
+                                <label><input type="radio" name="q3" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q3" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q3" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q3" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q3" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q4-label">4. Critical knowledge and customer relationships are shared rather than locked with individuals.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q4-label">
+                                <label><input type="radio" name="q4" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q4" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q4" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q4" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q4" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q5-label">5. The leadership team has the capacity and capability required for the next stage.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q5-label">
+                                <label><input type="radio" name="q5" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q5" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q5" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q5" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q5" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="dimension" data-dimension="process">
+                        <legend>Process</legend>
+                        <p class="dimension-copy">Commercial rhythms, repeatable workflows, cross-functional coordination and operating discipline.</p>
+
+                        <div class="question">
+                            <span class="question-text" id="q6-label">6. Sales pipeline, forecasting and review rhythms provide a reliable view of future revenue.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q6-label">
+                                <label><input type="radio" name="q6" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q6" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q6" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q6" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q6" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q7-label">7. The organisation's most important workflows are clear, repeatable and documented.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q7-label">
+                                <label><input type="radio" name="q7" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q7" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q7" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q7" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q7" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q8-label">8. Cross-functional hand-offs have clear inputs, outputs, timelines and ownership.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q8-label">
+                                <label><input type="radio" name="q8" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q8" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q8" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q8" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q8" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q9-label">9. A focused set of operating metrics is reviewed regularly and leads to decisions.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q9-label">
+                                <label><input type="radio" name="q9" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q9" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q9" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q9" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q9" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q10-label">10. Strategic decisions are consistently converted into actions, owners and timelines.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q10-label">
+                                <label><input type="radio" name="q10" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q10" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q10" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q10" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q10" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="dimension" data-dimension="technology">
+                        <legend>Technology</legend>
+                        <p class="dimension-copy">Reliable data, system adoption and practical automation that make execution easier and more visible.</p>
+
+                        <div class="question">
+                            <span class="question-text" id="q11-label">11. Core systems provide a reliable view of customers, work and operating performance.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q11-label">
+                                <label><input type="radio" name="q11" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q11" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q11" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q11" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q11" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q12-label">12. Teams use the organisation's core tools consistently and with clear data discipline.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q12-label">
+                                <label><input type="radio" name="q12" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q12" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q12" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q12" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q12" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q13-label">13. Repetitive, rules-based work is automated where doing so improves speed or accuracy.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q13-label">
+                                <label><input type="radio" name="q13" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q13" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q13" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q13" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q13" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q14-label">14. Leaders can access timely, trusted data for the decisions that matter most.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q14-label">
+                                <label><input type="radio" name="q14" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q14" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q14" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q14" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q14" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <span class="question-text" id="q15-label">15. Technology, automation and AI priorities are linked to business needs rather than isolated tools.</span>
+                            <div class="rating" role="radiogroup" aria-labelledby="q15-label">
+                                <label><input type="radio" name="q15" value="1" required><span>1</span></label>
+                                <label><input type="radio" name="q15" value="2"><span>2</span></label>
+                                <label><input type="radio" name="q15" value="3"><span>3</span></label>
+                                <label><input type="radio" name="q15" value="4"><span>4</span></label>
+                                <label><input type="radio" name="q15" value="5"><span>5</span></label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="assessment-button assessment-button--primary">Calculate My Readiness Score</button>
+                        <button type="reset" class="assessment-button assessment-button--secondary">Clear Answers</button>
+                        <p class="form-note">Complete all 15 questions to generate your scorecard.</p>
+                    </div>
+                </form>
+
+                <aside class="assessment-aside">
+                    <h2>What you will receive</h2>
+                    <ul class="pillar-list">
+                        <li><strong>Overall readiness score</strong><span>A current-state indication of how prepared your operating foundation is for growth.</span></li>
+                        <li><strong>Three dimension scores</strong><span>A clear view across People, Process and Technology.</span></li>
+                        <li><strong>Priorities for action</strong><span>Practical starting points based on the areas with the greatest opportunity.</span></li>
+                    </ul>
+                    <p class="privacy-note">Your responses are calculated in this browser. They are not stored or sent to PathWeave.</p>
+                </aside>
+            </div>
+
+            <section id="assessment-results" class="result-panel" aria-live="polite" tabindex="-1" hidden>
+                <div class="result-hero">
+                    <div class="overall-score">
+                        <strong id="overall-score">0</strong>
+                        <span>out of 100</span>
+                    </div>
+                    <div>
+                        <div class="result-kicker">YOUR READINESS STAGE</div>
+                        <h2 id="result-title">Your result</h2>
+                        <p id="result-summary"></p>
+                    </div>
+                </div>
+
+                <div class="result-body">
+                    <div class="dimension-results">
+                        <div class="dimension-result">
+                            <div class="dimension-result-header"><span>People</span><span id="people-score">0</span></div>
+                            <div class="result-track"><span id="people-bar"></span></div>
+                        </div>
+                        <div class="dimension-result">
+                            <div class="dimension-result-header"><span>Process</span><span id="process-score">0</span></div>
+                            <div class="result-track"><span id="process-bar"></span></div>
+                        </div>
+                        <div class="dimension-result">
+                            <div class="dimension-result-header"><span>Technology</span><span id="technology-score">0</span></div>
+                            <div class="result-track"><span id="technology-bar"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="priorities">
+                        <h3>Your practical priorities</h3>
+                        <ol id="priority-list"></ol>
+                    </div>
+
+                    <div class="result-actions">
+                        <a href="/contact/" class="assessment-button assessment-button--primary">Discuss These Results</a>
+                        <button type="button" id="print-scorecard" class="assessment-button assessment-button--secondary">Print or Save Scorecard</button>
+                        <button type="button" id="retake-assessment" class="assessment-button assessment-button--secondary">Retake Assessment</button>
+                    </div>
+
+                    <p class="result-disclaimer">
+                        This scorecard is an indicative self-assessment for reflection and prioritisation.
+                        It is not a formal consulting diagnosis and does not replace a review of your organisation's context.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="/site.js"></script>
+    <script>
+        (() => {
+            const form = document.getElementById("readiness-form");
+            const resultPanel = document.getElementById("assessment-results");
+            const questionGroups = {
+                people: ["q1", "q2", "q3", "q4", "q5"],
+                process: ["q6", "q7", "q8", "q9", "q10"],
+                technology: ["q11", "q12", "q13", "q14", "q15"]
+            };
+
+            const priorities = {
+                people: "Clarify decision rights, role outcomes and manager accountability; then strengthen the people processes that reinforce them.",
+                process: "Select the three workflows most critical to growth, define their owners and hand-offs, and review a focused set of operating measures.",
+                technology: "Identify the decisions that need better data, improve adoption of core systems, and prioritise automation against measurable business needs."
+            };
+
+            const stages = [
+                {
+                    maximum: 39,
+                    title: "Establish the foundations",
+                    summary: "Growth can move forward more confidently by clarifying ownership, making critical work repeatable and building a reliable information base."
+                },
+                {
+                    maximum: 59,
+                    title: "Strengthen the operating core",
+                    summary: "Some foundations are working, but greater consistency across people, process and technology will make growth easier to manage and sustain."
+                },
+                {
+                    maximum: 79,
+                    title: "Ready to scale with focus",
+                    summary: "Your operating foundation is taking shape. Focused improvements in the lower-scoring dimensions can increase speed, visibility and resilience."
+                },
+                {
+                    maximum: 100,
+                    title: "Built for disciplined growth",
+                    summary: "You report strong foundations across the organisation. The next opportunity is to keep them aligned as strategy, scale and complexity evolve."
+                }
+            ];
+
+            const scoreDimension = (names) => {
+                const total = names.reduce((sum, name) => {
+                    return sum + Number(form.elements[name].value);
+                }, 0);
+                return Math.round(((total - names.length) / (names.length * 4)) * 100);
+            };
+
+            const updateDimension = (dimension, score) => {
+                document.getElementById(`${dimension}-score`).textContent = `${score}/100`;
+                document.getElementById(`${dimension}-bar`).style.width = `${score}%`;
+            };
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                const scores = Object.fromEntries(
+                    Object.entries(questionGroups).map(([dimension, names]) => [dimension, scoreDimension(names)])
+                );
+                const overall = Math.round((scores.people + scores.process + scores.technology) / 3);
+                const stage = stages.find((item) => overall <= item.maximum);
+
+                document.getElementById("overall-score").textContent = overall;
+                document.getElementById("result-title").textContent = stage.title;
+                document.getElementById("result-summary").textContent = stage.summary;
+
+                Object.entries(scores).forEach(([dimension, score]) => updateDimension(dimension, score));
+
+                const orderedDimensions = Object.entries(scores).sort((a, b) => a[1] - b[1]);
+                const priorityList = document.getElementById("priority-list");
+                priorityList.innerHTML = orderedDimensions
+                    .map(([dimension]) => `<li>${priorities[dimension]}</li>`)
+                    .join("");
+
+                resultPanel.hidden = false;
+                resultPanel.focus({ preventScroll: true });
+                resultPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+
+            form.addEventListener("reset", () => {
+                resultPanel.hidden = true;
+            });
+
+            document.getElementById("print-scorecard").addEventListener("click", () => window.print());
+
+            document.getElementById("retake-assessment").addEventListener("click", () => {
+                form.reset();
+                form.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+        })();
+    </script>
+</body>
+</html>
