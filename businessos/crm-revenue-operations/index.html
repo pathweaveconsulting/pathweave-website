@@ -413,8 +413,10 @@
         .section-ice .flow span { background: var(--white); border: 1px solid var(--line); }
         .inline-link { text-decoration: underline; text-underline-offset: 3px; }
         .related-links.two-up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .related-links.three-up { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         @media (max-width: 720px) { .hero { padding: 40px 0 64px; } .hero h1 { font-size: 34px; letter-spacing: -1px; } .hero-copy { font-size: 16px; } .cta-inner { padding: 36px 26px; } .cta .button { white-space: normal; text-align: center; } }
-        @media (max-width: 600px) { .related-links.two-up { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { .related-links.three-up { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 600px) { .related-links.two-up, .related-links.three-up { grid-template-columns: 1fr; } }
 </style>
 
 <script type="application/ld+json">
@@ -605,13 +607,7 @@
 </section>
 
 <section class="why" id="experience">
-<!--
-  PROOF PENDING — confirm before adding to this section:
-  - Kohler India: platform used (Salesforce or Dynamics 365), number of users, one measurable outcome.
-  - Info Edge (Naukri.com): platform used, scale (users / sales team size), one measurable outcome.
-  - National EdTech client: one outcome (adoption, forecast quality, cycle time or visibility). Client stays unnamed.
-  Kohler and Naukri are the founder's leadership experience, not PathWeave client work.
--->
+<!-- Kohler and Naukri are the founder's leadership experience, not PathWeave client work. -->
     <div class="container split">
         <div>
             <div class="eyebrow">EXPERIENCE</div>
@@ -734,11 +730,11 @@
 <h2>Turn CRM data into a sales operating rhythm</h2>
 </div>
 <div class="copy">
-<!-- Link "sales dashboards and BI consulting" to /businessos/sales-dashboards-bi/ and add /businessos/sales-commercial-excellence/ ("sales and commercial excellence") to the related links once those pages are published. -->
 <p>
-    A well-run CRM produces data leaders can act on. When you need that data turned into executive and team dashboards, our sales dashboards and BI consulting builds on the same pipeline definitions — so the numbers in the CRM and the numbers in the dashboard always match.
+    A well-run CRM produces data leaders can act on. When you need that data turned into executive and team dashboards, our <a class="inline-link" href="/businessos/sales-dashboards-bi/">sales dashboards and BI consulting</a> builds on the same pipeline definitions — so the numbers in the CRM and the numbers in the dashboard always match.
 </p>
-<div aria-label="Related PathWeave pages" class="related-links two-up">
+<div aria-label="Related PathWeave pages" class="related-links three-up">
+<a href="/businessos/sales-commercial-excellence/">Sales and commercial excellence</a>
 <a href="/businessos/">Business and management consulting for SMEs</a>
 <a href="/how-we-work/">How PathWeave works</a>
 </div>
