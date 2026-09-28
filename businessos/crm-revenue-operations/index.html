@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CRM Consulting and Revenue Operations Services | PathWeave</title>
+<meta content="Salesforce and Dynamics 365 CRM consulting for growing businesses. Design, implement and drive adoption of CRM, pipeline and forecasting systems your sales team will use." name="description"/>
+<link href="https://pathweave.in/businessos/crm-revenue-operations/" rel="canonical"/>
+
+<meta content="website" property="og:type"/>
+<meta content="CRM and Revenue Operations Consulting | PathWeave Consulting" property="og:title"/>
+<meta content="Practical CRM, pipeline and forecasting systems — designed around your sales process, built on Salesforce or Dynamics 365, and adopted by your team." property="og:description"/>
+<meta content="https://pathweave.in/businessos/crm-revenue-operations/" property="og:url"/>
+<meta content="PathWeave" property="og:site_name"/>
+
+<meta content="summary" name="twitter:card"/>
+<meta content="CRM and Revenue Operations Consulting | PathWeave Consulting" name="twitter:title"/>
+<meta content="Practical CRM, pipeline and forecasting systems — designed around your sales process, built on Salesforce or Dynamics 365, and adopted by your team." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+
+<style>
+        :root {
+            --navy-deep: #071a2b;
+            --navy: #0b2238;
+            --blue: #2455d6;
+            --ice: #f4f8fd;
+            --white: #ffffff;
+            --text: #173047;
+            --muted: #5c7187;
+            --line: #d7e1eb;
+            --card: #ffffff;
+            --soft-blue: #eaf0ff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .container {
+            width: min(1180px, 88%);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1, h2, h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 500;
+            line-height: 1.08;
+        }
+
+        header {
+            width: 100%;
+            height: 96px;
+            background: #fff;
+            border-bottom: 1px solid #edf1f5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .nav {
+            width: min(1180px, 88%);
+            height: 96px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        header .nav > a:first-child {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        header .nav .logo {
+            width: 100px;
+            max-width: 100px;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        header .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 30px;
+            flex: 1 1 auto;
+            white-space: nowrap;
+        }
+
+        header .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            color: #0b2942;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        header .nav-links a.active {
+            color: var(--blue);
+        }
+
+        header .nav-links .nav-cta {
+            flex: 0 0 auto;
+            padding: 14px 25px;
+            border-radius: 30px;
+            background: #0b2942;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .breadcrumb {
+            padding: 18px 0 0;
+            background: var(--ice);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb a { color: var(--text); }
+        .breadcrumb .separator { padding: 0 8px; color: #9aabba; }
+
+        .hero {
+            background: var(--ice);
+            padding: 62px 0 88px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 4.15vw, 58px);
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+            max-width: 760px;
+        }
+
+        .hero h1 span { color: var(--blue); }
+
+        .hero-copy {
+            max-width: 820px;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--line);
+        }
+
+        .button-primary {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--text);
+        }
+
+        /* AUDIENCE BLOCK */
+        .audience-inner { display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+        .audience-label { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+        .audience-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+        .audience-pill { padding: 9px 15px; border: 1px solid var(--line); border-radius: 24px; font-size: 13px; color: var(--text); background: #fff; }
+
+        /* GENERAL SECTIONS */
+        .section { padding: 105px 0; }
+        .section-ice { background: var(--ice); }
+        .split { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
+        
+        .section-heading { max-width: 850px; margin-bottom: 55px; }
+        .section-heading h2 { font-size: clamp(38px, 4vw, 50px); margin-bottom: 20px; }
+        .section-heading p { color: var(--muted); font-size: 16px; max-width: 780px; }
+        
+        .copy { color: var(--muted); font-size: 16px; line-height: 1.8; }
+        .copy p + p { margin-top: 22px; }
+
+        /* CAPABILITIES */
+        .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .cap-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px; min-height: 270px; }
+        .section-ice .cap-card { background: var(--white); }
+        .card-number { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 38px; }
+        .cap-card h3 { font-size: 22px; margin-bottom: 13px; }
+        .cap-card p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* PAIN POINTS */
+        .pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 55px; }
+        .pain { padding: 25px 0; border-top: 1px solid var(--line); }
+        .pain h3 { font-size: 21px; margin-bottom: 9px; }
+        .pain p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* ENGAGEMENT */
+        .engagement-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .engagement-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 32px; }
+        .engagement-card h3 { font-size: 22px; margin-bottom: 10px; }
+        .engagement-card p { color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+        /* FIT */
+        .fit-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
+        .fit-list { display: grid; gap: 0; }
+        .fit-item { padding: 20px 0; border-bottom: 1px solid var(--line); }
+        .fit-item strong { display: block; margin-bottom: 5px; font-size: 16px; }
+        .fit-item span { color: var(--muted); font-size: 15px; line-height: 1.65; }
+
+        /* WHY PATHWEAVE FLOW */
+        .why { padding: 105px 0; }
+        .why-copy { color: var(--muted); font-size: 16px; line-height: 1.8; }
+        .why-copy p + p { margin-top: 22px; }
+        .flow { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 9px; font-weight: 700; font-size: 15px; }
+        .flow span { padding: 12px 15px; background: var(--ice); border-radius: 9px; }
+        .flow b { color: #9aaabb; }
+        
+        .principle { border-top: 1px solid var(--line); padding: 20px 0; }
+        .principle strong { display: block; font-size: 17px; margin-bottom: 5px; color: var(--text); }
+        .principle span { color: var(--muted); font-size: 15px; }
+
+        /* LOCAL PAGE GATE BLOCK */
+        .local {
+            background: var(--navy);
+            color: #fff;
+            padding: 90px 0;
+        }
+
+        .local .eyebrow { color: #9db9ff; }
+
+        .local-grid {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 90px;
+            align-items: start;
+        }
+
+        .local-copy {
+            color: #c5d4e3;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 760px;
+        }
+
+        .local-copy strong { color: #fff; }
+
+        /* RELATED & LOCAL LINKS */
+        .related-links {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .related-links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 52px;
+            box-sizing: border-box;
+            padding: 14px 16px;
+            border: 1px solid rgba(20, 48, 78, 0.16);
+            border-radius: 8px;
+            color: var(--navy);
+            background: rgba(255, 255, 255, 0.72);
+            font-weight: 600;
+            line-height: 1.25;
+            text-decoration: none;
+            white-space: normal;
+            transition: opacity .2s ease, transform .2s ease, border-color .2s ease;
+        }
+
+        .related-links a::after {
+            content: "→";
+            flex: 0 0 auto;
+            margin-left: 14px;
+            font-size: 1rem;
+            opacity: .65;
+        }
+
+        .related-links a:hover {
+            transform: translateY(-1px);
+            border-color: rgba(20, 48, 78, .32);
+        }
+
+        .local-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 0;
+            width: 100%;
+            margin-top: 18px;
+            white-space: nowrap;
+        }
+
+        .local-links a {
+            color: #9db9ff;
+            font-weight: 600;
+            line-height: 1.3;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: opacity .2s ease;
+        }
+
+        .local-links a:hover { opacity: .82; }
+
+        .local-links a:not(:last-child)::after {
+            content: "|";
+            display: inline-block;
+            margin: 0 14px;
+            color: rgba(157, 185, 255, 0.55);
+            text-decoration: none;
+        }
+
+        /* CTA */
+        .cta { background: var(--white); padding: 90px 0; }
+        .cta-inner { background: var(--ice); border: 1px solid var(--line); border-radius: 26px; padding: 60px; display: flex; justify-content: space-between; align-items: center; gap: 45px; }
+        .cta h2 { max-width: 800px; font-size: clamp(38px, 4vw, 50px); }
+        .cta .button { background: var(--navy); color: var(--white); border-color: var(--navy); white-space: nowrap; }
+
+        /* FOOTER */
+        footer { background: var(--navy-deep); color: var(--white); padding: 70px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns:1.3fr 1fr 1fr 1fr 1fr; gap: 50px; }
+        .footer-logo { width: 125px; height: auto; display: block; filter: brightness(0) invert(1); margin-bottom: 25px; }
+        .footer-description { color: #a9bdd0; max-width: 350px; font-size: 15px; line-height: 1.7; }
+        .footer-heading { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 24px; }
+        .footer-column a { display: block; color: #a9bdd0; margin-bottom: 12px; font-size: 15px; }
+        .footer-column a:hover { color: #fff; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 55px; padding-top: 25px; display: flex; justify-content: space-between; color: #7f98ae; font-size: 13px; }
+
+        @media (max-width: 1000px) {
+            header .nav, .container { width: 92%; }
+            .split, .fit-grid, .local-grid { grid-template-columns: 1fr; gap: 50px; }
+            .cap-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 900px) {
+            .related-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .local-links { flex-wrap: wrap; white-space: normal; row-gap: 8px; }
+            .local-links a:not(:last-child)::after { margin: 0 10px; }
+        }
+
+        @media (max-width: 820px) {
+            header { height: auto; min-height: 82px; }
+            header .nav { min-height: 82px; height: auto; padding: 16px 0; flex-wrap: wrap; }
+            header .nav-links { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: 16px 22px; }
+            .audience-inner { align-items: flex-start; flex-direction: column; }
+            .audience-list { justify-content: flex-start; }
+            .cta-inner { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 720px) {
+            header, header .nav { height: 82px; }
+            header .nav { padding: 0 6%; }
+            header .nav-links a:not(.nav-cta) { display: none; }
+            header .nav-links { width: auto; flex-wrap: nowrap; justify-content: flex-end; gap: 0; }
+            header .nav .logo { width: 88px; max-width: 88px; }
+            
+            .section, .why { padding: 75px 0; }
+            .cap-grid, .pain-grid, .engagement-grid { grid-template-columns: 1fr; }
+            
+            .flow { align-items: flex-start; }
+            .flow b { display: none; }
+            
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { display: block; }
+            .footer-bottom span + span { display: block; margin-top: 8px; }
+        }
+
+        @media (max-width: 600px) {
+            .related-links { grid-template-columns: 1fr; }
+            .local-links { gap: 6px 0; }
+        }
+
+        /* PAGE ADDITIONS: CRM & REVENUE OPERATIONS */
+        .audience { padding: 26px 0; border-bottom: 1px solid var(--line); }
+        .pain .pain-point { font-family: "Playfair Display", Georgia, serif; color: var(--text); font-size: 20px; line-height: 1.35; }
+        .pain-close { margin-top: 28px; }
+        .steps { list-style: none; }
+        .section-ice .flow span { background: var(--white); border: 1px solid var(--line); }
+        .inline-link { text-decoration: underline; text-underline-offset: 3px; }
+        .related-links.two-up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        @media (max-width: 720px) { .hero { padding: 40px 0 64px; } .hero h1 { font-size: 34px; letter-spacing: -1px; } .hero-copy { font-size: 16px; } .cta-inner { padding: 36px 26px; } .cta .button { white-space: normal; text-align: center; } }
+        @media (max-width: 600px) { .related-links.two-up { grid-template-columns: 1fr; } }
+</style>
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://pathweave.in/businessos/crm-revenue-operations/#service",
+          "name": "CRM Consulting and Revenue Operations",
+          "serviceType": "CRM consulting and implementation",
+          "description": "CRM consulting, Salesforce and Microsoft Dynamics 365 implementation, pipeline governance, forecasting and CRM adoption for growing businesses.",
+          "provider": {
+            "@type": "Organization",
+            "@id": "https://pathweave.in/#organization",
+            "name": "PathWeave",
+            "url": "https://pathweave.in/"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "India"
+          },
+          "url": "https://pathweave.in/businessos/crm-revenue-operations/"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://pathweave.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "BusinessOS",
+              "item": "https://pathweave.in/businessos/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "CRM and Revenue Operations",
+              "item": "https://pathweave.in/businessos/crm-revenue-operations/"
+            }
+          ]
+        }
+      ]
+    }
+</script>
+<style id="pathweave-global-footer-master-lock">footer{background:#071a2b !important;color:#fff !important;padding:70px 0 30px !important;}footer .footer-grid{display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr !important;gap:50px !important;}footer .footer-logo{width:125px !important;max-width:125px !important;height:auto !important;display:block !important;filter:brightness(0) invert(1) !important;margin:0 0 25px !important;}footer .footer-description{color:#a9bdd0 !important;max-width:350px !important;font-size:15px !important;line-height:1.7 !important;}footer .footer-column h4{margin:0 0 24px !important;color:#fff !important;font-family:"DM Sans",Arial,sans-serif !important;font-size:13px !important;font-weight:700 !important;letter-spacing:1px !important;}footer .footer-column a{display:block !important;color:#a9bdd0 !important;font-size:15px !important;line-height:1.5 !important;margin:0 0 12px !important;}footer .footer-column a:hover{color:#fff !important;}footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12) !important;margin-top:55px !important;padding-top:25px !important;display:flex !important;justify-content:space-between !important;color:#7f98ae !important;font-size:13px !important;}@media(max-width:900px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}}@media(max-width:720px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}footer .footer-grid>div:first-child{grid-column:1/-1 !important;}footer .footer-bottom{display:block !important;}footer .footer-bottom div+div{margin-top:8px !important;}}@media(max-width:480px){footer .footer-grid{grid-template-columns:1fr !important;}footer .footer-grid>div:first-child{grid-column:auto !important;}}</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<a aria-label="PathWeave home" href="/">
+<img alt="PathWeave" class="logo" src="../../logo.png"/>
+</a>
+<nav aria-label="Main navigation" class="nav-links">
+<a aria-current="page" class="active" href="/businessos/">BusinessOS</a>
+<a href="/peopleos/">PeopleOS</a>
+<a href="/skillhubos/">Skill HubOS</a>
+<a href="/government-advisory/">Government Advisory</a>
+<a href="/how-we-work/">How We Work</a>
+<a href="/about/">About</a>
+<a href="/insights/">Insights</a>
+<a class="nav-cta" href="/contact/">Let's Talk</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">Home</a>
+<span class="separator">→</span>
+<a href="/businessos/">BusinessOS</a>
+<span class="separator">→</span>
+<span aria-current="page">CRM &amp; Revenue Operations</span>
+</div>
+</div>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">BusinessOS · CRM and Revenue Operations</div>
+<h1>Build a <span>CRM and revenue operations system</span> your sales team will use</h1>
+<p class="hero-copy">
+    Connect your sales process, customer data, pipeline governance and CRM workflows into one working system. PathWeave helps founders and sales leaders design, implement and embed CRM on Salesforce or Microsoft Dynamics 365 — so leaders get pipeline visibility without burying the sales team in admin.
+</p>
+<div class="hero-actions">
+<a class="button button-primary" href="/contact/">Review your CRM and revenue operations</a>
+<a class="button button-secondary" href="/how-we-work/">See how we work</a>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-label="CRM experience and platforms" class="audience">
+<div class="container audience-inner">
+<div class="audience-label">CRM and sales-process transformation led at Kohler India and Info Edge (Naukri.com), and for a national EdTech client</div>
+<div class="audience-list">
+<span class="audience-pill">Salesforce</span>
+<span class="audience-pill">Microsoft Dynamics 365</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container split">
+<div>
+<div class="eyebrow">WHY CRM PROJECTS STALL</div>
+<h2>A CRM cannot fix an unclear sales process</h2>
+<p class="copy" style="margin-top:24px;">
+    Most CRM projects that stall do not fail on software. They fail because the system was configured before anyone agreed how the business actually sells.
+</p>
+<p class="copy" style="margin-top:22px;">
+    You may recognise the signs:
+</p>
+</div>
+<div>
+<div class="pain-grid">
+<article class="pain">
+<p class="pain-point">Sales stages mean different things to different managers</p>
+</article>
+<article class="pain">
+<p class="pain-point">Forecasts are rebuilt in spreadsheets every month</p>
+</article>
+<article class="pain">
+<p class="pain-point">Reps update the CRM just before reviews — or not at all</p>
+</article>
+<article class="pain">
+<p class="pain-point">Leads, deals and customer data sit across several tools</p>
+</article>
+<article class="pain">
+<p class="pain-point">Leadership cannot see which deals are real and which are hope</p>
+</article>
+<article class="pain">
+<p class="pain-point">A CRM was bought, launched, and quietly abandoned</p>
+</article>
+</div>
+<p class="copy pain-close">
+    We start with your sales rules, roles and the decisions leaders need to make — and only then design the system.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section section-ice" id="capabilities">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow">WHAT WE DO</div>
+<h2>CRM and revenue operations services</h2>
+</div>
+<div class="cap-grid">
+<article class="cap-card">
+<div class="card-number">01</div>
+<h3>Sales process and pipeline design</h3>
+<p>Define pipeline stages with clear entry and exit criteria, ownership, handoffs between teams, and probability logic that reflects how your deals actually move.</p>
+</article>
+<article class="cap-card">
+<div class="card-number">02</div>
+<h3>CRM requirements and solution design</h3>
+<p>Translate the sales process into CRM design: users and roles, objects and fields, workflows, permissions, integrations and the reports each role needs.</p>
+</article>
+<article class="cap-card">
+<div class="card-number">03</div>
+<h3>Salesforce and Dynamics 365 implementation</h3>
+<p>Configuration oversight, data migration, workflow setup, testing and launch on Salesforce or Microsoft Dynamics 365. Where you already have an implementation partner, we act on your side — owning the requirements and holding the build to them.</p>
+</article>
+<article class="cap-card">
+<div class="card-number">04</div>
+<h3>Pipeline governance and forecasting</h3>
+<p>Weekly pipeline reviews, forecast categories, data-quality standards and action tracking that turn the CRM into a management rhythm rather than a reporting chore.</p>
+</article>
+<article class="cap-card">
+<div class="card-number">05</div>
+<h3>CRM adoption and sales enablement</h3>
+<p>Role-based training, manager coaching routines, usage standards and post-launch support so the system is used every day, not just at month-end.</p>
+</article>
+<article class="cap-card">
+<div class="card-number">06</div>
+<h3>Revenue operations metrics</h3>
+<p>Funnel conversion, sales velocity, pipeline coverage, forecast accuracy and activity quality — defined once and tracked consistently.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section class="why" id="experience">
+<!--
+  PROOF PENDING — confirm before adding to this section:
+  - Kohler India: platform used (Salesforce or Dynamics 365), number of users, one measurable outcome.
+  - Info Edge (Naukri.com): platform used, scale (users / sales team size), one measurable outcome.
+  - National EdTech client: one outcome (adoption, forecast quality, cycle time or visibility). Client stays unnamed.
+  Kohler and Naukri are the founder's leadership experience, not PathWeave client work.
+-->
+    <div class="container split">
+        <div>
+            <div class="eyebrow">EXPERIENCE</div>
+            <h2>Experience behind the approach</h2>
+        </div>
+        <div class="why-copy">
+            <p>PathWeave's CRM practice is led by co-founder <strong>Srrinivas Sharrma</strong>, who has run CRM and sales-process transformation from inside large sales organisations and as a consultant.</p>
+            <div class="principle">
+                <strong>Kohler India — Business Process Excellence, Commercial</strong>
+                <span>Led commercial process excellence covering sales processes, sales technology and CRM, coordinating across Sales, Marketing, Technical Services, Supply Chain and Logistics.</span>
+            </div>
+            <div class="principle">
+                <strong>Info Edge (Naukri.com) — Sales Planning and Excellence</strong>
+                <span>As Senior Vice President, led national sales planning, CRM transformation, analytics, incentive systems and sales-process improvement.</span>
+            </div>
+            <div class="principle">
+                <strong>National EdTech company — PathWeave client engagement</strong>
+                <span>An approximately 18-month Salesforce and sales-process transformation: pipeline design, CRM configuration, workflows and adoption.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice" id="deliverables">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow">DELIVERABLES</div>
+<h2>What the engagement delivers</h2>
+</div>
+<div class="engagement-grid">
+<article class="engagement-card">
+<h3>Diagnose</h3>
+<p>Current-state review of sales process, CRM usage and data quality; priority list</p>
+</article>
+<article class="engagement-card">
+<h3>Design</h3>
+<p>Sales-process and pipeline blueprint; CRM requirements document; data and field model</p>
+</article>
+<article class="engagement-card">
+<h3>Build</h3>
+<p>Workflow and automation specification; migration and data-cleanup plan; configured and tested system</p>
+</article>
+<article class="engagement-card">
+<h3>Launch</h3>
+<p>Role-based enablement; usage standards; go-live support</p>
+</article>
+<article class="engagement-card">
+<h3>Improve</h3>
+<p>Forecasting and governance routines; adoption and performance dashboard; optimisation backlog</p>
+</article>
+</div>
+</div>
+</section>
+
+<section class="why">
+    <div class="container split">
+        <div>
+            <div class="eyebrow">PLATFORMS</div>
+            <h2>How we work with your technology environment</h2>
+        </div>
+        <div class="why-copy">
+            <p>We are platform-experienced, not platform-biased. Our delivery experience is on <strong>Salesforce</strong> and <strong>Microsoft Dynamics 365</strong>, and we are equally useful when:</p>
+            <div class="principle">
+                <strong>You are choosing a CRM</strong>
+                <span>We define requirements first, then assess fit.</span>
+            </div>
+            <div class="principle">
+                <strong>You already have a CRM that is under-used</strong>
+                <span>We fix process, data and adoption before adding features.</span>
+            </div>
+            <div class="principle">
+                <strong>You have an implementation partner</strong>
+                <span>We own the business requirements and hold the build to them.</span>
+            </div>
+            <p style="margin-top:22px;"><strong>The platform follows the process. Not the other way round.</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-ice" id="process">
+    <div class="container split">
+        <div>
+            <div class="eyebrow">PROCESS</div>
+            <h2>How the engagement works</h2>
+            <div class="flow" aria-hidden="true">
+                <span>Diagnose</span><b>→</b><span>Design</span><b>→</b><span>Build</span><b>→</b><span>Launch</span><b>→</b><span>Improve</span>
+            </div>
+        </div>
+        <div class="why-copy">
+            <ol class="steps">
+                <li class="principle">
+                    <strong>1. Diagnose</strong>
+                    <span>Understand how you sell today, where the pipeline leaks and why the CRM is or isn't used.</span>
+                </li>
+                <li class="principle">
+                    <strong>2. Design</strong>
+                    <span>Agree the sales process, pipeline rules and CRM design with your leadership team.</span>
+                </li>
+                <li class="principle">
+                    <strong>3. Build</strong>
+                    <span>Configure, migrate and test, with your team involved throughout.</span>
+                </li>
+                <li class="principle">
+                    <strong>4. Launch</strong>
+                    <span>Train by role, set usage standards and support the first review cycles.</span>
+                </li>
+                <li class="principle">
+                    <strong>5. Improve</strong>
+                    <span>Track adoption and forecast quality, and refine the system as the business grows.</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+<div class="container split">
+<div>
+<div class="eyebrow">BEYOND THE CRM</div>
+<h2>Turn CRM data into a sales operating rhythm</h2>
+</div>
+<div class="copy">
+<!-- Link "sales dashboards and BI consulting" to /businessos/sales-dashboards-bi/ and add /businessos/sales-commercial-excellence/ ("sales and commercial excellence") to the related links once those pages are published. -->
+<p>
+    A well-run CRM produces data leaders can act on. When you need that data turned into executive and team dashboards, our sales dashboards and BI consulting builds on the same pipeline definitions — so the numbers in the CRM and the numbers in the dashboard always match.
+</p>
+<div aria-label="Related PathWeave pages" class="related-links two-up">
+<a href="/businessos/">Business and management consulting for SMEs</a>
+<a href="/how-we-work/">How PathWeave works</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<div class="cta-inner">
+<div class="cta-copy">
+<h2>Start with the sales process, not the software</h2>
+<p>
+    Tell us how your team sells today and what leadership can't see. We'll show you where the CRM should start.
+</p>
+</div>
+<a class="button" href="/contact/">Review your CRM and revenue operations →</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="../../logo.png" alt="PathWeave">
+        <div class="footer-description">Strategy, transformation and growth across business, people, technology and government.</div>
+      </div>
+      <div class="footer-column">
+        <h4>OUR PRACTICES</h4>
+        <a href="/businessos/">BusinessOS</a>
+        <a href="/peopleos/">PeopleOS</a>
+        <a href="/skillhubos/">Skill HubOS</a>
+        <a href="/government-advisory/">Government Advisory</a>
+      </div>
+      <div class="footer-column">
+        <h4>PATHWEAVE</h4>
+        <a href="/how-we-work/">How We Work</a>
+        <a href="/about/">About</a>
+        <a href="/insights/">Insights</a>
+      </div>
+      <div class="footer-column">
+        <h4>LOCATIONS</h4>
+        <a href="/locations/hyderabad/">Hyderabad</a>
+        <a href="/locations/indore/">Indore</a>
+        <a href="/locations/bhopal/">Bhopal</a>
+        <a href="/locations/nagpur/">Nagpur</a>
+      </div>
+      <div class="footer-column">
+        <h4>CONNECT</h4>
+        <a href="/contact/">Start a Conversation</a>
+        <a href="https://www.linkedin.com/company/pathweave-consulting" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 PathWeave. All rights reserved.</div>
+      <div>People · Process · Technology</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
