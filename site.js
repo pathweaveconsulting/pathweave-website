@@ -97,9 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             </p>
 
                             <p>
-                                Focused on Hyderabad and Secunderabad, with remote
-                                consulting support for businesses in Nagpur, Bhopal,
-                                Indore and Delhi NCR.
+                                Focused on Hyderabad and Secunderabad, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.
                             </p>
 
                         </div>
