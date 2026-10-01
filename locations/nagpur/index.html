@@ -213,12 +213,6 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Locations",
-              "item": "https://pathweave.in/locations/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
               "name": "Nagpur",
               "item": "https://pathweave.in/locations/nagpur/"
             }
@@ -228,6 +222,7 @@
     }
     </script>
 <style id="pathweave-global-footer-master-lock">footer{background:#071a2b !important;color:#fff !important;padding:70px 0 30px !important;}footer .footer-grid{display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr !important;gap:50px !important;}footer .footer-logo{width:125px !important;max-width:125px !important;height:auto !important;display:block !important;filter:brightness(0) invert(1) !important;margin:0 0 25px !important;}footer .footer-description{color:#a9bdd0 !important;max-width:350px !important;font-size:15px !important;line-height:1.7 !important;}footer .footer-column h4{margin:0 0 24px !important;color:#fff !important;font-family:"DM Sans",Arial,sans-serif !important;font-size:13px !important;font-weight:700 !important;letter-spacing:1px !important;}footer .footer-column a{display:block !important;color:#a9bdd0 !important;font-size:15px !important;line-height:1.5 !important;margin:0 0 12px !important;}footer .footer-column a:hover{color:#fff !important;}footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12) !important;margin-top:55px !important;padding-top:25px !important;display:flex !important;justify-content:space-between !important;color:#7f98ae !important;font-size:13px !important;}@media(max-width:900px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}}@media(max-width:720px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}footer .footer-grid>div:first-child{grid-column:1/-1 !important;}footer .footer-bottom{display:block !important;}footer .footer-bottom div+div{margin-top:8px !important;}}@media(max-width:480px){footer .footer-grid{grid-template-columns:1fr !important;}footer .footer-grid>div:first-child{grid-column:auto !important;}}</style>
+<style id="pathweave-city-next-steps">.next-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.next-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px}.next-card .tier-label{margin-bottom:0;align-self:flex-start}.next-card h3{font-size:24px;color:var(--navy)}.next-card p{color:var(--muted);font-size:15px;line-height:1.7}.next-links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px}.next-links a,.next-direct,.next-reading a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}.next-card .button{align-self:flex-start;margin-top:auto}.next-direct{font-size:14px}.next-reading{margin-top:28px;color:var(--muted);font-size:15px;line-height:1.7}.next-card a:focus-visible,.next-reading a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}@media(max-width:820px){.next-grid{grid-template-columns:minmax(0,1fr)}.next-card{padding:26px}}</style>
 </head>
 
 <body>
@@ -252,8 +247,6 @@
 <div class="breadcrumb">
     <div class="container">
         <a href="/">Home</a>
-        <span class="separator">→</span>
-        <span>Locations</span>
         <span class="separator">→</span>
         <span aria-current="page">Nagpur</span>
     </div>
@@ -469,6 +462,38 @@
     </div>
 </section>
 
+<!-- SECTION 6B: WHERE TO START -->
+<section class="section section-ice" aria-labelledby="next-steps-heading">
+    <div class="container">
+        <div class="section-heading">
+            <div class="eyebrow">WHERE TO START</div>
+            <h2 id="next-steps-heading">Formalise one area first, or strengthen how you sell.</h2>
+            <p>Many established Nagpur businesses are moving from informal arrangements to structured management practice. A focused review lets you see the gaps in one area before committing to wider change.</p>
+        </div>
+        <div class="next-grid">
+            <article class="next-card">
+                <div class="tier-label">PeopleOS</div>
+                <h3>HR Health Check</h3>
+                <p>If HR policies, hiring or day-to-day HR operations have grown informally, the HR Health Check reviews one agreed area, maps the gaps and prioritises the fixes. Continuing with PathWeave afterwards is optional.</p>
+                <a class="button button-primary" href="/peopleos/hr-health-check/" data-pw-event="health_check_cta" data-pw-offer="hr-health-check">Explore the HR Health Check</a>
+                <a class="next-direct" href="/contact/">Already know what you need? Discuss your HR requirement →</a>
+            </article>
+            <article class="next-card">
+                <div class="tier-label">BusinessOS</div>
+                <h3>Sales, CRM and performance visibility</h3>
+                <p>Where your business sells through dealers or distributors, BusinessOS can help you review distributor performance, tighten sales processes and define what your CRM should track. Start with one question through the Sales &amp; CRM Health Check, or discuss a broader requirement.</p>
+                <div class="next-links" aria-label="BusinessOS services">
+                    <a href="/businessos/crm-revenue-operations/">CRM &amp; revenue operations</a>
+                    <a href="/businessos/sales-commercial-excellence/">Sales Excellence &amp; Commercial Excellence</a>
+                    <a href="/businessos/sales-dashboards-bi/">Sales dashboards &amp; BI</a>
+                </div>
+                <a class="button button-secondary" href="/businessos/sales-crm-health-check/" data-pw-event="health_check_cta" data-pw-offer="sales-crm-health-check">Explore the Sales &amp; CRM Health Check</a>
+            </article>
+        </div>
+        <p class="next-reading">Useful reading: <a href="/insights/distributor-performance-scorecard/">how to review distributor performance</a> and <a href="/insights/hr-setup-growing-sme/">HR setup for a growing SME</a>.</p>
+    </div>
+</section>
+
 <!-- SECTION 7: OTHER LOCATIONS -->
 <section class="locations-bar" aria-label="PathWeave service locations">
     <div class="container locations-bar-inner">
@@ -507,6 +532,7 @@
       <div>
         <img class="footer-logo" src="../../logo.png" alt="PathWeave">
         <div class="footer-description">Strategy, transformation and growth across business, people, technology and government.</div>
+        <div class="footer-description" style="margin-top:14px">Focused on Hyderabad and Secunderabad, with remote consulting support for businesses in Nagpur, Bhopal, Indore and Delhi NCR.</div>
       </div>
       <div class="footer-column">
         <h4>OUR PRACTICES</h4>
@@ -523,10 +549,10 @@
       </div>
       <div class="footer-column">
         <h4>LOCATIONS</h4>
-        <a href="/locations/hyderabad/">Hyderabad</a>
-        <a href="/locations/indore/">Indore</a>
-        <a href="/locations/bhopal/">Bhopal</a>
+        <a href="/locations/hyderabad/">Hyderabad &amp; Secunderabad</a>
         <a href="/locations/nagpur/">Nagpur</a>
+        <a href="/locations/bhopal/">Bhopal</a>
+        <a href="/locations/indore/">Indore</a>
       </div>
       <div class="footer-column">
         <h4>CONNECT</h4>

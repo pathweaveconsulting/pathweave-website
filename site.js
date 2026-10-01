@@ -96,6 +96,12 @@ document.addEventListener("DOMContentLoaded", () => {
                                 and government.
                             </p>
 
+                            <p>
+                                Focused on Hyderabad and Secunderabad, with remote
+                                consulting support for businesses in Nagpur, Bhopal,
+                                Indore and Delhi NCR.
+                            </p>
+
                         </div>
 
 
