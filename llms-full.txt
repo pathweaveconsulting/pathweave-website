@@ -36,6 +36,7 @@ Diagnose → Design → Implement → Enable → Measure. PathWeave diagnoses be
 ### BusinessOS — business, management and technology transformation
 https://pathweave.in/businessos/
 - Business and growth strategy
+- Sales transformation — https://pathweave.in/businessos/sales-transformation/ — integrated sales operating-model change across process, roles, CRM, pipeline, data, governance, management routines and adoption
 - Sales Excellence and Commercial Excellence — https://pathweave.in/businessos/sales-commercial-excellence/
 - Go-to-market, channel and market expansion
 - CRM and revenue operations (Salesforce and Microsoft Dynamics 365) — https://pathweave.in/businessos/crm-revenue-operations/
