@@ -718,8 +718,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=20261007">
+<link rel="stylesheet" href="/assets/css/site.css?v=20261007b">
 <meta name="theme-color" content="#FCFDFB">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <script>document.documentElement.className+=" js"</script>
 <!-- /pw:head -->
 </head>
@@ -962,7 +963,7 @@
                     </fieldset>
 
                     <div class="form-actions">
-                        <button type="submit" class="assessment-button assessment-button--primary">Calculate My Readiness Score</button>
+                        <button type="submit" class="assessment-button assessment-button--primary" id="calculate-score" disabled>Calculate My Readiness Score</button>
                         <button type="reset" class="assessment-button assessment-button--secondary">Clear Answers</button>
                         <p class="form-note">Complete all 15 questions to generate your scorecard.</p>
                     </div>
@@ -975,7 +976,7 @@
                         <li><strong>Three dimension scores</strong><span>A clear view across People, Process and Technology.</span></li>
                         <li><strong>Priorities for action</strong><span>Practical starting points based on the areas with the greatest opportunity.</span></li>
                     </ul>
-                    <p class="privacy-note">Your responses are calculated in this browser. They are not stored or sent to PathWeave.</p>
+                    <p class="privacy-note">Your responses are calculated in this browser. They are not saved, and they are not sent to PathWeave or included in website analytics. <a href="/privacy/#assessment">Privacy Policy</a></p>
                 </aside>
             </div>
 
@@ -1068,8 +1069,8 @@
       <span><a href="/locations/hyderabad/">Hyderabad</a> · <a href="/locations/nagpur/">Nagpur</a> · <a href="/locations/bhopal/">Bhopal</a> · <a href="/locations/indore/">Indore</a></span>
     </div>
     <div class="footer-meta">
-      <span>© 2026 PathWeave · People · Process · Technology</span>
-      <nav aria-label="More"><a href="https://www.linkedin.com/company/pathweave-consulting" rel="noopener">LinkedIn</a><a href="/about-for-ai/">About for AI</a><a href="/llms.txt">llms.txt</a></nav>
+      <span>© 2026 PathWeave. All rights reserved. · People · Process · Technology</span>
+      <nav aria-label="Legal and more"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="https://www.linkedin.com/company/pathweave-consulting" rel="noopener">LinkedIn</a><a href="/about-for-ai/">About for AI</a><a href="/llms.txt">llms.txt</a></nav>
     </div>
   </div>
 </footer>
@@ -1077,6 +1078,8 @@
 <!-- /pw:footer -->    <script>
         (() => {
             const form = document.getElementById("readiness-form");
+            // Enabled only once this script runs, so answers are never submitted as a URL query string.
+            document.getElementById("calculate-score").disabled = false;
             const resultPanel = document.getElementById("assessment-results");
             const questionGroups = {
                 people: ["q1", "q2", "q3", "q4", "q5"],

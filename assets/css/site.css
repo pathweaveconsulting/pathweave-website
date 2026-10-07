@@ -876,3 +876,22 @@ ol.steps .principle{padding:var(--s-4) 0 0;border-top:1px solid var(--line)}
 .prose,.article-layout>*{min-width:0}
 .eyebrow,.topic-label,.insight-card .topic-label{text-transform:none;letter-spacing:.005em;font-size:15px;font-weight:600}
 .insight-card .topic-label{font-size:14px;font-weight:500}
+
+/* ---------- Legal pages ---------- */
+.legal-hero{padding-bottom:var(--s-6)}
+.legal-hero h1{max-width:none}
+.legal-updated{margin-top:var(--s-4);font-size:var(--fs-small);color:var(--muted)}
+.legal-body{padding-bottom:var(--s-9)}
+.legal-toc{margin:0 0 var(--s-7);padding:var(--s-5);border:1px solid var(--line);border-left:3px solid var(--cobalt);border-radius:var(--radius);background:var(--white)}
+.legal-toc ol{columns:2;column-gap:var(--s-6)}
+.legal-toc a{text-decoration:none}
+.legal-body .prose{max-width:none}
+.legal-body .prose h2{font-size:clamp(24px,2.4vw,30px);margin-top:var(--s-7)}
+.legal-body .prose>h2:first-child{margin-top:0}
+.legal-list dt{font-weight:600;color:var(--ink-deep);margin-top:var(--s-4)}
+.legal-list dd{color:var(--ink)}
+.legal-list dd ul{margin-top:var(--s-2)}
+.legal-body code{font-size:.9em;background:var(--surface);padding:1px 6px;border-radius:4px}
+.contact-privacy{margin-top:var(--s-5);font-size:var(--fs-small);color:var(--muted)}
+@media (max-width:560px){.legal-toc ol{columns:1}}
+.legal-toc ol{display:block;columns:2;column-gap:var(--s-6)}.legal-toc li{break-inside:avoid}@media (max-width:560px){.legal-toc ol{columns:1}}

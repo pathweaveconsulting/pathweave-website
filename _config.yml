@@ -1,0 +1,6 @@
+# GitHub Pages (Jekyll) settings.
+# Pages are plain static HTML; Jekyll only copies them.
+# Folders starting with "_" or "." are not published by default; .well-known is
+# published explicitly so /.well-known/security.txt is served.
+include:
+  - .well-known

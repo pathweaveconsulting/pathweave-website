@@ -1,0 +1,6 @@
+# Security contact for pathweave.in
+# Please report suspected security vulnerabilities in this website by email.
+Contact: mailto:growth@pathweave.in
+Expires: 2027-10-07T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://pathweave.in/.well-known/security.txt
