@@ -14,7 +14,7 @@ This file summarises facts published on pathweave.in. Where it quotes outcomes f
 - Email: growth@pathweave.in
 - Phone / WhatsApp: +91 77008 83315
 - LinkedIn: https://www.linkedin.com/company/pathweave-consulting
-- Geography: Primary market Hyderabad and Secunderabad (Telangana, India). Local offices in Nagpur and Bhopal. Remote consulting support for Indore and Delhi NCR.
+- Geography: PathWeave works with organisations across India. Current on-ground presence includes Hyderabad, Nagpur and Bhopal, with remote consulting support where appropriate.
 
 ## Positioning
 
@@ -35,12 +35,22 @@ Diagnose → Design → Implement → Enable → Measure. PathWeave diagnoses be
 
 ### BusinessOS — business, management and technology transformation
 https://pathweave.in/businessos/
+
+Core authority and service pages:
+- Sales Transformation — https://pathweave.in/businessos/sales-transformation/ — integrated sales operating-model change across process, roles, CRM, pipeline, data, governance, management routines and adoption.
+- Sales Excellence Operating Model — https://pathweave.in/businessos/sales-excellence-operating-model/ — sales process, coverage, roles, manager cadence, coaching, incentives and performance governance.
+- Commercial Excellence — https://pathweave.in/businessos/commercial-excellence/ — pricing, margin, incentives, channel economics, revenue quality and commercial governance.
+- Sales Operations & RevOps — https://pathweave.in/businessos/sales-operations-revops/ — planning, territories, pipeline governance, CRM discipline, reporting, forecasting and sales performance management.
+- CRM Adoption & Governance — https://pathweave.in/businessos/crm-adoption-governance/ — business ownership, process discipline, data quality, manager routines, rollout, user adoption and partner governance.
+- Sales Forecasting & Pipeline Governance — https://pathweave.in/businessos/sales-forecasting-pipeline-governance/ — stage definitions, forecast categories, close-date discipline, manager judgment, review cadence and pipeline hygiene.
+- GTM & Channel Execution — https://pathweave.in/businessos/gtm-channel-execution/ — route-to-market, distributor versus direct sales, city expansion, coverage, channel roles, economics and governance.
+- Sales Excellence and Commercial Excellence — https://pathweave.in/businessos/sales-commercial-excellence/ — sales planning, targets, coverage, process, incentives and sales governance.
+- CRM and Revenue Operations — https://pathweave.in/businessos/crm-revenue-operations/ — sales process, pipeline, workflows, adoption and CRM on Salesforce or Microsoft Dynamics 365.
+- Sales Dashboards & BI — https://pathweave.in/businessos/sales-dashboards-bi/ — KPI frameworks and management dashboards.
+
+Other BusinessOS areas:
 - Business and growth strategy
-- Sales transformation — https://pathweave.in/businessos/sales-transformation/ — integrated sales operating-model change across process, roles, CRM, pipeline, data, governance, management routines and adoption
-- Sales Excellence and Commercial Excellence — https://pathweave.in/businessos/sales-commercial-excellence/
 - Go-to-market, channel and market expansion
-- CRM and revenue operations (Salesforce and Microsoft Dynamics 365) — https://pathweave.in/businessos/crm-revenue-operations/
-- Data, BI and decision systems — https://pathweave.in/businessos/sales-dashboards-bi/
 - Process and automation
 - Digital and technology enablement
 - Operating model and transformation
@@ -75,6 +85,11 @@ Business leader with 18+ years across revenue growth, sales transformation, Sale
 - Agro Tech Foods and PepsiCo: frontline and regional sales; at PepsiCo led the Maharashtra premium beverage business (Tropicana, Gatorade, Himalayan); Tropicana market share moved from 44% to 52% in that role.
 - Kohler India: led Retail and Projects across Andhra Pradesh and Telangana, including 5× retail growth over four years; later national Sales Development, then Business Process Excellence – Commercial. National Salesforce adoption covered four regions, 150+ Sales and Marketing employees and 500+ dealers.
 - Info Edge (Naukri.com): Senior Vice President – Sales Planning & Excellence; led Microsoft Dynamics CRM adoption across 700+ sales users and 11 branches.
+
+Authority evidence pages:
+- Kohler Salesforce & Sales Excellence — https://pathweave.in/about/srrinivas-sharrma/kohler-salesforce-sales-excellence/
+- Kohler Business Process Excellence — Commercial — https://pathweave.in/about/srrinivas-sharrma/kohler-business-process-excellence-commercial/
+- Info Edge Sales Operations & CRM — https://pathweave.in/about/srrinivas-sharrma/info-edge-sales-operations-crm/
 
 ### Renu Dhanopia Sharma — Founder, leads PeopleOS
 https://pathweave.in/about/
