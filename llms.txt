@@ -14,7 +14,7 @@ PathWeave works through four practices — BusinessOS, PeopleOS, Skill HubOS and
 
 ## BusinessOS authority cluster
 
-- [BusinessOS](https://pathweave.in/businessos/): Business, management and technology transformation for growing SMEs
+- [BusinessOS](https://pathweave.in/businessos/): Business, management and technology transformation for growing organisations
 - [Sales Transformation](https://pathweave.in/businessos/sales-transformation/): Integrated change across process, roles, CRM, pipeline, data, governance, management routines and adoption
 - [Sales Excellence Operating Model](https://pathweave.in/businessos/sales-excellence-operating-model/): Sales process, coverage, roles, manager cadence, coaching, incentives and performance governance
 - [Commercial Excellence](https://pathweave.in/businessos/commercial-excellence/): Pricing, margin, incentives, channel economics, revenue quality and commercial governance
@@ -28,44 +28,44 @@ PathWeave works through four practices — BusinessOS, PeopleOS, Skill HubOS and
 
 ## PeopleOS authority cluster
 
-- [PeopleOS](https://pathweave.in/peopleos/): People and HR transformation for growing organisations
-- [HR Transformation](https://pathweave.in/peopleos/hr-transformation/): Redesign of HR operating model, processes, governance, HR technology, data, manager routines and adoption
-- [HR Operating Model](https://pathweave.in/peopleos/hr-operating-model/): HR ownership, manager responsibilities, service boundaries, decision rights, governance and delivery capacity
-- [Organisation Design & Role Clarity](https://pathweave.in/peopleos/organisation-design-role-clarity/): Structures, spans, accountabilities, decision rights and role interfaces
+### Flagship
+- [PeopleOS](https://pathweave.in/peopleos/): People and HR transformation practice
+- [HR Consulting for SMEs](https://pathweave.in/peopleos/hr-consulting-smes/): Flagship PeopleOS pillar for growing SMEs — organisation and role clarity, manager capability, performance, recruitment, HR operations, HRMS and the right mix of internal, fractional and outsourced HR capacity
+
+### Industry sub-pillars
+- [HR Consulting for Startups](https://pathweave.in/peopleos/hr-consulting-startups/): Stage-appropriate HR foundations for first hires, roles, managers, performance, people operations and HR ownership
+- [HR Consulting for Pharma & Life Sciences](https://pathweave.in/peopleos/hr-consulting-pharma-life-sciences/): People systems for specialist and multi-location workforces across technical, operational, corporate and commercial contexts
+- [HR Consulting for IT & Technology](https://pathweave.in/peopleos/hr-consulting-it-technology/): Specialist hiring, role and career architecture, manager capability, performance systems, distributed people operations and HRMS
+- [HR Consulting for GCCs](https://pathweave.in/peopleos/hr-consulting-gccs/): People operating models for GCCs in India, including global-local HR ownership, workforce and role architecture, manager capability, HR service delivery and people data
+
+### Functional authority
+- [HR Transformation](https://pathweave.in/peopleos/hr-transformation/): Redesign HR operating models, processes, governance, technology, data, manager routines and adoption
+- [HR Operating Model](https://pathweave.in/peopleos/hr-operating-model/): Clarify what HR owns, what managers own, service boundaries, decision rights, governance and capacity model
+- [Organisation Design & Role Clarity](https://pathweave.in/peopleos/organisation-design-role-clarity/): Structures, spans, role purpose, accountabilities, decision rights and interfaces
 - [Performance Management](https://pathweave.in/peopleos/performance-management/): Expectations, manager check-ins, evidence, calibration, development and follow-through
-- [HR Operations & HRMS](https://pathweave.in/peopleos/hr-operations-hrms/): HR processes, employee data, HRMS, workflows, reporting and automation
-- [Fractional HR](https://pathweave.in/peopleos/fractional-hr/): Experienced HR leadership without a full-time senior HR hire
-- [HR Outsourcing](https://pathweave.in/peopleos/hr-outsourcing/): Connected HR delivery across operations, recruitment and the employee lifecycle
-- [Recruitment & Talent](https://pathweave.in/peopleos/recruitment-talent/): Recruitment process, role clarity and hiring workflows
-- [HR Consulting for Startups](https://pathweave.in/peopleos/hr-consulting-startups/): HR foundations for early-stage organisations
-- [HR Consulting for SMEs](https://pathweave.in/peopleos/hr-consulting-smes/): HR systems and structure for growing SMEs
-- [HR Services](https://pathweave.in/peopleos/hr-services/): Broad practical HR support for growing organisations
-
-## Other practices
-
-- [Skill HubOS](https://pathweave.in/skillhubos/): Education-to-employment capability ecosystem
-- [Government Advisory](https://pathweave.in/government-advisory/): Policy, incentives, approvals and regulatory interfaces
+- [HR Operations & HRMS](https://pathweave.in/peopleos/hr-operations-hrms/): HR processes, employee data, HRMS, reporting, workflows and automation
+- [Recruitment & Talent](https://pathweave.in/peopleos/recruitment-talent/): Recruitment process, role clarity, evaluation and hiring workflows
+- [Fractional HR](https://pathweave.in/peopleos/fractional-hr/): Experienced HR leadership without a full-time senior hire
+- [HR Outsourcing](https://pathweave.in/peopleos/hr-outsourcing/): Defined external support across recurring HR operations and the employee lifecycle
 
 ## Focused starting points
 
-- [HR Health Check](https://pathweave.in/peopleos/hr-health-check/): Fixed-price review of one HR area
-- [Sales & CRM Health Check](https://pathweave.in/businessos/sales-crm-health-check/): Fixed-price review of one sales, CRM, distributor or city-expansion question
+- [HR Health Check](https://pathweave.in/peopleos/hr-health-check/): Small fixed-price review of one HR area, agreed upfront
+- [Sales & CRM Health Check](https://pathweave.in/businessos/sales-crm-health-check/): Small fixed-price review of one sales, CRM, distributor or city-expansion question
 - [Readiness assessment](https://pathweave.in/diagnostic/): Free 15-question self-assessment across People, Process and Technology
 
 ## Founders
 
 - [Srrinivas Sharrma](https://pathweave.in/about/srrinivas-sharrma/): Founder, leads BusinessOS; 18+ years in sales transformation, Sales Excellence, Commercial Excellence, Sales Operations and CRM transformation
-- [Renu Dhanopia Sharma](https://pathweave.in/about/): Founder, leads PeopleOS; HR leadership, consulting and outsourced HR delivery
+- [Renu Dhanopia Sharma](https://pathweave.in/about/): Founder, leads PeopleOS; HR leadership, consulting and outsourced HR delivery across organisation structures, policies, recruitment, performance management, HR operations and people systems
 
 ## Insights
 
 - [All insights](https://pathweave.in/insights/): Practical guides on HR setup, HR models, CRM, sales process, forecasting and distribution
 - [HR Setup for a Growing SME](https://pathweave.in/insights/hr-setup-growing-sme/): HR capability by growth stage
-- [HR Setup for Startups](https://pathweave.in/insights/hr-setup-startups/): HR foundations for early-stage organisations
-- [Fractional HR for Growing Businesses](https://pathweave.in/insights/fractional-hr-growing-businesses/): When fractional HR fits
-- [HR Outsourcing for SMEs](https://pathweave.in/insights/hr-outsourcing-smes/): What to outsource and how to govern it
-- [Fractional HR vs Outsourced HR vs HR Consulting](https://pathweave.in/insights/fractional-vs-outsourced-vs-hr-consulting/): Comparison of delivery models
-- [HR Audit Checklist](https://pathweave.in/insights/hr-audit-checklist-growing-businesses/): Review seven HR areas systematically
+- [HR Setup for Startups](https://pathweave.in/insights/hr-setup-startups/): Practical startup HR foundations
+- [Fractional HR vs Outsourced HR vs HR Consulting](https://pathweave.in/insights/fractional-vs-outsourced-vs-hr-consulting/): Framework for choosing an HR delivery model
+- [HR Audit Checklist](https://pathweave.in/insights/hr-audit-checklist-growing-businesses/): Review one HR area at a time
 - [CRM Requirements Checklist](https://pathweave.in/insights/crm-requirements-checklist-growing-businesses/): Process-first CRM requirements before platform selection
 - [Sales Process Leakage Review](https://pathweave.in/insights/sales-process-leakage-review/): Stage-by-stage sales process review
 - [Improve Sales Forecast Accuracy](https://pathweave.in/insights/improve-sales-forecast-accuracy/): Pipeline rules, forecast categories and review cadence
