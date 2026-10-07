@@ -15,6 +15,7 @@ PathWeave works through four practices — BusinessOS, PeopleOS, Skill HubOS and
 ## Practices
 
 - [BusinessOS](https://pathweave.in/businessos/): Business, management and technology transformation for growing SMEs
+- [Sales Transformation](https://pathweave.in/businessos/sales-transformation/): Integrated sales operating-model change across process, roles, CRM, pipeline, data, governance, management routines and adoption
 - [Sales Excellence & Commercial Excellence](https://pathweave.in/businessos/sales-commercial-excellence/): Sales planning, governance, incentives and performance management
 - [CRM & Revenue Operations](https://pathweave.in/businessos/crm-revenue-operations/): Sales process, pipeline and CRM on Salesforce or Microsoft Dynamics 365
 - [Sales Dashboards & BI](https://pathweave.in/businessos/sales-dashboards-bi/): KPI frameworks and management dashboards
