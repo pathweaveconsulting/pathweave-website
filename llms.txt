@@ -1,6 +1,6 @@
 # PathWeave
 
-> PathWeave is a management consulting and advisory firm (founded April 2020) that helps founders and leadership teams strengthen sales, CRM, people and HR systems, processes, data and execution. Brand line: Strategy. Transformation. Growth. Primary market Hyderabad and Secunderabad, India, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.
+> PathWeave is a management consulting and advisory firm (founded April 2020) that helps founders and leadership teams strengthen sales, CRM, people and HR systems, processes, data and execution. Brand line: Strategy. Transformation. Growth. PathWeave works with organisations across India; its current on-ground presence includes Hyderabad, Nagpur and Bhopal, with remote consulting support where appropriate.
 
 PathWeave works through four practices — BusinessOS, PeopleOS, Skill HubOS and Government Advisory — connected by the PW-3 Sutra framework (People, Process and Technology designed together). Engagements follow Diagnose, Design, Implement, Enable, Measure. Contact: growth@pathweave.in, +91 77008 83315.
 
@@ -37,6 +37,17 @@ PathWeave works through four practices — BusinessOS, PeopleOS, Skill HubOS and
 ## Insights
 
 - [All insights](https://pathweave.in/insights/): Practical guides on HR setup, HR models, CRM, sales process, forecasting and distribution
+- [CRM Requirements Checklist](https://pathweave.in/insights/crm-requirements-checklist-growing-businesses/): Process-first CRM requirements before platform selection
+- [Sales Process Leakage Review](https://pathweave.in/insights/sales-process-leakage-review/): Stage-by-stage sales process review
+- [Improve Sales Forecast Accuracy](https://pathweave.in/insights/improve-sales-forecast-accuracy/): Pipeline rules, forecast categories and review cadence
+- [HR Setup for a Growing SME](https://pathweave.in/insights/hr-setup-growing-sme/): HR capability by growth stage
+
+## Authority and operating experience
+
+- [Srrinivas Sharrma biography](https://pathweave.in/about/srrinivas-sharrma/): Business leadership profile and career evidence
+- [Kohler Salesforce & Sales Excellence](https://pathweave.in/about/srrinivas-sharrma/kohler-salesforce-sales-excellence/): National Salesforce adoption and Sales Excellence experience
+- [Kohler Business Process Excellence — Commercial](https://pathweave.in/about/srrinivas-sharrma/kohler-business-process-excellence-commercial/): Commercial transformation and Business Process Excellence experience
+- [Info Edge Sales Operations & CRM](https://pathweave.in/about/srrinivas-sharrma/info-edge-sales-operations-crm/): Sales planning, Microsoft Dynamics CRM and sales operations experience
 
 ## Optional
 
