@@ -1,7 +1,7 @@
 # PathWeave website — privacy data inventory
 
 Internal document. Not published (GitHub Pages does not publish folders starting with `_`).
-Evidence gathered 2026-10-07 from the repository at `09e55a7` and from production (https://pathweave.in/) using headless Chrome, curl and DevTools Protocol cookie inspection.
+Evidence gathered 2026-10-07 from the repository at `09e55a7` and from production (https://pathweave.in/) using headless Chrome, curl and DevTools Protocol cookie inspection. Owner business facts were confirmed on 2026-10-07.
 
 ## Data collection points
 
@@ -68,6 +68,7 @@ Evidence from live responses and HTML:
 - Web Analytics: as above.
 - Turnstile: not present.
 - HTTPS: `http://pathweave.in/` → 301 → `https://pathweave.in/`; `www` → apex.
+- On 2026-10-07 a hostname-scoped Cloudflare Response Header Transform Rule was added for `pathweave.in` only, setting HSTS, X-Content-Type-Options, Referrer-Policy, X-Frame-Options, Permissions-Policy, Cross-Origin-Opener-Policy and a Content-Security-Policy-Report-Only header. CSP enforcement remains off; HSTS has neither `includeSubDomains` nor `preload`.
 
 ## Third-party processors
 
@@ -99,37 +100,47 @@ All fonts, CSS, JavaScript and images are self-hosted. There are no Google Fonts
 ## Known storage locations
 
 - Website: none.
-- Outside the website: PathWeave's email mailbox, phone and WhatsApp accounts, and LinkedIn messages. Owner to confirm whether enquiries are copied into a CRM or spreadsheet.
+- Outside the website: PathWeave's email mailbox, phone and WhatsApp accounts, and LinkedIn messages.
+- Owner-confirmed 2026-10-07: website enquiries are **not currently entered into a CRM**.
 - Cloudflare and GitHub logs, under their own retention.
 
-## Unknown / requires owner confirmation
+## Owner-confirmed business facts (2026-10-07)
 
-- Legal entity name and registered office (the location pages show "PathWeave Consulting" with office addresses, but no registration details are evidenced).
+- Public/business name: **PathWeave**.
+- Legal entity status: PathWeave is **not currently incorporated or registered as a separate company, LLP or other legal entity**. No invented legal suffix is to be used.
+- Registered office: none is to be published; no residential address is to be substituted.
+- CRM: **none currently** for website enquiries.
+- Enquiry retention: **no fixed retention period is being represented publicly**. The public policy uses purpose-based retention: information is kept only as long as reasonably necessary for the enquiry, business records or an actual/potential business relationship, subject to applicable requirements.
+- Governing law / jurisdiction: deliberately **not specified** in the current Website Terms.
+- Privacy/security contact currently used: `growth@pathweave.in`.
+
+## Items still not evidenced from the website/repository
+
+These are not blockers for the current public policy because the policy does not make unsupported claims about them:
+
 - Email service provider.
-- Whether enquiries are entered into a CRM or any lead database.
-- Formal retention periods for correspondence.
-- Whether marketing emails or newsletters are ever sent (none are offered on the site).
-- Whether client information may be used in case studies.
-- Governing law / jurisdiction for the Terms.
-- Whether `growth@pathweave.in` should remain the privacy and security contact.
+- Whether PathWeave may later introduce newsletters/marketing campaigns (none are offered on the site today).
+- Whether future client information may be used in case studies; any such use should be governed by the relevant client engagement/permission rather than assumed here.
 
-## Retention facts currently evidenced
+## Retention facts currently evidenced / confirmed
 
 - Assessment answers: not retained (in-page only).
 - Website: no retention, because it stores nothing.
 - `cf_clearance`: about one year (set by Cloudflare).
-- No evidence of any other retention period.
+- Enquiry correspondence: no fixed period is published; owner has confirmed use of a purpose-based retention approach rather than an invented fixed duration.
 
-## Security controls observed
+## Security controls observed / applied
 
 - HTTPS enforced (301) through Cloudflare. Redirect target is HTTPS; no mixed content observed.
 - Cloudflare bot detection and email obfuscation.
 - No secrets, keys, tokens or credential files in tracked files or git history (pattern scan 2026-10-07).
 - `.git`, `.env`, `_redirects`, `_seo-briefs/` and `Claude outputs/` are not served (404).
-- Missing response headers: HSTS, CSP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, X-Frame-Options / frame-ancestors. See `SECURITY-HEADERS-RECOMMENDATIONS.md`.
+- Repository includes `<meta name="referrer" content="strict-origin-when-cross-origin">` on every page.
+- Cloudflare hostname-scoped security headers were applied on 2026-10-07 for apex `pathweave.in`: `Strict-Transport-Security: max-age=31536000`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, `X-Frame-Options: DENY`, `Permissions-Policy`, `Cross-Origin-Opener-Policy: same-origin`, and `Content-Security-Policy-Report-Only`. The zone-wide HSTS setting was left untouched.
 
 ## Legal pages currently present/missing
 
-- Before this pass: no privacy policy, no terms, no security contact.
+- Before the privacy/security pass: no privacy policy, no terms, no security contact.
 - Added 2026-10-07: `/privacy/`, `/terms/` (includes the general-information disclaimer), `/.well-known/security.txt`.
-- Not created: cookie banner or cookie page (not required: only a security cookie and cookieless analytics; explained in the Privacy Policy) and a separate disclaimer page (covered in Terms).
+- Public legal pages intentionally identify the business simply as **PathWeave**, publish no registered office, make no CRM claim, use purpose-based retention wording and contain no governing-law clause.
+- Not created: cookie banner or cookie page (not required by the audited site behaviour: only a security cookie and cookieless analytics; both are explained in the Privacy Policy) and a separate disclaimer page (covered in Terms).
