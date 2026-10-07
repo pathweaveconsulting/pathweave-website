@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/logo.png">
-
 <title>Business and Management Consulting for SMEs | PathWeave</title>
     <meta name="description" content="PathWeave helps growing SMEs strengthen strategy, sales, operations, data and technology through practical business and management consulting.">
 
@@ -111,914 +109,16 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Business and Management Consulting for SMEs | PathWeave Consulting">
     <meta name="twitter:description" content="Practical consulting that connects strategy with sales, operations, data and technology — and turns priorities into ways of working your team can run.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
-    <style>
-        :root {
-            --navy: #0b2238;
-            --navy-dark: #071a2b;
-            --blue: #2455d6;
-            --ice: #f4f8fd;
-            --white: #ffffff;
-            --text: #173047;
-            --muted: #5c7187;
-            --line: #d7e1eb;
-            --card: #ffffff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            color: var(--text);
-            background: var(--white);
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* =========================
-           PATHWEAVE GLOBAL HEADER — LOCKED
-        ========================== */
-
-        header {
-            height: 96px;
-            background: var(--white);
-            border-bottom: 1px solid #edf1f5;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav {
-            height: 96px;
-            padding: 0 11%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            width: 100px;
-            height: auto;
-            display: block;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            font-size: 15px;
-            color: var(--navy);
-        }
-
-        .nav-links a {
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--blue);
-        }
-
-        .nav-links a.active {
-            color: var(--blue);
-            font-weight: 600;
-        }
-
-        .nav-cta {
-            background: var(--navy);
-            color: var(--white) !important;
-            padding: 14px 25px;
-            border-radius: 30px;
-            font-weight: 700;
-        }
-
-        /* =========================
-           COMMON
-        ========================== */
-
-        .container {
-            width: min(1180px, 88%);
-            margin: 0 auto;
-        }
-
-        .eyebrow {
-            color: var(--blue);
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 500;
-            color: var(--navy);
-        }
-
-        .button {
-            display: inline-block;
-            padding: 15px 25px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .button-primary {
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .button-secondary {
-            border: 1px solid var(--line);
-            color: var(--navy);
-            background: var(--white);
-        }
-
-        /* =========================
-           HERO
-        ========================== */
-
-        .hero {
-            background: var(--ice);
-            padding: 78px 0;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 75px;
-            align-items: center;
-        }
-
-        .hero h1 {
-            font-size: clamp(46px, 4.15vw, 60px);
-            line-height: 1.08;
-            letter-spacing: -1.5px;
-            margin: 0;
-        }
-
-        .hero h1 span {
-            color: var(--blue);
-        }
-
-        .hero-copy {
-            color: var(--muted);
-            font-size: 16px;
-            max-width: 680px;
-            margin-top: 28px;
-            line-height: 1.8;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 32px;
-        }
-
-        .hero-visual {
-            min-height: 390px;
-            border-radius: 22px;
-            background: var(--navy);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .business-system {
-            width: 270px;
-            height: 270px;
-            border: 1px solid rgba(255,255,255,0.25);
-            border-radius: 50%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .business-system::before {
-            content: "";
-            position: absolute;
-            inset: 35px;
-            border: 1px solid rgba(255,255,255,0.13);
-            border-radius: 50%;
-        }
-
-        .business-core {
-            width: 115px;
-            height: 115px;
-            border-radius: 50%;
-            background: var(--white);
-            color: var(--navy);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 1px;
-            z-index: 2;
-        }
-
-        .system-node {
-            position: absolute;
-            width: 92px;
-            height: 92px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.28);
-            background: rgba(255,255,255,0.06);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            line-height: 1.25;
-            z-index: 3;
-        }
-
-        .node-one {
-            top: -32px;
-            left: 89px;
-        }
-
-        .node-two {
-            bottom: -32px;
-            left: -12px;
-        }
-
-        .node-three {
-            bottom: -32px;
-            right: -12px;
-        }
-
-        /* =========================
-           INTRO
-        ========================== */
-
-        .intro {
-            padding: 105px 0;
-        }
-
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 0.85fr 1.15fr;
-            gap: 90px;
-        }
-
-        .intro h2 {
-            font-size: clamp(40px, 3.8vw, 52px);
-            line-height: 1.08;
-            letter-spacing: -1.2px;
-            margin: 0 0 18px;
-        }
-
-        .intro-copy {
-            color: var(--muted);
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        .intro-copy p + p {
-            margin-top: 22px;
-        }
-
-        /* =========================
-           CAPABILITIES
-        ========================== */
-
-        .capabilities {
-            background: var(--ice);
-            padding: 105px 0;
-        }
-
-        .section-heading {
-            max-width: 850px;
-            margin-bottom: 55px;
-        }
-
-        .section-heading h2 {
-            font-size: clamp(40px, 3.65vw, 52px);
-            line-height: 1.08;
-            margin-bottom: 22px;
-            color: var(--navy);
-        }
-
-        .section-heading p {
-            color: var(--muted);
-            font-size: 16px;
-            max-width: 760px;
-        }
-
-        .capability-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .capability {
-            background: var(--card);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 34px;
-            min-height: 205px;
-        }
-
-        .capability-number {
-            color: var(--blue);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            margin-bottom: 45px;
-        }
-
-        .capability h3 {
-            color: var(--navy);
-            font-size: 25px;
-            margin-bottom: 12px;
-        }
-
-        .capability p {
-            color: var(--muted);
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        /* =========================
-           COMMERCIAL TRANSFORMATION
-        ========================== */
-
-        .commercial {
-            padding: 105px 0;
-        }
-
-        .commercial-box {
-            background: var(--navy);
-            border-radius: 22px;
-            padding: 62px;
-            color: var(--white);
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 75px;
-            align-items: start;
-        }
-
-        .commercial-box .eyebrow {
-            color: #8fb3ff;
-        }
-
-        .commercial-box h2 {
-            color: var(--white);
-            font-size: clamp(38px, 3.55vw, 52px);
-            line-height: 1.08;
-        }
-
-        .commercial-copy {
-            color: #c3d2e2;
-            font-size: 17px;
-            line-height: 1.8;
-        }
-
-        .commercial-copy p + p {
-            margin-top: 20px;
-        }
-
-        .commercial-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            margin-top: 30px;
-        }
-
-        .commercial-list div {
-            padding: 16px 18px;
-            border: 1px solid rgba(255,255,255,0.14);
-            border-radius: 12px;
-            color: #e2ebf5;
-            font-size: 14px;
-        }
-
-        /* =========================
-           PW-3 SUTRA
-        ========================== */
-
-        .sutra {
-            background: var(--ice);
-            padding: 105px 0;
-        }
-
-        .sutra-heading {
-            max-width: 850px;
-            margin-bottom: 55px;
-        }
-
-        .sutra-heading h2 {
-            font-size: clamp(40px, 3.65vw, 52px);
-            line-height: 1.08;
-            margin-bottom: 22px;
-            color: var(--navy);
-        }
-
-        .sutra-heading p {
-            color: var(--muted);
-            font-size: 16px;
-            max-width: 760px;
-        }
-
-        .sutra-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .sutra-card {
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 36px;
-            min-height: 220px;
-        }
-
-        .sutra-card h3 {
-            font-size: 28px;
-            color: var(--navy);
-            margin-bottom: 15px;
-        }
-
-        .sutra-card p {
-            color: var(--muted);
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        /* =========================
-           HOW WE WORK
-        ========================== */
-
-        .how {
-            padding: 105px 0;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 0;
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .step {
-            padding: 32px 24px 35px;
-            border-right: 1px solid var(--line);
-            min-height: 230px;
-        }
-
-        .step:first-child {
-            padding-left: 0;
-        }
-
-        .step:last-child {
-            border-right: none;
-            padding-right: 0;
-        }
-
-        .step-number {
-            color: var(--blue);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            margin-bottom: 55px;
-        }
-
-        .step h3 {
-            font-family: "DM Sans", sans-serif;
-            font-size: 19px;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 12px;
-        }
-
-        .step p {
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        /* =========================
-           CTA
-        ========================== */
-
-        .cta {
-            background: var(--navy);
-            padding: 72px 0;
-        }
-
-        .cta-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-        }
-
-        .cta h2 {
-            color: var(--white);
-            font-size: clamp(38px, 3.55vw, 52px);
-            line-height: 1.08;
-            max-width: 850px;
-        }
-
-        .button-light {
-            background: var(--white);
-            color: var(--navy);
-            flex-shrink: 0;
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            background: var(--navy-dark);
-            color: var(--white);
-            padding: 70px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
-
-        .footer-logo {
-            width: 125px;
-            height: auto;
-            display: block;
-            margin-bottom: 25px;
-        }
-
-        .footer-description {
-            color: #a9bdd0;
-            max-width: 350px;
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        .footer-column h4 {
-            margin: 0 0 24px;
-            font-size: 13px;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-
-        .footer-column a {
-            display: block;
-            color: #a9bdd0;
-            font-size: 15px;
-            margin-bottom: 12px;
-        }
-
-        .footer-column a:hover {
-            color: var(--white);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,.12);
-            margin-top: 55px;
-            padding-top: 25px;
-            display: flex;
-            justify-content: space-between;
-            color: #7f98ae;
-            font-size: 13px;
-        }
-
-/* =========================
-           TYPOGRAPHY LOCK
-        ========================== */
-        .hero h1,
-        .intro h2,
-        .section-heading h2,
-        .commercial-box h2,
-        .sutra-heading h2,
-        .cta h2 {
-            letter-spacing: -0.9px;
-        }
-
-        .hero-copy,
-        .intro-copy,
-        .section-heading p,
-        .commercial-copy,
-        .sutra-heading p {
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        .capability h3 {
-            font-size: 25px;
-            line-height: 1.25;
-        }
-
-        .sutra-card h3 {
-            font-size: 28px;
-            line-height: 1.2;
-        }
-
-        .step h3 {
-            font-family: "DM Sans", sans-serif;
-            font-size: 19px;
-            line-height: 1.35;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================== */
-
-        @media (max-width: 1000px) {
-            .hero-grid,
-            .intro-grid,
-            .commercial-box {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-visual {
-                min-height: 340px;
-            }
-
-            .capability-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .sutra-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .step:nth-child(2) {
-                border-right: none;
-            }
-
-            .step:nth-child(3),
-            .step:nth-child(4),
-            .step:nth-child(5) {
-                border-top: 1px solid var(--line);
-            }
-
-            .step:nth-child(5) {
-                grid-column: 1 / -1;
-                border-right: none;
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cta-inner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-
-        @media (max-width: 720px) {
-            header,
-            .nav {
-                height: 82px;
-            }
-
-            .nav {
-                padding: 0 6%;
-            }
-
-            .nav-links a:not(.nav-cta) {
-                display: none;
-            }
-
-            .logo {
-                width: 88px;
-            }
-
-            .nav-cta {
-                padding: 12px 18px;
-            }
-
-            .hero {
-                padding: 65px 0;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero-copy {
-                font-size: 16px;
-            }
-
-            .hero-visual {
-                padding: 30px;
-            }
-
-            .intro,
-            .capabilities,
-            .commercial,
-            .sutra,
-            .how {
-                padding: 75px 0;
-            }
-
-            .commercial-box {
-                padding: 38px;
-            }
-
-            .commercial-list {
-                grid-template-columns: 1fr;
-            }
-
-            .steps {
-                grid-template-columns: 1fr;
-            }
-
-            .step {
-                border-right: none;
-                border-bottom: 1px solid var(--line);
-                padding-bottom: 25px;
-                margin-right: 0;
-            }
-
-            .step:nth-child(3),
-            .step:nth-child(4),
-            .step:nth-child(5) {
-                border-top: none;
-            }
-
-            .step:last-child {
-                border-bottom: none;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 10px;
-                padding: 18px 0;
-            }
-        }
-    </style>
-<style id="pathweave-businessos-global-header-test">
-/* =========================================================
-   PATHWEAVE — GLOBAL HEADER LOCK v1 — BUSINESSOS TEST
-   ========================================================= */
-header{
-  width:100% !important;
-  height:96px !important;
-  background:#fff !important;
-  border-bottom:1px solid #edf1f5 !important;
-  position:sticky !important;
-  top:0 !important;
-  z-index:1000 !important;
-}
-header .nav{
-  width:min(1180px,88%) !important;
-  height:96px !important;
-  margin:0 auto !important;
-  padding:0 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:space-between !important;
-  gap:30px !important;
-}
-header .nav > a:first-child{
-  flex:0 0 auto !important;
-  display:flex !important;
-  align-items:center !important;
-}
-header .nav .logo{
-  width:100px !important;
-  max-width:100px !important;
-  height:auto !important;
-  display:block !important;
-  object-fit:contain !important;
-}
-header .nav-links{
-  display:flex !important;
-  align-items:center !important;
-  justify-content:flex-end !important;
-  gap:30px !important;
-  flex:1 1 auto !important;
-  white-space:nowrap !important;
-}
-header .nav-links a{
-  display:inline-flex !important;
-  align-items:center !important;
-  white-space:nowrap !important;
-  text-decoration:none !important;
-  color:#0b2942 !important;
-  font-family:"DM Sans",sans-serif !important;
-  font-size:15px !important;
-  font-weight:500 !important;
-  line-height:1 !important;
-}
-header .nav-links a:hover{
-  color:#0b2942 !important;
-}
-header .nav-links a.active{
-  color:#2455d6 !important;
-  font-weight:500 !important;
-}
-header .nav-links .nav-cta{
-  flex:0 0 auto !important;
-  padding:14px 25px !important;
-  border-radius:30px !important;
-  background:#0b2942 !important;
-  color:#fff !important;
-  font-size:15px !important;
-  font-weight:600 !important;
-}
-header .nav-links .nav-cta:hover{
-  color:#fff !important;
-  background:#0b2942 !important;
-}
-@media(max-width:1100px){
-  header .nav{width:92% !important;gap:20px !important}
-  header .nav-links{gap:18px !important}
-  header .nav-links a{font-size:15px !important}
-  header .nav-links .nav-cta{padding:14px 22px !important}
-}
-@media(max-width:900px){
-  header .nav{
-    height:auto !important;
-    min-height:82px !important;
-    padding:16px 0 !important;
-    flex-wrap:wrap !important;
-  }
-  header .nav-links{
-    width:100% !important;
-    flex-wrap:wrap !important;
-    justify-content:flex-start !important;
-    gap:16px 22px !important;
-  }
-}
-@media(max-width:720px){
-  header,header .nav{height:82px !important}
-  header .nav{padding:0 6% !important}
-  header .nav-links a:not(.nav-cta){display:none !important}
-  header .nav-links{
-    width:auto !important;
-    flex-wrap:nowrap !important;
-    justify-content:flex-end !important;
-    gap:0 !important;
-  }
-  header .nav .logo{width:88px !important;max-width:88px !important}
-  header .nav-links .nav-cta{padding:12px 18px !important}
-}
-/* =========================
-   SEO RELEASE ADDITIONS
-========================== */
-.intro-ice { background: var(--ice); }
-.capabilities-white { background: var(--white); }
-.signs-list { list-style: none; margin-top: 22px; }
-.signs-list li { padding: 14px 0; border-top: 1px solid var(--line); color: var(--text); font-size: 16px; line-height: 1.6; }
-.inline-link { text-decoration: underline; text-underline-offset: 3px; }
-.commercial-list a { text-decoration: underline; text-underline-offset: 3px; }
-.step-output { margin-top: 14px; color: var(--text) !important; font-size: 13px !important; }
-.how-link { margin-top: 28px; color: var(--muted); font-size: 15px; }
-.cta-copy p { color: #c3d2e2; margin-top: 16px; max-width: 760px; font-size: 16px; line-height: 1.7; }
-@media (max-width: 720px) {
-  .hero h1 { font-size: 36px; }
-  .cta .button { white-space: normal; text-align: center; }
-  .step { padding-left: 0; padding-right: 0; }
-}
-</style>
-<style id="pathweave-global-footer-master-lock">footer{background:#071a2b !important;color:#fff !important;padding:70px 0 30px !important;}footer .footer-grid{display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr !important;gap:50px !important;}footer .footer-logo{width:125px !important;max-width:125px !important;height:auto !important;display:block !important;filter:brightness(0) invert(1) !important;margin:0 0 25px !important;}footer .footer-description{color:#a9bdd0 !important;max-width:350px !important;font-size:15px !important;line-height:1.7 !important;}footer .footer-column h4{margin:0 0 24px !important;color:#fff !important;font-family:"DM Sans",Arial,sans-serif !important;font-size:13px !important;font-weight:700 !important;letter-spacing:1px !important;}footer .footer-column a{display:block !important;color:#a9bdd0 !important;font-size:15px !important;line-height:1.5 !important;margin:0 0 12px !important;}footer .footer-column a:hover{color:#fff !important;}footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12) !important;margin-top:55px !important;padding-top:25px !important;display:flex !important;justify-content:space-between !important;color:#7f98ae !important;font-size:13px !important;}@media(max-width:900px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}}@media(max-width:720px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}footer .footer-grid>div:first-child{grid-column:1/-1 !important;}footer .footer-bottom{display:block !important;}footer .footer-bottom div+div{margin-top:8px !important;}}@media(max-width:480px){footer .footer-grid{grid-template-columns:1fr !important;}footer .footer-grid>div:first-child{grid-column:auto !important;}}</style>
+<!-- pw:head -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=20261007">
+<meta name="theme-color" content="#FCFDFB">
+<script>document.documentElement.className+=" js"</script>
+<!-- /pw:head -->
 </head>
 
 <body>
@@ -1027,568 +127,274 @@ header .nav-links .nav-cta:hover{
          HEADER
     ========================== -->
 
-    <header>
-  <div class="nav">
-    <a href="/" aria-label="PathWeave home">
-      <img class="logo" src="../logo.png" alt="PathWeave">
-    </a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a class="active" href="/businessos/" aria-current="page">BusinessOS</a>
-      <a href="/peopleos/">PeopleOS</a>
-      <a href="/skillhubos/">Skill HubOS</a>
-      <a href="/government-advisory/">Government Advisory</a>
-      <a href="/how-we-work/">How We Work</a>
-      <a href="/about/">About</a>
-      <a href="/insights/">Insights</a>
-      <a class="nav-cta" href="/contact/">Let's Talk</a>
+    <!-- pw:header -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="PathWeave home"><img src="/assets/images/pathweave-mark.webp" width="176" height="96" alt=""><span class="brand-name">PathWeave</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="has-sub"><button class="nav-link sub-toggle is-current" type="button" aria-expanded="false" aria-controls="nav-practices">Practices</button>
+          <ul class="sub-menu" id="nav-practices"><li><a href="/businessos/" aria-current="page"><strong>BusinessOS</strong><span>Sales, CRM, data and how the business runs</span></a></li><li><a href="/peopleos/"><strong>PeopleOS</strong><span>HR, organisation and people systems</span></a></li><li class="sub-divider" role="presentation"></li><li class="sub-secondary"><a href="/skillhubos/"><strong>Skill HubOS</strong><span>Education-to-employment capability</span></a></li><li class="sub-secondary"><a href="/government-advisory/"><strong>Government Advisory</strong><span>Policy, incentives and approvals</span></a></li></ul></li>
+        <li><a class="nav-link" href="/how-we-work/">How We Work</a></li>
+        <li><a class="nav-link" href="/insights/">Insights</a></li>
+        <li><a class="nav-link" href="/about/">About</a></li>
+      </ul>
+      <a class="button button-primary button-small nav-cta" href="/contact/">Start a conversation</a>
     </nav>
   </div>
 </header>
-
-
-    <main>
-
-        <!-- =========================
-             HERO
-        ========================== -->
-
-        <section class="hero">
-
-            <div class="container hero-grid">
-
-                <div>
-
-                    <div class="eyebrow">
-                        BUSINESSOS · BUSINESS, MANAGEMENT &amp; TECHNOLOGY TRANSFORMATION
-                    </div>
-
-                    <h1>
-                        <span>Business and management consulting</span>
-                        for growing SMEs
-                    </h1>
-
-                    <p class="hero-copy">
-                        Strengthen the systems behind growth. PathWeave works with
-                        founders and leadership teams to connect strategy with sales,
-                        operations, data and technology, then turn priorities into
-                        practical ways of working.
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <a href="/contact/" class="button button-primary">
-                            Discuss your growth and transformation priorities
-                        </a>
-
-                        <a href="/how-we-work/" class="button button-secondary">
-                            See how we work
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="hero-visual">
-
-                    <div class="business-system">
-
-                        <div class="business-core">
-                            BUSINESSOS
-                        </div>
-
-                        <div class="system-node node-one">
-                            GROWTH
-                        </div>
-
-                        <div class="system-node node-two">
-                            OPERATIONS
-                        </div>
-
-                        <div class="system-node node-three">
-                            TECHNOLOGY
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PROBLEM
-        ========================== -->
-
-        <section class="intro">
-
-            <div class="container intro-grid">
-
-                <div>
-                    <div class="eyebrow">WHEN IT MAKES SENSE</div>
-                    <h2>When growth exposes gaps in the way the business operates</h2>
-                </div>
-
-                <div class="intro-copy">
-                    <p>
-                        Growth rarely stalls because the opportunity disappears.
-                        It stalls because the way the business runs has not kept up.
-                        You may recognise the signs:
-                    </p>
-                    <ul class="signs-list">
-                        <li>Sales results depend on a few people rather than a repeatable process</li>
-                        <li>Priorities change every month and teams are unsure what matters most</li>
-                        <li>Leaders wait days for reports that are assembled by hand</li>
-                        <li>Processes differ by branch, team or manager, and nobody owns the end-to-end flow</li>
-                        <li>Technology was bought, but teams still work around it in spreadsheets and messages</li>
-                        <li>The founder is still the final decision point for too many things</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             INTRO
-        ========================== -->
-
-        <section class="intro intro-ice">
-
-            <div class="container intro-grid">
-
-                <div>
-                    <div class="eyebrow">THE BUSINESSOS APPROACH</div>
-                    <h2>Business consulting that connects strategy with execution</h2>
-                </div>
-
-                <div class="intro-copy">
-                    <p>
-                        Growth is not just a strategy. It is an operating system.
-                        As organisations grow, strategy, sales, processes, data,
-                        technology and execution cannot operate as disconnected pieces.
-                    </p>
-                    <p>
-                        BusinessOS is PathWeave's business, management and technology
-                        transformation practice. We bring these dimensions together using
-                        one simple model — <strong>People, Process and Technology</strong> —
-                        so that recommendations become systems leaders and teams can
-                        actually operate.
-                    </p>
-                    <p>
-                        The focus is not on producing a strategy deck. It is on building
-                        the commercial, operational and technology foundations the business
-                        needs to execute and scale.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CAPABILITIES
-        ========================== -->
-
-        <section class="capabilities capabilities-white" id="capabilities">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <div class="eyebrow">BUSINESSOS CAPABILITIES</div>
-                    <h2>BusinessOS consulting services</h2>
-                    <p>
-                        From business strategy to the systems that make growth work —
-                        business transformation, commercial excellence, operating models
-                        and technology enablement around your growth agenda.
-                    </p>
-                </div>
-
-                <div class="capability-grid">
-
-                    <article class="capability">
-                        <div class="capability-number">01</div>
-                        <h3>Business and growth strategy</h3>
-                        <p>Growth priorities, market choices, business models and execution roadmaps that connect strategy with practical action.</p>
-                    </article>
-
-                    <article class="capability">
-                        <div class="capability-number">02</div>
-                        <h3>Sales Excellence and Commercial Excellence</h3>
-                        <p>Sales planning, commercial governance, incentives, productivity and performance management that make sales results repeatable. Explore our <a class="inline-link" href="/businessos/sales-commercial-excellence/">Sales Excellence and Commercial Excellence consulting</a>.</p>
-                    </article>
-
-                    <article class="capability">
-                        <div class="capability-number">03</div>
-                        <h3>Go-to-market, channel and market expansion</h3>
-                        <p>Route-to-market, channel design and expansion choices that improve customer reach and commercial execution.</p>
-                    </article>
-
-                    <article class="capability">
-                        <div class="capability-number">04</div>
-                        <h3>CRM and revenue operations</h3>
-                        <p>Pipeline, forecasting, workflows, adoption and reporting that give leaders visibility into sales. Explore our <a class="inline-link" href="/businessos/crm-revenue-operations/">CRM and revenue operations services</a>.</p>
-                    </article>
-
-                    <article class="capability">
-                        <div class="capability-number">05</div>
-                        <h3>Data, BI and decision systems</h3>
-                        <p>Dashboards, KPI frameworks and management information that leaders trust and act on. See our <a class="inline-link" href="/businessos/sales-dashboards-bi/">sales dashboards and BI consulting</a>.</p>
-                    </article>
-
-                    <article class="capability">
-                        <div class="capability-number">06</div>
-                        <h3>Process and automation</h3>
-                        <p>Workflow redesign, standardisation and practical automation that improve productivity and control.</p>
-                    </article>
-
-                    <article class="capability">
-                        <div class="capability-number">07</div>
-                        <h3>Digital and technology enablement</h3>
-                        <p>Technology requirements, roadmaps and implementation support that turn business needs into working systems.</p>
-                    </article>
-
-                    <article class="capability">
-                        <div class="capability-number">08</div>
-                        <h3>Operating model and transformation</h3>
-                        <p>Roles, governance, decision rights and operating rhythms that let the organisation execute consistently as it grows. Where the work touches organisation design or capability, it connects with <a class="inline-link" href="/peopleos/">PeopleOS HR and organisation consulting</a>.</p>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             COMMERCIAL TRANSFORMATION
-        ========================== -->
-
-        <section class="commercial">
-
-            <div class="container">
-
-                <div class="commercial-box">
-
-                    <div>
-                        <div class="eyebrow">COMMERCIAL TRANSFORMATION</div>
-                        <h2>Turn growth ambition into a system the business can execute.</h2>
-                    </div>
-
-                    <div class="commercial-copy">
-
-                        <p>
-                            Growth often slows not because the opportunity is missing,
-                            but because the systems behind growth have not kept pace.
-                        </p>
-
-                        <p>
-                            BusinessOS helps connect strategy with the commercial
-                            processes, technology, data and operating discipline
-                            required to turn opportunity into repeatable execution.
-                        </p>
-
-                        <div class="commercial-list">
-                            <div><a href="/businessos/sales-commercial-excellence/">Sales planning &amp; governance</a></div>
-                            <div><a href="/businessos/crm-revenue-operations/">CRM &amp; pipeline management</a></div>
-                            <div>GTM &amp; channel effectiveness</div>
-                            <div>Sales automation &amp; productivity</div>
-                            <div><a href="/businessos/sales-dashboards-bi/">BI &amp; performance dashboards</a></div>
-                            <div>Commercial process redesign</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PW-3 SUTRA
-        ========================== -->
-
-        <section class="sutra">
-
-            <div class="container">
-
-                <div class="sutra-heading">
-
-                    <div class="eyebrow">
-                        THE PW-3 SUTRA
-                    </div>
-
-                    <h2>
-                        Sustainable business transformation happens when
-                        People, Process and Technology work together.
-                    </h2>
-
-                    <p>
-                        The PW-3 Sutra is the common thinking framework connecting
-                        PathWeave's practices. Within BusinessOS, it ensures that
-                        growth and transformation are grounded in people realities,
-                        operational discipline and technology enablement.
-                    </p>
-
-                </div>
-
-
-                <div class="sutra-grid">
-
-                    <article class="sutra-card">
-
-                        <h3>
-                            People
-                        </h3>
-
-                        <p>
-                            Leadership, capability, ownership and organisational
-                            alignment required to execute strategy and sustain change.
-                        </p>
-
-                    </article>
-
-
-                    <article class="sutra-card">
-
-                        <h3>
-                            Process
-                        </h3>
-
-                        <p>
-                            Operating models, workflows, governance and accountability
-                            that make execution repeatable and scalable.
-                        </p>
-
-                    </article>
-
-
-                    <article class="sutra-card">
-
-                        <h3>
-                            Technology
-                        </h3>
-
-                        <p>
-                            CRM, data, automation, analytics and digital systems that
-                            create visibility, efficiency and leverage.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             HOW WE WORK
-        ========================== -->
-
-        <section class="how">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <div class="eyebrow">HOW WE WORK</div>
-                    <h2>How PathWeave works</h2>
-                    <p>
-                        BusinessOS combines advisory thinking with practical
-                        implementation, so every stage ends with something the
-                        organisation can use.
-                    </p>
-                </div>
-
-                <div class="steps">
-
-                    <div class="step">
-                        <div class="step-number">01</div>
-                        <h3>Diagnose</h3>
-                        <p>Understand the business, operating model, commercial systems and constraints.</p>
-                        <p class="step-output"><strong>What you get:</strong> Current-state business diagnostic; priority list</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">02</div>
-                        <h3>Design</h3>
-                        <p>Define the target business model, priorities, processes and technology requirements.</p>
-                        <p class="step-output"><strong>What you get:</strong> Growth and transformation priorities; commercial or operating-model design; technology and data requirements</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">03</div>
-                        <h3>Implement</h3>
-                        <p>Translate recommendations into practical systems, workflows and actions.</p>
-                        <p class="step-output"><strong>What you get:</strong> Process maps and governance; implementation roadmap</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">04</div>
-                        <h3>Enable</h3>
-                        <p>Equip leaders and teams to operate the new systems effectively.</p>
-                        <p class="step-output"><strong>What you get:</strong> Leadership working sessions; role-based enablement</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">05</div>
-                        <h3>Measure</h3>
-                        <p>Track adoption, effectiveness and business impact to keep improving.</p>
-                        <p class="step-output"><strong>What you get:</strong> Adoption and performance measures; improvement backlog</p>
-                    </div>
-
-                </div>
-
-                <p class="how-link">Read more about <a class="inline-link" href="/how-we-work/">how PathWeave works</a>.</p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             WHO IT IS FOR
-        ========================== -->
-
-        <section class="intro intro-ice">
-
-            <div class="container intro-grid">
-
-                <div>
-                    <div class="eyebrow">WHO WE WORK WITH</div>
-                    <h2>Who BusinessOS is for</h2>
-                </div>
-
-                <div class="intro-copy">
-                    <ul class="signs-list">
-                        <li><strong>Growing SMEs</strong> moving from founder-led decisions to structured management</li>
-                        <li><strong>Promoter-led companies</strong> professionalising sales, operations and reporting</li>
-                        <li><strong>Multi-location businesses</strong> that need consistent processes across branches, plants or regions</li>
-                        <li><strong>Mid-market firms</strong> preparing for the next stage — a new market, a new channel, investment or a leadership transition</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             EXPERIENCE
-        ========================== -->
-
-        <section class="intro">
-            <!-- Kohler and Naukri are the founder's leadership experience, not PathWeave client work. -->
-
-            <div class="container intro-grid">
-
-                <div>
-                    <div class="eyebrow">EXPERIENCE</div>
-                    <h2>Experience behind BusinessOS</h2>
-                </div>
-
-                <div class="intro-copy">
-                    <p>
-                        BusinessOS is led by founder <strong><a href="/about/srrinivas-sharrma/" style="text-decoration:underline;text-underline-offset:3px">Srrinivas Sharrma</a></strong>,
-                        whose 18+ years span business growth, sales, commercial process
-                        excellence and CRM transformation.
-                    </p>
-                    <ul class="signs-list">
-                        <li><strong>Kohler India — Business Process Excellence, Commercial.</strong> Led commercial process excellence covering sales processes, sales technology and CRM, coordinating across Sales, Marketing, Technical Services, Supply Chain and Logistics.</li>
-                        <li><strong>Info Edge (Naukri.com) — Sales Planning and Excellence.</strong> As Senior Vice President, led national sales planning, CRM transformation, analytics, incentive systems and sales-process improvement.</li>
-                    </ul>
-                <p style="margin-top:20px"><a href="/about/srrinivas-sharrma/kohler-salesforce-sales-excellence/" style="text-decoration:underline;text-underline-offset:3px">Kohler national Salesforce and Sales Excellence experience</a> · <a href="/about/srrinivas-sharrma/kohler-business-process-excellence-commercial/" style="text-decoration:underline;text-underline-offset:3px">Kohler Business Process Excellence experience</a> · <a href="/about/srrinivas-sharrma/info-edge-sales-operations-crm/" style="text-decoration:underline;text-underline-offset:3px">Info Edge Sales Operations and CRM experience</a></p>
-</div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CTA
-        ========================== -->
-
-        <section class="intro intro-ice" aria-labelledby="sales-check-entry-title"><div class="container intro-grid">
-          <div><div class="eyebrow">FOCUSED FIRST STEP</div><h2 id="sales-check-entry-title">Start with one sales or growth question.</h2></div>
-          <div class="intro-copy"><p>The <strong>Sales &amp; CRM Health Check</strong> is a small paid review of one selected focus area:</p><ul class="signs-list"><li>CRM Requirements</li><li>Sales Process Optimisation</li><li>Distributor Health</li><li>City Expansion</li></ul><p>The price and scope are agreed upfront. <a class="inline-link" href="/businessos/sales-crm-health-check/">Explore the Sales &amp; CRM Health Check →</a></p></div>
-        </div></section>
-
-        <section class="cta">
-
-            <div class="container cta-inner">
-
-                <div class="cta-copy">
-                    <h2>Start with the business problem</h2>
-                    <p>
-                        Tell us what is slowing the business down — sales, operations,
-                        reporting or technology. We'll help you identify where to start
-                        and what a practical first phase looks like.
-                    </p>
-                </div>
-
-                <a href="/contact/" class="button button-light">
-                    Discuss your growth and transformation priorities
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
+<!-- /pw:header --><main id="main">
+<nav class="container breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span aria-current="page">BusinessOS</span></nav>
+
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container page-hero-grid">
+    <div>
+      <p class="eyebrow case"><span class="strands" aria-hidden="true"><i></i><i></i><i></i></span>BusinessOS · Business, management &amp; technology transformation</p>
+      <h1 id="page-title">Business and management consulting for growing SMEs</h1>
+      <p class="lead">Strengthen the systems behind growth. PathWeave works with founders and leadership teams to connect strategy with sales, operations, data and technology, then turn priorities into practical ways of working.</p>
+      <div class="actions">
+        <a class="button button-primary" href="/businessos/sales-crm-health-check/" data-pw-event="health_check_cta" data-pw-offer="sales-crm-health-check">Start with a Sales &amp; CRM Health Check</a>
+        <a class="button button-secondary" href="/contact/">Discuss your growth priorities</a>
+      </div>
+    </div>
+    <aside class="hero-aside" aria-label="Signs BusinessOS can help">
+      <p class="aside-title">You may recognise the signs</p>
+      <ul>
+        <li>Sales results depend on a few people rather than a repeatable process</li>
+        <li>Priorities change every month and teams are unsure what matters most</li>
+        <li>Leaders wait days for reports that are assembled by hand</li>
+        <li>Processes differ by branch, team or manager, and nobody owns the end-to-end flow</li>
+        <li>Technology was bought, but teams still work around it in spreadsheets and messages</li>
+        <li>The founder is still the final decision point for too many things</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section surface-plain" aria-labelledby="system-title">
+  <div class="container">
+    <div class="section-head section-head-split">
+      <div>
+        <p class="eyebrow">How the pieces fit</p>
+        <h2 id="system-title" class="h-xl">Growth is an operating system, not a strategy deck.</h2>
+      </div>
+      <div class="rich">
+        <p>Growth rarely stalls because the opportunity disappears. It stalls because the way the business runs has not kept up. Strategy, sales, processes, data and technology cannot work as disconnected pieces.</p>
+        <p>BusinessOS treats them as one system: direction at the top, a commercial engine that runs every week, and foundations that keep it working as you grow.</p>
+      </div>
+    </div>
+
+    <figure class="diagram">
+      <div class="bos" role="group" aria-label="The BusinessOS commercial system">
+        <div class="bos-tier bos-direction">
+          <p class="bos-tier-label">Direction<span>Where to grow and how to reach customers</span></p>
+          <div class="bos-row" style="--n:2">
+            <div class="bos-node"><h3>Growth priorities</h3><p>Market choices, business model and the execution roadmap.</p></div>
+            <div class="bos-node"><h3>Go-to-market &amp; channel</h3><p>Route-to-market, distributors, direct sales and new cities.</p></div>
+          </div>
+        </div>
+        <div class="bos-arrow" aria-hidden="true"></div>
+        <div class="bos-tier bos-engine">
+          <p class="bos-tier-label">Commercial engine<span>The weekly cycle that turns opportunity into revenue</span></p>
+          <div class="bos-row" style="--n:4">
+            <div class="bos-node"><h3><a href="/businessos/sales-commercial-excellence/">Sales process</a></h3><p>Stages, ownership, incentives and governance.</p></div>
+            <div class="bos-node"><h3><a href="/businessos/crm-revenue-operations/">CRM &amp; pipeline</a></h3><p>One record of every lead, deal and forecast.</p></div>
+            <div class="bos-node"><h3><a href="/businessos/sales-dashboards-bi/">Data &amp; dashboards</a></h3><p>KPIs and reports leaders trust.</p></div>
+            <div class="bos-node"><h3>Review rhythm</h3><p>Pipeline and performance reviews that drive action.</p></div>
+          </div>
+        </div>
+        <p class="bos-return"><span>Reviews feed back into the sales process — the engine improves as it runs.</span></p>
+        <div class="bos-tier bos-foundation">
+          <p class="bos-tier-label">Foundations<span>What keeps the engine working as the business grows</span></p>
+          <div class="bos-row" style="--n:3">
+            <div class="bos-node"><h3>Process &amp; automation</h3><p>Standard workflows and practical automation.</p></div>
+            <div class="bos-node"><h3>Technology enablement</h3><p>Requirements, roadmaps and working systems.</p></div>
+            <div class="bos-node"><h3>Operating model</h3><p>Roles, decision rights and governance.</p></div>
+          </div>
+        </div>
+      </div>
+      <figcaption>Most engagements start in one place — often the commercial engine — and connect outwards only where the problem demands it.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="capabilities" aria-labelledby="cap-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Capabilities</p>
+      <h2 id="cap-title" class="h-xl">BusinessOS consulting services</h2>
+      <p>From business strategy to the systems that make growth work — business transformation, commercial excellence, operating models and technology enablement around your growth agenda.</p>
+    </div>
+    <div class="cap-groups">
+      <div class="cap-group" style="--c:var(--gold)">
+        <h3 class="cap-group-title">Set direction</h3>
+        <dl>
+          <dt>Business and growth strategy</dt>
+          <dd>Growth priorities, market choices, business models and execution roadmaps that connect strategy with practical action.</dd>
+          <dt>Go-to-market, channel and market expansion</dt>
+          <dd>Route-to-market, channel design and expansion choices that improve customer reach and commercial execution.</dd>
+        </dl>
+      </div>
+      <div class="cap-group" style="--c:var(--cobalt)">
+        <h3 class="cap-group-title">Run the commercial engine</h3>
+        <dl>
+          <dt>Sales Excellence and Commercial Excellence</dt>
+          <dd>Sales planning, commercial governance, incentives, productivity and performance management that make sales results repeatable. Explore our <a class="inline-link" href="/businessos/sales-commercial-excellence/">Sales Excellence and Commercial Excellence consulting</a>.</dd>
+          <dt>CRM and revenue operations</dt>
+          <dd>Pipeline, forecasting, workflows, adoption and reporting that give leaders visibility into sales. Explore our <a class="inline-link" href="/businessos/crm-revenue-operations/">CRM and revenue operations services</a>.</dd>
+          <dt>Data, BI and decision systems</dt>
+          <dd>Dashboards, KPI frameworks and management information that leaders trust and act on. See our <a class="inline-link" href="/businessos/sales-dashboards-bi/">sales dashboards and BI consulting</a>.</dd>
+        </dl>
+      </div>
+      <div class="cap-group" style="--c:var(--green)">
+        <h3 class="cap-group-title">Strengthen the foundations</h3>
+        <dl>
+          <dt>Process and automation</dt>
+          <dd>Workflow redesign, standardisation and practical automation that improve productivity and control.</dd>
+          <dt>Digital and technology enablement</dt>
+          <dd>Technology requirements, roadmaps and implementation support that turn business needs into working systems.</dd>
+          <dt>Operating model and transformation</dt>
+          <dd>Roles, governance, decision rights and operating rhythms that let the organisation execute consistently as it grows. Where the work touches organisation design or capability, it connects with <a class="inline-link" href="/peopleos/">PeopleOS HR and organisation consulting</a>.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" aria-labelledby="hc-title">
+  <div class="container">
+    <div class="entry">
+      <div>
+        <p class="eyebrow">Focused first step</p>
+        <h2 id="hc-title">Start with one sales or growth question.</h2>
+        <p>The Sales &amp; CRM Health Check is a small paid review of one selected area. The price and scope are agreed upfront, and you decide whether to continue.</p>
+      </div>
+      <ul class="entry-list" aria-label="Focus areas">
+        <li><b>CRM Requirements</b><span>What should our CRM actually do for the business?</span></li>
+        <li><b>Sales Process Optimisation</b><span>Where is the sales process leaking?</span></li>
+        <li><b>Distributor Health</b><span>Is the channel model performing as it should?</span></li>
+        <li><b>City Expansion</b><span>What route to market makes sense for one new city?</span></li>
+      </ul>
+      <div class="actions"><a class="button button-primary" href="/businessos/sales-crm-health-check/" data-pw-event="health_check_cta" data-pw-offer="sales-crm-health-check">Explore the Sales &amp; CRM Health Check</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="work-title">
+  <div class="container">
+    <div class="section-head section-head-split">
+      <div>
+        <p class="eyebrow">How we work</p>
+        <h2 id="work-title">Every stage ends with something the business can use.</h2>
+      </div>
+      <p>BusinessOS combines advisory thinking with practical implementation. Read more about <a class="inline-link" href="/how-we-work/">how PathWeave works</a>.</p>
+    </div>
+    <div class="path">
+      <ol class="path-track">
+        <li class="path-stage s1"><span class="path-node">1</span><h3>Diagnose</h3><p>Understand the business, operating model, commercial systems and constraints.</p><p class="path-get"><b>What you get</b>Current-state business diagnostic; priority list</p></li>
+        <li class="path-stage s2"><span class="path-node">2</span><h3>Design</h3><p>Define the target business model, priorities, processes and technology requirements.</p><p class="path-get"><b>What you get</b>Growth and transformation priorities; commercial or operating-model design; technology and data requirements</p></li>
+        <li class="path-stage s3"><span class="path-node">3</span><h3>Implement</h3><p>Translate recommendations into practical systems, workflows and actions.</p><p class="path-get"><b>What you get</b>Process maps and governance; implementation roadmap</p></li>
+        <li class="path-stage s4"><span class="path-node">4</span><h3>Enable</h3><p>Equip leaders and teams to operate the new systems effectively.</p><p class="path-get"><b>What you get</b>Leadership working sessions; role-based enablement</p></li>
+        <li class="path-stage s5"><span class="path-node">5</span><h3>Measure</h3><p>Track adoption, effectiveness and business impact to keep improving.</p><p class="path-get"><b>What you get</b>Adoption and performance measures; improvement backlog</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section surface-plain" aria-labelledby="fit-title">
+  <div class="container two-col">
+    <div>
+      <p class="eyebrow">Who we work with</p>
+      <h2 id="fit-title">Who BusinessOS is for</h2>
+      <ul class="list-rule" style="margin-top:var(--s-5)">
+        <li>Growing SMEs moving from founder-led decisions to structured management</li>
+        <li>Promoter-led companies professionalising sales, operations and reporting</li>
+        <li>Multi-location businesses that need consistent processes across branches, plants or regions</li>
+        <li>Mid-market firms preparing for the next stage — a new market, a new channel, investment or a leadership transition</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Experience</p>
+      <h2>Experience behind BusinessOS</h2>
+      <div class="rich" style="margin-top:var(--s-4)">
+        <p>BusinessOS is led by founder <a href="/about/srrinivas-sharrma/">Srrinivas Sharrma</a>, whose 18+ years span business growth, sales, commercial process excellence and CRM transformation.</p>
+      </div>
+      <div class="principle"><strong>Kohler India — Business Process Excellence, Commercial</strong><span>Led commercial process excellence covering sales processes, sales technology and CRM, coordinating across Sales, Marketing, Technical Services, Supply Chain and Logistics.</span></div>
+      <div class="principle"><strong>Info Edge (Naukri.com) — Sales Planning and Excellence</strong><span>As Senior Vice President, led national sales planning, CRM transformation, analytics, incentive systems and sales-process improvement.</span></div>
+      <p class="small muted" style="margin-top:var(--s-3)">These are leadership roles before PathWeave, not PathWeave client case studies.</p>
+      <ul class="link-list">
+        <li><a class="text-link" href="/about/srrinivas-sharrma/kohler-salesforce-sales-excellence/">Kohler national Salesforce and Sales Excellence experience</a></li>
+        <li><a class="text-link" href="/about/srrinivas-sharrma/kohler-business-process-excellence-commercial/">Kohler Business Process Excellence experience</a></li>
+        <li><a class="text-link" href="/about/srrinivas-sharrma/info-edge-sales-operations-crm/">Info Edge Sales Operations and CRM experience</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="read-title">
+  <div class="container">
+    <div class="practice-block-intro">
+      <div class="section-intro"><p class="eyebrow">Related insights</p><h2 id="read-title">Guides for sales and growth leaders</h2></div>
+      <a class="text-link" href="/insights/#businessos-insights">All BusinessOS insights</a>
+    </div>
+    <div class="insight-grid">
+      <article class="insight-card"><p class="topic-label">CRM Requirements</p><h3><a href="/insights/crm-requirements-checklist-growing-businesses/">CRM Requirements Checklist: What to Define Before You Choose a CRM</a></h3><p>A vendor-neutral, process-first checklist covering sales stages, exit criteria, data, dashboards, integrations, governance and adoption.</p></article>
+      <article class="insight-card"><p class="topic-label">Sales Forecasting</p><h3><a href="/insights/improve-sales-forecast-accuracy/">How to Improve Sales Forecast Accuracy</a></h3><p>Stage exit criteria, forecast categories, close-date discipline, review cadence and bias checks that make a forecast worth trusting.</p></article>
+      <article class="insight-card"><p class="topic-label">Route to Market</p><h3><a href="/insights/distributor-vs-direct-sales-new-city/">Distributor or Direct Sales for a New City? A Decision Guide</a></h3><p>When direct sales, a distributor or a hybrid model fits a new market — and what you need to know before deciding.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="container cta-band-inner">
+    <div>
+      <h2 id="cta-title">Start with the business problem.</h2>
+      <p>Tell us what is slowing the business down — sales, operations, reporting or technology. We’ll help you identify where to start and what a practical first phase looks like.</p>
+    </div>
+    <a class="button button-primary" href="/contact/">Discuss your growth and transformation priorities</a>
+  </div>
+</section>
+</main>
 
 
     <!-- =========================
          FOOTER
     ========================== -->
-    <footer>
+    <!-- pw:footer -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <img class="footer-logo" src="../logo.png" alt="PathWeave">
-        <div class="footer-description">Strategy, transformation and growth across business, people, technology and government.</div>
-        <div class="footer-description" style="margin-top:14px">Focused on Hyderabad and Secunderabad, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.</div>
+      <div class="footer-brand">
+        <a href="/" aria-label="PathWeave home"><img class="footer-logo" src="/assets/images/pathweave-logo.webp" width="400" height="310" alt="PathWeave" loading="lazy" decoding="async"></a>
+        <p class="footer-tagline">Strategy. Transformation. Growth.</p>
+        <p>Management consulting across business, people, skills and government advisory.</p>
       </div>
-      <div class="footer-column">
-        <h4>OUR PRACTICES</h4>
-        <a href="/businessos/">BusinessOS</a>
-        <a href="/peopleos/">PeopleOS</a>
-        <a href="/skillhubos/">Skill HubOS</a>
-        <a href="/government-advisory/">Government Advisory</a>
-      </div>
-      <div class="footer-column">
-        <h4>PATHWEAVE</h4>
-        <a href="/how-we-work/">How We Work</a>
-        <a href="/about/">About</a>
-        <a href="/insights/">Insights</a>
-      </div>
-      <div class="footer-column">
-        <h4>LOCATIONS</h4>
-        <a href="/locations/hyderabad/">Hyderabad &amp; Secunderabad</a>
-        <a href="/locations/nagpur/">Nagpur</a>
-        <a href="/locations/bhopal/">Bhopal</a>
-        <a href="/locations/indore/">Indore</a>
-      </div>
-      <div class="footer-column">
-        <h4>CONNECT</h4>
-        <a href="/contact/">Start a Conversation</a>
-        <a href="https://www.linkedin.com/company/pathweave-consulting" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+      <nav class="footer-col" aria-label="Practices">
+        <p class="footer-heading">Practices</p>
+        <ul><li><a href="/businessos/">BusinessOS</a></li><li><a href="/peopleos/">PeopleOS</a></li><li><a href="/skillhubos/">Skill HubOS</a></li><li><a href="/government-advisory/">Government Advisory</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <p class="footer-heading">Company</p>
+        <ul><li><a href="/about/">About</a></li><li><a href="/how-we-work/">How We Work</a></li><li><a href="/insights/">Insights</a></li><li><a href="/contact/">Contact</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <p class="footer-heading">Resources</p>
+        <ul><li><a href="/peopleos/hr-health-check/">HR Health Check</a></li><li><a href="/businessos/sales-crm-health-check/">Sales &amp; CRM Health Check</a></li><li><a href="/diagnostic/">Readiness assessment</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul>
+      </nav>
     </div>
-    <div class="footer-bottom">
-      <div>© 2026 PathWeave. All rights reserved.</div>
-      <div>People · Process · Technology</div>
+    <div class="footer-places">
+      <span>Hyderabad &amp; Secunderabad, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.</span>
+      <span><a href="/locations/hyderabad/">Hyderabad</a> · <a href="/locations/nagpur/">Nagpur</a> · <a href="/locations/bhopal/">Bhopal</a> · <a href="/locations/indore/">Indore</a></span>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 PathWeave · People · Process · Technology</span>
+      <nav aria-label="More"><a href="https://www.linkedin.com/company/pathweave-consulting" rel="noopener">LinkedIn</a><a href="/about-for-ai/">About for AI</a><a href="/llms.txt">llms.txt</a></nav>
     </div>
   </div>
 </footer>
-
+<script src="/assets/js/site.js?v=20261007" defer></script>
+<!-- /pw:footer -->
 </body>
 </html>

@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/logo.png">
-
-    <title>Growth Readiness Assessment | PathWeave</title>
+<title>Growth Readiness Assessment | PathWeave</title>
     <meta name="description" content="Assess your organisation's growth readiness across People, Process and Technology with PathWeave's free 15-question diagnostic.">
     <link rel="canonical" href="https://pathweave.in/diagnostic/">
 
@@ -18,11 +16,6 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Growth Readiness Assessment | PathWeave">
     <meta name="twitter:description" content="A free 15-question readiness assessment across People, Process and Technology.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/site.css">
 
     <script type="application/ld+json">
     {
@@ -65,20 +58,19 @@
 
     <style>
         :root {
-            --diagnostic-navy: #0b2238;
-            --diagnostic-navy-dark: #071a2b;
+            --diagnostic-navy: #102A3D;
+            --diagnostic-navy-dark: #1C46BA;
             --diagnostic-blue: #2455d6;
-            --diagnostic-ice: #f4f8fd;
+            --diagnostic-ice: #EEF5FF;
             --diagnostic-text: #173047;
-            --diagnostic-muted: #5c7187;
-            --diagnostic-line: #d7e1eb;
+            --diagnostic-muted: #5B6E7F;
+            --diagnostic-line: #DDE6EC;
             --diagnostic-white: #ffffff;
         }
 
-        body {
-            background: var(--diagnostic-ice);
+        body { background: var(--canvas);
             color: var(--diagnostic-text);
-            font-family: "DM Sans", Arial, sans-serif;
+            font-family: var(--font-body);
         }
 
         .pw-logo img {
@@ -119,17 +111,14 @@
         .assessment-eyebrow {
             margin-bottom: 18px;
             color: var(--diagnostic-blue);
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1.8px;
-            text-transform: uppercase;
+            font-size: 15px; font-weight: 600;
         }
 
         .assessment-heading h1 {
             max-width: 850px;
             margin: 0 0 20px;
             color: var(--diagnostic-navy);
-            font-family: "Playfair Display", serif;
+            font-family: var(--font-display); font-weight: 450;
             font-size: clamp(42px, 5vw, 66px);
             font-weight: 500;
             line-height: 1.06;
@@ -173,7 +162,7 @@
             border: 1px solid var(--diagnostic-line);
             border-radius: 26px;
             background: var(--diagnostic-white);
-            box-shadow: 0 22px 55px rgba(11, 34, 56, .07);
+            box-shadow: none;
         }
 
         .assessment-panel {
@@ -183,13 +172,13 @@
         .assessment-intro {
             padding: 34px 36px;
             border-bottom: 1px solid var(--diagnostic-line);
-            background: linear-gradient(135deg, #ffffff 0%, #f7faff 100%);
+            background: var(--white);
         }
 
         .assessment-intro h2 {
             margin: 0 0 10px;
             color: var(--diagnostic-navy);
-            font-family: "Playfair Display", serif;
+            font-family: var(--font-display); font-weight: 450;
             font-size: 30px;
             font-weight: 500;
         }
@@ -241,7 +230,7 @@
             margin: 0 0 8px;
             padding: 0;
             color: var(--diagnostic-navy);
-            font-family: "Playfair Display", serif;
+            font-family: var(--font-display); font-weight: 450;
             font-size: 32px;
             font-weight: 500;
         }
@@ -337,7 +326,7 @@
             border-radius: 999px;
             padding: 13px 23px;
             cursor: pointer;
-            font-family: "DM Sans", sans-serif;
+            font-family: var(--font-body);
             font-size: 14px;
             font-weight: 700;
             transition: transform .18s ease, background .18s ease;
@@ -378,7 +367,7 @@
         .assessment-aside h2 {
             margin: 0 0 18px;
             color: var(--diagnostic-navy);
-            font-family: "Playfair Display", serif;
+            font-family: var(--font-display); font-weight: 450;
             font-size: 27px;
             font-weight: 500;
         }
@@ -448,13 +437,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(255, 255, 255, .22);
+            border: 2px solid var(--cobalt);
             border-radius: 50%;
-            background: rgba(255, 255, 255, .06);
+            background: var(--white);
         }
 
         .overall-score strong {
-            font-family: "Playfair Display", serif;
+            font-family: var(--font-display); font-weight: 450;
             font-size: 45px;
             font-weight: 500;
             line-height: 1;
@@ -462,14 +451,14 @@
 
         .overall-score span {
             margin-top: 5px;
-            color: #b8c9d8;
+            color: var(--muted);
             font-size: 12px;
             text-transform: uppercase;
         }
 
         .result-kicker {
             margin-bottom: 7px;
-            color: #8fb2ff;
+            color: var(--cobalt);
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 1.4px;
@@ -478,7 +467,7 @@
 
         .result-hero h2 {
             margin: 0 0 10px;
-            font-family: "Playfair Display", serif;
+            font-family: var(--font-display); font-weight: 450;
             font-size: clamp(30px, 4vw, 44px);
             font-weight: 500;
             line-height: 1.15;
@@ -487,7 +476,7 @@
         .result-hero p {
             max-width: 680px;
             margin: 0;
-            color: #c7d4df;
+            color: var(--muted);
             font-size: 16px;
             line-height: 1.6;
         }
@@ -541,7 +530,7 @@
         .priorities h3 {
             margin: 0 0 16px;
             color: var(--diagnostic-navy);
-            font-family: "Playfair Display", serif;
+            font-family: var(--font-display); font-weight: 450;
             font-size: 28px;
             font-weight: 500;
         }
@@ -600,7 +589,7 @@
         .result-next h3 {
             margin: 0 0 10px;
             color: var(--diagnostic-navy);
-            font-family: "Playfair Display", serif;
+            font-family: var(--font-display); font-weight: 450;
             font-size: 22px;
             font-weight: 500;
         }
@@ -695,8 +684,8 @@
         }
 
         @media print {
-            #site-header,
-            #site-footer,
+            .site-header,
+            .site-footer,
             .assessment-heading,
             .assessment-layout,
             .result-actions {
@@ -713,13 +702,48 @@
                 box-shadow: none;
             }
         }
+    /* PathWeave refresh: light result header, site buttons */
+        .result-hero { background: var(--sky); color: var(--ink-deep); }
+        .result-hero h2, .overall-score strong { color: var(--ink-deep); }
+        .result-hero p { color: var(--muted); }
+        .assessment-button { border-radius: 12px; font-size: 16px; }
+        .assessment-button--primary { background: var(--cobalt); color: #fff; }
+        .assessment-button--primary:hover { background: var(--cobalt-hover); }
+        .result-track span { background: var(--cobalt); }
+        .assessment-panel, .assessment-aside, .result-panel { border-radius: 20px; }
     </style>
+<!-- pw:head -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=20261007">
+<meta name="theme-color" content="#FCFDFB">
+<script>document.documentElement.className+=" js"</script>
+<!-- /pw:head -->
 </head>
 
 <body>
-    <div id="site-header"></div>
-
-    <main class="diagnostic-main">
+    <!-- pw:header -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="PathWeave home"><img src="/assets/images/pathweave-mark.webp" width="176" height="96" alt=""><span class="brand-name">PathWeave</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="has-sub"><button class="nav-link sub-toggle" type="button" aria-expanded="false" aria-controls="nav-practices">Practices</button>
+          <ul class="sub-menu" id="nav-practices"><li><a href="/businessos/"><strong>BusinessOS</strong><span>Sales, CRM, data and how the business runs</span></a></li><li><a href="/peopleos/"><strong>PeopleOS</strong><span>HR, organisation and people systems</span></a></li><li class="sub-divider" role="presentation"></li><li class="sub-secondary"><a href="/skillhubos/"><strong>Skill HubOS</strong><span>Education-to-employment capability</span></a></li><li class="sub-secondary"><a href="/government-advisory/"><strong>Government Advisory</strong><span>Policy, incentives and approvals</span></a></li></ul></li>
+        <li><a class="nav-link" href="/how-we-work/">How We Work</a></li>
+        <li><a class="nav-link" href="/insights/">Insights</a></li>
+        <li><a class="nav-link" href="/about/">About</a></li>
+      </ul>
+      <a class="button button-primary button-small nav-cta" href="/contact/">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+<!-- /pw:header -->    <main id="main" class="diagnostic-main">
         <div class="diagnostic-container">
             <nav class="breadcrumb" aria-label="Breadcrumb">
                 <a href="/">Home</a>
@@ -728,7 +752,7 @@
             </nav>
 
             <header class="assessment-heading">
-                <div class="assessment-eyebrow">PATHWEAVE GROWTH DIAGNOSTIC</div>
+                <div class="assessment-eyebrow">Growth readiness assessment</div>
                 <h1>Is your operating foundation ready for the next stage of growth?</h1>
                 <p>
                     Rate how consistently each statement is true today. Your answers generate an
@@ -962,7 +986,7 @@
                         <span>out of 100</span>
                     </div>
                     <div>
-                        <div class="result-kicker">YOUR READINESS STAGE</div>
+                        <div class="result-kicker">Your readiness stage</div>
                         <h2 id="result-title">Your result</h2>
                         <p id="result-summary"></p>
                     </div>
@@ -1017,10 +1041,40 @@
         </div>
     </main>
 
-    <div id="site-footer"></div>
-
-    <script src="/site.js"></script>
-    <script>
+    <!-- pw:footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" aria-label="PathWeave home"><img class="footer-logo" src="/assets/images/pathweave-logo.webp" width="400" height="310" alt="PathWeave" loading="lazy" decoding="async"></a>
+        <p class="footer-tagline">Strategy. Transformation. Growth.</p>
+        <p>Management consulting across business, people, skills and government advisory.</p>
+      </div>
+      <nav class="footer-col" aria-label="Practices">
+        <p class="footer-heading">Practices</p>
+        <ul><li><a href="/businessos/">BusinessOS</a></li><li><a href="/peopleos/">PeopleOS</a></li><li><a href="/skillhubos/">Skill HubOS</a></li><li><a href="/government-advisory/">Government Advisory</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <p class="footer-heading">Company</p>
+        <ul><li><a href="/about/">About</a></li><li><a href="/how-we-work/">How We Work</a></li><li><a href="/insights/">Insights</a></li><li><a href="/contact/">Contact</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <p class="footer-heading">Resources</p>
+        <ul><li><a href="/peopleos/hr-health-check/">HR Health Check</a></li><li><a href="/businessos/sales-crm-health-check/">Sales &amp; CRM Health Check</a></li><li><a href="/diagnostic/">Readiness assessment</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul>
+      </nav>
+    </div>
+    <div class="footer-places">
+      <span>Hyderabad &amp; Secunderabad, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.</span>
+      <span><a href="/locations/hyderabad/">Hyderabad</a> · <a href="/locations/nagpur/">Nagpur</a> · <a href="/locations/bhopal/">Bhopal</a> · <a href="/locations/indore/">Indore</a></span>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 PathWeave · People · Process · Technology</span>
+      <nav aria-label="More"><a href="https://www.linkedin.com/company/pathweave-consulting" rel="noopener">LinkedIn</a><a href="/about-for-ai/">About for AI</a><a href="/llms.txt">llms.txt</a></nav>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=20261007" defer></script>
+<!-- /pw:footer -->    <script>
         (() => {
             const form = document.getElementById("readiness-form");
             const resultPanel = document.getElementById("assessment-results");

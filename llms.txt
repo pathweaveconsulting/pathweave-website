@@ -1,0 +1,45 @@
+# PathWeave
+
+> PathWeave is a management consulting and advisory firm (founded April 2020) that helps founders and leadership teams strengthen sales, CRM, people and HR systems, processes, data and execution. Brand line: Strategy. Transformation. Growth. Primary market Hyderabad and Secunderabad, India, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.
+
+PathWeave works through four practices — BusinessOS, PeopleOS, Skill HubOS and Government Advisory — connected by the PW-3 Sutra framework (People, Process and Technology designed together). Engagements follow Diagnose, Design, Implement, Enable, Measure. Contact: growth@pathweave.in, +91 77008 83315.
+
+## Company
+
+- [Home](https://pathweave.in/): Overview of PathWeave, its practices and focused entry offers
+- [About](https://pathweave.in/about/): Why PathWeave exists and its founders, Srrinivas Sharrma and Rennu Sharma
+- [How We Work](https://pathweave.in/how-we-work/): The five-stage method and how implementation and ownership are handled
+- [Contact](https://pathweave.in/contact/): Email, phone, WhatsApp and locations
+- [About for AI](https://pathweave.in/about-for-ai/): Reference facts about PathWeave in one page
+
+## Practices
+
+- [BusinessOS](https://pathweave.in/businessos/): Business, management and technology transformation for growing SMEs
+- [Sales Excellence & Commercial Excellence](https://pathweave.in/businessos/sales-commercial-excellence/): Sales planning, governance, incentives and performance management
+- [CRM & Revenue Operations](https://pathweave.in/businessos/crm-revenue-operations/): Sales process, pipeline and CRM on Salesforce or Microsoft Dynamics 365
+- [Sales Dashboards & BI](https://pathweave.in/businessos/sales-dashboards-bi/): KPI frameworks and management dashboards
+- [PeopleOS](https://pathweave.in/peopleos/): People and HR transformation
+- [HR Services](https://pathweave.in/peopleos/hr-services/), [Fractional HR](https://pathweave.in/peopleos/fractional-hr/), [HR Outsourcing](https://pathweave.in/peopleos/hr-outsourcing/), [HR Operations & HRMS](https://pathweave.in/peopleos/hr-operations-hrms/), [Recruitment & Talent](https://pathweave.in/peopleos/recruitment-talent/), [HR Consulting for Startups](https://pathweave.in/peopleos/hr-consulting-startups/), [HR Consulting for SMEs](https://pathweave.in/peopleos/hr-consulting-smes/)
+- [Skill HubOS](https://pathweave.in/skillhubos/): Education-to-employment capability ecosystem
+- [Government Advisory](https://pathweave.in/government-advisory/): Policy, incentives, approvals and regulatory interfaces
+
+## Focused starting points
+
+- [HR Health Check](https://pathweave.in/peopleos/hr-health-check/): Fixed-price review of one HR area
+- [Sales & CRM Health Check](https://pathweave.in/businessos/sales-crm-health-check/): Fixed-price review of one sales, CRM, distributor or city-expansion question
+- [Readiness assessment](https://pathweave.in/diagnostic/): Free 15-question self-assessment across People, Process and Technology
+
+## Founders
+
+- [Srrinivas Sharrma](https://pathweave.in/about/srrinivas-sharrma/): Founder, leads BusinessOS; 18+ years in sales, Sales Excellence and CRM transformation
+- [Rennu Sharma](https://pathweave.in/about/): Founder, leads PeopleOS; HR leadership, consulting and outsourced HR delivery
+
+## Insights
+
+- [All insights](https://pathweave.in/insights/): Practical guides on HR setup, HR models, CRM, sales process, forecasting and distribution
+
+## Optional
+
+- [Full reference text](https://pathweave.in/llms-full.txt)
+- [Locations: Hyderabad](https://pathweave.in/locations/hyderabad/), [Nagpur](https://pathweave.in/locations/nagpur/), [Bhopal](https://pathweave.in/locations/bhopal/), [Indore](https://pathweave.in/locations/indore/)
+- [Sitemap](https://pathweave.in/sitemap.xml)

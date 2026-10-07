@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/logo.png">
-    <title>About PathWeave | Founders Srrinivas Sharrma &amp; Rennu Sharma</title>
+<title>About PathWeave | Founders Srrinivas Sharrma &amp; Rennu Sharma</title>
     <meta name="description" content="Meet Srrinivas Sharrma and Rennu Sharma, the founders of PathWeave, a management consulting firm connecting people, processes, technology and execution.">
     
     <link rel="canonical" href="https://pathweave.in/about/">
@@ -35,6 +34,9 @@
       "mentions": [
         {
           "@id": "https://pathweave.in/about/#srrinivas-sharrma"
+        },
+        {
+          "@id": "https://pathweave.in/about/#rennu-sharma"
         }
       ],
       "breadcrumb": {
@@ -69,6 +71,26 @@
       ]
     },
     {
+      "@type": "Person",
+      "@id": "https://pathweave.in/about/#rennu-sharma",
+      "name": "Rennu Sharma",
+      "jobTitle": "Founder",
+      "url": "https://pathweave.in/about/",
+      "image": "https://pathweave.in/assets/rennu-sharma.jpeg",
+      "description": "Founder of PathWeave, leading PeopleOS. HR leadership, consulting and outsourced HR delivery across organisation structures, policies, recruitment, performance management, HR operations and people systems.",
+      "worksFor": {
+        "@id": "https://pathweave.in/#organization"
+      },
+      "knowsAbout": [
+        "HR Transformation",
+        "Organisation Design",
+        "HR Operations",
+        "Recruitment",
+        "Performance Management",
+        "HR Policies"
+      ]
+    },
+    {
       "@type": "BreadcrumbList",
       "@id": "https://pathweave.in/about/#breadcrumb",
       "itemListElement": [
@@ -89,1137 +111,213 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --navy: #0b2238;
-            --navy-dark: #071a2b;
-            --blue: #2455d6;
-            --ice: #f4f8fd;
-            --white: #ffffff;
-            --text: #173047;
-            --muted: #5c7187;
-            --line: #d7e1eb;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            color: var(--text);
-            background: var(--white);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        h1, h2, h3 {
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-        }
-
-        .container {
-            width: min(1180px, 88%);
-            margin: 0 auto;
-        }
-
-        .eyebrow {
-            color: var(--blue);
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 22px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 14px 24px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .button-primary {
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .button-secondary {
-            border: 1px solid var(--line);
-            color: var(--navy);
-            background: var(--white);
-        }
-
-        /* HEADER */
-
-        .site-header {
-            height: 96px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 11%;
-            background: var(--white);
-            border-bottom: 1px solid #edf1f5;
-        }
-
-        .site-logo {
-            width: 100px;
-            height: auto;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        .nav a {
-            transition: color 0.2s ease;
-        }
-
-        .nav a:hover {
-            color: var(--blue);
-        }
-
-        .nav .active {
-            color: var(--blue);
-        }
-
-        .nav-cta {
-            background: var(--navy);
-            color: var(--white) !important;
-            padding: 14px 25px;
-            border-radius: 30px;
-            font-weight: 600;
-        }
-
-        /* HERO */
-
-        .hero {
-            background: var(--ice);
-            padding: 86px 0 82px;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.08fr .92fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .hero h1 {
-            color: var(--navy);
-            font-size: clamp(48px, 4.5vw, 64px);
-            line-height: 1.08;
-            letter-spacing: -.02em;
-            max-width: 720px;
-        }
-
-        .hero h1 span {
-            color: var(--blue);
-        }
-
-        .hero-copy {
-            color: var(--muted);
-            font-size: 17px;
-            line-height: 1.78;
-            max-width: 670px;
-            margin-top: 25px;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 30px;
-        }
-
-        .hero-visual {
-            min-height: 390px;
-            border-radius: 22px;
-            background: var(--navy);
-            padding: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .pathway {
-            width: 300px;
-            height: 300px;
-            position: relative;
-            border: 1px solid rgba(255,255,255,.22);
-            border-radius: 50%;
-        }
-
-        .pathway::before {
-            content: "";
-            position: absolute;
-            inset: 42px;
-            border: 1px solid rgba(255,255,255,.14);
-            border-radius: 50%;
-        }
-
-        .pathway::after {
-            content: "";
-            position: absolute;
-            inset: 90px;
-            border: 1px solid rgba(255,255,255,.12);
-            border-radius: 50%;
-        }
-
-        .path-core {
-            position: absolute;
-            inset: 0;
-            margin: auto;
-            width: 118px;
-            height: 118px;
-            border-radius: 50%;
-            background: var(--white);
-            color: var(--navy);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            z-index: 2;
-        }
-
-        .path-node {
-            position: absolute;
-            width: 94px;
-            height: 94px;
-            border: 1px solid rgba(255,255,255,.28);
-            background: rgba(255,255,255,.06);
-            border-radius: 50%;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 10px;
-            line-height: 1.3;
-            font-weight: 700;
-            letter-spacing: .6px;
-            z-index: 3;
-        }
-
-        .node-strategy {
-            top: -28px;
-            left: 103px;
-        }
-
-        .node-transformation {
-            left: -27px;
-            bottom: -25px;
-        }
-
-        .node-growth {
-            right: -27px;
-            bottom: -25px;
-        }
-
-        /* STRATEGY / TRANSFORMATION / GROWTH */
-
-        .story {
-            padding: 96px 0;
-        }
-
-        .story-grid {
-            display: grid;
-            grid-template-columns: .9fr 1.1fr;
-            gap: 85px;
-        }
-
-        .story h2 {
-            color: var(--navy);
-            font-size: clamp(40px, 3.8vw, 54px);
-            line-height: 1.1;
-        }
-
-        .story-copy {
-            color: var(--muted);
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        .story-copy p + p {
-            margin-top: 20px;
-        }
-
-        .story-points {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 42px;
-        }
-
-        .story-point {
-            border-top: 2px solid var(--blue);
-            padding-top: 18px;
-        }
-
-        .story-point h3 {
-            color: var(--navy);
-            font-family: "DM Sans", sans-serif;
-            font-size: 19px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .story-point p {
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.65;
-        }
-
-        /* PW-3 */
-
-        .sutra {
-            background: var(--ice);
-            padding: 96px 0;
-        }
-
-        .sutra-heading {
-            max-width: 850px;
-            margin-bottom: 48px;
-        }
-
-        .sutra-heading h2 {
-            color: var(--navy);
-            font-size: clamp(40px, 3.8vw, 54px);
-            line-height: 1.1;
-        }
-
-        .sutra-heading p {
-            color: var(--muted);
-            font-size: 16px;
-            line-height: 1.8;
-            margin-top: 20px;
-            max-width: 780px;
-        }
-
-        .sutra-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .sutra-card {
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 34px;
-            min-height: 210px;
-        }
-
-        .sutra-card-number {
-            color: var(--blue);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            margin-bottom: 42px;
-        }
-
-        .sutra-card h3 {
-            color: var(--navy);
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .sutra-card p {
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        /* PRACTICES */
-
-        .practices {
-            padding: 96px 0;
-        }
-
-        .section-heading {
-            max-width: 850px;
-            margin-bottom: 48px;
-        }
-
-        .section-heading h2 {
-            color: var(--navy);
-            font-size: clamp(40px, 3.8vw, 54px);
-            line-height: 1.1;
-        }
-
-        .section-heading p {
-            color: var(--muted);
-            font-size: 16px;
-            line-height: 1.8;
-            margin-top: 20px;
-            max-width: 760px;
-        }
-
-        .practice-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .practice-card {
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 34px;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            background: var(--white);
-        }
-
-        .practice-number {
-            color: var(--blue);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            margin-bottom: 48px;
-        }
-
-        .practice-card h3 {
-            color: var(--navy);
-            font-size: 29px;
-            margin-bottom: 13px;
-        }
-
-        .practice-card p {
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .practice-link {
-            margin-top: auto;
-            padding-top: 24px;
-            color: var(--blue);
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        /* HOW WE WORK */
-
-        .method {
-            background: var(--navy);
-            padding: 88px 0;
-        }
-
-        .method .eyebrow {
-            color: #8fb3ff;
-        }
-
-        .method h2 {
-            color: var(--white);
-            font-size: clamp(40px, 3.8vw, 54px);
-            line-height: 1.1;
-            max-width: 850px;
-        }
-
-        .method-intro {
-            color: #c3d2e2;
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 760px;
-            margin-top: 20px;
-        }
-
-        .method-steps {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            margin-top: 48px;
-            border-top: 1px solid rgba(255,255,255,.15);
-            border-bottom: 1px solid rgba(255,255,255,.15);
-        }
-
-        .method-step {
-            padding: 28px 20px 32px;
-            border-right: 1px solid rgba(255,255,255,.15);
-            min-height: 205px;
-        }
-
-        .method-step:first-child {
-            padding-left: 0;
-        }
-
-        .method-step:last-child {
-            border-right: none;
-            padding-right: 0;
-        }
-
-        .method-number {
-            color: #8fb3ff;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            margin-bottom: 50px;
-        }
-
-        .method-step h3 {
-            font-family: "DM Sans", sans-serif;
-            color: var(--white);
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .method-step p {
-            color: #b9cbdc;
-            font-size: 13px;
-            line-height: 1.65;
-        }
-
-        /* CTA */
-
-        .cta {
-            background: var(--ice);
-            padding: 76px 0;
-        }
-
-        .cta-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 50px;
-        }
-
-        .cta h2 {
-            color: var(--navy);
-            font-size: clamp(40px, 3.8vw, 54px);
-            line-height: 1.1;
-            max-width: 820px;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: var(--navy-dark);
-            color: var(--white);
-            padding: 70px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
-
-        .footer-logo {
-            width: 125px;
-            height: auto;
-            display: block;
-            filter: brightness(0) invert(1);
-            margin-bottom: 25px;
-        }
-
-        .footer-description {
-            color: #a9bdd0;
-            max-width: 350px;
-            font-size: 15px;
-        }
-
-        .footer-column h4 {
-            font-size: 13px;
-            letter-spacing: 1px;
-            margin-bottom: 24px;
-        }
-
-        .footer-column a {
-            display: block;
-            color: #a9bdd0;
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
-
-        .footer-column a:hover {
-            color: var(--white);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.12);
-            margin-top: 55px;
-            padding-top: 25px;
-            display: flex;
-            justify-content: space-between;
-            color: #7f98ae;
-            font-size: 13px;
-        }
-
-        /* RESPONSIVE */
-
-        @media (max-width: 1000px) {
-            .hero-grid,
-            .story-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-visual {
-                min-height: 340px;
-            }
-
-            .practice-grid,
-            .sutra-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .method-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .method-step:nth-child(2) {
-                border-right: none;
-            }
-
-            .method-step:nth-child(3),
-            .method-step:nth-child(4),
-            .method-step:nth-child(5) {
-                border-top: 1px solid rgba(255,255,255,.15);
-            }
-
-            .method-step:nth-child(5) {
-                grid-column: 1 / -1;
-                border-right: none;
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cta-inner {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .site-header {
-                height: auto;
-                padding: 22px 6%;
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 18px;
-            }
-
-            .nav .nav-cta {
-                display: none;
-            }
-
-            .hero {
-                padding: 65px 0;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero-copy {
-                font-size: 16px;
-            }
-
-            .story,
-            .sutra,
-            .practices {
-                padding: 75px 0;
-            }
-
-            .story-points {
-                grid-template-columns: 1fr;
-            }
-
-            .method {
-                padding: 75px 0;
-            }
-
-            .method-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .method-step,
-            .method-step:first-child,
-            .method-step:last-child {
-                border-right: none;
-                border-bottom: 1px solid rgba(255,255,255,.15);
-                padding: 25px 0;
-            }
-
-            .method-step:nth-child(3),
-            .method-step:nth-child(4),
-            .method-step:nth-child(5) {
-                border-top: none;
-            }
-
-            .method-step:last-child {
-                border-bottom: none;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
-
-<style>
-/* ABOUT PAGE — page-specific layout only. Brand infrastructure is inherited above. */
-.about-hero{background:var(--ice);padding:95px 0 100px}
-.about-hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:80px;align-items:center}
-.about-hero h1{color:var(--navy);font-size:clamp(48px,4.5vw,64px);line-height:1.08;letter-spacing:-.02em;max-width:700px}
-.about-hero h1 span{color:var(--blue)}
-.about-hero-copy{color:var(--muted);font-size:17px;line-height:1.78;max-width:650px;margin-top:26px}
-.about-hero-visual{min-height:390px;border-radius:18px;background:var(--navy);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.about-orbit{width:290px;height:290px;border:1px solid rgba(255,255,255,.22);border-radius:50%;position:relative}
-.about-orbit:before{content:"";position:absolute;inset:42px;border:1px solid rgba(255,255,255,.14);border-radius:50%}
-.about-orbit:after{content:"";position:absolute;inset:87px;border:1px solid rgba(255,255,255,.12);border-radius:50%}
-.about-core{position:absolute;inset:0;margin:auto;width:122px;height:122px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;z-index:2}
-.about-core img{width:94px;height:auto;display:block}
-.about-node{position:absolute;width:88px;height:88px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.05);border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-size:10px;font-weight:700;letter-spacing:.7px;z-index:3}
-.about-node.one{top:-27px;left:101px}
-.about-node.two{left:-27px;bottom:-25px}
-.about-node.three{right:-27px;bottom:-25px}
-
-.about-intro{padding:105px 0}
-.about-intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:88px;align-items:start}
-.about-intro h2,.people-heading h2,.principles-heading h2{color:var(--navy);font-size:clamp(42px,3.8vw,56px);line-height:1.1}
-.about-copy{color:var(--muted);font-size:16px;line-height:1.85;max-width:720px}
-.about-copy p+p{margin-top:22px}
-
-.people{background:var(--ice);padding:105px 0}
-.people-heading{max-width:820px;margin-bottom:52px}
-.people-heading p,.principles-heading p{color:var(--muted);font-size:16px;line-height:1.8;margin-top:20px;max-width:760px}
-.people-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.person-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:38px;min-height:410px}
-.person-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:54px}
-.person-mark{width:64px;height:64px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-size:27px}
-.person-role{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding-top:8px;text-align:right}
-.person-card h3{color:var(--navy);font-size:34px;line-height:1.1;margin-bottom:14px}
-.person-card p{color:var(--muted);font-size:14px;line-height:1.75}
-
-.principles{padding:105px 0}
-.principles-heading{max-width:850px;margin-bottom:50px}
-.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.principle{padding:30px 28px 34px 0;border-right:1px solid var(--line);margin-right:28px;min-height:205px}
-.principle:last-child{border-right:none;margin-right:0}
-.principle-number{color:var(--blue);font-size:12px;font-weight:700;letter-spacing:1.5px;margin-bottom:48px}
-.principle h3{color:var(--navy);font-size:27px;margin-bottom:10px}
-.principle p{color:var(--muted);font-size:14px;line-height:1.7}
-
-.about-cta{background:var(--ice);padding:76px 0}
-.about-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:50px}
-.about-cta h2{color:var(--navy);font-size:clamp(40px,3.8vw,54px);line-height:1.1;max-width:820px}
-
-@media (max-width:1000px){
- .about-hero-grid,.about-intro-grid{grid-template-columns:1fr}
- .people-grid{grid-template-columns:1fr}
- .principles-grid{grid-template-columns:1fr}
- .principle,.principle:last-child{border-right:none;border-bottom:1px solid var(--line);margin-right:0;padding:28px 0}
- .principle:last-child{border-bottom:none}
- .about-cta-inner{align-items:flex-start;flex-direction:column}
-}
-@media (max-width:650px){
- .about-hero,.about-intro,.people,.principles{padding:75px 0}
- .about-hero h1{font-size:42px}
- .about-hero-copy{font-size:16px}
- .about-hero-visual{min-height:330px}
- .about-orbit{width:250px;height:250px}
- .about-node.one{left:81px}
-}
-</style>
-
-
-
-<style id="pathweave-global-navigation">
-/* PATHWEAVE GLOBAL NAVIGATION — LOCKED */
-header{width:100%;height:96px;background:#fff;border-bottom:1px solid #edf1f5;position:sticky;top:0;z-index:1000}
-header .nav{width:min(1180px,88%);height:96px;margin:0 auto;padding:0;display:flex;align-items:center;justify-content:space-between;gap:30px}
-header .nav > a:first-child{flex:0 0 auto;display:flex;align-items:center}
-header .nav .logo{width:100px !important;max-width:100px !important;height:auto !important;display:block !important;object-fit:contain}
-header .nav-links{display:flex !important;align-items:center;justify-content:flex-end;gap:30px !important;flex:1 1 auto;white-space:nowrap}
-header .nav-links a{display:inline-flex;align-items:center;white-space:nowrap;text-decoration:none;color:#0b2942;font-family:"DM Sans",sans-serif;font-size:15px !important;line-height:1}
-header .nav-links a:hover{color:#2455d6}
-header .nav-links a[href="/about/"]{color:#2455d6}
-header .nav-links .nav-cta{flex:0 0 auto;padding:14px 25px !important;border-radius:30px;background:#0b2942;color:#fff !important;font-weight:600}
-@media (max-width:1100px){
-header .nav{width:92%;gap:20px}
-header .nav-links{gap:18px !important}
-header .nav-links a{font-size:15px !important}
-header .nav-links .nav-cta{padding:14px 22px !important}
-}
-@media (max-width:900px){
-header .nav{height:auto;min-height:82px;padding:16px 0;flex-wrap:wrap}
-header .nav-links{width:100%;flex-wrap:wrap;justify-content:flex-start;gap:16px 22px}
-}
-@media (max-width:720px){
-header,header .nav{height:82px}
-header .nav{padding:0 6%}
-header .nav-links a:not(.nav-cta){display:none !important}
-header .nav-links{width:auto;flex-wrap:nowrap;justify-content:flex-end;gap:0}
-header .nav .logo{width:88px !important;max-width:88px !important}
-header .nav-links .nav-cta{padding:12px 18px !important}
-}
-</style>
-
-
-<style id="pathweave-locked-typography">
-/* =========================================================
-   PATHWEAVE TYPOGRAPHY — ABOUT PAGE
-   LOCKED TO PEOPLEOS MASTER HERO SYSTEM
-   ========================================================= */
-.about-hero{
-    padding:78px 0 !important;
-}
-.about-hero-grid{
-    display:grid;
-    grid-template-columns:1.08fr .92fr;
-    gap:80px;
-    align-items:center;
-}
-.about-hero h1{
-    font-family:"Playfair Display",serif !important;
-    color:var(--navy) !important;
-    font-size:clamp(42px,4.15vw,58px) !important;
-    font-weight:500 !important;
-    line-height:1.08 !important;
-    letter-spacing:-1.5px !important;
-    max-width:760px !important;
-    margin:0 0 22px 0 !important;
-}
-.about-hero h1 span{
-    color:var(--blue) !important;
-}
-.about-hero-copy{
-    font-family:"DM Sans",sans-serif !important;
-    color:var(--muted) !important;
-    font-size:16px !important;
-    font-weight:400 !important;
-    line-height:1.75 !important;
-    max-width:680px !important;
-    margin-top:0 !important;
-}
-.about-hero .eyebrow{
-    font-size:13px !important;
-    font-weight:700 !important;
-    letter-spacing:2px !important;
-    margin-bottom:18px !important;
-}
-.about-intro h2,.people-heading h2,.principles-heading h2,.about-cta h2{
-    font-size:clamp(38px,4vw,50px) !important;
-    line-height:1.08 !important;
-}
-.about-copy,.people-heading p,.principles-heading p{
-    font-size:16px !important;
-    line-height:1.8 !important;
-}
-.person-card h3,.principle h3{
-    font-size:22px !important;
-}
-.person-card p,.principle p{
-    font-size:15px !important;
-}
-.button{
-    font-size:14px !important;
-}
-</style>
-
-
-<style id="pathweave-locked-footer">
-/* PATHWEAVE FOOTER — PEOPLEOS MASTER */
-footer{background:#071a2b !important;color:#fff;padding:70px 0 30px !important}
-.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:50px}
-.footer-logo{width:125px !important;max-width:125px !important;height:auto !important;display:block !important;filter:brightness(0) invert(1);margin-bottom:25px}
-.footer-description{color:#a9bdd0;max-width:350px;font-size:15px !important;line-height:1.7}
-.footer-column h4{color:#fff;font-family:"DM Sans",sans-serif;font-size:13px !important;font-weight:700;letter-spacing:1px;margin-bottom:24px}
-.footer-column a{display:block;color:#a9bdd0;margin-bottom:12px;font-size:15px !important;line-height:1.5}
-.footer-column a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:55px;padding-top:25px;display:flex;justify-content:space-between;color:#7f98ae;font-size:13px !important}
-@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:35px}}
-@media (max-width:720px){.footer-grid{grid-template-columns:1fr 1fr}.footer-grid > div:first-child{grid-column:1 / -1}.footer-bottom{display:block}.footer-bottom div + div{margin-top:8px}}
-@media (max-width:480px){.footer-grid{grid-template-columns:1fr !important}.footer-grid > div:first-child{grid-column:auto}}
-</style>
-
-<style id="pathweave-global-footer-master-lock">footer{background:#071a2b !important;color:#fff !important;padding:70px 0 30px !important;}footer .footer-grid{display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr !important;gap:50px !important;}footer .footer-logo{width:125px !important;max-width:125px !important;height:auto !important;display:block !important;filter:brightness(0) invert(1) !important;margin:0 0 25px !important;}footer .footer-description{color:#a9bdd0 !important;max-width:350px !important;font-size:15px !important;line-height:1.7 !important;}footer .footer-column h4{margin:0 0 24px !important;color:#fff !important;font-family:"DM Sans",Arial,sans-serif !important;font-size:13px !important;font-weight:700 !important;letter-spacing:1px !important;}footer .footer-column a{display:block !important;color:#a9bdd0 !important;font-size:15px !important;line-height:1.5 !important;margin:0 0 12px !important;}footer .footer-column a:hover{color:#fff !important;}footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12) !important;margin-top:55px !important;padding-top:25px !important;display:flex !important;justify-content:space-between !important;color:#7f98ae !important;font-size:13px !important;}@media(max-width:900px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}}@media(max-width:720px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}footer .footer-grid>div:first-child{grid-column:1/-1 !important;}footer .footer-bottom{display:block !important;}footer .footer-bottom div+div{margin-top:8px !important;}}@media(max-width:480px){footer .footer-grid{grid-template-columns:1fr !important;}footer .footer-grid>div:first-child{grid-column:auto !important;}}</style>
+<!-- pw:head -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=20261007">
+<meta name="theme-color" content="#FCFDFB">
+<script>document.documentElement.className+=" js"</script>
+<!-- /pw:head -->
 </head>
 <body>
 
-<header>
-    <div class="nav">
-
-        <a href="/" aria-label="PathWeave home">
-            <img class="logo" src="../logo.png" alt="PathWeave">
-        </a>
-
-        <nav class="nav-links" aria-label="Main navigation">
-
-            <a href="/businessos/">BusinessOS</a>
-
-            <a href="/peopleos/">PeopleOS</a>
-
-            <a href="/skillhubos/">Skill HubOS</a>
-
-            <a href="/government-advisory/">
-                Government Advisory
-            </a>
-
-            <a href="/how-we-work/">
-                How We Work
-            </a>
-
-            <a href="/about/">
-                About
-            </a>
-
-            <a href="/insights/">
-                Insights
-            </a>
-
-            <a class="nav-cta" href="/contact/">
-                Let's Talk
-            </a>
-
-        </nav>
-
-    </div>
+<!-- pw:header -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="PathWeave home"><img src="/assets/images/pathweave-mark.webp" width="176" height="96" alt=""><span class="brand-name">PathWeave</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="has-sub"><button class="nav-link sub-toggle" type="button" aria-expanded="false" aria-controls="nav-practices">Practices</button>
+          <ul class="sub-menu" id="nav-practices"><li><a href="/businessos/"><strong>BusinessOS</strong><span>Sales, CRM, data and how the business runs</span></a></li><li><a href="/peopleos/"><strong>PeopleOS</strong><span>HR, organisation and people systems</span></a></li><li class="sub-divider" role="presentation"></li><li class="sub-secondary"><a href="/skillhubos/"><strong>Skill HubOS</strong><span>Education-to-employment capability</span></a></li><li class="sub-secondary"><a href="/government-advisory/"><strong>Government Advisory</strong><span>Policy, incentives and approvals</span></a></li></ul></li>
+        <li><a class="nav-link" href="/how-we-work/">How We Work</a></li>
+        <li><a class="nav-link" href="/insights/">Insights</a></li>
+        <li><a class="nav-link" href="/about/" aria-current="page">About</a></li>
+      </ul>
+      <a class="button button-primary button-small nav-cta" href="/contact/">Start a conversation</a>
+    </nav>
+  </div>
 </header>
+<!-- /pw:header --><main id="main">
+<nav class="container breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span aria-current="page">About</span></nav>
 
-<main>
-
-<section class="about-hero">
-    <div class="container about-hero-grid">
-        <div>
-            <div class="eyebrow">ABOUT PATHWEAVE</div>
-            <h1>Built from experience.<br><span>Designed for what comes next.</span></h1>
-            <p class="about-hero-copy">
-                PathWeave brings together business, people and technology to help organisations
-                move from where they are today to what they need to become next.
-            </p>
-            <div class="hero-actions">
-                <a href="/contact/" class="button button-primary">Start a Conversation</a>
-                <a href="/how-we-work/" class="button button-secondary">How We Work</a>
-            </div>
-        </div>
-
-        <div class="about-hero-visual" aria-hidden="true">
-            <div class="about-orbit">
-                <div class="about-core">
-                    <img src="../logo.png" alt="PathWeave">
-                </div>
-                <div class="about-node one">BUSINESS</div>
-                <div class="about-node two">PEOPLE</div>
-                <div class="about-node three">GOVERNMENT</div>
-            </div>
-        </div>
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container page-hero-grid">
+    <div>
+      <p class="eyebrow"><span class="strands" aria-hidden="true"><i></i><i></i><i></i></span>About PathWeave</p>
+      <h1 id="page-title" class="hero-xl">Built from experience. Designed for what comes next.</h1>
     </div>
+    <div class="rich">
+      <p class="lead" style="color:var(--ink)">PathWeave is a boutique management consulting firm, founded in April 2020. We bring business, people and technology together to help organisations move from where they are today to what they need to become.</p>
+    </div>
+  </div>
 </section>
 
-<section class="about-intro">
-    <div class="container about-intro-grid">
-        <div>
-            <div class="eyebrow">WHY PATHWEAVE</div>
-            <h2>Transformation is easier to talk about than to make real.</h2>
-        </div>
-
-        <div class="about-copy">
-            <p>
-                Organisations rarely struggle because they lack another idea. More often, the
-                challenge is turning the right idea into a way of working that people can
-                understand, adopt and sustain.
-            </p>
-            <p>
-                PathWeave, founded in 2020, was built around that reality. Our work connects strategy with
-                operating models, people with processes, and technology with execution — so
-                change becomes part of how the organisation works rather than another initiative
-                sitting alongside it.
-            </p>
-            <p>
-                We work across business transformation, people transformation and government
-                advisory, bringing the right combination of experience and practical execution
-                to each situation.
-            </p>
-        </div>
+<section class="section surface-plain" aria-labelledby="why-title">
+  <div class="container two-col">
+    <div>
+      <p class="eyebrow">Why PathWeave exists</p>
+      <h2 id="why-title" class="h-xl">Transformation is easier to talk about than to make real.</h2>
     </div>
+    <div class="rich">
+      <p>Organisations rarely struggle because they lack another idea. More often, the challenge is turning the right idea into a way of working that people can understand, adopt and sustain.</p>
+      <p>PathWeave was built around that reality. Our work connects strategy with operating models, people with processes, and technology with execution — so change becomes part of how the organisation works rather than another initiative running alongside it.</p>
+      <p>We work across <a href="/businessos/">business transformation</a>, <a href="/peopleos/">people transformation</a>, <a href="/skillhubos/">skills</a> and <a href="/government-advisory/">government advisory</a>, bringing the right combination of experience and practical execution to each situation.</p>
+    </div>
+  </div>
 </section>
 
-<section class="people">
-    <div class="container">
-        <div class="people-heading">
-            <div class="eyebrow">THE PEOPLE BEHIND PATHWEAVE</div>
-            <h2>Experience across the pieces that make transformation work.</h2>
-            <p>
-                PathWeave combines business and commercial leadership with people and
-                organisational transformation — bringing complementary perspectives into the
-                same conversation.
-            </p>
-        </div>
-
-        <div class="people-grid">
-            <article class="person-card">
-                <div class="person-top">
-                    <div class="person-mark">S</div>
-                    <div class="person-role">Founder</div>
-                </div>
-                <h3><a href="/about/srrinivas-sharrma/" style="text-decoration: underline; text-underline-offset: 3px;">Srrinivas Sharrma</a></h3>
-                <p>
-                    Srrinivas Sharrma is a business leader with 18+ years of experience across
-                    revenue growth, sales transformation, Sales Excellence, Commercial Excellence,
-                    sales operations, CRM and go-to-market execution. His experience includes
-                    commercial leadership and transformation at Kohler India and Senior Vice
-                    President – Sales Planning &amp; Excellence at Info Edge (Naukri.com). At PathWeave,
-                    he brings this operating perspective to business consulting, helping leadership
-                    teams strengthen sales processes, CRM requirements, performance visibility and execution.
-                </p>
-                <p style="margin-top: 16px;">
-                    He leads PathWeave's <a href="/businessos/" style="text-decoration: underline; text-underline-offset: 3px;">business and management consulting</a>,
-                    including <a href="/businessos/sales-commercial-excellence/" style="text-decoration: underline; text-underline-offset: 3px;">Sales Excellence and Commercial Excellence</a>,
-                    <a href="/businessos/crm-revenue-operations/" style="text-decoration: underline; text-underline-offset: 3px;">CRM and sales-process transformation</a> and
-                    <a href="/businessos/sales-dashboards-bi/" style="text-decoration: underline; text-underline-offset: 3px;">sales analytics and dashboard design</a>.
-                </p>
-                <p style="margin-top: 16px;"><a href="/about/srrinivas-sharrma/" style="text-decoration: underline; text-underline-offset: 3px;">Explore Srrinivas’s career experience</a></p>
-                <p style="margin-top: 16px;">
-                    <a href="https://www.linkedin.com/in/srrinnivassharrma/" target="_blank" rel="noopener" style="text-decoration: underline; text-underline-offset: 3px;" aria-label="View Srrinivas's professional profile on LinkedIn (opens in a new tab)">View Srrinivas's professional profile</a>
-                </p>
-            </article>
-
-            <article class="person-card">
-                <div class="person-top">
-                    <div class="person-mark">R</div>
-                    <div class="person-role">Founder</div>
-                </div>
-                <h3>Rennu Sharma</h3>
-                <p>
-                    Rennu brings deep experience in people, HR and organisational transformation.
-                    Her work focuses on building practical people systems, leadership capability,
-                    organisational structures and operating practices that help businesses scale
-                    with greater clarity and ownership.
-                </p>
-            </article>
-        </div>
+<section class="section" aria-labelledby="people-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">The people behind PathWeave</p>
+      <h2 id="people-title" class="h-xl">Two founders, two sides of the same problem.</h2>
+      <p>One has spent a career inside sales organisations; the other inside people functions. Most growth problems need both perspectives in the same conversation.</p>
     </div>
+
+    <article class="profile" id="srrinivas" aria-labelledby="p-srrinivas">
+      <picture>
+        <source srcset="/assets/images/srrinivas-sharrma-320.webp" type="image/webp">
+        <img class="portrait" src="/assets/images/srrinivas-sharrma-320.jpg" width="320" height="319" alt="Portrait of Srrinivas Sharrma" loading="lazy" decoding="async">
+      </picture>
+      <div>
+        <h3 id="p-srrinivas">Srrinivas Sharrma</h3>
+        <p class="role">Founder · leads BusinessOS</p>
+        <div class="rich">
+          <p>Srrinivas is a business leader with 18+ years across revenue growth, sales transformation, Sales Excellence, Commercial Excellence, sales operations, CRM and go-to-market execution. He started in frontline and regional sales, and went on to lead commercial transformation at Kohler India and serve as Senior Vice President – Sales Planning &amp; Excellence at Info Edge (Naukri.com).</p>
+          <p>At PathWeave he brings that operating view to <a href="/businessos/">business and management consulting</a>: <a href="/businessos/sales-commercial-excellence/">Sales Excellence and Commercial Excellence</a>, <a href="/businessos/crm-revenue-operations/">CRM and sales-process transformation</a> and <a href="/businessos/sales-dashboards-bi/">sales analytics and dashboard design</a>.</p>
+        </div>
+        <div class="profile-facts">
+          <div style="--c:var(--gold)"><b>PepsiCo</b><span>Led the Maharashtra premium beverage business</span></div>
+          <div style="--c:var(--cobalt)"><b>Kohler India</b><span>Retail &amp; Projects, Sales Development, Business Process Excellence</span></div>
+          <div style="--c:var(--green)"><b>Info Edge (Naukri.com)</b><span>SVP – Sales Planning &amp; Excellence</span></div>
+        </div>
+        <ul class="link-list">
+          <li><a class="text-link" href="/about/srrinivas-sharrma/">Explore Srrinivas’s career experience</a></li>
+          <li><a class="text-link" href="https://www.linkedin.com/in/srrinnivassharrma/" rel="noopener">View his professional profile</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="profile" id="rennu" aria-labelledby="p-rennu">
+      <picture>
+        <source srcset="/assets/images/rennu-sharma-320.webp" type="image/webp">
+        <img class="portrait" src="/assets/images/rennu-sharma-320.jpg" width="320" height="320" alt="Portrait of Rennu Sharma" loading="lazy" decoding="async">
+      </picture>
+      <div>
+        <h3 id="p-rennu">Rennu Sharma</h3>
+        <p class="role">Founder · leads PeopleOS</p>
+        <div class="rich">
+          <p>Rennu brings deep experience in people, HR and organisational transformation. Her work focuses on building practical people systems, leadership capability, organisational structures and operating practices that help businesses scale with greater clarity and ownership.</p>
+          <p>PeopleOS draws on her HR leadership, consulting and outsourced HR delivery experience — and on hands-on HR operations work, including payroll and statutory filings, delivered in-house rather than handed off.</p>
+        </div>
+        <div class="profile-facts">
+          <div style="--c:var(--green)"><b>Organisation &amp; policies</b><span>Structures, roles and policies people can follow</span></div>
+          <div style="--c:var(--gold)"><b>Recruitment &amp; performance</b><span>Hiring workflows and performance rhythms</span></div>
+          <div style="--c:var(--cobalt)"><b>HR operations &amp; systems</b><span>Everyday HR processes, data and HRMS</span></div>
+        </div>
+        <ul class="link-list">
+          <li><a class="text-link" href="/peopleos/">Explore PeopleOS</a></li>
+        </ul>
+      </div>
+    </article>
+  </div>
 </section>
 
-<section class="principles">
-    <div class="container">
-        <div class="principles-heading">
-            <div class="eyebrow">WHAT WE BELIEVE</div>
-            <h2>Good transformation should leave the organisation stronger than it found it.</h2>
-            <p>
-                That means solving the immediate problem while building the capability, ownership
-                and systems required for what comes next.
-            </p>
-        </div>
-
-        <div class="principles-grid">
-            <article class="principle">
-                <div class="principle-number">01</div>
-                <h3>Business first</h3>
-                <p>
-                    Transformation has to connect to a meaningful business outcome — growth,
-                    efficiency, capability, resilience or scale.
-                </p>
-            </article>
-
-            <article class="principle">
-                <div class="principle-number">02</div>
-                <h3>Practical by design</h3>
-                <p>
-                    We favour solutions that teams can understand, adopt and operate rather than
-                    approaches that create unnecessary complexity.
-                </p>
-            </article>
-
-            <article class="principle">
-                <div class="principle-number">03</div>
-                <h3>Built to sustain</h3>
-                <p>
-                    The goal is not simply to solve today's problem. It is to create systems that
-                    continue to work as the organisation grows and changes.
-                </p>
-            </article>
-        </div>
+<section class="section surface-sage" aria-labelledby="believe-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-green">What we believe</p>
+      <h2 id="believe-title" class="h-xl">Good transformation should leave the organisation stronger than it found it.</h2>
+      <p>That means solving the immediate problem while building the capability, ownership and systems needed for what comes next.</p>
     </div>
+    <div class="beliefs">
+      <div class="belief" style="--c:var(--cobalt)"><h3>Business first</h3><p>Transformation has to connect to a meaningful business outcome — growth, efficiency, capability, resilience or scale.</p></div>
+      <div class="belief" style="--c:var(--gold)"><h3>Practical by design</h3><p>We favour solutions that teams can understand, adopt and operate over approaches that add complexity.</p></div>
+      <div class="belief" style="--c:var(--green)"><h3>Built to sustain</h3><p>The goal is systems that keep working as the organisation grows and changes — not just a fix for today.</p></div>
+    </div>
+  </div>
 </section>
 
-<section class="about-cta">
-    <div class="container about-cta-inner">
-        <h2>Ready to work on what comes next?</h2>
-        <a href="/contact/" class="button button-primary">Start a Conversation</a>
+<section class="section" aria-labelledby="diff-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">How we are different</p>
+      <h2 id="diff-title">Not slides. Systems your team can run.</h2>
     </div>
+    <div class="contrast">
+      <div>
+        <h3>Recommendation-only consulting</h3>
+        <ul>
+          <li>Ends with a report and a presentation</li>
+          <li>Starts from a standard framework</li>
+          <li>Ownership is handed over at the end</li>
+          <li>Success means the deliverable was accepted</li>
+        </ul>
+      </div>
+      <div>
+        <h3>How PathWeave works</h3>
+        <ul>
+          <li>Ends with something running — a process, a CRM, a review rhythm</li>
+          <li>Starts from a diagnosis of your organisation</li>
+          <li>Ownership is built with your team during the work</li>
+          <li>Success means it was adopted and measured</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:var(--s-5)"><a class="text-link" href="/how-we-work/">How we work, stage by stage</a></p>
+  </div>
 </section>
 
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="container cta-band-inner">
+    <div>
+      <h2 id="cta-title">Ready to work on what comes next?</h2>
+      <p>Tell us what you are working through, and we will suggest a sensible first step.</p>
+    </div>
+    <a class="button button-primary" href="/contact/">Start a conversation</a>
+  </div>
+</section>
 </main>
 
-<footer>
+<!-- pw:footer -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <img class="footer-logo" src="../logo.png" alt="PathWeave">
-        <div class="footer-description">Strategy, transformation and growth across business, people, technology and government.</div>
-        <div class="footer-description" style="margin-top:14px">Focused on Hyderabad and Secunderabad, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.</div>
+      <div class="footer-brand">
+        <a href="/" aria-label="PathWeave home"><img class="footer-logo" src="/assets/images/pathweave-logo.webp" width="400" height="310" alt="PathWeave" loading="lazy" decoding="async"></a>
+        <p class="footer-tagline">Strategy. Transformation. Growth.</p>
+        <p>Management consulting across business, people, skills and government advisory.</p>
       </div>
-      <div class="footer-column">
-        <h4>OUR PRACTICES</h4>
-        <a href="/businessos/">BusinessOS</a>
-        <a href="/peopleos/">PeopleOS</a>
-        <a href="/skillhubos/">Skill HubOS</a>
-        <a href="/government-advisory/">Government Advisory</a>
-      </div>
-      <div class="footer-column">
-        <h4>PATHWEAVE</h4>
-        <a href="/how-we-work/">How We Work</a>
-        <a href="/about/">About</a>
-        <a href="/insights/">Insights</a>
-      </div>
-      <div class="footer-column">
-        <h4>LOCATIONS</h4>
-        <a href="/locations/hyderabad/">Hyderabad &amp; Secunderabad</a>
-        <a href="/locations/nagpur/">Nagpur</a>
-        <a href="/locations/bhopal/">Bhopal</a>
-        <a href="/locations/indore/">Indore</a>
-      </div>
-      <div class="footer-column">
-        <h4>CONNECT</h4>
-        <a href="/contact/">Start a Conversation</a>
-        <a href="https://www.linkedin.com/company/pathweave-consulting" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+      <nav class="footer-col" aria-label="Practices">
+        <p class="footer-heading">Practices</p>
+        <ul><li><a href="/businessos/">BusinessOS</a></li><li><a href="/peopleos/">PeopleOS</a></li><li><a href="/skillhubos/">Skill HubOS</a></li><li><a href="/government-advisory/">Government Advisory</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <p class="footer-heading">Company</p>
+        <ul><li><a href="/about/">About</a></li><li><a href="/how-we-work/">How We Work</a></li><li><a href="/insights/">Insights</a></li><li><a href="/contact/">Contact</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <p class="footer-heading">Resources</p>
+        <ul><li><a href="/peopleos/hr-health-check/">HR Health Check</a></li><li><a href="/businessos/sales-crm-health-check/">Sales &amp; CRM Health Check</a></li><li><a href="/diagnostic/">Readiness assessment</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul>
+      </nav>
     </div>
-    <div class="footer-bottom">
-      <div>© 2026 PathWeave. All rights reserved.</div>
-      <div>People · Process · Technology</div>
+    <div class="footer-places">
+      <span>Hyderabad &amp; Secunderabad, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.</span>
+      <span><a href="/locations/hyderabad/">Hyderabad</a> · <a href="/locations/nagpur/">Nagpur</a> · <a href="/locations/bhopal/">Bhopal</a> · <a href="/locations/indore/">Indore</a></span>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 PathWeave · People · Process · Technology</span>
+      <nav aria-label="More"><a href="https://www.linkedin.com/company/pathweave-consulting" rel="noopener">LinkedIn</a><a href="/about-for-ai/">About for AI</a><a href="/llms.txt">llms.txt</a></nav>
     </div>
   </div>
 </footer>
+<script src="/assets/js/site.js?v=20261007" defer></script>
+<!-- /pw:footer -->
 
 </body>
 </html>

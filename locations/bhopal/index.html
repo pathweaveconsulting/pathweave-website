@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/logo.png">
-
-    <title>PeopleOS &amp; HR Consulting in Bhopal | PathWeave</title>
+<title>PeopleOS &amp; HR Consulting in Bhopal | PathWeave</title>
 <meta name="description" content="PathWeave's PeopleOS provides strategic HR consulting, fractional HR, recruitment, and people operations support for SMEs and growing organisations in Bhopal.">    <link rel="canonical" href="https://pathweave.in/locations/bhopal/">
 
     <meta property="og:type" content="website">
@@ -17,160 +15,6 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="PeopleOS &amp; HR Consulting in Bhopal | PathWeave">
     <meta name="twitter:description" content="PathWeave's PeopleOS partners with Bhopal-based SMEs and growing organisations to deliver strategic HR consulting, fractional HR, recruitment, and structured people operations.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --navy-deep: #071a2b;
-            --navy: #0b2238;
-            --blue: #2455d6;
-            --ice: #f4f8fd;
-            --white: #ffffff;
-            --text: #173047;
-            --muted: #5c7187;
-            --line: #d7e1eb;
-            --card: #ffffff;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body { font-family: "DM Sans", sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
-        a { color: inherit; text-decoration: none; }
-
-        .container { width: min(1180px, 88%); margin: 0 auto; }
-        .eyebrow { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
-        h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; line-height: 1.08; }
-
-        /* HEADER */
-        header { width: 100%; height: 96px; background: #fff; border-bottom: 1px solid #edf1f5; position: sticky; top: 0; z-index: 1000; }
-        header .nav { width: min(1180px, 88%); height: 96px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
-        header .nav > a:first-child { flex: 0 0 auto; display: flex; align-items: center; }
-        header .nav .logo { width: 100px; max-width: 100px; height: auto; display: block; object-fit: contain; }
-        header .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 30px; flex: 1 1 auto; white-space: nowrap; }
-        header .nav-links a { display: inline-flex; align-items: center; white-space: nowrap; color: #0b2942; font-size: 15px; font-weight: 500; line-height: 1; }
-        header .nav-links a.active { color: var(--blue); }
-        header .nav-links .nav-cta { flex: 0 0 auto; padding: 14px 25px; border-radius: 30px; background: #0b2942; color: #fff; font-size: 15px; font-weight: 600; }
-
-        /* BREADCRUMB */
-        .breadcrumb { padding: 18px 0 0; background: var(--ice); color: var(--muted); font-size: 13px; }
-        .breadcrumb a { color: var(--text); }
-        .breadcrumb .separator { padding: 0 8px; color: #9aabba; }
-
-        /* HERO */
-        .hero { background: var(--ice); padding: 62px 0 88px; }
-        .hero h1 { font-size: clamp(40px, 4vw, 56px); letter-spacing: -1px; margin-bottom: 24px; max-width: 820px; }
-        .hero h1 span { color: var(--blue); }
-        .hero-copy { max-width: 760px; color: var(--muted); font-size: 17px; line-height: 1.75; margin-bottom: 34px; }
-        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-        
-        .button { display: inline-flex; align-items: center; justify-content: center; padding: 15px 25px; border-radius: 30px; font-size: 14px; font-weight: 600; border: 1px solid var(--line); }
-        .button-primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
-        .button-secondary { background: transparent; color: var(--text); }
-
-        /* GENERAL SECTION SPACING */
-        .section { padding: 100px 0; }
-        .section-ice { background: var(--ice); }
-        .split { display: grid; grid-template-columns: .82fr 1.18fr; gap: 90px; }
-        .section-heading { max-width: 860px; margin-bottom: 48px; }
-        .section-heading h2 { font-size: clamp(36px, 3.8vw, 48px); margin-bottom: 18px; }
-        .section-heading p { color: var(--muted); font-size: 16px; max-width: 780px; }
-        .copy { color: var(--muted); font-size: 16px; line-height: 1.8; }
-        .copy p + p { margin-top: 20px; }
-
-        /* GROUPED SERVICE ROUTER (FULL CARD CLICKABLE) */
-        .service-tier { margin-bottom: 48px; }
-        .service-tier:last-child { margin-bottom: 0; }
-        .tier-label { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy); margin-bottom: 20px; display: inline-block; border-bottom: 2px solid var(--blue); padding-bottom: 4px; }
-        .router-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-        .router-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-        
-        a.router-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; transition: transform .2s ease, border-color .2s ease; text-decoration: none; color: inherit; }
-        a.router-card:hover { transform: translateY(-2px); border-color: rgba(36, 85, 214, 0.35); }
-        a.router-card h3 { font-size: 21px; margin-bottom: 10px; color: var(--navy); }
-        a.router-card p { color: var(--muted); font-size: 14.5px; line-height: 1.65; margin-bottom: 20px; }
-        .router-link { color: var(--blue); font-size: 13.5px; font-weight: 700; display: inline-flex; align-items: center; transition: text-decoration .2s ease; }
-        a.router-card:hover .router-link { text-decoration: underline; }
-
-        /* USE CASES */
-        .use-case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-        .use-case-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
-        .use-case-card h3 { font-size: 19px; margin-bottom: 10px; font-family: "DM Sans", sans-serif; font-weight: 700; }
-        .use-case-card p { color: var(--muted); font-size: 14.5px; line-height: 1.65; }
-
-        /* 5-STEP PROCESS */
-        .steps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 10px; }
-        .step-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 24px; min-height: 200px; }
-        .step-num { color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 24px; }
-        .step-card h3 { font-size: 18px; margin-bottom: 10px; font-family: "DM Sans", sans-serif; font-weight: 700; }
-        .step-card p { color: var(--muted); font-size: 13.5px; line-height: 1.6; }
-
-        /* LOCAL RELEVANCE & PRESENCE */
-        .local-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 70px; align-items: start; }
-        .presence-box { background: var(--ice); border: 1px solid var(--line); border-radius: 18px; padding: 34px; }
-        .presence-box h3 { font-size: 22px; margin-bottom: 14px; }
-        .presence-address { font-style: normal; color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
-        .presence-address strong { color: var(--text); }
-        .presence-contact-link { display: inline-block; color: var(--blue); font-weight: 700; font-size: 14px; }
-
-        /* OTHER LOCATIONS STRIP */
-        .locations-bar { background: var(--navy); color: #fff; padding: 45px 0; }
-        .locations-bar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .locations-bar-label { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #9db9ff; }
-        .locations-links { display: flex; align-items: center; gap: 0; white-space: nowrap; flex-wrap: wrap; }
-        .locations-links a { color: #fff; font-weight: 600; font-size: 15px; text-decoration: underline; text-underline-offset: 3px; transition: opacity .2s ease; }
-        .locations-links a:hover { opacity: .8; }
-        .locations-links a.current { color: #9db9ff; text-decoration: none; cursor: default; }
-        .locations-links span.sep { margin: 0 16px; color: rgba(255, 255, 255, 0.3); font-size: 13px; }
-
-        /* CTA */
-        .cta { background: var(--white); padding: 90px 0; }
-        .cta-inner { background: var(--ice); border: 1px solid var(--line); border-radius: 26px; padding: 60px; display: flex; justify-content: space-between; align-items: center; gap: 45px; }
-        .cta h2 { max-width: 760px; font-size: clamp(36px, 3.8vw, 48px); }
-        .cta .button { background: var(--navy); color: var(--white); border-color: var(--navy); white-space: nowrap; }
-
-        /* FOOTER */
-        footer { background: var(--navy-deep); color: var(--white); padding: 70px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns:1.3fr 1fr 1fr 1fr 1fr; gap: 50px; }
-        .footer-logo { width: 125px; height: auto; display: block; filter: brightness(0) invert(1); margin-bottom: 25px; }
-        .footer-description { color: #a9bdd0; max-width: 350px; font-size: 15px; line-height: 1.7; }
-        .footer-heading { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 24px; font-family: "DM Sans", sans-serif; }
-        .footer-column a { display: block; color: #a9bdd0; margin-bottom: 12px; font-size: 15px; line-height: 1.5; }
-        .footer-column a:hover { color: #fff; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 55px; padding-top: 25px; display: flex; justify-content: space-between; color: #7f98ae; font-size: 13px; }
-
-        @media (max-width: 1000px) {
-            header .nav, .container { width: 92%; }
-            .split, .local-layout { grid-template-columns: 1fr; gap: 45px; }
-            .router-grid-3, .use-case-grid { grid-template-columns: repeat(2, 1fr); }
-            .steps-grid { grid-template-columns: repeat(3, 1fr); }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 35px; }
-        }
-
-        @media (max-width: 820px) {
-            header { height: auto; min-height: 82px; }
-            header .nav { min-height: 82px; height: auto; padding: 16px 0; flex-wrap: wrap; }
-            header .nav-links { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: 16px 22px; }
-            .steps-grid { grid-template-columns: repeat(2, 1fr); }
-            .cta-inner { flex-direction: column; align-items: flex-start; }
-            .locations-bar-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
-        }
-
-        @media (max-width: 650px) {
-            header, header .nav { height: 82px; }
-            header .nav { padding: 0 6%; }
-            header .nav-links a:not(.nav-cta) { display: none; }
-            header .nav-links { width: auto; flex-wrap: nowrap; justify-content: flex-end; gap: 0; }
-            header .nav .logo { width: 88px; max-width: 88px; }
-            .section { padding: 75px 0; }
-            .router-grid-3, .router-grid-2, .use-case-grid, .steps-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .footer-bottom { display: block; }
-            .footer-bottom span + span { display: block; margin-top: 8px; }
-        }
-    </style>
 
     <script type="application/ld+json">
     {
@@ -222,30 +66,38 @@
       ]
     }
     </script>
-<style id="pathweave-global-footer-master-lock">footer{background:#071a2b !important;color:#fff !important;padding:70px 0 30px !important;}footer .footer-grid{display:grid !important;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr !important;gap:50px !important;}footer .footer-logo{width:125px !important;max-width:125px !important;height:auto !important;display:block !important;filter:brightness(0) invert(1) !important;margin:0 0 25px !important;}footer .footer-description{color:#a9bdd0 !important;max-width:350px !important;font-size:15px !important;line-height:1.7 !important;}footer .footer-column h4{margin:0 0 24px !important;color:#fff !important;font-family:"DM Sans",Arial,sans-serif !important;font-size:13px !important;font-weight:700 !important;letter-spacing:1px !important;}footer .footer-column a{display:block !important;color:#a9bdd0 !important;font-size:15px !important;line-height:1.5 !important;margin:0 0 12px !important;}footer .footer-column a:hover{color:#fff !important;}footer .footer-bottom{border-top:1px solid rgba(255,255,255,.12) !important;margin-top:55px !important;padding-top:25px !important;display:flex !important;justify-content:space-between !important;color:#7f98ae !important;font-size:13px !important;}@media(max-width:900px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}}@media(max-width:720px){footer .footer-grid{grid-template-columns:1fr 1fr !important;gap:35px !important;}footer .footer-grid>div:first-child{grid-column:1/-1 !important;}footer .footer-bottom{display:block !important;}footer .footer-bottom div+div{margin-top:8px !important;}}@media(max-width:480px){footer .footer-grid{grid-template-columns:1fr !important;}footer .footer-grid>div:first-child{grid-column:auto !important;}}</style>
-<style id="pathweave-city-next-steps">.next-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.next-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px}.next-card .tier-label{margin-bottom:0;align-self:flex-start}.next-card h3{font-size:24px;color:var(--navy)}.next-card p{color:var(--muted);font-size:15px;line-height:1.7}.next-links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px}.next-links a,.next-direct,.next-reading a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px}.next-card .button{align-self:flex-start;margin-top:auto}.next-direct{font-size:14px}.next-reading{margin-top:28px;color:var(--muted);font-size:15px;line-height:1.7}.next-card a:focus-visible,.next-reading a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}@media(max-width:820px){.next-grid{grid-template-columns:minmax(0,1fr)}.next-card{padding:26px}}</style>
+<!-- pw:head -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=20261007">
+<meta name="theme-color" content="#FCFDFB">
+<script>document.documentElement.className+=" js"</script>
+<!-- /pw:head -->
 </head>
 
 <body>
-<header>
-    <div class="nav">
-        <a href="/" aria-label="PathWeave home">
-            <img class="logo" src="../../logo.png" alt="PathWeave">
-        </a>
-        <nav class="nav-links" aria-label="Main navigation">
-            <a href="/businessos/">BusinessOS</a>
-            <a href="/peopleos/">PeopleOS</a>
-            <a href="/skillhubos/">Skill HubOS</a>
-            <a href="/government-advisory/">Government Advisory</a>
-            <a href="/how-we-work/">How We Work</a>
-            <a href="/about/">About</a>
-            <a href="/insights/">Insights</a>
-            <a class="nav-cta" href="/contact/">Let's Talk</a>
-        </nav>
-    </div>
+<!-- pw:header -->
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="PathWeave home"><img src="/assets/images/pathweave-mark.webp" width="176" height="96" alt=""><span class="brand-name">PathWeave</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li class="has-sub"><button class="nav-link sub-toggle" type="button" aria-expanded="false" aria-controls="nav-practices">Practices</button>
+          <ul class="sub-menu" id="nav-practices"><li><a href="/businessos/"><strong>BusinessOS</strong><span>Sales, CRM, data and how the business runs</span></a></li><li><a href="/peopleos/"><strong>PeopleOS</strong><span>HR, organisation and people systems</span></a></li><li class="sub-divider" role="presentation"></li><li class="sub-secondary"><a href="/skillhubos/"><strong>Skill HubOS</strong><span>Education-to-employment capability</span></a></li><li class="sub-secondary"><a href="/government-advisory/"><strong>Government Advisory</strong><span>Policy, incentives and approvals</span></a></li></ul></li>
+        <li><a class="nav-link" href="/how-we-work/">How We Work</a></li>
+        <li><a class="nav-link" href="/insights/">Insights</a></li>
+        <li><a class="nav-link" href="/about/">About</a></li>
+      </ul>
+      <a class="button button-primary button-small nav-cta" href="/contact/">Start a conversation</a>
+    </nav>
+  </div>
 </header>
-
-<div class="breadcrumb">
+<!-- /pw:header --><div class="breadcrumb">
     <div class="container">
         <a href="/">Home</a>
         <span class="separator">→</span>
@@ -253,11 +105,11 @@
     </div>
 </div>
 
-<main>
+<main id="main">
 <!-- SECTION 1: HERO -->
 <section class="hero">
     <div class="container">
-        <div class="eyebrow">PATHWEAVE IN BHOPAL</div>
+        <div class="eyebrow">PathWeave in Bhopal</div>
         <h1>PeopleOS &amp; HR Support for <span>Growing Organisations</span> in Bhopal.</h1>
         <p class="hero-copy">
             PathWeave partners with founders, business owners, and SME leadership teams in Bhopal to build structured HR systems, formalize people processes, and develop management capabilities for sustainable growth.
@@ -273,7 +125,7 @@
 <section class="section">
     <div class="container split">
         <div>
-            <div class="eyebrow">THE PEOPLEOS APPROACH</div>
+            <div class="eyebrow">The PeopleOS approach</div>
             <h2>HR requirements change as your business grows.</h2>
         </div>
         <div class="copy">
@@ -294,7 +146,7 @@
 <section class="section section-ice" id="services">
     <div class="container">
         <div class="section-heading">
-            <div class="eyebrow">OUR PEOPLEOS SERVICES</div>
+            <div class="eyebrow">Our PeopleOS services</div>
             <h2>The HR capability you need, when you need it.</h2>
             <p>
                 Explore our core service pillars. Rather than rigid packages, PeopleOS allows organisations in Bhopal to access specific capabilities aligned with their current operational challenges.
@@ -356,7 +208,7 @@
 <section class="section">
     <div class="container">
         <div class="section-heading">
-            <div class="eyebrow">HOW WE ENGAGE</div>
+            <div class="eyebrow">How we engage</div>
             <h2>Focused on the problem you need to solve.</h2>
             <p>We work around your existing operational reality rather than enforcing rigid external mandates.</p>
         </div>
@@ -393,7 +245,7 @@
 <section class="section section-ice">
     <div class="container">
         <div class="section-heading">
-            <div class="eyebrow">OUR METHODOLOGY</div>
+            <div class="eyebrow">Our methodology</div>
             <h2>From understanding the problem to making the system work.</h2>
             <p>Every engagement follows an intentional, disciplined delivery lifecycle to ensure long-term sustainability.</p>
         </div>
@@ -431,7 +283,7 @@
 <section class="section">
     <div class="container local-layout">
         <div>
-            <div class="eyebrow">LOCAL RELEVANCE</div>
+            <div class="eyebrow">Local relevance</div>
             <h2>Supporting Bhopal's commercial and industrial enterprises.</h2>
             <div class="copy" style="margin-top: 20px;">
                 <p>
@@ -468,7 +320,7 @@
 <section class="section section-ice" aria-labelledby="next-steps-heading">
     <div class="container">
         <div class="section-heading">
-            <div class="eyebrow">WHERE TO START</div>
+            <div class="eyebrow">Where to start</div>
             <h2 id="next-steps-heading">Choose a practical first step.</h2>
             <p>For commercial SMEs and growing ventures in Bhopal, the right first step depends on whether the pressure is in people practices, sales execution or both.</p>
         </div>
@@ -528,45 +380,38 @@
 </section>
 </main>
 
-<footer>
+<!-- pw:footer -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <img class="footer-logo" src="../../logo.png" alt="PathWeave">
-        <div class="footer-description">Strategy, transformation and growth across business, people, technology and government.</div>
-        <div class="footer-description" style="margin-top:14px">Focused on Hyderabad and Secunderabad, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.</div>
+      <div class="footer-brand">
+        <a href="/" aria-label="PathWeave home"><img class="footer-logo" src="/assets/images/pathweave-logo.webp" width="400" height="310" alt="PathWeave" loading="lazy" decoding="async"></a>
+        <p class="footer-tagline">Strategy. Transformation. Growth.</p>
+        <p>Management consulting across business, people, skills and government advisory.</p>
       </div>
-      <div class="footer-column">
-        <h4>OUR PRACTICES</h4>
-        <a href="/businessos/">BusinessOS</a>
-        <a href="/peopleos/">PeopleOS</a>
-        <a href="/skillhubos/">Skill HubOS</a>
-        <a href="/government-advisory/">Government Advisory</a>
-      </div>
-      <div class="footer-column">
-        <h4>PATHWEAVE</h4>
-        <a href="/how-we-work/">How We Work</a>
-        <a href="/about/">About</a>
-        <a href="/insights/">Insights</a>
-      </div>
-      <div class="footer-column">
-        <h4>LOCATIONS</h4>
-        <a href="/locations/hyderabad/">Hyderabad &amp; Secunderabad</a>
-        <a href="/locations/nagpur/">Nagpur</a>
-        <a href="/locations/bhopal/">Bhopal</a>
-        <a href="/locations/indore/">Indore</a>
-      </div>
-      <div class="footer-column">
-        <h4>CONNECT</h4>
-        <a href="/contact/">Start a Conversation</a>
-        <a href="https://www.linkedin.com/company/pathweave-consulting" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+      <nav class="footer-col" aria-label="Practices">
+        <p class="footer-heading">Practices</p>
+        <ul><li><a href="/businessos/">BusinessOS</a></li><li><a href="/peopleos/">PeopleOS</a></li><li><a href="/skillhubos/">Skill HubOS</a></li><li><a href="/government-advisory/">Government Advisory</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <p class="footer-heading">Company</p>
+        <ul><li><a href="/about/">About</a></li><li><a href="/how-we-work/">How We Work</a></li><li><a href="/insights/">Insights</a></li><li><a href="/contact/">Contact</a></li></ul>
+      </nav>
+      <nav class="footer-col" aria-label="Resources">
+        <p class="footer-heading">Resources</p>
+        <ul><li><a href="/peopleos/hr-health-check/">HR Health Check</a></li><li><a href="/businessos/sales-crm-health-check/">Sales &amp; CRM Health Check</a></li><li><a href="/diagnostic/">Readiness assessment</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul>
+      </nav>
     </div>
-    <div class="footer-bottom">
-      <div>© 2026 PathWeave. All rights reserved.</div>
-      <div>People · Process · Technology</div>
+    <div class="footer-places">
+      <span>Hyderabad &amp; Secunderabad, with local offices in Nagpur and Bhopal and remote consulting support for Indore and Delhi NCR.</span>
+      <span><a href="/locations/hyderabad/">Hyderabad</a> · <a href="/locations/nagpur/">Nagpur</a> · <a href="/locations/bhopal/">Bhopal</a> · <a href="/locations/indore/">Indore</a></span>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 PathWeave · People · Process · Technology</span>
+      <nav aria-label="More"><a href="https://www.linkedin.com/company/pathweave-consulting" rel="noopener">LinkedIn</a><a href="/about-for-ai/">About for AI</a><a href="/llms.txt">llms.txt</a></nav>
     </div>
   </div>
 </footer>
-</body>
+<script src="/assets/js/site.js?v=20261007" defer></script>
+<!-- /pw:footer --></body>
 </html>

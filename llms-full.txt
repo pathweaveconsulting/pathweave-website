@@ -1,0 +1,103 @@
+# PathWeave — full reference
+
+> PathWeave is a management consulting and advisory firm founded in April 2020. It helps founders and leadership teams strengthen the systems behind growth: sales processes, CRM, data and dashboards, HR and people systems, roles, operating routines and execution. Website: https://pathweave.in/
+
+This file summarises facts published on pathweave.in. Where it quotes outcomes from a founder's earlier career, those are employer results from before PathWeave, not PathWeave client results. Last reviewed: 7 October 2026.
+
+## Identity
+
+- Official name: PathWeave
+- Brand line: Strategy. Transformation. Growth.
+- Type: Management consulting and advisory firm
+- Founded: April 2020
+- Website: https://pathweave.in/
+- Email: growth@pathweave.in
+- Phone / WhatsApp: +91 77008 83315
+- LinkedIn: https://www.linkedin.com/company/pathweave-consulting
+- Geography: Primary market Hyderabad and Secunderabad (Telangana, India). Local offices in Nagpur and Bhopal. Remote consulting support for Indore and Delhi NCR.
+
+## Positioning
+
+Growth problems are often systems problems. PathWeave works on the connected pieces — people, processes, data, technology and execution — rather than treating them as isolated functional fixes. It works mainly with growing SMEs, promoter-led companies and mid-market businesses moving from founder-led decisions to structured management.
+
+## Framework: the PW-3 Sutra
+
+People, Process and Technology are designed together:
+- People: roles, ownership, capability and the leaders who run the change.
+- Process: workflows, reviews and decision rights that make work repeatable.
+- Technology: CRM, HR systems, data and dashboards that make work visible.
+
+## Method
+
+Diagnose → Design → Implement → Enable → Measure. PathWeave diagnoses before prescribing, designs for the real organisation, supports implementation where required, builds ownership with the client team, and sets practical measures for adoption and outcomes.
+
+## Practices
+
+### BusinessOS — business, management and technology transformation
+https://pathweave.in/businessos/
+- Business and growth strategy
+- Sales Excellence and Commercial Excellence — https://pathweave.in/businessos/sales-commercial-excellence/
+- Go-to-market, channel and market expansion
+- CRM and revenue operations (Salesforce and Microsoft Dynamics 365) — https://pathweave.in/businessos/crm-revenue-operations/
+- Data, BI and decision systems — https://pathweave.in/businessos/sales-dashboards-bi/
+- Process and automation
+- Digital and technology enablement
+- Operating model and transformation
+
+### PeopleOS — people and HR transformation
+https://pathweave.in/peopleos/
+- People strategy; organisation design; talent and capability
+- HR transformation; HR operations; HR technology and AI
+- HR offshoring and managed services
+- Services: HR Services, Fractional HR, HR Consulting for Startups, HR Consulting for SMEs, HR Operations & HRMS, Recruitment & Talent, HR Outsourcing
+
+### Skill HubOS — skills, employability and capability
+https://pathweave.in/skillhubos/
+An education-to-employment ecosystem connecting students and freshers, academia, tutors and coaches, industry and employers, and government. Journey: Understand, Build, Practise, Demonstrate, Connect.
+
+### Government Advisory
+https://pathweave.in/government-advisory/
+Policy and government advisory, incentives and schemes, approvals and facilitation, regulatory interface, trade and market access, government stakeholder management, project and investment facilitation.
+
+## Focused entry offers
+
+- HR Health Check — https://pathweave.in/peopleos/hr-health-check/ — one HR area (HR operations, policies and compliance, performance management, recruitment, organisation and role clarity, HRMS and HR processes, employee lifecycle).
+- Sales & CRM Health Check — https://pathweave.in/businessos/sales-crm-health-check/ — one focus (CRM requirements, sales process optimisation, distributor health, city expansion).
+- Both: small fixed price agreed upfront; outputs are a gap map, prioritised fixes, a recommended next step and an optional implementation scope. Continuing with PathWeave is optional.
+- Free readiness assessment — https://pathweave.in/diagnostic/ — 15 questions, about 5 minutes, indicative scores across People, Process and Technology; responses are calculated in the browser.
+
+## Founders
+
+### Srrinivas Sharrma — Founder, leads BusinessOS
+https://pathweave.in/about/srrinivas-sharrma/
+Business leader with 18+ years across revenue growth, sales transformation, Sales Excellence, Commercial Excellence, sales operations, CRM and go-to-market execution.
+- Agro Tech Foods and PepsiCo: frontline and regional sales; at PepsiCo led the Maharashtra premium beverage business (Tropicana, Gatorade, Himalayan); Tropicana market share moved from 44% to 52% in that role.
+- Kohler India: led Retail and Projects across Andhra Pradesh and Telangana, including 5× retail growth over four years; later national Sales Development, then Business Process Excellence – Commercial. National Salesforce adoption covered four regions, 150+ Sales and Marketing employees and 500+ dealers.
+- Info Edge (Naukri.com): Senior Vice President – Sales Planning & Excellence; led Microsoft Dynamics CRM adoption across 700+ sales users and 11 branches.
+
+### Rennu Sharma — Founder, leads PeopleOS
+https://pathweave.in/about/
+HR leadership, consulting and outsourced HR delivery across organisation structures, policies, recruitment, performance management, HR operations and people systems.
+
+## Insights (guides)
+
+https://pathweave.in/insights/
+- HR Setup for a Growing SME — https://pathweave.in/insights/hr-setup-growing-sme/
+- HR Setup for Startups — https://pathweave.in/insights/hr-setup-startups/
+- Fractional HR for Growing Businesses — https://pathweave.in/insights/fractional-hr-growing-businesses/
+- HR Outsourcing for SMEs — https://pathweave.in/insights/hr-outsourcing-smes/
+- Fractional HR vs Outsourced HR vs HR Consulting — https://pathweave.in/insights/fractional-vs-outsourced-vs-hr-consulting/
+- Third-Party Payroll Outsourcing Guide — https://pathweave.in/insights/third-party-payroll-outsourcing-guide/
+- HR Audit Checklist — https://pathweave.in/insights/hr-audit-checklist-growing-businesses/
+- CRM Requirements Checklist — https://pathweave.in/insights/crm-requirements-checklist-growing-businesses/
+- Sales Process Leakage Review — https://pathweave.in/insights/sales-process-leakage-review/
+- How to Improve Sales Forecast Accuracy — https://pathweave.in/insights/improve-sales-forecast-accuracy/
+- Distributor Performance Scorecard — https://pathweave.in/insights/distributor-performance-scorecard/
+- Distributor or Direct Sales for a New City — https://pathweave.in/insights/distributor-vs-direct-sales-new-city/
+
+## Locations
+
+- Hyderabad & Secunderabad — https://pathweave.in/locations/hyderabad/
+- Nagpur — https://pathweave.in/locations/nagpur/
+- Bhopal — https://pathweave.in/locations/bhopal/
+- Indore — https://pathweave.in/locations/indore/
