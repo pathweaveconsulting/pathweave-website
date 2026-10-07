@@ -57,10 +57,21 @@ Other BusinessOS areas:
 
 ### PeopleOS — people and HR transformation
 https://pathweave.in/peopleos/
-- People strategy; organisation design; talent and capability
-- HR transformation; HR operations; HR technology and AI
-- HR offshoring and managed services
-- Services: HR Services, Fractional HR, HR Consulting for Startups, HR Consulting for SMEs, HR Operations & HRMS, Recruitment & Talent, HR Outsourcing
+
+Core authority and service pages:
+- HR Transformation — https://pathweave.in/peopleos/hr-transformation/ — redesign of HR operating model, employee-lifecycle processes, governance, HR technology, data, manager routines and adoption.
+- HR Operating Model — https://pathweave.in/peopleos/hr-operating-model/ — HR mandate, manager responsibilities, service delivery, decision rights, governance and delivery capacity.
+- Organisation Design & Role Clarity — https://pathweave.in/peopleos/organisation-design-role-clarity/ — structures, spans, role purpose, accountabilities, decision rights and role interfaces.
+- Performance Management — https://pathweave.in/peopleos/performance-management/ — expectations, manager check-ins, evidence, calibration, development and consequences or recognition.
+- HR Operations & HRMS — https://pathweave.in/peopleos/hr-operations-hrms/ — HR processes, employee data, HRMS, reporting, workflows and automation.
+- Fractional HR — https://pathweave.in/peopleos/fractional-hr/ — experienced HR leadership without the commitment of a full-time senior HR hire.
+- HR Outsourcing — https://pathweave.in/peopleos/hr-outsourcing/ — connected HR support across operations, recruitment and the employee lifecycle.
+- Recruitment & Talent — https://pathweave.in/peopleos/recruitment-talent/ — recruitment process, role clarity and hiring workflows.
+- HR Consulting for Startups — https://pathweave.in/peopleos/hr-consulting-startups/ — people foundations for early-stage organisations.
+- HR Consulting for SMEs — https://pathweave.in/peopleos/hr-consulting-smes/ — stronger HR systems and structure for growing SMEs.
+- HR Services — https://pathweave.in/peopleos/hr-services/ — broad practical HR support for growing organisations.
+
+PeopleOS also covers people strategy, talent and capability, HR technology and AI, and HR offshoring and managed services.
 
 ### Skill HubOS — skills, employability and capability
 https://pathweave.in/skillhubos/
@@ -94,6 +105,8 @@ Authority evidence pages:
 ### Renu Dhanopia Sharma — Founder, leads PeopleOS
 https://pathweave.in/about/
 HR leadership, consulting and outsourced HR delivery across organisation structures, policies, recruitment, performance management, HR operations and people systems.
+
+PeopleOS authority pages connect this experience to HR transformation, HR operating models, organisation design, role clarity, performance management, HR operations, HRMS, fractional HR, HR outsourcing and recruitment.
 
 ## Insights (guides)
 
