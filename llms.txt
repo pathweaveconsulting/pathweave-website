@@ -2,7 +2,7 @@
 
 > PathWeave is a management consulting and advisory firm (founded April 2020) that helps founders and leadership teams strengthen sales, CRM, people and HR systems, processes, data and execution. Brand line: Strategy. Transformation. Growth. PathWeave works with organisations across India; its current on-ground presence includes Hyderabad, Nagpur and Bhopal, with remote consulting support where appropriate.
 
-PathWeave works through four practices — BusinessOS, PeopleOS, Skill HubOS and Government Advisory — connected by the PW-3 Sutra framework (People, Process and Technology designed together). Engagements follow Diagnose, Design, Implement, Enable, Measure. Contact: growth@pathweave.in, +91 77008 83315.
+PathWeave works through five practices — BusinessOS, PeopleOS, Skill HubOS, Government Advisory and Manufacturing Advisory — connected by the PW-3 Sutra framework (People, Process and Technology designed together). Engagements follow Diagnose, Design, Implement, Enable, Measure. Contact: growth@pathweave.in, +91 77008 83315.
 
 ## Company
 
@@ -27,6 +27,8 @@ PathWeave works through four practices — BusinessOS, PeopleOS, Skill HubOS and
 - [Sales Dashboards & BI](https://pathweave.in/businessos/sales-dashboards-bi/): KPI frameworks and management dashboards
 
 ## PeopleOS authority cluster
+
+- [HR Outsourcing for Manufacturing Plants](https://pathweave.in/peopleos/hr-outsourcing-for-manufacturing-plants/)
 
 ### Flagship
 - [PeopleOS](https://pathweave.in/peopleos/): People and HR transformation practice

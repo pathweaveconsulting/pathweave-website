@@ -2,7 +2,7 @@
 
 > PathWeave is a management consulting and advisory firm founded in April 2020. It helps founders and leadership teams strengthen the systems behind growth: sales processes, CRM, data and dashboards, HR and people systems, roles, operating routines and execution. Website: https://pathweave.in/
 
-This file summarises facts published on pathweave.in. Where it quotes outcomes from a founder's earlier career, those are employer results from before PathWeave, not PathWeave client results. Last reviewed: 8 October 2026.
+This file summarises facts published on pathweave.in. Where it quotes outcomes from a founder's earlier career, those are employer results from before PathWeave, not PathWeave client results. Last reviewed: 20 November 2026.
 
 ## Identity
 
@@ -131,6 +131,18 @@ Experienced HR leadership without the commitment of a full-time senior hire.
 
 HR Outsourcing — https://pathweave.in/peopleos/hr-outsourcing/
 Defined external support across recurring HR operations, recruitment and employee lifecycle work.
+
+## Manufacturing Advisory
+
+PathWeave works through five practices: BusinessOS, PeopleOS, Skill HubOS, Government Advisory and Manufacturing Advisory. Manufacturing Advisory helps manufacturers examine plant profitability through a 45-day Plant Profit Diagnostic or one of 13 focused, 30-day sprints. Clients can continue into implementation support. Renu Dhanopia Sharma leads the Manpower Productivity Study.
+
+- Manufacturing Advisory: https://pathweave.in/manufacturing-advisory/
+- Plant Profit Diagnostic: https://pathweave.in/manufacturing-advisory/plant-profit-diagnostic/
+- Manpower Productivity Study: https://pathweave.in/manufacturing-advisory/manpower-productivity-study/
+- Purchase Price Health Check: https://pathweave.in/manufacturing-advisory/purchase-price-health-check/
+- Material Cost Leakage Scan: https://pathweave.in/manufacturing-advisory/material-cost-leakage-scan/
+- Implementation Support: https://pathweave.in/manufacturing-advisory/implementation-support/
+- PeopleOS HR Outsourcing for Manufacturing Plants: https://pathweave.in/peopleos/hr-outsourcing-for-manufacturing-plants/ — shift attendance, contractor reconciliation, hiring and payroll inputs, according to the agreed scope.
 
 ## Focused entry offers
 
