@@ -1,0 +1,58 @@
+name: Verify public plant pages
+on: [push]
+permissions: {}
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check public routes, schema, links and mobile widths
+        env:
+          NODE_OPTIONS: --no-warnings
+        run: |
+          node --input-type=module <<'NODE'
+          import { spawn } from 'node:child_process';
+          import { once } from 'node:events';
+          const origin='https://pathweave.in';
+          const paths=["/manufacturing-advisory/","/manufacturing-advisory/plant-profit-diagnostic/","/manufacturing-advisory/material-cost-leakage-scan/","/manufacturing-advisory/purchase-price-health-check/","/manufacturing-advisory/scrap-yield-recovery/","/manufacturing-advisory/manpower-productivity-study/","/manufacturing-advisory/rejection-quality-cost-sprint/","/manufacturing-advisory/maintenance-spares-oee/","/manufacturing-advisory/capacity-outsourcing-review/","/manufacturing-advisory/price-recovery-product-margin-review/","/manufacturing-advisory/incentives-recoveries-review/","/manufacturing-advisory/inventory-working-capital-scan/","/manufacturing-advisory/group-transfer-pricing-review/","/manufacturing-advisory/energy-utilities-audit/","/manufacturing-advisory/indirect-spend-freight-review/","/manufacturing-advisory/implementation-support/","/manufacturing-advisory/hyderabad/","/manufacturing-advisory/delhi-ncr/","/manufacturing-advisory/nagpur/","/manufacturing-advisory/bhopal/","/manufacturing-advisory/indore/","/peopleos/hr-outsourcing-for-manufacturing-plants/"];
+          const pause=ms=>new Promise(r=>setTimeout(r,ms));
+          async function get(path) {
+            let status;
+            for(let attempt=0;attempt<3;attempt++){
+              const res=await fetch(origin+path,{signal:AbortSignal.timeout(25000)});
+              status=res.status;
+              if(res.ok) return await res.text();
+              await pause(3000);
+            }
+            throw Error(path+' HTTP '+status);
+          }
+          const sitemap=await get('/sitemap-manufacturing-advisory.xml');
+          const links=new Set();
+          for(const path of paths){
+            const html=await get(path);
+            const schema=html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+            if(!schema || !html.includes('href="'+origin+path+'"')) throw Error(path+' missing canonical or schema');
+            JSON.parse(schema[1]);
+            if(path.startsWith('/manufacturing')&&!sitemap.includes(origin+path+'</loc>'))throw Error(path+' missing from sitemap');
+            for(const m of html.matchAll(/href="(\/[^"#]*)"/g))links.add(m[1].replaceAll('&amp;','&'));
+          }
+          for(const link of links)await get(link);
+          console.log('Public routes verified:',paths.length,'linked routes:',links.size);
+          const chrome=spawn('google-chrome',['--headless','--no-sandbox','--disable-dev-shm-usage','--remote-debugging-port=9222','--user-data-dir=/tmp/plant-page-qa','about:blank'],{stdio:'ignore'});
+          try {
+            let target;
+            for(let i=0;i<50&&!target;i++){await pause(150);try{target=(await (await fetch('http://localhost:9222/json/list')).json()).find(x=>x.type==='page')}catch{}}
+            const ws=new WebSocket(target.webSocketDebuggerUrl);
+            await new Promise((ok,fail)=>{ws.onopen=ok;ws.onerror=fail});
+            const waiting=new Map();let count=0;
+            ws.onmessage=({data})=>{const msg=JSON.parse(data);waiting.get(msg.id)?.(msg);waiting.delete(msg.id)};
+            function call(method,params={}){const id=++count;return new Promise((ok,fail)=>{waiting.set(id,m=>m.error?fail(Error(m.error.message)):ok(m.result));ws.send(JSON.stringify({id,method,params}))})}
+            await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
+            for(const path of paths){await call('Page.navigate',{url:origin+path});let state;
+              for(let i=0;i<80;i++){await pause(150);state=(await call('Runtime.evaluate',{expression:'({path:location.pathname,ready:document.readyState,width:document.documentElement.scrollWidth,title:document.querySelector("h1")?.innerText,canonical:document.querySelector("link[rel=canonical]")?.href})',returnByValue:true})).result.value;if(state?.path===path && state.title && state.ready==='complete')break}
+              if(state?.canonical!==origin+path||!state?.title||state.width>390)throw Error(JSON.stringify(state));
+              console.log('Mobile verified',path,state.width);
+            }
+            ws.close();
+          } finally {chrome.kill();}
+          NODE
