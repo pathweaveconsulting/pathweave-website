@@ -1,19 +1,30 @@
 name: Verify public plant pages
 on: [push]
-permissions: {}
+permissions:
+  contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Check public routes, schema, links and mobile widths
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Report public HTTP status
+        run: |
+          for path in / /manufacturing-advisory/ /sitemap-manufacturing-advisory.xml; do
+            curl -sS -D - -o /dev/null "https://pathweave.in$path" | grep -Ei 'HTTP/|cf-mitigated|server:'
+          done
+      - name: Check deployed source, links and mobile widths
         env:
           NODE_OPTIONS: --no-warnings
         run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 >/tmp/plant-local-http.log 2>&1 &
           node --input-type=module <<'NODE'
           import { spawn } from 'node:child_process';
           import { once } from 'node:events';
-          const origin='https://pathweave.in';
+          const origin='http://127.0.0.1:8080';
+          const canonicalOrigin='https://pathweave.in';
           const paths=["/manufacturing-advisory/","/manufacturing-advisory/plant-profit-diagnostic/","/manufacturing-advisory/material-cost-leakage-scan/","/manufacturing-advisory/purchase-price-health-check/","/manufacturing-advisory/scrap-yield-recovery/","/manufacturing-advisory/manpower-productivity-study/","/manufacturing-advisory/rejection-quality-cost-sprint/","/manufacturing-advisory/maintenance-spares-oee/","/manufacturing-advisory/capacity-outsourcing-review/","/manufacturing-advisory/price-recovery-product-margin-review/","/manufacturing-advisory/incentives-recoveries-review/","/manufacturing-advisory/inventory-working-capital-scan/","/manufacturing-advisory/group-transfer-pricing-review/","/manufacturing-advisory/energy-utilities-audit/","/manufacturing-advisory/indirect-spend-freight-review/","/manufacturing-advisory/implementation-support/","/manufacturing-advisory/hyderabad/","/manufacturing-advisory/delhi-ncr/","/manufacturing-advisory/nagpur/","/manufacturing-advisory/bhopal/","/manufacturing-advisory/indore/","/peopleos/hr-outsourcing-for-manufacturing-plants/"];
           const pause=ms=>new Promise(r=>setTimeout(r,ms));
           async function get(path) {
@@ -31,9 +42,9 @@ jobs:
           for(const path of paths){
             const html=await get(path);
             const schema=html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
-            if(!schema || !html.includes('href="'+origin+path+'"')) throw Error(path+' missing canonical or schema');
+            if(!schema || !html.includes('href="'+canonicalOrigin+path+'"')) throw Error(path+' missing canonical or schema');
             JSON.parse(schema[1]);
-            if(path.startsWith('/manufacturing')&&!sitemap.includes(origin+path+'</loc>'))throw Error(path+' missing from sitemap');
+            if(path.startsWith('/manufacturing')&&!sitemap.includes(canonicalOrigin+path+'</loc>'))throw Error(path+' missing from sitemap');
             for(const m of html.matchAll(/href="(\/[^"#]*)"/g))links.add(m[1].replaceAll('&amp;','&'));
           }
           for(const link of links)await get(link);
@@ -50,7 +61,7 @@ jobs:
             await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
             for(const path of paths){await call('Page.navigate',{url:origin+path});let state;
               for(let i=0;i<80;i++){await pause(150);state=(await call('Runtime.evaluate',{expression:'({path:location.pathname,ready:document.readyState,width:document.documentElement.scrollWidth,title:document.querySelector("h1")?.innerText,canonical:document.querySelector("link[rel=canonical]")?.href})',returnByValue:true})).result.value;if(state?.path===path && state.title && state.ready==='complete')break}
-              if(state?.canonical!==origin+path||!state?.title||state.width>390)throw Error(JSON.stringify(state));
+              if(state?.canonical!==canonicalOrigin+path||!state?.title||state.width>390)throw Error(JSON.stringify(state));
               console.log('Mobile verified',path,state.width);
             }
             ws.close();
