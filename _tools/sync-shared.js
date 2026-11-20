@@ -29,6 +29,7 @@ const practices = [
   ['/peopleos/', 'PeopleOS', 'HR, organisation and people systems'],
   ['/skillhubos/', 'Skill HubOS', 'Education-to-employment capability'],
   ['/government-advisory/', 'Government Advisory', 'Policy, incentives and approvals'],
+  ['/manufacturing-advisory/', 'Manufacturing Advisory', 'Plant profit and productivity'],
 ];
 
 function header(urlPath) {
